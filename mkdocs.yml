@@ -16,3 +16,14 @@ plugins:
       fallback_to_build_date: true
 repo_url: https://github.com/chatterino/chatterino2
 edit_uri: ""
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/3vmJRwy
+      name: Discord
+    - icon: fontawesome/brands/github
+      link: https://github.com/chatterino/chatterino2
+      name: GitHub
+    - icon: fontawesome/solid/dollar-sign
+      link: https://streamelements.com/fourtf/tip
+      name: Donate
