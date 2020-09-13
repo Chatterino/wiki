@@ -1,6 +1,6 @@
 # Chatterino Wiki
 
-This is the source code of the wiki hosted at https://chatterino.github.io/wiki
+This is the source code of the wiki hosted at https://wiki.chatterino.com
 
 
 ## Making changes
