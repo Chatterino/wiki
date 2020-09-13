@@ -10,4 +10,4 @@ plugins:
   - search
   - git-revision-date-localized
 repo_url: https://github.com/chatterino/chatterino2
-edit_url: ""
+edit_uri: ""

@@ -17,7 +17,7 @@ jobs:
           architecture: 'x64'
           
       - run: |
-          pip install mkdocs-material
+          pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
           mkdocs build
 
       - name: Deploy 🚀
