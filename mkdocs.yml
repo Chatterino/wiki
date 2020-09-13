@@ -8,5 +8,5 @@ theme:
     - instant
 plugins:
   - search
-  - git-revision-date
+  - git-revision-date-localized
 repo_url: https://github.com/chatterino/chatterino2
