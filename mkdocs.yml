@@ -2,12 +2,17 @@ site_name: Chatterino
 theme:
   name: material
   logo: https://chatterino.com/img/icon-256.png
+  favicon: https://chatterino.com/img/icon-256.png
   palette:
     scheme: preference
   features:
     - instant
+  icon:
+    repo: fontawesome/brands/github
 plugins:
   - search
-  - git-revision-date-localized
+  - git-revision-date-localized:
+      type: datetime
+      fallback_to_build_date: true
 repo_url: https://github.com/chatterino/chatterino2
 edit_uri: ""
