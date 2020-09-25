@@ -1,3 +1,4 @@
+# Commands
 Commands are used as shortcuts for long messages. If a message starts with the "trigger" then the message will be replaced with the Command.
 
 #### Example

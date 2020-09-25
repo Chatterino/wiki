@@ -1,3 +1,4 @@
+# Regex
 _Regular expressions_ (or short _regexes_) are often used to check if a text matches a certain pattern. For example the regex `ab?c` would match `abc` or `ac`, but not `abbc` or `123`. In Chatterino, you can use them to highlight messages (and more) based on complex conditions.
 
 Basic patterns:
@@ -42,4 +43,5 @@ Special patterns:
 |`\b`       |Word boundaries (between \w and \W)|
 |`\B`       |Non-word boundaries|
 
-You can try out your regex pattern on websites like [regex101](https://regex101.com/).
+
+You can try out your regex pattern on websites like [regex101](https://regex101.com).
