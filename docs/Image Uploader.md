@@ -45,7 +45,7 @@ Replace `XXXXXXXXXXXXXXX` with your API key from s-ul.eu. It can be found on [yo
 |Image link|`{url}`|
 |Deletion link|`https://s-ul.eu/delete.php?file={filename}&key=XXXXXXXXXXXXXXX`|
 
-## [i.fourtf.com](https://github.com/fourtf/i)
+### [i.fourtf.com](https://github.com/fourtf/i)
 This is not a hosted service, but rather a service that can be self-hosted. Click on the URL for more information.
 Replace `XXXXXXXXXXXXXXX` with your Base64-encoded user and password
 
