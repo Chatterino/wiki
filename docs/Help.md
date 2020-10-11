@@ -34,12 +34,10 @@ There's a few things to cover here:
 
 If all else fails, you may be having [connection issues](#chatterino-is-failing-to-connect-to-chat) to Twitch or your network may be blocking the necessary IRC ports in order to connect.
 
-### Chatterino is failing to connect to chat
-
+<!--### Chatterino is failing to connect to chat-->
 
 ### Chatterino is repeatedly dis/connecting from Twitch chat
 The most likely issue here is due to the large amount of channels you are connected to. The maximum channel limit is usually around the 100 mark, but may differ from user to user.
-
 
 ### I am unable to send whispers from Chatterino
 If you are getting the `Your settings prevent you from sending this whisper` error message, it may be due to:
