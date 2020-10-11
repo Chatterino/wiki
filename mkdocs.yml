@@ -6,7 +6,7 @@ theme:
   palette:
     scheme: preference
   features:
-    - instant
+    - navigation.instant
   icon:
     repo: fontawesome/brands/github
 plugins:
