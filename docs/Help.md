@@ -19,7 +19,7 @@ Chatterino extension issues should be posted [here](https://github.com/Chatterin
 
 ### Does using Chatterino accumulate Twitch channel points?
 Unfortunately not. This is a limitation due to Twitch using internal APIs for channel points.<br>
-This will however work with most chatbots, as they simply take you being connected to chat as "watching the stream"
+This will however work with most chatbots, as they simply take you being connected to chat as "watching the stream".
 
 ### Can I use Chatterino as my chat overlay for my stream?
 You definitely can, but it's not recommended. We suggest using a service similar to [KapChat](https://nightdev.com/kapchat).
@@ -28,7 +28,7 @@ You definitely can, but it's not recommended. We suggest using a service similar
 There's a few things to cover here:
 
 - If your message is not sent in Chatterino, it is likely not sent in webchat either. Webchat renders messages whether they are sent or not, Chatterino will only render the message if it is accepted by the server.
-- If you're trying to type in a chat where there are a lot of active chatters, then your message may be dropped by Twitch's chat servers (due to the volume )
+- If you're trying to type in a chat where there are a lot of active chatters, then your message may be dropped by Twitch's chat servers (due to the volume).
 - If an alt account has been banned in that chat, you have likely been shadowbanned by Twitch in that channel. Preventing any of your other accounts from speaking in that channel.
 - If you have spammed too much in another chat, you have likely been temporarily shadowbanned by Twitch in channels where you are not: Subscribed, VIP or Moderator.
 
@@ -55,7 +55,7 @@ Chatterino only makes a connection to the necessary APIs to fetch these emotes, 
 - The server (braize) used to fetch the link information may be down. Braize uptime can be found [here](https://braize.pajlada.com/chatterino/health/uptime).
 - Your network may be having issues connecting to braize. Try restarting your PC and router.
 
-### How do I get the dank supporter badge?
+### How do I get the supporter badge?
 Donate €10 to fourtf [here](https://streamelements.com/fourtf/tip).
 
 ### Login expired error
