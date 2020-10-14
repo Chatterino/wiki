@@ -29,7 +29,7 @@ There's a few things to cover here:
 
 - If your message is not sent in Chatterino, it is likely not sent in webchat either. Webchat renders messages whether they are sent or not, Chatterino will only render the message if it is accepted by the server.
 - If you're trying to type in a chat where there are a lot of active chatters, then your message may be dropped by Twitch's chat servers (due to the volume).
-- If an alt account has been banned in that chat, you have likely been shadowbanned by Twitch in that channel. Preventing any of your other accounts from speaking in that channel.
+- If an alt account has been banned in that chat, you have likely been shadowbanned by Twitch in that channel. Which prevents any of your other accounts from speaking in that channel.
 - If you have spammed too much in another chat, you have likely been temporarily shadowbanned by Twitch in channels where you are not: Subscribed, VIP or Moderator.
 
 If all else fails, you may be having [connection issues](#chatterino-is-failing-to-connect-to-chat) to Twitch or your network may be blocking the necessary IRC ports in order to connect.
