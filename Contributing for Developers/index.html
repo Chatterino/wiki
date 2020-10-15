@@ -1,7 +1,4 @@
 
-
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -12,7 +9,7 @@
       
       
       <link rel="shortcut icon" href="https://chatterino.com/img/icon-256.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.14">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
     
     
       
@@ -20,15 +17,17 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.d3202873.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ff0a5ce4.min.css">
-      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        
       
     
     
     
       
+        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
@@ -46,11 +45,13 @@
     
     
     
+    
+    
     <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="">
+      
+        <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
+      
   
-    
-      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
-    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -140,8 +141,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -183,7 +182,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Chatterino Wiki" class="md-nav__link">
+    <a href=".." class="md-nav__link">
       Chatterino Wiki
     </a>
   </li>
@@ -195,7 +194,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Commands/" title="Commands" class="md-nav__link">
+    <a href="../Commands/" class="md-nav__link">
       Commands
     </a>
   </li>
@@ -220,7 +219,7 @@
         <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="Contribution Guidelines" class="md-nav__link md-nav__link--active">
+    <a href="./" class="md-nav__link md-nav__link--active">
       Contribution Guidelines
     </a>
     
@@ -360,7 +359,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Environment%20Variables/" title="Environment Variables" class="md-nav__link">
+    <a href="../Environment%20Variables/" class="md-nav__link">
       Environment Variables
     </a>
   </li>
@@ -372,7 +371,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../Image%20Uploader/" title="Image Uploader" class="md-nav__link">
+    <a href="../Help/" class="md-nav__link">
+      Help
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Image%20Uploader/" class="md-nav__link">
       Image Uploader
     </a>
   </li>
@@ -384,7 +395,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Regex/" title="Regex" class="md-nav__link">
+    <a href="../Regex/" class="md-nav__link">
       Regex
     </a>
   </li>
@@ -536,9 +547,6 @@
               
                 
                 
-                  
-                
-                
                 <h1 id="contribution-guidelines">Contribution Guidelines</h1>
 <p>This is a set of guidelines for contributing to Chatterino. The goal is to teach programmers without C++ background (java/python/etc.), people who haven't used Qt or otherwise have different experience the idioms of the codebase. Thus we will focus on those which are different from those other environments. There are extra guidelines available <a href="https://hackmd.io/@fourtf/chatterino-pendantic-guidelines">here</a> but they are considered as extras and not as important.</p>
 <h2 id="tooling">Tooling</h2>
@@ -552,15 +560,14 @@
 </ul>
 <p>Try to structure your code so that comments are not required.</p>
 <h5 id="good-example">Good example</h5>
-<pre><code class="cpp">/// Result is 0 if a == b, negative if a &lt; b and positive if b &gt; a.
+<pre><code class="language-cpp">/// Result is 0 if a == b, negative if a &lt; b and positive if b &gt; a.
 /// ^^^ You can't know this from the function signature!
 //      Even better: Return a &quot;strong ordering&quot; type.
 //          (but we don't have such a type right now)
 int compare(const QString &amp;a, const QString &amp;b);
 </code></pre>
-
 <h5 id="bad-example">Bad example</h5>
-<pre><code class="cpp">/*
+<pre><code class="language-cpp">/*
  * Matches a link and returns boost::none if it failed and a
  * QRegularExpressionMatch on success. 
  * ^^^ This comment just repeats the function signature!!!
@@ -571,11 +578,10 @@ int compare(const QString &amp;a, const QString &amp;b);
  */
 boost::optional&lt;QRegularExpressionMatch&gt; matchLink(const QString &amp;text);
 </code></pre>
-
 <h2 id="code">Code</h2>
 <h2 id="arithmetic-types">Arithmetic Types</h2>
 <p>Arithmetic types (like char, short, int, long, float and double), bool, and pointers are NOT initialized by default in c++. They keep whatever value is already at their position in the memory. This makes debugging harder and is unpredictable, so we initialize them to zero by using <code>{}</code> after their name when declaring them.</p>
-<pre><code class="cpp">class ArithmeticTypes
+<pre><code class="language-cpp">class ArithmeticTypes
 {
     int thisIs0{};
     QWidget *thisIsNull{};
@@ -593,15 +599,13 @@ void myFunc() {
     int a = 1 + 1; // &lt;- here we initialize it immediately, so it's fine.
 }
 </code></pre>
-
 <h2 id="passing-parameters">Passing parameters</h2>
 <p>The way a parameter is passed signals how it is going to be used inside of the function. C++ doesn't have multiple return values so there is "out parameters" (reference to a variable that is going to be assigned inside of the function) to simulate multiple return values.</p>
 <p><strong>Cheap to copy types</strong> like int/enum/etc. can be passed in per value since copying them is fast.</p>
-<pre><code class="cpp">void setValue(int value) {
+<pre><code class="language-cpp">void setValue(int value) {
     // ...
 }
 </code></pre>
-
 <p><strong>References</strong> mean that the variable doesn't need to be copied when it is passed to a function.</p>
 <table>
 <thead>
@@ -637,7 +641,7 @@ void myFunc() {
 </tbody>
 </table>
 <p><strong>R-value references</strong> <code>&amp;&amp;</code> work similar to regular references but signal the parameter should be "consumed".</p>
-<pre><code class="cpp">void storeLargeObject(LargeObject &amp;&amp;object) {
+<pre><code class="language-cpp">void storeLargeObject(LargeObject &amp;&amp;object) {
     // ...
 }
 
@@ -662,11 +666,10 @@ void main() {
     assert(unique.get() == nullptr);
 }
 </code></pre>
-
 <p>Generally the lowest level of requirement should be used e.g. passing <code>Channel&amp;</code> instead of <code>std::shared_ptr&lt;Channel&gt;&amp;</code> (aka <code>ChannelPtr</code>) if possible.</p>
 <h2 id="members">Members</h2>
 <p>All functions names are in <code>camelCase</code>. <em>Private</em> member variables are in <code>camelCase_</code> (note the underscore at the end). We don't use the <code>get</code> prefix for getters. We mark functions as <code>const</code> <a href="https://stackoverflow.com/questions/751681/meaning-of-const-last-in-a-function-declaration-of-a-class">if applicable</a>.</p>
-<pre><code class="cpp">class NamedObject
+<pre><code class="language-cpp">class NamedObject
 {
 public:
     const QString &amp;name() const; // &lt;- no &quot;get&quot; prefix.
@@ -684,7 +687,6 @@ private:
 
 void myFreeStandingFunction(); // &lt;- also lower case
 </code></pre>
-
 <h2 id="casts">Casts</h2>
 <ul>
 <li><strong>Avoid</strong> c-style casts: <code>(type)variable</code>.</li>
@@ -692,7 +694,7 @@ void myFreeStandingFunction(); // &lt;- also lower case
 <li>Or use one of <a href="https://en.cppreference.com/w/cpp/language/static_cast">static_cast</a>, <a href="https://en.cppreference.com/w/cpp/language/const_cast">const_cast</a> and <a href="https://en.cppreference.com/w/cpp/language/dynamic_cast">dynamic_cast</a> </li>
 <li>Try to avoid <a href="https://en.cppreference.com/w/cpp/language/reinterpret_cast">reinterpret_cast</a> unless necessary.</li>
 </ul>
-<pre><code class="cpp">void example() {
+<pre><code class="language-cpp">void example() {
     float f = 123.456;
     int i = (int)f; // &lt;- don't
     int i = int(f); // &lt;- do
@@ -712,10 +714,9 @@ void myFreeStandingFunction(); // &lt;- also lower case
     float *pp = reinterpret_cast&lt;float*&gt;(&amp;p);
 }
 </code></pre>
-
 <h2 id="this">This</h2>
 <p>Always use <code>this</code> to refer to instance members to make it clear where we use either locals or members.</p>
-<pre><code class="cpp">class Test
+<pre><code class="language-cpp">class Test
 {
     void testFunc(int a);
     int testInt_{};
@@ -733,7 +734,6 @@ Test::testFunc(int a)
     this-&gt;testFunc(testInt_ + 1);
 }
 </code></pre>
-
 <h2 id="managing-resources">Managing resources</h2>
 <h5 id="regular-classes">Regular classes</h5>
 <p>Keep the element on the stack if possible. If you need a pointer or have complex ownership you should use one of these classes:
@@ -753,7 +753,7 @@ Test::testFunc(int a)
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 25, 2020 17:59:18</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 15, 2020 18:00:52</span>
     
   </small>
 </div>
@@ -776,7 +776,7 @@ Test::testFunc(int a)
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Commands/" title="Commands" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Commands/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -791,7 +791,7 @@ Test::testFunc(int a)
           </a>
         
         
-          <a href="../Environment%20Variables/" title="Environment Variables" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Environment%20Variables/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -846,15 +846,15 @@ Test::testFunc(int a)
       
     </div>
     
-      <script src="../assets/javascripts/vendor.2d1db4bd.min.js"></script>
-      <script src="../assets/javascripts/bundle.6627ddf3.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: ['instant'],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
