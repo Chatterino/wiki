@@ -32,7 +32,7 @@ When a filter is evaluated, variables are replaced with the values they represen
 | - | - |
 | Int | `123`, `5` |
 | String | `"Hello there"`, `"Escaped \" quote"` |
-| List | `{"list item", 123} |
+| List | `{"list item", 123}` |
 
 ### Operators
 
