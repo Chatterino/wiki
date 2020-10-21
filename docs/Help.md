@@ -6,16 +6,19 @@ Having issues with Chatterino or need general assistance? Check the below troubl
 Prior to starting on the below, you should first try the basic troubleshooting steps listed here. These steps can resolve a variety of issues:
 
 - Ensure that your Chatterino is up to date.
-- Ensure that you have **BOTH** the x86 and x64 [Visual C++ Redistributables](Resources.md#visual-c-redistributables) installed **AND** have restarted your PC after installation.
-- Try running Chatterino in administrator mode.
+- [Windows] Try running Chatterino in administrator mode.
+- [Windows] Ensure that you have **BOTH** the x86 and x64 Visual C++ Redistributables installed **AND** have restarted your PC after installation:
+    - x64: <https://aka.ms/vs/16/release/vc_redist.x64.exe>
+    - x86: <https://aka.ms/vs/16/release/vc_redist.x86.exe>
+    - Chocolatey: `choco install vcredist140`
 
 ### I am having an issue with the Chatterino extension
 Chatterino extension issues should be posted [here](https://github.com/Chatterino/chatterino-browser-ext/issues/new).
 
 ### Chatterino not starting/Crashing upon startup
-- Try running Chatterino in administrator mode.
-- Adding Chatterino to your anti-virus/malware whitelist.
-- If nothing else works, try resetting your settings using the `Fresh Install` option in the installer.
+- [Windows] Try running Chatterino in administrator mode.
+- [Windows] Adding Chatterino to your anti-virus/malware whitelist.
+- [Windows] If nothing else works, try resetting your settings using the `Fresh Install` option in the installer.
 
 ### Does using Chatterino accumulate Twitch channel points?
 Unfortunately not. This is a limitation due to Twitch using internal APIs for channel points.<br>
@@ -37,7 +40,8 @@ If all else fails, you may be having [connection issues](#chatterino-is-failing-
 <!--### Chatterino is failing to connect to chat-->
 
 ### Chatterino is repeatedly dis/connecting from Twitch chat
-The most likely issue here is due to the large amount of channels you are connected to. The maximum channel limit is usually around the 100 mark, but may differ from user to user.
+If you are having troubles with Chatterino repeatedly connecting/disconnecting, it is likely due to the large amount of channels you are connected to. The maximum channel limit is usually around the 100 mark, but may differ from user to user.
+Try closing splits in Chatterino in order to fix this.
 
 ### I am unable to send whispers from Chatterino
 If you are getting the `Your settings prevent you from sending this whisper` error message, it may be due to:
