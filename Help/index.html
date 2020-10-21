@@ -527,16 +527,21 @@
 <p>Prior to starting on the below, you should first try the basic troubleshooting steps listed here. These steps can resolve a variety of issues:</p>
 <ul>
 <li>Ensure that your Chatterino is up to date.</li>
-<li>Ensure that you have <strong>BOTH</strong> the x86 and x64 <a href="Resources.md#visual-c-redistributables">Visual C++ Redistributables</a> installed <strong>AND</strong> have restarted your PC after installation.</li>
-<li>Try running Chatterino in administrator mode.</li>
+<li>[Windows] Try running Chatterino in administrator mode.</li>
+<li>[Windows] Ensure that you have <strong>BOTH</strong> the x86 and x64 Visual C++ Redistributables installed <strong>AND</strong> have restarted your PC after installation:<ul>
+<li>x64: <a href="https://aka.ms/vs/16/release/vc_redist.x64.exe">https://aka.ms/vs/16/release/vc_redist.x64.exe</a></li>
+<li>x86: <a href="https://aka.ms/vs/16/release/vc_redist.x86.exe">https://aka.ms/vs/16/release/vc_redist.x86.exe</a></li>
+<li>Chocolatey: <code>choco install vcredist140</code></li>
+</ul>
+</li>
 </ul>
 <h3 id="i-am-having-an-issue-with-the-chatterino-extension">I am having an issue with the Chatterino extension</h3>
 <p>Chatterino extension issues should be posted <a href="https://github.com/Chatterino/chatterino-browser-ext/issues/new">here</a>.</p>
 <h3 id="chatterino-not-startingcrashing-upon-startup">Chatterino not starting/Crashing upon startup</h3>
 <ul>
-<li>Try running Chatterino in administrator mode.</li>
-<li>Adding Chatterino to your anti-virus/malware whitelist.</li>
-<li>If nothing else works, try resetting your settings using the <code>Fresh Install</code> option in the installer.</li>
+<li>[Windows] Try running Chatterino in administrator mode.</li>
+<li>[Windows] Adding Chatterino to your anti-virus/malware whitelist.</li>
+<li>[Windows] If nothing else works, try resetting your settings using the <code>Fresh Install</code> option in the installer.</li>
 </ul>
 <h3 id="does-using-chatterino-accumulate-twitch-channel-points">Does using Chatterino accumulate Twitch channel points?</h3>
 <p>Unfortunately not. This is a limitation due to Twitch using internal APIs for channel points.<br>
@@ -555,7 +560,8 @@ This will however work with most chatbots, as they simply take you being connect
 <!--### Chatterino is failing to connect to chat-->
 
 <h3 id="chatterino-is-repeatedly-disconnecting-from-twitch-chat">Chatterino is repeatedly dis/connecting from Twitch chat</h3>
-<p>The most likely issue here is due to the large amount of channels you are connected to. The maximum channel limit is usually around the 100 mark, but may differ from user to user.</p>
+<p>If you are having troubles with Chatterino repeatedly connecting/disconnecting, it is likely due to the large amount of channels you are connected to. The maximum channel limit is usually around the 100 mark, but may differ from user to user.
+Try closing splits in Chatterino in order to fix this.</p>
 <h3 id="i-am-unable-to-send-whispers-from-chatterino">I am unable to send whispers from Chatterino</h3>
 <p>If you are getting the <code>Your settings prevent you from sending this whisper</code> error message, it may be due to:</p>
 <ul>
@@ -591,7 +597,7 @@ Try hitting F5 once to manually refresh the emotes.</p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 21, 2020 14:57:45</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 21, 2020 14:58:21</span>
     
   </small>
 </div>
