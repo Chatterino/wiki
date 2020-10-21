@@ -16,16 +16,15 @@ Simple filters are available through the Channel Filter Creator dialog. Advanced
 
 ## Filter syntax
 
-A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single `True` or `False` value to decide whether to filter a message.
-Evaluating to something other than `True` or `False` will lead to all messages being filtered out.
+A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single `True` or `False` value to decide whether to filter a message. Evaluating to something other than `True` or `False` will lead to all messages being filtered out.
 
 ### Values
 A value can be an integer (`123`, `5`), a string (`"hello"`, `"this is a string"`), or a variable (`author.name`, `message.length`).
 
 When a filter is evaluated, variables are replaced with the values they represent.
 
-
 **Literals:**
+
 | Name | Example |
 | - | - |
 | Int | `123`, `5` |
@@ -42,6 +41,7 @@ Unary operators act on one value:
 - `!author.subbed`
 
 The following operators are available:
+
 | Operator | Description |
 | - | - |
 | `&&` | And |
