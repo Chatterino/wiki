@@ -483,16 +483,29 @@
 </li>
 </ul>
 <h2 id="filter-syntax">Filter syntax</h2>
-<p>A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single <code>True</code> or <code>False</code> value to decide whether to filter a message.
-Evaluating to something other than <code>True</code> or <code>False</code> will lead to all messages being filtered out.</p>
+<p>A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single <code>True</code> or <code>False</code> value to decide whether to filter a message. Evaluating to something other than <code>True</code> or <code>False</code> will lead to all messages being filtered out.</p>
 <h3 id="values">Values</h3>
 <p>A value can be an integer (<code>123</code>, <code>5</code>), a string (<code>"hello"</code>, <code>"this is a string"</code>), or a variable (<code>author.name</code>, <code>message.length</code>).</p>
 <p>When a filter is evaluated, variables are replaced with the values they represent.</p>
-<p><strong>Literals:</strong>
-| Name | Example |
-| - | - |
-| Int | <code>123</code>, <code>5</code> |
-| String | <code>"Hello there"</code>, <code>"Escaped \" quote"</code> |</p>
+<p><strong>Literals:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Int</td>
+<td><code>123</code>, <code>5</code></td>
+</tr>
+<tr>
+<td>String</td>
+<td><code>"Hello there"</code>, <code>"Escaped \" quote"</code></td>
+</tr>
+</tbody>
+</table>
 <h3 id="operators">Operators</h3>
 <p>Binary operators act on two values:
 - <code>1 + 2</code>
@@ -500,26 +513,85 @@ Evaluating to something other than <code>True</code> or <code>False</code> will 
 - <code>"long sentence" contains "ten"</code></p>
 <p>Unary operators act on one value:
 - <code>!author.subbed</code></p>
-<p>The following operators are available:
-| Operator | Description |
-| - | - |
-| <code>&amp;&amp;</code> | And |
-| <code>\|\|</code> | Or |
-| <code>!</code> | Not |
-| <code>==</code> | Equals |
-| <code>!=</code> | Not equals |
-| <code>&lt;</code> | Less than |
-| <code>&lt;=</code> | Less than or equal to |
-| <code>&gt;</code> | Greater than |
-| <code>&gt;=</code> | Greater than or equal to |
-| <code>contains</code> | String, List, or Map contains |
-| <code>startswith</code> | String or List starts with text or string, respectively |
-| <code>endswith</code> | String or List ends with text or string, respectively |
-| <code>+</code> | Add (or string concatenation) |
-| <code>-</code> | Subtract |
-| <code>*</code> | Multiply |
-| <code>/</code> | Divide (integer) |
-| <code>%</code> | Modulus |</p>
+<p>The following operators are available:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>And</td>
+</tr>
+<tr>
+<td><code>\|\|</code></td>
+<td>Or</td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td>Not</td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td>Equals</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>Not equals</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Less than</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>Less than or equal to</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Greater than</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>Greater than or equal to</td>
+</tr>
+<tr>
+<td><code>contains</code></td>
+<td>String, List, or Map contains</td>
+</tr>
+<tr>
+<td><code>startswith</code></td>
+<td>String or List starts with text or string, respectively</td>
+</tr>
+<tr>
+<td><code>endswith</code></td>
+<td>String or List ends with text or string, respectively</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>Add (or string concatenation)</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Subtract</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Multiply</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Divide (integer)</td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Modulus</td>
+</tr>
+</tbody>
+</table>
 <h3 id="variables">Variables</h3>
 <p>The following variables are available:</p>
 <table>
@@ -654,7 +726,7 @@ If two types can't mix, <code>False</code> or <code>0</code> will be returned, d
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 18, 2020 11:08:21</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 21, 2020 14:57:45</span>
     
   </small>
 </div>
