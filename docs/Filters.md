@@ -45,7 +45,7 @@ The following operators are available:
 | Operator | Description |
 | - | - |
 | `&&` | And |
-| `\|\|` | Or |
+| `||` | Or |
 | `!` | Not |
 | `==` | Equals |
 | `!=` | Not equals |
