@@ -19,7 +19,9 @@ Simple filters are available through the Channel Filter Creator dialog. Advanced
 A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single `True` or `False` value to decide whether to filter a message. Evaluating to something other than `True` or `False` will lead to all messages being filtered out.
 
 ### Values
-A value can be an integer (`123`, `5`), a string (`"hello"`, `"this is a string"`), or a variable (`author.name`, `message.length`).
+A value can be an integer (`123`, `5`), a string (`"hello"`, `"this is a string"`), a variable (`author.name`, `message.length`), or a list of values (`{123, "hello", author.name}`).
+
+Lists are surrounded by braces (`{}`) and list items are separated by commas. A list item can be a value (e.g. `"hello"`) or an expression wrapped in parentheses (e.g. `(author.sub_length * message.length)`).
 
 When a filter is evaluated, variables are replaced with the values they represent.
 
@@ -29,6 +31,7 @@ When a filter is evaluated, variables are replaced with the values they represen
 | - | - |
 | Int | `123`, `5` |
 | String | `"Hello there"`, `"Escaped \" quote"` |
+| List | `{"list item", 123}` |
 
 ### Operators
 
