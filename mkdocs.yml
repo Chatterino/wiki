@@ -17,6 +17,7 @@ plugins:
 repo_url: https://github.com/chatterino/chatterino2
 edit_uri: ""
 markdown_extensions:
+  - attr_list
   - toc:
       permalink: true
 extra:
