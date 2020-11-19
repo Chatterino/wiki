@@ -32,3 +32,9 @@ Default value: `443`
 ### CHATTERINO2_TWITCH_SERVER_SECURE
 Bool value used to tell Chatterino whether to try to connect securely (secure irc) to the Twitch chat server.  
 Default value: `true`
+
+### QT_LOGGING_RULES
+Used to enable/disable logging at run time. For example: `QT_LOGGING_RULES="chatterino.*.debug=true"` to enable debug logging in release builds. (It's on by default in debug builds). See [Qt docs](https://doc.qt.io/qt-5/qloggingcategory.html) for more details.
+
+### QT_MESSAGE_PATTERN
+Used to customize logging at run time. For example: `QT_MESSAGE_PATTERN="%{time hh:mm:ss.zzz} %{category}: %{function} %{message}"` enables a timestamp and function name in log messages. See [Qt docs](https://doc.qt.io/qt-5/qloggingcategory.html) for more details.
