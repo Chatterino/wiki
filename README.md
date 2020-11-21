@@ -2,12 +2,10 @@
 
 This is the source code of the wiki hosted at https://wiki.chatterino.com
 
-
 ## Making changes
 
 This source code of this wiki is managed through `git`.
 Search for a guide for making a pull request on GitHub if you are new to the process.
-
 
 ## Running locally
 

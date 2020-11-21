@@ -2,7 +2,8 @@ name: Build Github Pages
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   build:
@@ -17,10 +18,10 @@ jobs:
         with:
           python-version: '3.x'
           architecture: 'x64'
-          
+
       - run: |
           pip install -r requirements.txt
-          mkdocs build
+          mkdocs build --verbose
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
