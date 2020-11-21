@@ -72,3 +72,14 @@ This is not natively supported, but there is a work around:
 2. Turn on `Always on top` in Chatterino
 3. Click the 3 dots up the top of a channel split and click `Popup`
 4. Move and resize the chat to overlay on top of the standard Twitch chat
+
+### How do I delete the Chatterino cache?
+
+For **Windows**:
+Delete the `%APPDATA%/Chatterino2/Cache` folder
+
+For **Linux**:
+Delete the `$HOME/.local/share/chatterino/Cache` folder: `rm -rf "$HOME/.local/share/chatterino/Cache"`
+
+For **Mac**:
+Delete the `$HOME/Library/Application Support/chatterino/Cache` folder: `rm -rf "$HOME/Library/Application Support/chatterino/Cache"`
