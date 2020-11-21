@@ -2,7 +2,8 @@ name: Build Github Pages
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   build:
@@ -10,18 +11,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        
+        with:
+          persist-credentials: false
+
       - uses: actions/setup-python@v2
         with:
           python-version: '3.x'
           architecture: 'x64'
-          
+
       - run: |
-          pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
-          mkdocs build
+          pip install -r requirements.txt
+          mkdocs build --verbose
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.5.9
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
