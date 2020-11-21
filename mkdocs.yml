@@ -6,7 +6,7 @@ theme:
   palette:
     scheme: preference
   features:
-    - instant
+    - navigation.instant
   icon:
     repo: fontawesome/brands/github
 plugins:
@@ -18,6 +18,8 @@ repo_url: https://github.com/chatterino/chatterino2
 edit_uri: ""
 markdown_extensions:
   - attr_list
+  - toc:
+      permalink: true
 extra:
   social:
     - icon: fontawesome/brands/discord
