@@ -440,32 +440,32 @@
               
                 
                 
-                <h1 id="environment-variables">Environment Variables</h1>
+                <h1 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h1>
 <p>Below I have tried to list all environment variables that can be used to modify the behaviour of Chatterino. Used for things that I don't feel like fit in the settings system.</p>
-<h3 id="chatterino2_recent_messages_url">CHATTERINO2_RECENT_MESSAGES_URL</h3>
+<h3 id="chatterino2_recent_messages_url">CHATTERINO2_RECENT_MESSAGES_URL<a class="headerlink" href="#chatterino2_recent_messages_url" title="Permanent link">&para;</a></h3>
 <p>Used to change the URL that Chatterino2 uses when trying to load historic Twitch chat messages (if the setting is enabled).<br />
 Default value: <code>https://recent-messages.robotty.de/api/v2/recent-messages/%1</code> (an <a href="https://github.com/robotty/recent-messages2">open-source service</a> written and currently run by <a href="https://github.com/RAnders00">@RAnders00</a> - <a href="https://recent-messages.robotty.de/">visit the homepage for more details about the service</a>)<br />
 Arguments:<br />
  - <code>%1</code> = Name of the Twitch channel</p>
-<h3 id="chatterino2_link_resolver_url">CHATTERINO2_LINK_RESOLVER_URL</h3>
+<h3 id="chatterino2_link_resolver_url">CHATTERINO2_LINK_RESOLVER_URL<a class="headerlink" href="#chatterino2_link_resolver_url" title="Permanent link">&para;</a></h3>
 <p>Used to change the URL that Chatterino2 uses when trying to get link information to display in the tooltip on hover.<br />
 Default value: <code>https://braize.pajlada.com/chatterino/link_resolver/%1</code><br />
 Arguments:<br />
  - <code>%1</code> = Escaped URL the link resolver should resolve</p>
-<h3 id="chatterino2_twitch_emote_set_resolver_url">CHATTERINO2_TWITCH_EMOTE_SET_RESOLVER_URL</h3>
+<h3 id="chatterino2_twitch_emote_set_resolver_url">CHATTERINO2_TWITCH_EMOTE_SET_RESOLVER_URL<a class="headerlink" href="#chatterino2_twitch_emote_set_resolver_url" title="Permanent link">&para;</a></h3>
 <p>Used to change the URL that Chatterino2 uses when trying to get emote set information
 Default value: <code>https://braize.pajlada.com/chatterino/twitchemotes/set/%1/</code><br />
 Arguments:<br />
  - <code>%1</code> = Emote set ID</p>
-<h3 id="chatterino2_twitch_server_host">CHATTERINO2_TWITCH_SERVER_HOST</h3>
+<h3 id="chatterino2_twitch_server_host">CHATTERINO2_TWITCH_SERVER_HOST<a class="headerlink" href="#chatterino2_twitch_server_host" title="Permanent link">&para;</a></h3>
 <p>String value used to change what Twitch chat server host to connect to.<br />
 Default value: <code>irc.chat.twitch.tv</code></p>
-<h3 id="chatterino2_twitch_server_port">CHATTERINO2_TWITCH_SERVER_PORT</h3>
+<h3 id="chatterino2_twitch_server_port">CHATTERINO2_TWITCH_SERVER_PORT<a class="headerlink" href="#chatterino2_twitch_server_port" title="Permanent link">&para;</a></h3>
 <p>Number value used to change what port to use when connecting to Twitch chat servers.<br />
 Currently known valid ports for secure usage: 6697, 443.<br />
 Currently known valid ports for non-secure usage (CHATTERINO2_TWITCH_SERVER_SECURE set to false): 6667, 80.<br />
 Default value: <code>443</code></p>
-<h3 id="chatterino2_twitch_server_secure">CHATTERINO2_TWITCH_SERVER_SECURE</h3>
+<h3 id="chatterino2_twitch_server_secure">CHATTERINO2_TWITCH_SERVER_SECURE<a class="headerlink" href="#chatterino2_twitch_server_secure" title="Permanent link">&para;</a></h3>
 <p>Bool value used to tell Chatterino whether to try to connect securely (secure irc) to the Twitch chat server.<br />
 Default value: <code>true</code></p>
                 
@@ -476,7 +476,7 @@ Default value: <code>true</code></p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 21, 2020 10:38:57</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 21, 2020 10:53:06</span>
     
   </small>
 </div>
@@ -575,7 +575,7 @@ Default value: <code>true</code></p>
       <script>
         app = initialize({
           base: "..",
-          features: ['instant'],
+          features: ['navigation.instant'],
           search: Object.assign({
             worker: "../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
