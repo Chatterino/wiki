@@ -14,6 +14,7 @@ Search for a guide for making a pull request on GitHub if you are new to the pro
 In case you want to try and run the wiki locally follow these steps:
 
 - Have Python 3 installed
-- Run `pip install mkdocs-material mkdocs-git-revision-date-localized-plugin`
+- _Optionally_ create and enter a virtual environment: `python3 -m venv venv && source venv/bin/activate`
+- Run `pip install -r requirements.txt`
 - Run `mkdocs serve`
 - Navigate to `localhost:8000` in your browser
