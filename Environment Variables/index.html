@@ -295,6 +295,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#qt_logging_rules" class="md-nav__link">
+    QT_LOGGING_RULES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qt_message_pattern" class="md-nav__link">
+    QT_MESSAGE_PATTERN
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -427,6 +441,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#qt_logging_rules" class="md-nav__link">
+    QT_LOGGING_RULES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qt_message_pattern" class="md-nav__link">
+    QT_MESSAGE_PATTERN
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -468,6 +496,10 @@ Default value: <code>443</code></p>
 <h3 id="chatterino2_twitch_server_secure">CHATTERINO2_TWITCH_SERVER_SECURE<a class="headerlink" href="#chatterino2_twitch_server_secure" title="Permanent link">&para;</a></h3>
 <p>Bool value used to tell Chatterino whether to try to connect securely (secure irc) to the Twitch chat server.<br />
 Default value: <code>true</code></p>
+<h3 id="qt_logging_rules">QT_LOGGING_RULES<a class="headerlink" href="#qt_logging_rules" title="Permanent link">&para;</a></h3>
+<p>Used to enable/disable logging at run time. For example: <code>QT_LOGGING_RULES="chatterino.*.debug=true"</code> to enable debug logging in release builds. (It's on by default in debug builds). See <a href="https://doc.qt.io/qt-5/qloggingcategory.html">Qt docs</a> for more details.</p>
+<h3 id="qt_message_pattern">QT_MESSAGE_PATTERN<a class="headerlink" href="#qt_message_pattern" title="Permanent link">&para;</a></h3>
+<p>Used to customize logging at run time. For example: <code>QT_MESSAGE_PATTERN="%{time hh:mm:ss.zzz} %{category}: %{function} %{message}"</code> enables a timestamp and function name in log messages. See <a href="https://doc.qt.io/qt-5/qloggingcategory.html">Qt docs</a> for more details.</p>
                 
                   
                     
@@ -476,7 +508,7 @@ Default value: <code>true</code></p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 21, 2020 11:09:37</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 21, 2020 15:28:16</span>
     
   </small>
 </div>
