@@ -35,7 +35,7 @@ There's a few things to cover here:
 - If an alt account has been banned in that chat, you have likely been shadowbanned by Twitch in that channel. Which prevents any of your other accounts from speaking in that channel.
 - If you have spammed too much in another chat, you have likely been temporarily shadowbanned by Twitch in channels where you are not: Subscribed, VIP or Moderator.
 
-If all else fails, you may be having [connection issues](#chatterino-is-failing-to-connect-to-chat) to Twitch or your network may be blocking the necessary IRC ports in order to connect.
+If all else fails, you may be having connection issues to Twitch or your network may be blocking the necessary IRC ports in order to connect.
 
 <!--### Chatterino is failing to connect to chat-->
 
