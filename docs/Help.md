@@ -68,18 +68,33 @@ If you're getting the `Login expired for user <user>! Try adding your account ag
 ### How do I add Chatterino as an OBS dock?
 This is not natively supported, but there is a work around:
 
-1. Add a dock into OBS for standard Twitch chat
-2. Turn on `Always on top` in Chatterino
-3. Click the 3 dots up the top of a channel split and click `Popup`
-4. Move and resize the chat to overlay on top of the standard Twitch chat
+1. Add a dock into OBS for standard Twitch chat.
+2. Turn on `Always on top` in Chatterino.
+3. Click the 3 dots up the top of a channel split and click `Popup`.
+4. Move and resize the chat to overlay on top of the standard Twitch chat.
 
-### How do I delete the Chatterino cache?
+### Where is my Chatterino folder located?
+On **Windows**:
+`%APPDATA%/Chatterino2`
 
-For **Windows**:
-Delete the `%APPDATA%/Chatterino2/Cache` folder
+On **Linux**:
+`$HOME/.local/share/chatterino`
 
-For **Linux**:
-Delete the `$HOME/.local/share/chatterino/Cache` folder: `rm -rf "$HOME/.local/share/chatterino/Cache"`
+On **Mac**:
+`$HOME/Library/Application Support/chatterino`
 
-For **Mac**:
-Delete the `$HOME/Library/Application Support/chatterino/Cache` folder: `rm -rf "$HOME/Library/Application Support/chatterino/Cache"`
+### How do I delete the Chatterino cache / settings?
+Navigate to your [Chatterino folder](#where-is-chatterino-folder-located) and remove corresponding folders.
+
+ * The *Cache* folder contains cached network requests from Chatterino.
+ * The *Logs* folder contains chat logs from chats you've had open in Chatterino.
+ * The *Misc* folder contains internal information about the current running instance of Chatterino.
+ * The *Settings* folder contains any settings you may have configured in Chatterino (e.g. font size, highlight phrases) and your list of channels open.
+
+### My settings / commands / window layout are not saving
+This is usually a case because Chatterino is unable to save settings on your disk. To fix that, try following steps:
+
+1. Run Chatterino as Administrator.
+2. Back up your settings by copying them from your [Chatterino folder](#where-is-chatterino-folder-located) to a safe location on your disk and delete them. Restart your computer and try launching Chatterino again.
+3. Back up your settings, uninstall Chatterino and install it again, but make sure `Fresh Install` option is checked.
+4. Try running Chatterino in portable mode.
