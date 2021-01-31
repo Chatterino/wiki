@@ -73,7 +73,7 @@ This is not natively supported, but there is a work around:
 3. Click the 3 dots up the top of a channel split and click `Popup`.
 4. Move and resize the chat to overlay on top of the standard Twitch chat.
 
-### Where is Chatterino folder located?
+### Where is my Chatterino folder located?
 On **Windows**:
 `%APPDATA%/Chatterino2`
 
@@ -84,12 +84,12 @@ On **Mac**:
 `$HOME/Library/Application Support/chatterino`
 
 ### How do I delete the Chatterino cache / settings?
-Navigate to [Chatterino folder](#where-is-chatterino-folder-located) and remove corresponding folders.
+Navigate to your [Chatterino folder](#where-is-chatterino-folder-located) and remove corresponding folders.
 
 ### My settings / commands / window layout are not saving
 This is usually a case because Chatterino is unable to save settings on your disk. To fix that, try following steps:
 
 1. Run Chatterino as Administrator.
-2. Back up your settings by copying them from [Chatterino folder](#where-is-chatterino-folder-located) to safe location on your disk and delete them. Restart your computer and try launching Chatterino again.
+2. Back up your settings by copying them from your [Chatterino folder](#where-is-chatterino-folder-located) to a safe location on your disk and delete them. Restart your computer and try launching Chatterino again.
 3. Back up your settings, uninstall Chatterino and install it again, but make sure `Fresh Install` option is checked.
 4. Try running Chatterino in portable mode.
