@@ -86,6 +86,11 @@ On **Mac**:
 ### How do I delete the Chatterino cache / settings?
 Navigate to your [Chatterino folder](#where-is-chatterino-folder-located) and remove corresponding folders.
 
+ * The *Cache* folder contains cached network requests from Chatterino.
+ * The *Logs* folder contains chat logs from chats you've had open in Chatterino.
+ * The *Misc* folder contains internal information about the current running instance of Chatterino.
+ * The *Settings* folder contains any settings you may have configured in Chatterino (e.g. font size, highlight phrases) and your list of channels open.
+
 ### My settings / commands / window layout are not saving
 This is usually a case because Chatterino is unable to save settings on your disk. To fix that, try following steps:
 
