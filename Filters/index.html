@@ -333,6 +333,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#regular-expressions" class="md-nav__link">
+    Regular Expressions
+  </a>
+  
+    <nav class="md-nav" aria-label="Regular Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-matching" class="md-nav__link">
+    Simple matching
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-capturing" class="md-nav__link">
+    Group capturing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#about-the-order-of-operations" class="md-nav__link">
     About the order of operations
   </a>
@@ -485,6 +512,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#regular-expressions" class="md-nav__link">
+    Regular Expressions
+  </a>
+  
+    <nav class="md-nav" aria-label="Regular Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-matching" class="md-nav__link">
+    Simple matching
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-capturing" class="md-nav__link">
+    Group capturing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#about-the-order-of-operations" class="md-nav__link">
     About the order of operations
   </a>
@@ -533,8 +587,9 @@
 <h2 id="filter-syntax">Filter syntax<a class="headerlink" href="#filter-syntax" title="Permanent link">&para;</a></h2>
 <p>A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single <code>True</code> or <code>False</code> value to decide whether to filter a message. Evaluating to something other than <code>True</code> or <code>False</code> will lead to all messages being filtered out.</p>
 <h3 id="values">Values<a class="headerlink" href="#values" title="Permanent link">&para;</a></h3>
-<p>A value can be an integer (<code>123</code>, <code>5</code>), a string (<code>"hello"</code>, <code>"this is a string"</code>), a variable (<code>author.name</code>, <code>message.length</code>), or a list of values (<code>{123, "hello", author.name}</code>).</p>
+<p>A value can be an integer (<code>123</code>, <code>5</code>), a string (<code>"hello"</code>, <code>"this is a string"</code>), a variable (<code>author.name</code>, <code>message.length</code>), a list of values (<code>{123, "hello", author.name}</code>), or a regular expression (<code>r"\d\d\d\d"</code>).</p>
 <p>Lists are surrounded by braces (<code>{}</code>) and list items are separated by commas. A list item can be a value (e.g. <code>"hello"</code>) or an expression wrapped in parentheses (e.g. <code>(author.sub_length * message.length)</code>).</p>
+<p>Regular expressions are similar to strings, but are denoted with an <code>r</code> before the opening quotation mark (e.g. <code>r"something"</code>). To make a regular expression case insensitive, use <code>ri</code> before the opening question mark (e.g. <code>ri"something"</code>).</p>
 <p>When a filter is evaluated, variables are replaced with the values they represent.</p>
 <p><strong>Literals:</strong></p>
 <table>
@@ -554,8 +609,12 @@
 <td><code>"Hello there"</code>, <code>"Escaped \" quote"</code></td>
 </tr>
 <tr>
+<td>RegEx</td>
+<td><code>r"\d\d\d\d"</code>, <code>ri"something.*"</code></td>
+</tr>
+<tr>
 <td>List</td>
-<td><code>{"list item", 123}</code></td>
+<td>`{"list item", 123}</td>
 </tr>
 </tbody>
 </table>
@@ -622,6 +681,10 @@
 <tr>
 <td><code>endswith</code></td>
 <td>String or List ends with text or string, respectively</td>
+</tr>
+<tr>
+<td><code>match</code></td>
+<td>Match string with regular expression</td>
 </tr>
 <tr>
 <td><code>+</code></td>
@@ -762,6 +825,15 @@
 <p>Chatterino will try to transform incompatible types for operations, but it isn't always successful.
 If two types can't mix, <code>False</code> or <code>0</code> will be returned, depending on the context. </p>
 <p>Double check the table above to see the types of each variable to prevent unexpected results.</p>
+<h3 id="regular-expressions">Regular Expressions<a class="headerlink" href="#regular-expressions" title="Permanent link">&para;</a></h3>
+<p>Chatterino can match string variables to a regular expression, returning whether the expression matched or, optionally, the value of a capture group.</p>
+<h4 id="simple-matching">Simple matching<a class="headerlink" href="#simple-matching" title="Permanent link">&para;</a></h4>
+<p><code>"some string" match r"some regex"</code> returns <code>True</code> or <code>False</code>. </p>
+<p>For example: <code>message.content match r"\d\d"</code></p>
+<h4 id="group-capturing">Group capturing<a class="headerlink" href="#group-capturing" title="Permanent link">&para;</a></h4>
+<p><code>"some string" match {r"some regex", capture number}</code> returns <code>False</code> if no match or the value of the nth captured group.</p>
+<p>For example: <code>message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}</code> matches the year component of a date like <code>12/31/2020</code>. </p>
+<p><code>(message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}) == "2020"</code> will filter only messages that contain a written date with 2020 as the year.</p>
 <h3 id="about-the-order-of-operations">About the order of operations<a class="headerlink" href="#about-the-order-of-operations" title="Permanent link">&para;</a></h3>
 <p>The order of operations in filters may not be exactly what you expect.</p>
 <ul>
@@ -779,7 +851,7 @@ If two types can't mix, <code>False</code> or <code>0</code> will be returned, d
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 31, 2021 11:25:01</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 31, 2021 11:41:46</span>
     
   </small>
 </div>
