@@ -19,9 +19,11 @@ Simple filters are available through the Channel Filter Creator dialog. Advanced
 A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single `True` or `False` value to decide whether to filter a message. Evaluating to something other than `True` or `False` will lead to all messages being filtered out.
 
 ### Values
-A value can be an integer (`123`, `5`), a string (`"hello"`, `"this is a string"`), a variable (`author.name`, `message.length`), or a list of values (`{123, "hello", author.name}`).
+A value can be an integer (`123`, `5`), a string (`"hello"`, `"this is a string"`), a variable (`author.name`, `message.length`), a list of values (`{123, "hello", author.name}`), or a regular expression (`r"\d\d\d\d"`).
 
 Lists are surrounded by braces (`{}`) and list items are separated by commas. A list item can be a value (e.g. `"hello"`) or an expression wrapped in parentheses (e.g. `(author.sub_length * message.length)`).
+
+Regular expressions are similar to strings, but are denoted with an `r` before the opening quotation mark (e.g. `r"something"`). To make a regular expression case insensitive, use `ri` before the opening question mark (e.g. `ri"something"`).
 
 When a filter is evaluated, variables are replaced with the values they represent.
 
@@ -31,7 +33,8 @@ When a filter is evaluated, variables are replaced with the values they represen
 | - | - |
 | Int | `123`, `5` |
 | String | `"Hello there"`, `"Escaped \" quote"` |
-| List | `{"list item", 123}` |
+| RegEx | `r"\d\d\d\d"`, `ri"something.*"` |
+| List | `{"list item", 123} |
 
 ### Operators
 
@@ -59,6 +62,7 @@ The following operators are available:
 | `contains` | String, List, or Map contains |
 | `startswith` | String or List starts with text or string, respectively |
 | `endswith` | String or List ends with text or string, respectively |
+| `match` | Match string with regular expression |
 | `+` | Add (or string concatenation) |
 | `-` | Subtract |
 | `*` | Multiply |
@@ -104,6 +108,22 @@ Chatterino will try to transform incompatible types for operations, but it isn't
 If two types can't mix, `False` or `0` will be returned, depending on the context. 
 
 Double check the table above to see the types of each variable to prevent unexpected results.
+
+### Regular Expressions
+Chatterino can match string variables to a regular expression, returning whether the expression matched or, optionally, the value of a capture group.
+
+
+#### Simple matching
+`"some string" match r"some regex"` returns `True` or `False`. 
+
+For example: `message.content match r"\d\d"`
+
+#### Group capturing
+`"some string" match {r"some regex", capture number}` returns `False` if no match or the value of the nth captured group.
+
+For example: `message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}` matches the year component of a date like `12/31/2020`. 
+
+`(message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}) == "2020"` will filter only messages that contain a written date with 2020 as the year.
 
 ### About the order of operations
 The order of operations in filters may not be exactly what you expect.
