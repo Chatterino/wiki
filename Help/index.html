@@ -389,8 +389,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-do-i-delete-the-chatterino-cache" class="md-nav__link">
-    How do I delete the Chatterino cache?
+  <a href="#where-is-my-chatterino-folder-located" class="md-nav__link">
+    Where is my Chatterino folder located?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-delete-the-chatterino-cache-settings" class="md-nav__link">
+    How do I delete the Chatterino cache / settings?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-settings-commands-window-layout-are-not-saving" class="md-nav__link">
+    My settings / commands / window layout are not saving
   </a>
   
 </li>
@@ -562,8 +576,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-do-i-delete-the-chatterino-cache" class="md-nav__link">
-    How do I delete the Chatterino cache?
+  <a href="#where-is-my-chatterino-folder-located" class="md-nav__link">
+    Where is my Chatterino folder located?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-delete-the-chatterino-cache-settings" class="md-nav__link">
+    How do I delete the Chatterino cache / settings?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-settings-commands-window-layout-are-not-saving" class="md-nav__link">
+    My settings / commands / window layout are not saving
   </a>
   
 </li>
@@ -646,18 +674,34 @@ Try hitting F5 once to manually refresh the emotes.</p>
 <h3 id="how-do-i-add-chatterino-as-an-obs-dock">How do I add Chatterino as an OBS dock?<a class="headerlink" href="#how-do-i-add-chatterino-as-an-obs-dock" title="Permanent link">&para;</a></h3>
 <p>This is not natively supported, but there is a work around:</p>
 <ol>
-<li>Add a dock into OBS for standard Twitch chat</li>
-<li>Turn on <code>Always on top</code> in Chatterino</li>
-<li>Click the 3 dots up the top of a channel split and click <code>Popup</code></li>
-<li>Move and resize the chat to overlay on top of the standard Twitch chat</li>
+<li>Add a dock into OBS for standard Twitch chat.</li>
+<li>Turn on <code>Always on top</code> in Chatterino.</li>
+<li>Click the 3 dots up the top of a channel split and click <code>Popup</code>.</li>
+<li>Move and resize the chat to overlay on top of the standard Twitch chat.</li>
 </ol>
-<h3 id="how-do-i-delete-the-chatterino-cache">How do I delete the Chatterino cache?<a class="headerlink" href="#how-do-i-delete-the-chatterino-cache" title="Permanent link">&para;</a></h3>
-<p>For <strong>Windows</strong>:
-Delete the <code>%APPDATA%/Chatterino2/Cache</code> folder</p>
-<p>For <strong>Linux</strong>:
-Delete the <code>$HOME/.local/share/chatterino/Cache</code> folder: <code>rm -rf "$HOME/.local/share/chatterino/Cache"</code></p>
-<p>For <strong>Mac</strong>:
-Delete the <code>$HOME/Library/Application Support/chatterino/Cache</code> folder: <code>rm -rf "$HOME/Library/Application Support/chatterino/Cache"</code></p>
+<h3 id="where-is-my-chatterino-folder-located">Where is my Chatterino folder located?<a class="headerlink" href="#where-is-my-chatterino-folder-located" title="Permanent link">&para;</a></h3>
+<p>On <strong>Windows</strong>:
+<code>%APPDATA%/Chatterino2</code></p>
+<p>On <strong>Linux</strong>:
+<code>$HOME/.local/share/chatterino</code></p>
+<p>On <strong>Mac</strong>:
+<code>$HOME/Library/Application Support/chatterino</code></p>
+<h3 id="how-do-i-delete-the-chatterino-cache-settings">How do I delete the Chatterino cache / settings?<a class="headerlink" href="#how-do-i-delete-the-chatterino-cache-settings" title="Permanent link">&para;</a></h3>
+<p>Navigate to your <a href="#where-is-chatterino-folder-located">Chatterino folder</a> and remove corresponding folders.</p>
+<ul>
+<li>The <em>Cache</em> folder contains cached network requests from Chatterino.</li>
+<li>The <em>Logs</em> folder contains chat logs from chats you've had open in Chatterino.</li>
+<li>The <em>Misc</em> folder contains internal information about the current running instance of Chatterino.</li>
+<li>The <em>Settings</em> folder contains any settings you may have configured in Chatterino (e.g. font size, highlight phrases) and your list of channels open.</li>
+</ul>
+<h3 id="my-settings-commands-window-layout-are-not-saving">My settings / commands / window layout are not saving<a class="headerlink" href="#my-settings-commands-window-layout-are-not-saving" title="Permanent link">&para;</a></h3>
+<p>This is usually a case because Chatterino is unable to save settings on your disk. To fix that, try following steps:</p>
+<ol>
+<li>Run Chatterino as Administrator.</li>
+<li>Back up your settings by copying them from your <a href="#where-is-chatterino-folder-located">Chatterino folder</a> to a safe location on your disk and delete them. Restart your computer and try launching Chatterino again.</li>
+<li>Back up your settings, uninstall Chatterino and install it again, but make sure <code>Fresh Install</code> option is checked.</li>
+<li>Try running Chatterino in portable mode.</li>
+</ol>
                 
                   
                     
@@ -666,7 +710,7 @@ Delete the <code>$HOME/Library/Application Support/chatterino/Cache</code> folde
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 30, 2021 11:30:08</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 31, 2021 11:25:01</span>
     
   </small>
 </div>
