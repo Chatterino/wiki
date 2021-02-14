@@ -47,7 +47,7 @@ Try closing splits in Chatterino in order to fix this.
 If you are getting the `Your settings prevent you from sending this whisper` error message, it may be due to:
 
 - You turning on the `Block Whispers from Strangers` option in your [Twitch account security settings](https://www.twitch.tv/settings/security).
-- Your account is too new to be able to whisper users from IRC. If you wish to whisper a user, you must use the Twitch website. This was an IRC spam protection measure put in place by Twitch. This is not a Chatterino bug.
+- Your account is too new to be able to whisper users using IRC. If you wish to whisper a user, you must use the Twitch website. This was an IRC spam protection measure put in place by Twitch. This is not a Chatterino bug.
 
 ### FFZ/BTTV emotes are not working
 You need to be logged in to see emotes.
