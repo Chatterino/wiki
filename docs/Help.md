@@ -7,7 +7,7 @@ Prior to starting on the below, you should first try the basic troubleshooting s
 
 - Ensure that your Chatterino is up to date.
 - [Windows] Try running Chatterino in administrator mode.
-- [Windows] Ensure that you have **BOTH** the x86 and x64 Visual C++ Redistributables installed **AND** have restarted your PC after installation:
+- [Windows] Ensure that you have the x64 Visual C++ Redistributables installed **AND** have restarted your PC after installation:
     - x64: <https://aka.ms/vs/16/release/vc_redist.x64.exe>
     - Chocolatey: `choco install vcredist140`
 
