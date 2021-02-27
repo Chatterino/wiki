@@ -9,7 +9,6 @@ Prior to starting on the below, you should first try the basic troubleshooting s
 - [Windows] Try running Chatterino in administrator mode.
 - [Windows] Ensure that you have **BOTH** the x86 and x64 Visual C++ Redistributables installed **AND** have restarted your PC after installation:
     - x64: <https://aka.ms/vs/16/release/vc_redist.x64.exe>
-    - x86: <https://aka.ms/vs/16/release/vc_redist.x86.exe>
     - Chocolatey: `choco install vcredist140`
 
 ### I am having an issue with the Chatterino extension
