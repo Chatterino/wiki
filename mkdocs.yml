@@ -4,7 +4,17 @@ theme:
   logo: https://chatterino.com/img/icon-256.png
   favicon: https://chatterino.com/img/icon-256.png
   palette:
-    scheme: preference
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
   features:
     - navigation.instant
   icon:
