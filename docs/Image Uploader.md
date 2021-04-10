@@ -34,6 +34,12 @@ Other fields empty.
 |Image link|`{data.link}`|
 |Deletion link|`https://imgur.com/delete/{data.deletehash}`|
 
+You can also upload images to your imgur account by putting the following as `Extra headers`:
+
+Replace `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` with the token which you can obtain [here](https://zneix.eu/imgurauth).
+
+`Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+
 ### s-ul.eu
 Replace `XXXXXXXXXXXXXXX` with your API key from s-ul.eu. It can be found on [your account's configuration page](https://s-ul.eu/account/configurations).
 
