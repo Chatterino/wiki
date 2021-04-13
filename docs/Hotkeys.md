@@ -7,6 +7,8 @@ By default Chatterino contains a set of default *hotkeys*. A hotkey can be descr
 - a key combo,
 - and [arguments][arguments]
 
+![./images/hotkeys/Editing.png](Open quick switcher hotkey being edited)
+
 ### What is a scope
 
 Scopes describe where in the app the hotkey's action take place. For example:
