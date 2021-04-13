@@ -2,7 +2,7 @@
 
 By default Chatterino contains a set of default *hotkeys*. A hotkey can be described using five parameters:
 
-- Its name,
+- Its name
 - A [scope](#scopes)
 - An [action](#actions)
 - A key combo
@@ -22,7 +22,7 @@ Scopes describe where in the app the hotkey's action take place. For example:
 An action simply describes what a hotkey does. For example:
 
 - The **reconnect** action in a Split causes Chatterino to reconnect to Twitch/IRC.
-- the **zoom** action in a Window causes Chatterino to zoom in or out (depending on the [arguments][#hotkey-arguments] given)
+- The **zoom** action in a Window causes Chatterino to zoom in or out (depending on the [arguments][#hotkey-arguments] given)
 
 ### Hotkey Arguments
 
