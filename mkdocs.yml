@@ -1,4 +1,6 @@
 site_name: Chatterino
+extra_css:
+  - stylesheets/extra.css
 theme:
   name: material
   logo: https://chatterino.com/img/icon-256.png
@@ -10,7 +12,7 @@ theme:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+      scheme: chatterino-dark
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode

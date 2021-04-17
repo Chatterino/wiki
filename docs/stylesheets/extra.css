@@ -1,0 +1,16 @@
+[data-md-color-scheme="chatterino-dark"] {
+    --md-default-bg-color:               rgb(37, 36, 36);
+
+    --md-default-fg-color: rgb(212, 212, 212);
+    --md-default-fg-color--light: rgb(240, 240, 240);
+    
+    --md-typeset-a-color: rgb(96, 165, 250);
+
+    --md-primary-fg-color:               rgb(37, 36, 36);
+    --md-primary-fg-color--light:       rgb(242, 242, 242);
+  
+    --md-accent-fg-color:                rgb(96, 165, 250);
+
+    --md-footer-bg-color: rgb(26, 25, 25);
+    --md-footer-bg-color--dark: rgb(26, 25, 25);
+}
