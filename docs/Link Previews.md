@@ -4,7 +4,7 @@ All links go through [github.com/chatterino/api](https://github.com/chatterino/a
 # Enabling
 
 By default link previews are disabled. Turn them on under "Link Previews" in the settings.
-Optionally also turn on thumbnails in your preffered size for an even richer link experience.
+Optionally also turn on thumbnails in your preferred size for an even richer link experience.
 
 ![Link Previews Option](images/linkPreviews/option.png)
 
