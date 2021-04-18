@@ -59,7 +59,8 @@ Chatterino only makes a connection to the necessary APIs to fetch these emotes, 
 - Your network may be having issues connecting to braize. Try restarting your PC and router.
 
 ### How do I get the supporter badge?
-Donate €10 to fourtf [here](https://streamelements.com/fourtf/tip).
+Donate €10 to fourtf [here](https://streamelements.com/fourtf/tip). You should get your badge automatically after some time. Make sure to restart Chatterino and/or [wipe your cache](https://wiki.chatterino.com/Help/#how-do-i-delete-the-chatterino-cache-settings) if you can't see the badge.  
+If you still can't see it, ask fourtf on [Chatterino Discord](https://discord.gg/3vmJRwy) for assistance.
 
 ### Login expired error
 If you're getting the `Login expired for user <user>! Try adding your account again.` error, simply re-add your account and it will start working again.
