@@ -11,9 +11,9 @@ Search for a guide for making a pull request on GitHub if you are new to the pro
 
 In case you want to try and run the wiki locally follow these steps (requires python 3):
 
-- You can use `make serve` or `make serve-venv` to use virtual environment.
+- You can use `make serve` or `make serve-venv` to use a virtual environment.
 
-Or you can run commands manually:
+Or you can run these commands manually:
 
 - _Optionally_ create and enter a virtual environment: `python3 -m venv venv && source venv/bin/activate`
 - Run `pip install -r requirements.txt`
