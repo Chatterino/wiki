@@ -1,15 +1,15 @@
 # Search
 
-Chatterino has Search Popup which lets you quickly find messages in the chat. You can open it with the `Ctrl+F` shortcut.
+Chatterino has a Search Popup which lets you quickly find messages in the chat. You can open it with the `Ctrl+F` shortcut.
 
 ## Search filters
 
-You can use several search filters to narrow down your search:
+You can use several search filters (format `filter:value`) to narrow down your search. `Value` can have multiple comma-separated entries (look at examples below).
 
-- `from:<username>` - shows messages only from certain username. Can be multiple usernames separated with a comma (added in 2.1.4)
-- `has:<flags>` - shows messages only containing specified elements, list of flags (added in 2.1.4):
+- `from:<username>` - shows messages from certain users (added in 2.1.4)
+- `has:<flags>` - shows messages containing specified elements (added in 2.1.4). List of flags:
     - `link` - filters messages with links
-- `in:<channel>` - (useful in `#/mentions` channel) shows messages that originate from certain channels (added in 2.1.4)
+- `in:<channel>` - shows messages that originate from certain channels, useful in `#/mentions` channel (added in 2.3.0)
 
 
 ## Examples
