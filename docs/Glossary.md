@@ -2,6 +2,8 @@
 
 Explain common words used in Chatterino.
 
+## Anatomy of a Chatterino window
+
 ![overview](images/glossary/overview.png)
 
 |Term|Description|
@@ -10,3 +12,14 @@ Explain common words used in Chatterino.
 |Split Header|Contains split title, moderation actions, viewerlist, split menu button and add split button|
 |Split Menu|Settings or actions for the specific split|
 |Tab|Can contain multiple splits|
+
+## Moderation
+
+![moderation](images/glossary/moderation.png)
+
+|Term|Description|
+|-|-|
+|Moderation buttons|Allow you to quickly delete messages, timeout users or execute custom commands. They can be configured in the settings|
+|Moderation mode button|Toggles whether Moderation buttons are shown|
+|Usercard|Contains useful information about a user, action buttons as well as their recent messages|
+|User Timeout Buttons|Allow you time a user out from their Usercard|
