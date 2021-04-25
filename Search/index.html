@@ -14,7 +14,7 @@
     
     
       
-        <title>Link Previews - Chatterino</title>
+        <title>Search - Chatterino</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#enabling" class="md-skip">
+        <a href="#search" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Link Previews
+              Search
             
           </span>
         </div>
@@ -324,21 +324,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Link%20Previews/" class="md-nav__link">
         Link Previews
       </a>
-      
     </li>
   
 
@@ -379,11 +369,85 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Search/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Search
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Search
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#search-filters" class="md-nav__link">
+    Search filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shows-messages-from-user-fourtf-containing-word-merge" class="md-nav__link">
+    Shows messages from user fourtf containing word merge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-messages-from-users-pajbot-and-zneix-that-have-links-containing-word-chatterino" class="md-nav__link">
+    Shows messages from users pajbot and zneix that have links containing word chatterino
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-messages-only-from-channels-pajlada-and-supinic-from-user-supibot" class="md-nav__link">
+    Shows messages only from channels pajlada and supinic from user supibot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -407,6 +471,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#search-filters" class="md-nav__link">
+    Search filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shows-messages-from-user-fourtf-containing-word-merge" class="md-nav__link">
+    Shows messages from user fourtf containing word merge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-messages-from-users-pajbot-and-zneix-that-have-links-containing-word-chatterino" class="md-nav__link">
+    Shows messages from users pajbot and zneix that have links containing word chatterino
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-messages-only-from-channels-pajlada-and-supinic-from-user-supibot" class="md-nav__link">
+    Shows messages only from channels pajlada and supinic from user supibot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -418,29 +531,29 @@
               
                 
                 
-                <p>Link Previews make it easy to check what's behind a link withou visiting the link in the browser.
-All links go through <a href="https://github.com/chatterino/api">github.com/chatterino/api</a> to protect your IP from any leaks.</p>
-<h1 id="enabling">Enabling<a class="headerlink" href="#enabling" title="Permanent link">&para;</a></h1>
-<p>By default link previews are disabled. Turn them on under "Link Previews" in the settings.
-Optionally also turn on thumbnails in your preferred size for an even richer link experience.</p>
-<p><img alt="Link Previews Option" src="../images/linkPreviews/option.png" /></p>
-<h1 id="supported-links">Supported Links<a class="headerlink" href="#supported-links" title="Permanent link">&para;</a></h1>
-<p>By default chatterino will use <a href="https://ogp.me/">Open Graph</a> tags to enrich tooltips. 
-To enhance the tooltips even more we have some custom handling for the following sites:</p>
+                <h1 id="search">Search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h1>
+<p>Chatterino has a Search Popup which lets you quickly find messages in the chat. You can open it with the <code>Ctrl+F</code> shortcut.</p>
+<h2 id="search-filters">Search filters<a class="headerlink" href="#search-filters" title="Permanent link">&para;</a></h2>
+<p>You can use several search filters (format <code>filter:value</code>) to narrow down your search.<br />
+<code>Value</code> can have multiple comma-separated entries (look at examples below).</p>
 <ul>
-<li><a href="https://betterttv.com/">Betterttv</a></li>
-<li><a href="https://discord.com/">Discord</a></li>
-<li><a href="https://www.frankerfacez.com/">FrankerFaceZ</a></li>
-<li><a href="https://imgur.com">Imgur</a></li>
-<li><a href="https://livestreamfails.com/">Livestreamfails</a></li>
-<li><a href="https://supinic.com/">Supinic</a></li>
-<li><a href="https://twitch.tv">Twitch</a></li>
-<li><a href="https://twitter.com">Twitter</a></li>
-<li><a href="https://youtube.com">YouTube</a></li>
-<li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
+<li><code>from:&lt;username&gt;</code> - shows messages from certain users (added in 2.1.4)</li>
+<li><code>has:&lt;flags&gt;</code> - shows messages containing specified elements (added in 2.1.4). List of flags:<ul>
+<li><code>link</code> - filters messages with links</li>
 </ul>
-<h1 id="demo">Demo<a class="headerlink" href="#demo" title="Permanent link">&para;</a></h1>
-<p><img alt="Demo" src="../images/linkPreviews/demo.gif" /></p>
+</li>
+<li><code>in:&lt;channel&gt;</code> - shows messages that originate from certain channels, useful in <code>#/mentions</code> channel (added in 2.3.0)</li>
+</ul>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h4 id="shows-messages-from-user-fourtf-containing-word-merge">Shows messages from user <code>fourtf</code> containing word <code>merge</code><a class="headerlink" href="#shows-messages-from-user-fourtf-containing-word-merge" title="Permanent link">&para;</a></h4>
+<p><code>from:fourtf merge</code><br />
+<img alt="from:fourtf merge" src="../images/search/example1.png" /></p>
+<h4 id="shows-messages-from-users-pajbot-and-zneix-that-have-links-containing-word-chatterino">Shows messages from users <code>pajbot</code> and <code>zneix</code> that have links containing word <code>chatterino</code><a class="headerlink" href="#shows-messages-from-users-pajbot-and-zneix-that-have-links-containing-word-chatterino" title="Permanent link">&para;</a></h4>
+<p><code>has:link from:pajbot,zneix chatterino</code><br />
+<img alt="has:link from:pajbot,zneix chatterino" src="../images/search/example2.png" /></p>
+<h4 id="shows-messages-only-from-channels-pajlada-and-supinic-from-user-supibot">Shows messages only from channels <code>pajlada</code> and <code>supinic</code> from user <code>supibot</code><a class="headerlink" href="#shows-messages-only-from-channels-pajlada-and-supinic-from-user-supibot" title="Permanent link">&para;</a></h4>
+<p><code>in:pajlada,supinic from:supibot</code><br />
+<img alt="in:pajlada,supinic from:supibot" src="../images/search/example3.png" /></p>
                 
                   
                     
@@ -472,7 +585,7 @@ To enhance the tooltips even more we have some custom handling for the following
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../Image%20Uploader/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../Regex/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -481,25 +594,11 @@ To enhance the tooltips even more we have some custom handling for the following
               <span class="md-footer__direction">
                 Previous
               </span>
-              Image Uploader
+              Regex
             </div>
           </div>
         </a>
       
-      
-        <a href="../Moderation/" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Moderation
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
