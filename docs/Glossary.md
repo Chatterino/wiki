@@ -1,6 +1,6 @@
 # Glossary
 
-Explain common words used in chatterino.
+Explain common words used in Chatterino.
 
 ![overview](images/glossary/overview.png)
 
