@@ -104,7 +104,6 @@ This is usually a case because Chatterino is unable to save settings on your dis
 ##### Overview
 Nightly is a "developer release" of Chatterino. It is released every time there's a new change added to source code. It includes some features that may not be available in the latest stable release.
 
-
 ##### Installation
 1. Go to [nightly release page](https://github.com/Chatterino/chatterino2/releases/tag/nightly-build) on GitHub.
 1. Download nightly:
@@ -112,9 +111,9 @@ Nightly is a "developer release" of Chatterino. It is released every time there'
     - For **Linux** download `test-cmake-Chatterino-x86_64.AppImage`
     - For **Mac** download `test-cmake-chatterino-osx.dmg`
 1. Install nightly:
-    - On **Windows** extract it with 7zip / winrar and import files from extracted `Chatterino2` folder to `C:\Program Files\Chatterino` (or whereever is your application installed).
-    - On **Linux** open up download directory in your terminal and execute the following command `chmod +x test-cmake-Chatterino-x86_64.AppImage && sudo mv test-cmake-Chatterino-x86_64.AppImage /usr/local/bin`
-    - On **Mac** open the dmg file and drag Chatterino into the Applications folder.
+    - On **Windows**, right click the archive > `Extract All` > `Extract`. Open the newly extracted folder and move the `Chatterino2` folder to `C:\Program Files\Chatterino` (or wherever is your stable Chatterino installed).
+    - On **Linux**, open up the download directory in your terminal and execute the following command `chmod +x test-cmake-Chatterino-x86_64.AppImage && sudo mv test-cmake-Chatterino-x86_64.AppImage /usr/local/bin`
+    - On **Mac**, open the dmg file and drag Chatterino into the Applications folder.
 
 ##### Updating
 Nightly ignores version checking and it will not attempt to update on its own. Because of that it will not notify you when a new stable update is available. To update, simply repeat steps above. If you want to switch back to stable release, simply download and install it from [Chatterino's website](https://chatterino.com/#downloads).
