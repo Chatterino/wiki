@@ -84,7 +84,7 @@ On **Mac**:
 `$HOME/Library/Application Support/chatterino`
 
 ### How do I delete the Chatterino cache / settings?
-Navigate to your [Chatterino folder](#where-is-chatterino-folder-located) and remove corresponding folders.
+Navigate to your [Chatterino folder](#where-is-my-chatterino-folder-located) and remove corresponding folders.
 
  * The *Cache* folder contains cached network requests from Chatterino.
  * The *Logs* folder contains chat logs from chats you've had open in Chatterino.
