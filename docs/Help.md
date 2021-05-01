@@ -111,7 +111,7 @@ Nightly is a "developer release" of Chatterino. It is released every time there'
     - For **Linux** download `test-cmake-Chatterino-x86_64.AppImage`
     - For **Mac** download `test-cmake-chatterino-osx.dmg`
 1. Install nightly:
-    - On **Windows**, right click the archive > `Extract All` > `Extract`. Open the newly extracted folder and move the `Chatterino2` folder to `C:\Program Files\Chatterino` (or wherever your stable Chatterino is installed).
+    - On **Windows**, right click the archive > `Extract All` > `Extract` (Override files if prompted). Open the newly extracted folder and create a shortcut for the `chatterino.exe` file to the Desktop for easy access.
     - On **Linux**, open up the download directory in your terminal and execute the following command `chmod +x test-cmake-Chatterino-x86_64.AppImage && sudo mv test-cmake-Chatterino-x86_64.AppImage /usr/local/bin`
     - On **Mac**, open the dmg file and drag Chatterino into the Applications folder.
 
