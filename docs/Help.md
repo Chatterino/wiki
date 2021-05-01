@@ -38,7 +38,7 @@ If all else fails, you may be having connection issues to Twitch or your network
 
 <!--### Chatterino is failing to connect to chat-->
 
-### Chatterino is repeatedly dis/connecting from Twitch chat
+### Chatterino is repeatedly disconnecting from Twitch chat
 If you are having troubles with Chatterino repeatedly connecting/disconnecting, it is likely due to the large amount of channels you are connected to. The maximum channel limit is usually around the 100 mark, but may differ from user to user.
 Try closing splits in Chatterino in order to fix this.
 
