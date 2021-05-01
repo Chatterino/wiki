@@ -11,7 +11,7 @@ You can use several search filters (format `filter:value`) to narrow down your s
 - `has:<flags>` - shows messages containing specified elements (added in 2.1.4). List of flags:
     - `link` - filters messages with links
 - `in:<channel>` - shows messages that originate from certain channels, useful in `#/mentions` channel (added in 2.3.0)
-- `is:<flags>` - shows certain types of messages (added in [nightly release](https://github.com/Chatterino/chatterino2/releases/tag/nightly-build)). List of flags:
+- `is:<flags>` - shows certain types of messages (added in [nightly release](../Help/#what-is-nightly-and-how-to-use-install-it)). List of flags:
     - `deleted` or `disabled` - filters deleted messages
     - `sub` or `subscription` - filters subscription messages
     - `timeout` or `ban` - filters moderation messages
