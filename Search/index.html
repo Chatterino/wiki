@@ -454,6 +454,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#shows-subscription-messages" class="md-nav__link">
+    Shows subscription messages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-deleted-messages-containing-word-vanish" class="md-nav__link">
+    Shows deleted messages containing word vanish
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-timeoutban-messages" class="md-nav__link">
+    Shows timeout/ban messages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-highlighted-messages" class="md-nav__link">
+    Shows highlighted messages
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -528,6 +556,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#shows-subscription-messages" class="md-nav__link">
+    Shows subscription messages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-deleted-messages-containing-word-vanish" class="md-nav__link">
+    Shows deleted messages containing word vanish
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-timeoutban-messages" class="md-nav__link">
+    Shows timeout/ban messages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-highlighted-messages" class="md-nav__link">
+    Shows highlighted messages
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -558,6 +614,14 @@
 </ul>
 </li>
 <li><code>in:&lt;channel&gt;</code> - shows messages that originate from certain channels, useful in <code>#/mentions</code> channel (added in 2.3.0)</li>
+<li><code>is:&lt;flags&gt;</code> - shows certain types of messages (added in <a href="../Help/#what-is-nightly-and-how-to-use-install-it">nightly release</a>). List of flags:<ul>
+<li><code>deleted</code> or <code>disabled</code> - filters deleted messages</li>
+<li><code>sub</code> or <code>subscription</code> - filters subscription messages</li>
+<li><code>timeout</code> or <code>ban</code> - filters moderation messages</li>
+<li><code>highlighted</code> - filters highlighted messages</li>
+<li><code>system</code> - filters system messages (grey text ones like: "Now hosting username", "streamer is live", etc.)</li>
+</ul>
+</li>
 </ul>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <h4 id="shows-messages-from-user-fourtf-containing-word-merge">Shows messages from user <code>fourtf</code> containing word <code>merge</code><a class="headerlink" href="#shows-messages-from-user-fourtf-containing-word-merge" title="Permanent link">&para;</a></h4>
@@ -569,6 +633,18 @@
 <h4 id="shows-messages-only-from-channels-pajlada-and-supinic-from-user-supibot">Shows messages only from channels <code>pajlada</code> and <code>supinic</code> from user <code>supibot</code><a class="headerlink" href="#shows-messages-only-from-channels-pajlada-and-supinic-from-user-supibot" title="Permanent link">&para;</a></h4>
 <p><code>in:pajlada,supinic from:supibot</code><br />
 <img alt="in:pajlada,supinic from:supibot" src="../images/search/example3.png" /></p>
+<h4 id="shows-subscription-messages">Shows subscription messages<a class="headerlink" href="#shows-subscription-messages" title="Permanent link">&para;</a></h4>
+<p><code>is:sub</code><br />
+<img alt="is:sub" src="../images/search/example4.png" /></p>
+<h4 id="shows-deleted-messages-containing-word-vanish">Shows deleted messages containing word <code>vanish</code><a class="headerlink" href="#shows-deleted-messages-containing-word-vanish" title="Permanent link">&para;</a></h4>
+<p><code>is:deleted vanish</code><br />
+<img alt="is:deleted vanish" src="../images/search/example5.png" /></p>
+<h4 id="shows-timeoutban-messages">Shows timeout/ban messages<a class="headerlink" href="#shows-timeoutban-messages" title="Permanent link">&para;</a></h4>
+<p><code>is:timeout</code><br />
+<img alt="is:timeout" src="../images/search/example6.png" /></p>
+<h4 id="shows-highlighted-messages">Shows highlighted messages<a class="headerlink" href="#shows-highlighted-messages" title="Permanent link">&para;</a></h4>
+<p><code>is:highlighted</code><br />
+<img alt="is:highlighted" src="../images/search/example7.png" /></p>
                 
                   
                     
@@ -577,7 +653,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 1, 2021 10:45:29</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 1, 2021 12:14:00</span>
     
   </small>
 </div>
