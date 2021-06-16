@@ -1,6 +1,6 @@
 Having issues with Chatterino or need general assistance? Check the below troubleshooting below corresponding to your operating system for assistance!
 
-[Report a bug/issue](https://github.com/Chatterino/chatterino2/issues/new?assignees=&labels=bug%2C+needs+triage&template=bug_report.md&title=) | [Make a feature suggestion](https://github.com/Chatterino/chatterino2/issues/new?assignees=&labels=enhancement%2C+needs+triage&template=feature-suggestion.md&title=) | [Join the Discord](https://discord.gg/3vmJRwy)
+[Report a bug/issue](https://github.com/Chatterino/chatterino2/issues/new?assignees=&labels=bug%2C+needs+triage&template=bug_report.md&title=) | [Make a feature suggestion](https://github.com/Chatterino/chatterino2/issues/new?assignees=&labels=enhancement%2C+needs+triage&template=feature-suggestion.md&title=) | [Join the Discord](https://discord.gg/qq7DDxjste)
 
 ### Basic troubleshooting
 Prior to starting on the below, you should first try the basic troubleshooting steps listed here. These steps can resolve a variety of issues:
@@ -60,7 +60,7 @@ Chatterino only makes a connection to the necessary APIs to fetch these emotes, 
 
 ### How do I get the supporter badge?
 Donate €10 to fourtf [here](https://streamelements.com/fourtf/tip) (can be done in multiple donations). You should get your badge automatically after about 5 minutes. Make sure to restart Chatterino if you can't see the badge.  
-If you still can't see it, ask fourtf on [Chatterino Discord](https://discord.gg/3vmJRwy) for assistance.
+If you still can't see it, ask fourtf on [Chatterino Discord](https://discord.gg/qq7DDxjste) for assistance.
 
 ### Login expired error
 If you're getting the `Login expired for user <user>! Try adding your account again.` error, simply re-add your account and it will start working again.
