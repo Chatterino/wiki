@@ -1,5 +1,6 @@
 site_name: Chatterino
 site_url: https://wiki.chatterino.com
+use_directory_urls: true
 extra_css:
   - stylesheets/extra.css
 theme:
