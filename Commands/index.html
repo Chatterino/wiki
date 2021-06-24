@@ -9,19 +9,21 @@
       
       
       
+        <link rel="canonical" href="https://wiki.chatterino.com/Commands/">
+      
       <link rel="icon" href="https://chatterino.com/logo.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
-        <title>Filters - Chatterino</title>
+        <title>Commands - Chatterino</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -36,7 +38,7 @@
     
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     
       
@@ -57,7 +59,7 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -67,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-to-filters" class="md-skip">
+        <a href="#commands" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +80,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Chatterino" class="md-header__button md-logo" aria-label="Chatterino" data-md-component="logo">
+    <a href=".." title="Chatterino" class="md-header__button md-logo" aria-label="Chatterino" data-md-component="logo">
       
   <img src="https://chatterino.com/logo.png" alt="logo">
 
@@ -96,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Filters
+              Commands
             
           </span>
         </div>
@@ -192,7 +194,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Chatterino" class="md-nav__button md-logo" aria-label="Chatterino" data-md-component="logo">
+    <a href=".." title="Chatterino" class="md-nav__button md-logo" aria-label="Chatterino" data-md-component="logo">
       
   <img src="https://chatterino.com/logo.png" alt="logo">
 
@@ -223,53 +225,8 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href=".." class="md-nav__link">
         Chatterino Wiki
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Commands.html" class="md-nav__link">
-        Commands
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Contributing%20for%20Developers.html" class="md-nav__link">
-        Contribution Guidelines
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Environment%20Variables.html" class="md-nav__link">
-        Environment Variables
       </a>
     </li>
   
@@ -289,20 +246,24 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Filters
+          Commands
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="Filters.html" class="md-nav__link md-nav__link--active">
-        Filters
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Commands
       </a>
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -312,85 +273,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction-to-filters" class="md-nav__link">
-    Introduction to Filters
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-filters" class="md-nav__link">
-    Example filters
+  <a href="#advanced" class="md-nav__link">
+    Advanced
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filter-syntax" class="md-nav__link">
-    Filter syntax
-  </a>
-  
-    <nav class="md-nav" aria-label="Filter syntax">
+    <nav class="md-nav" aria-label="Advanced">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#values" class="md-nav__link">
-    Values
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#operators" class="md-nav__link">
-    Operators
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#variables" class="md-nav__link">
-    Variables
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-types" class="md-nav__link">
-    Data types
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regular-expressions" class="md-nav__link">
-    Regular Expressions
-  </a>
-  
-    <nav class="md-nav" aria-label="Regular Expressions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simple-matching" class="md-nav__link">
-    Simple matching
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#group-capturing" class="md-nav__link">
-    Group capturing
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#about-the-order-of-operations" class="md-nav__link">
-    About the order of operations
+  <a href="#using-placeholders" class="md-nav__link">
+    Using placeholders
   </a>
   
 </li>
@@ -416,7 +315,52 @@
   
   
     <li class="md-nav__item">
-      <a href="Glossary.html" class="md-nav__link">
+      <a href="../Contributing%20for%20Developers/" class="md-nav__link">
+        Contribution Guidelines
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Environment%20Variables/" class="md-nav__link">
+        Environment Variables
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Filters/" class="md-nav__link">
+        Filters
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Glossary/" class="md-nav__link">
         Glossary
       </a>
     </li>
@@ -431,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Help.html" class="md-nav__link">
+      <a href="../Help/" class="md-nav__link">
         Help
       </a>
     </li>
@@ -446,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Image%20Uploader.html" class="md-nav__link">
+      <a href="../Image%20Uploader/" class="md-nav__link">
         Image Uploader
       </a>
     </li>
@@ -461,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Link%20Previews.html" class="md-nav__link">
+      <a href="../Link%20Previews/" class="md-nav__link">
         Link Previews
       </a>
     </li>
@@ -476,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Moderation.html" class="md-nav__link">
+      <a href="../Moderation/" class="md-nav__link">
         Moderation
       </a>
     </li>
@@ -491,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Regex.html" class="md-nav__link">
+      <a href="../Regex/" class="md-nav__link">
         Regex
       </a>
     </li>
@@ -506,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Search.html" class="md-nav__link">
+      <a href="../Search/" class="md-nav__link">
         Search
       </a>
     </li>
@@ -529,6 +473,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -537,85 +483,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction-to-filters" class="md-nav__link">
-    Introduction to Filters
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-filters" class="md-nav__link">
-    Example filters
+  <a href="#advanced" class="md-nav__link">
+    Advanced
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filter-syntax" class="md-nav__link">
-    Filter syntax
-  </a>
-  
-    <nav class="md-nav" aria-label="Filter syntax">
+    <nav class="md-nav" aria-label="Advanced">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#values" class="md-nav__link">
-    Values
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#operators" class="md-nav__link">
-    Operators
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#variables" class="md-nav__link">
-    Variables
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-types" class="md-nav__link">
-    Data types
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regular-expressions" class="md-nav__link">
-    Regular Expressions
-  </a>
-  
-    <nav class="md-nav" aria-label="Regular Expressions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simple-matching" class="md-nav__link">
-    Simple matching
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#group-capturing" class="md-nav__link">
-    Group capturing
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#about-the-order-of-operations" class="md-nav__link">
-    About the order of operations
+  <a href="#using-placeholders" class="md-nav__link">
+    Using placeholders
   </a>
   
 </li>
@@ -638,286 +522,27 @@
               
                 
                 
-                  <h1>Filters</h1>
-                
-                <h2 id="introduction-to-filters">Introduction to Filters<a class="headerlink" href="#introduction-to-filters" title="Permanent link">&para;</a></h2>
-<p>Filters can be applied to splits to provide a selective view of messages. Filters are created in the Settings page and are applied by opening the Split menu (three dots) and selecting "Set filters". Applied filters are saved when you close and open Chatterino.</p>
-<p>Multiple filters can be applied to a Split. A message must pass all applied filters for it to be displayed.</p>
-<p>Simple filters are available through the Channel Filter Creator dialog. Advanced filters take inspiration from many programming languages, and the full description of keywords and operators can be found below.</p>
-<h2 id="example-filters">Example filters<a class="headerlink" href="#example-filters" title="Permanent link">&para;</a></h2>
+                <h1 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h1>
+<p>Commands are used as shortcuts for long messages. If a message starts with the "trigger" then the message will be replaced with the Command.</p>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<p>Add Command <code>Hello chat :)</code> with the trigger <code>/hello</code>. Now typing <code>/hello</code> in chat will send <code>Hello chat :)</code> instead of <code>/hello</code>.</p>
+<h2 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>message.content contains "hello"</code><ul>
-<li>Only messages that contain the phrase <code>hello</code></li>
+<li>The trigger has to be matched at the <strong>start</strong> of the message but there is a setting to also match them at the <strong>end</strong>.</li>
+<li>Triggers don't need to start with <code>/</code></li>
 </ul>
-</li>
-<li><code>message.length &lt; 40 || author.subscribed</code><ul>
-<li>Messages that are less than 40 characters log, OR are sent by a subscriber.</li>
-</ul>
-</li>
-<li><code>channel.name == "somestreamer" &amp;&amp; author.badges contains "moderator"</code><ul>
-<li>Messages that originated in the channel <code>somestreamer</code> AND are from users with a moderator badge</li>
-</ul>
-</li>
-</ul>
-<h2 id="filter-syntax">Filter syntax<a class="headerlink" href="#filter-syntax" title="Permanent link">&para;</a></h2>
-<p>A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single <code>True</code> or <code>False</code> value to decide whether to filter a message. Evaluating to something other than <code>True</code> or <code>False</code> will lead to all messages being filtered out.</p>
-<h3 id="values">Values<a class="headerlink" href="#values" title="Permanent link">&para;</a></h3>
-<p>A value can be an integer (<code>123</code>, <code>5</code>), a string (<code>"hello"</code>, <code>"this is a string"</code>), a variable (<code>author.name</code>, <code>message.length</code>), a list of values (<code>{123, "hello", author.name}</code>), or a regular expression (<code>r"\d\d\d\d"</code>).</p>
-<p>Lists are surrounded by braces (<code>{}</code>) and list items are separated by commas. A list item can be a value (e.g. <code>"hello"</code>) or an expression wrapped in parentheses (e.g. <code>(author.sub_length * message.length)</code>).</p>
-<p>Regular expressions are similar to strings, but are denoted with an <code>r</code> before the opening quotation mark (e.g. <code>r"something"</code>). To make a regular expression case insensitive, use <code>ri</code> before the opening question mark (e.g. <code>ri"something"</code>).</p>
-<p>When a filter is evaluated, variables are replaced with the values they represent.</p>
-<p><strong>Literals:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Int</td>
-<td><code>123</code>, <code>5</code></td>
-</tr>
-<tr>
-<td>String</td>
-<td><code>"Hello there"</code>, <code>"Escaped \" quote"</code></td>
-</tr>
-<tr>
-<td>RegEx</td>
-<td><code>r"\d\d\d\d"</code>, <code>ri"something.*"</code></td>
-</tr>
-<tr>
-<td>List</td>
-<td>`{"list item", 123}</td>
-</tr>
-</tbody>
-</table>
-<h3 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">&para;</a></h3>
-<p>Binary operators act on two values:
-- <code>1 + 2</code>
-- <code>author.subbed &amp;&amp; flags.highlighted</code>
-- <code>"long sentence" contains "ten"</code></p>
-<p>Unary operators act on one value:
-- <code>!author.subbed</code></p>
-<p>The following operators are available:</p>
-<table>
-<thead>
-<tr>
-<th>Operator</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>&amp;&amp;</code></td>
-<td>And</td>
-</tr>
-<tr>
-<td><code>||</code></td>
-<td>Or</td>
-</tr>
-<tr>
-<td><code>!</code></td>
-<td>Not</td>
-</tr>
-<tr>
-<td><code>==</code></td>
-<td>Equals</td>
-</tr>
-<tr>
-<td><code>!=</code></td>
-<td>Not equals</td>
-</tr>
-<tr>
-<td><code>&lt;</code></td>
-<td>Less than</td>
-</tr>
-<tr>
-<td><code>&lt;=</code></td>
-<td>Less than or equal to</td>
-</tr>
-<tr>
-<td><code>&gt;</code></td>
-<td>Greater than</td>
-</tr>
-<tr>
-<td><code>&gt;=</code></td>
-<td>Greater than or equal to</td>
-</tr>
-<tr>
-<td><code>contains</code></td>
-<td>String, List, or Map contains</td>
-</tr>
-<tr>
-<td><code>startswith</code></td>
-<td>String or List starts with text or string, respectively</td>
-</tr>
-<tr>
-<td><code>endswith</code></td>
-<td>String or List ends with text or string, respectively</td>
-</tr>
-<tr>
-<td><code>match</code></td>
-<td>Match string with regular expression</td>
-</tr>
-<tr>
-<td><code>+</code></td>
-<td>Add (or string concatenation)</td>
-</tr>
-<tr>
-<td><code>-</code></td>
-<td>Subtract</td>
-</tr>
-<tr>
-<td><code>*</code></td>
-<td>Multiply</td>
-</tr>
-<tr>
-<td><code>/</code></td>
-<td>Divide (integer)</td>
-</tr>
-<tr>
-<td><code>%</code></td>
-<td>Modulus</td>
-</tr>
-</tbody>
-</table>
-<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
-<p>The following variables are available:</p>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Author</strong></td>
-<td></td>
-<td>User who sent the message</td>
-</tr>
-<tr>
-<td><code>author.badges</code></td>
-<td>List<String></td>
-<td>List of author's badges</td>
-</tr>
-<tr>
-<td><code>author.color</code></td>
-<td>Color*</td>
-<td>Color code of author, or none</td>
-</tr>
-<tr>
-<td><code>author.name</code></td>
-<td>String</td>
-<td>Display name of author</td>
-</tr>
-<tr>
-<td><code>author.no_color</code></td>
-<td>Bool</td>
-<td>Whether the author has no color set (i.e. gray name)</td>
-</tr>
-<tr>
-<td><code>author.subbed</code></td>
-<td>Bool</td>
-<td>Whether author is subscribed</td>
-</tr>
-<tr>
-<td><code>author.sub_length</code></td>
-<td>Int</td>
-<td>How long author has been subscribed (or zero)</td>
-</tr>
-<tr>
-<td><strong>Channel</strong></td>
-<td></td>
-<td>The channel where the message was sent</td>
-</tr>
-<tr>
-<td><code>channel.name</code></td>
-<td>String</td>
-<td>Channel name</td>
-</tr>
-<tr>
-<td><code>channel.watching</code></td>
-<td>Bool</td>
-<td>Whether the channel is being watched (requires Chatterino extension)</td>
-</tr>
-<tr>
-<td><strong>Flags</strong></td>
-<td></td>
-<td>Message-specific flags</td>
-</tr>
-<tr>
-<td><code>flags.highlighted</code></td>
-<td>Bool</td>
-<td>Whether the message is highlighted</td>
-</tr>
-<tr>
-<td><code>flags.points_redeemed</code></td>
-<td>Bool</td>
-<td>Whether the message was redeemed through channel points</td>
-</tr>
-<tr>
-<td><code>flags.sub_message</code></td>
-<td>Bool</td>
-<td>Whether the message is a sub/resub/gift message</td>
-</tr>
-<tr>
-<td><code>flags.system_message</code></td>
-<td>Bool</td>
-<td>Whether the message is a system message (i.e. timeout/ban/info)</td>
-</tr>
-<tr>
-<td><code>flags.whisper</code></td>
-<td>Bool</td>
-<td>Whether the message is a whisper</td>
-</tr>
-<tr>
-<td><strong>Message</strong></td>
-<td></td>
-<td>Actual message sent</td>
-</tr>
-<tr>
-<td><code>message.content</code></td>
-<td>String</td>
-<td>Message content</td>
-</tr>
-<tr>
-<td><code>message.length</code></td>
-<td>Int</td>
-<td>Message length</td>
-</tr>
-</tbody>
-</table>
-<p>*Note: To compare a <code>Color</code>, compare it to a color hex code string: <code>author.color == "#FF0000"</code></p>
-<h3 id="data-types">Data types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h3>
-<p>Generally, data types won't be much of an issue. However, mismatching datatypes can cause confusing results.</p>
-<p>For example: 
-- <code>"abc" + 123 == "abc123"</code> but <code>123 + "abc" != "123abc"</code> 
-- <code>1 + "2" == 3</code> and <code>1 + "2" == "3"</code>. </p>
-<p>Chatterino will try to transform incompatible types for operations, but it isn't always successful.
-If two types can't mix, <code>False</code> or <code>0</code> will be returned, depending on the context. </p>
-<p>Double check the table above to see the types of each variable to prevent unexpected results.</p>
-<h3 id="regular-expressions">Regular Expressions<a class="headerlink" href="#regular-expressions" title="Permanent link">&para;</a></h3>
-<p>Chatterino can match string variables to a regular expression, returning whether the expression matched or, optionally, the value of a capture group.</p>
-<h4 id="simple-matching">Simple matching<a class="headerlink" href="#simple-matching" title="Permanent link">&para;</a></h4>
-<p><code>"some string" match r"some regex"</code> returns <code>True</code> or <code>False</code>. </p>
-<p>For example: <code>message.content match r"\d\d"</code></p>
-<h4 id="group-capturing">Group capturing<a class="headerlink" href="#group-capturing" title="Permanent link">&para;</a></h4>
-<p><code>"some string" match {r"some regex", capture number}</code> returns <code>False</code> if no match or the value of the nth captured group.</p>
-<p>For example: <code>message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}</code> matches the year component of a date like <code>12/31/2020</code>. </p>
-<p><code>(message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}) == "2020"</code> will filter only messages that contain a written date with 2020 as the year.</p>
-<h3 id="about-the-order-of-operations">About the order of operations<a class="headerlink" href="#about-the-order-of-operations" title="Permanent link">&para;</a></h3>
-<p>The order of operations in filters may not be exactly what you expect.</p>
+<h4 id="using-placeholders">Using placeholders<a class="headerlink" href="#using-placeholders" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Expressions in parentheses are evaluated first</li>
-<li>Math operations are evaluated from left to right, not by MDAS. <code>2 + 3 * 4</code> yields <code>20</code>, not <code>14</code>.</li>
-<li><code>a &amp;&amp; b || c &amp;&amp; d</code> is evaluated as <code>(a &amp;&amp; b) || (c &amp;&amp; d)</code></li>
-<li><code>a || b &amp;&amp; c || d</code> is evaluated as <code>a || (b &amp;&amp; c) || d</code></li>
+<li><code>{1}</code>, <code>{2}</code>, <code>{3}</code> and so on can be used to insert the 1st, 2nd, 3rd, ... word after the trigger.</li>
 </ul>
-<p>Basically, if you're unsure about the order of operations, use extra parentheses.</p>
+<p>Example: Add Command <code>/timeout {1} 1</code> with trigger <code>/warn</code>. Now typing <code>/warn user123</code> will send <code>/timeout user123 1</code></p>
+<ul>
+<li>Similarly <code>{1+}</code> and so on can be used to insert all words starting with the 1st, ... word.</li>
+</ul>
+<p>Example: Add Command <code>Have a {1+} day!</code> with trigger <code>/day</code>. Now typing <code>/day very super nice</code> will send <code>Have a very super nice day!</code></p>
+<ul>
+<li>You can use <code>{{1}</code> if you want to send <code>{1}</code> literally.</li>
+</ul>
                 
                   
                     
@@ -926,7 +551,7 @@ If two types can't mix, <code>False</code> or <code>0</code> will be returned, d
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2021 22:36:31</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 24, 2021 13:52:23</span>
       
     
   </small>
@@ -951,7 +576,7 @@ If two types can't mix, <code>False</code> or <code>0</code> will be returned, d
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="Environment%20Variables.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Environment Variables" rel="prev">
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Chatterino Wiki" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -960,20 +585,20 @@ If two types can't mix, <code>False</code> or <code>0</code> will be returned, d
               <span class="md-footer__direction">
                 Previous
               </span>
-              Environment Variables
+              Chatterino Wiki
             </div>
           </div>
         </a>
       
       
         
-        <a href="Glossary.html" class="md-footer__link md-footer__link--next" aria-label="Next: Glossary" rel="next">
+        <a href="../Contributing%20for%20Developers/" class="md-footer__link md-footer__link--next" aria-label="Next: Contribution Guidelines" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Glossary
+              Contribution Guidelines
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1024,10 +649,10 @@ If two types can't mix, <code>False</code> or <code>0</code> will be returned, d
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
       
     
   </body>
