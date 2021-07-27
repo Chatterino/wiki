@@ -65,5 +65,5 @@ Replace `XXXXXXXXXXXXXXX` with your Base64-encoded user and password
 
 
 ### [catbox.moe](https://catbox.moe/)
-it's not possible yet to upload to catbox.moe due to how their upload method is constructed - it requires you to put extra form fields, which unfortunately can't be done in Chatterino's uploader yet
+It's not possible yet to upload to catbox.moe due to how their upload method is constructed. It requires you to add extra form fields, which unfortunately cannot be done in Chatterino's uploader yet.
 
