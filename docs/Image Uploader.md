@@ -4,7 +4,7 @@ You can drag and drop images to Chatterino or paste them from clipboard to uploa
 By default, the image uploader is turned off. You can enable by checking the `Chatterino Settings -> External Tools -> Image Uploader -> Enable image uploader` option and configuring per one of the below options.
 
 Note to advanced users: This module sends multipart-form requests via POST method, so uploading via SFTP/FTP won't work.
-However, popular hosts like [imgur.com](https://imgur.com) are [s-ul.eu](https://s-ul.eu) supported. Scroll down to see example cofiguration.
+However, popular hosts like [imgur.com](https://imgur.com) and [s-ul.eu](https://s-ul.eu) are supported. Scroll down to see example cofiguration.
 
 ## Configuration Explanation
 |Row|Description|
@@ -33,6 +33,12 @@ Other fields empty.
 |Extra headers|`Authorization: Client-ID c898c0bb848ca39`|
 |Image link|`{data.link}`|
 |Deletion link|`https://imgur.com/delete/{data.deletehash}`|
+
+You can also upload images to your imgur account by putting the following as `Extra headers`:
+
+Replace `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` with the token which you can obtain [here](https://zneix.eu/imgurauth).
+
+`Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
 
 ### s-ul.eu
 Replace `XXXXXXXXXXXXXXX` with your API key from s-ul.eu. It can be found on [your account's configuration page](https://s-ul.eu/account/configurations).

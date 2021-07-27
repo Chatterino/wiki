@@ -1,10 +1,24 @@
 site_name: Chatterino
+site_url: https://wiki.chatterino.com
+use_directory_urls: true
+extra_css:
+  - stylesheets/extra.css
 theme:
   name: material
-  logo: https://chatterino.com/img/icon-256.png
-  favicon: https://chatterino.com/img/icon-256.png
+  logo: https://chatterino.com/logo.png
+  favicon: https://chatterino.com/logo.png
   palette:
-    scheme: preference
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: chatterino-dark
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
   features:
     - navigation.instant
   icon:
@@ -23,7 +37,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/discord
-      link: https://discord.gg/3vmJRwy
+      link: https://discord.gg/qq7DDxjste
       name: Discord
     - icon: fontawesome/brands/github
       link: https://github.com/chatterino/chatterino2
