@@ -85,6 +85,7 @@ The following variables are available:
 | **Channel** | | The channel where the message was sent |
 | `channel.name` | String | Channel name |
 | `channel.watching` | Bool | Whether the channel is being watched (requires Chatterino extension) |
+| `channel.live` | Bool | Whether the channel is currently live |
 | **Flags** | | Message-specific flags |
 | `flags.highlighted` | Bool | Whether the message is highlighted |
 | `flags.points_redeemed` | Bool | Whether the message was redeemed through channel points |
