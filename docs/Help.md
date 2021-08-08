@@ -120,3 +120,8 @@ Nightly ignores version checking and it will not attempt to update on its own. B
 
 ##### Issues
 Since nightly is a testing release, it may be a little unstable. If you find any bugs, make sure to report an issue on [GitHub](https://github.com/Chatterino/chatterino2/issues/new/choose). Before opening an issue make sure you're on latest nightly (to check it, go to Settings > About and compare commit hash) and that there's no duplicate issue already open.
+
+#### Fix white Boarders on full screen 
+Right click `chatterino.exe` -> Properties -> Compatibility -> Enable "Run this program in compatibility mode for:" -> Select Windows 8 in the drop-down menu. 
+[Like this](https://i.imgur.com/k4Atgqh.png)
+After applying this the app seems to maximize with no white bar on the second monitor
