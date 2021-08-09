@@ -1,8 +1,12 @@
 Having issues with Chatterino or need general assistance? Check the below troubleshooting below corresponding to your operating system for assistance!
 
-Please search for [existing issues](https://github.com/Chatterino/chatterino2/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) before opening a new one.
+Please search for your problem in the [GitHub Issues][githubissues].  If there
+is no such issue, please create a new one [here][newissue]. If you have more
+questions you can [join the Discord](https://discord.gg/qq7DDxjste)
 
-[Report a bug/issue](https://github.com/Chatterino/chatterino2/issues/new/choose) | [Join the Discord](https://discord.gg/qq7DDxjste)
+[githubissues]: https://github.com/Chatterino/chatterino2/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
+[newissue]: https://github.com/Chatterino/chatterino2/issues/new/choose
+
 
 ### Basic troubleshooting
 Prior to starting on the below, you should first try the basic troubleshooting steps listed here. These steps can resolve a variety of issues:
