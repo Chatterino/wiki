@@ -123,4 +123,4 @@ Since nightly is a testing release, it may be a little unstable. If you find any
 
 ### I see white borders on full screen
 This is a Windows issue it can be mitigated by turning on Compatibility mode for Chatterino. Right click `chatterino.exe` -> Properties -> Compatibility -> Enable "Run this program in compatibility mode for:" -> Select Windows 8 in the drop-down menu. 
-![Like this](images/help/boarders.png)
+![Like this](images/help/borders.png)
