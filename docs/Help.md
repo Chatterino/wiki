@@ -2,7 +2,7 @@ Having issues with Chatterino or need general assistance? Check the below troubl
 
 Please search for your problem in the [GitHub Issues][githubissues].  If there
 is no such issue, please [create a new one][newissue]. If you have more
-questions you can [join the Discord](https://discord.gg/qq7DDxjste).
+questions, feel free to [join the Discord](https://discord.gg/qq7DDxjste).
 
 [githubissues]: https://github.com/Chatterino/chatterino2/issues?q=is%3Aissue+sort%3Aupdated-desc
 [newissue]: https://github.com/Chatterino/chatterino2/issues/new/choose
