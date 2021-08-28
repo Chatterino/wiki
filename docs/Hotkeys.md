@@ -1,6 +1,6 @@
 ## Introduction to Custom Hotkeys
 
-By default Chatterino contains a set of default *hotkeys*. A hotkey can be described using five parameters:
+By default Chatterino contains a set of default _hotkeys_. A hotkey can be described using five parameters:
 
 - Its name
 - A [scope](#scopes)
