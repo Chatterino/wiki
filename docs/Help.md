@@ -1,6 +1,12 @@
 Having issues with Chatterino or need general assistance? Check the below troubleshooting below corresponding to your operating system for assistance!
 
-[Report a bug/issue](https://github.com/Chatterino/chatterino2/issues/new?assignees=&labels=bug%2C+needs+triage&template=bug_report.md&title=) | [Make a feature suggestion](https://github.com/Chatterino/chatterino2/issues/new?assignees=&labels=enhancement%2C+needs+triage&template=feature-suggestion.md&title=) | [Join the Discord](https://discord.gg/qq7DDxjste)
+Please search for your problem in the [GitHub Issues][githubissues].  If there
+is no such issue, please [create a new one][newissue]. If you have more
+questions, feel free to [join the Discord](https://discord.gg/qq7DDxjste).
+
+[githubissues]: https://github.com/Chatterino/chatterino2/issues?q=is%3Aissue+sort%3Aupdated-desc
+[newissue]: https://github.com/Chatterino/chatterino2/issues/new/choose
+
 
 ### Basic troubleshooting
 Prior to starting on the below, you should first try the basic troubleshooting steps listed here. These steps can resolve a variety of issues:
@@ -120,3 +126,7 @@ Nightly ignores version checking and it will not attempt to update on its own. B
 
 ##### Issues
 Since nightly is a testing release, it may be a little unstable. If you find any bugs, make sure to report an issue on [GitHub](https://github.com/Chatterino/chatterino2/issues/new/choose). Before opening an issue make sure you're on latest nightly (to check it, go to Settings > About and compare commit hash) and that there's no duplicate issue already open.
+
+### I see white borders on full screen
+This is a Windows issue, it can be mitigated by turning on Compatibility mode for Chatterino. Right click `chatterino.exe` -> Properties -> Compatibility -> Enable "Run this program in compatibility mode for:" -> Select Windows 8 in the drop-down menu. 
+![Change to Windows 8 in Properties Tab](images/help/borders.png)

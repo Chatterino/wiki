@@ -9,7 +9,7 @@ Simple filters are available through the Channel Filter Creator dialog. Advanced
 ## Example filters
 - `message.content contains "hello"`
     - Only messages that contain the phrase `hello`
-- `message.length < 40 || author.subscribed`
+- `message.length < 40 || author.subbed`
     - Messages that are less than 40 characters log, OR are sent by a subscriber.
 - `channel.name == "somestreamer" && author.badges contains "moderator"`
     - Messages that originated in the channel `somestreamer` AND are from users with a moderator badge
@@ -85,6 +85,7 @@ The following variables are available:
 | **Channel** | | The channel where the message was sent |
 | `channel.name` | String | Channel name |
 | `channel.watching` | Bool | Whether the channel is being watched (requires Chatterino extension) |
+| `channel.live` | Bool | Whether the channel is currently live |
 | **Flags** | | Message-specific flags |
 | `flags.highlighted` | Bool | Whether the message is highlighted |
 | `flags.points_redeemed` | Bool | Whether the message was redeemed through channel points |
