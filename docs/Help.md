@@ -1,5 +1,11 @@
 Having issues with Chatterino or need general assistance? Check the below troubleshooting below corresponding to your operating system for assistance!
 
+
+
+
+
+sdfffffsdfsdf
+
 Please search for your problem in the [GitHub Issues][githubissues].  If there
 is no such issue, please [create a new one][newissue]. If you have more
 questions, feel free to [join the Discord](https://discord.gg/qq7DDxjste).
