@@ -27,7 +27,6 @@ plugins:
   - search
   - git-revision-date-localized:
       type: datetime
-      fallback_to_build_date: true
 repo_url: https://github.com/chatterino/chatterino2
 edit_uri: ""
 markdown_extensions:
