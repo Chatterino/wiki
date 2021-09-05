@@ -20,6 +20,8 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
 
 - You can use `{{1}` if you want to send `{1}` literally.
 
+Placeholders below are available in nightly:
+
 - `{channel}` can be used to insert the name of the current channel
 
     Example: Add Command `/openurl https://twitch.tv/{channel}` with trigger `/openchannel`. Now typing `/openchannel` will open the current channel in your browser.
