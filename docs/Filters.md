@@ -91,7 +91,7 @@ The following variables are available:
 | `flags.points_redeemed` | Bool | Whether the message was redeemed through channel points |
 | `flags.sub_message` | Bool | Whether the message is a sub/resub/gift message |
 | `flags.system_message` | Bool | Whether the message is a system message (i.e. timeout/ban/info) |
-| `flags.reward_message` | Bool | Whether the message is a redeemed channel point reward message |
+| `flags.reward_message` | Bool | Whether the message is a redeemed channel point reward message (available in [nightly](../Help/#what-is-nightly-and-how-to-use-install-it) since [c0f4a410](https://github.com/Chatterino/chatterino2/commit/c0f4a410fab95df6f22c921586d6ed10f2b6dc74)) |
 | `flags.whisper` | Bool | Whether the message is a whisper |
 | **Message** | | Actual message sent |
 | `message.content` | String | Message content |
