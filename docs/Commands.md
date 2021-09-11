@@ -20,7 +20,7 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
 
 - You can use `{{1}` if you want to send `{1}` literally.
 
-Placeholders below are available only in nightly versions of Chatterino:
+Placeholders below are available only in [nightly versions](../Help/#what-is-nightly-and-how-to-use-install-it) of Chatterino:
 
 - `{channel.name}` can be used to insert the name of the current channel
 
