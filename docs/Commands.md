@@ -35,4 +35,4 @@ Placeholders below are available only in [nightly versions](../Help/#what-is-nig
 
 - `{stream.title}` can be used to insert the title set in the current channel
 
-    Example: Add Command `The title is {stream.title}` with trigger
+    Example: Add Command `The title is {stream.title}` with trigger `/title`. Now typing `/title` will send a message like `The title is Programming.S04E74.1440p.MP4-XD.NVENC`
