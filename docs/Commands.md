@@ -20,19 +20,19 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
 
 - You can use `{{1}` if you want to send `{1}` literally.
 
-Placeholders below are available in nightly:
+Placeholders below are available only in nightly versions of Chatterino:
 
-- `{channel}` can be used to insert the name of the current channel
+- `{channel.name}` can be used to insert the name of the current channel
 
-    Example: Add Command `/openurl https://twitch.tv/{channel}` with trigger `/openchannel`. Now typing `/openchannel` will open the current channel in your browser.
+    Example: Add Command `/openurl https://twitch.tv/{channel.name}` with trigger `/openchannel`. Now typing `/openchannel` will open the current channel in your browser.
 
-- `{channelid}` can be used to insert the Twitch account ID of the owner of current channel
-- `{myid}` can be used to insert the Twitch account ID of the currently selected account
-- `{myname}` can be used to insert the Twitch username of the currently selected account
-- `{game}` can be used to insert the game set in the current channel
+- `{channel.id}` can be used to insert the Twitch account ID of the owner of current channel
+- `{my.id}` can be used to insert the Twitch account ID of the currently selected account
+- `{my.name}` can be used to insert the Twitch username of the currently selected account
+- `{stream.game}` can be used to insert the game set in the current channel
 
-    Example: Add Command `I'm currently playing {game}` with trigger `/game`. Now typing `/game` will send a message like `I'm currently playing World of Warcraft`.
+    Example: Add Command `I'm currently playing {stream.game}` with trigger `/game`. Now typing `/game` will send a message like `I'm currently playing World of Warcraft`.
 
-- `{title}` can be used to insert the title set in the current channel
+- `{stream.title}` can be used to insert the title set in the current channel
 
-    Example: Add Command `The title is {title}` with trigger
+    Example: Add Command `The title is {stream.title}` with trigger
