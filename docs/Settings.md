@@ -32,6 +32,6 @@ Navigate to your [Chatterino folder](#where-is-my-chatterino-folder-located) and
 This is usually a case because Chatterino is unable to save settings on your disk. To fix that, try following steps:
 
 1. Run Chatterino as Administrator.
-2. Back up your settings by copying them from your [Chatterino folder](#where-is-chatterino-folder-located) to a safe location on your disk and delete them. Restart your computer and try launching Chatterino again.
+2. Back up your settings by copying them from your [Chatterino folder](#where-is-my-chatterino-folder-located) to a safe location on your disk and delete them. Restart your computer and try launching Chatterino again.
 3. Back up your settings, uninstall Chatterino and install it again, but make sure `Fresh Install` option is checked.
 4. Try running Chatterino in portable mode.
