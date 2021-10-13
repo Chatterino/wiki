@@ -5,7 +5,8 @@ Chatterino has a Search Popup which lets you quickly find messages in the chat. 
 ## Search filters
 
 You can use several search filters (format `filter:value`) to narrow down your search.  
-`Value` can have multiple comma-separated entries (look at examples below).
+`value` can have multiple comma-separated entries (look at examples below).  
+Surround `value` in quotation marks to use whitespaces within it, useful for dealing with the regex filter (added in [nightly release](../Help/#what-is-nightly-and-how-to-use-install-it))
 
 - `from:<username>` - shows messages from certain users (added in 2.1.4)
 - `has:<flags>` - shows messages containing specified elements (added in 2.1.4). List of flags:
@@ -17,6 +18,7 @@ You can use several search filters (format `filter:value`) to narrow down your s
     - `timeout` or `ban` - filters moderation messages
     - `highlighted` - filters highlighted messages
     - `system` - filters system messages (grey text ones like: "Now hosting username", "streamer is live", etc.)
+- `regex:<regex>` - shows messages matching a given regex (added in [nightly release](../Help/#what-is-nightly-and-how-to-use-install-it))
 
 ## Examples
 
@@ -47,3 +49,7 @@ You can use several search filters (format `filter:value`) to narrow down your s
 #### Shows highlighted messages  
 `is:highlighted`  
 ![`is:highlighted`](images/search/example7.png)
+
+#### Shows messages matching a given regex
+`regex:`
+![`regex:`](images/search/example8.png)
