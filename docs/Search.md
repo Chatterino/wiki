@@ -51,5 +51,5 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
 ![`is:highlighted`](images/search/example7.png)
 
 #### Shows messages matching a given regex
-`regex:`
-![`regex:`](images/search/example8.png)
+`regex:^gachi\w*$`  
+![`regex:^gachi\w*$`](images/search/example8.png)
