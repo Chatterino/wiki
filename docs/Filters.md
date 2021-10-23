@@ -77,29 +77,30 @@ The following operators are available:
 
 The following variables are available:
 
-| Variable                | Type         | Description                                                                                              |
-| ----------------------- | ------------ | -------------------------------------------------------------------------------------------------------- |
-| **Author**              |              | User who sent the message                                                                                |
-| `author.badges`         | List<String> | List of author's badges                                                                                  |
-| `author.color`          | Color\*      | Color code of author, or none                                                                            |
-| `author.name`           | String       | Display name of author                                                                                   |
-| `author.no_color`       | Bool         | Whether the author has no color set (i.e. gray name)                                                     |
-| `author.subbed`         | Bool         | Whether author is subscribed                                                                             |
-| `author.sub_length`     | Int          | How long author has been subscribed (or zero)                                                            |
-| **Channel**             |              | The channel where the message was sent                                                                   |
-| `channel.name`          | String       | Channel name                                                                                             |
-| `channel.watching`      | Bool         | Whether the channel is being watched (requires Chatterino extension)                                     |
-| `channel.live`          | Bool         | Whether the channel is currently live                                                                    |
-| **Flags**               |              | Message-specific flags                                                                                   |
-| `flags.highlighted`     | Bool         | Whether the message is highlighted                                                                       |
-| `flags.points_redeemed` | Bool         | Whether the message was redeemed through channel points                                                  |
-| `flags.sub_message`     | Bool         | Whether the message is a sub/resub/gift message                                                          |
-| `flags.system_message`  | Bool         | Whether the message is a system message (i.e. timeout/ban/info)                                          |
-| `flags.reward_message`  | Bool         | Whether the message is a redeemed channel point reward message (available in [nightly] since [c0f4a410]) |
-| `flags.whisper`         | Bool         | Whether the message is a whisper                                                                         |
-| **Message**             |              | Actual message sent                                                                                      |
-| `message.content`       | String       | Message content                                                                                          |
-| `message.length`        | Int          | Message length                                                                                           |
+| Variable                | Type         | Description                                                                                                |
+| ----------------------- | ------------ | ---------------------------------------------------------------------------------------------------------- |
+| **Author**              |              | User who sent the message                                                                                  |
+| `author.badges`         | List<String> | List of author's badges                                                                                    |
+| `author.color`          | Color\*      | Color code of author, or none                                                                              |
+| `author.name`           | String       | Display name of author                                                                                     |
+| `author.no_color`       | Bool         | Whether the author has no color set (i.e. gray name)                                                       |
+| `author.subbed`         | Bool         | Whether author is subscribed                                                                               |
+| `author.sub_length`     | Int          | How long author has been subscribed (or zero)                                                              |
+| **Channel**             |              | The channel where the message was sent                                                                     |
+| `channel.name`          | String       | Channel name                                                                                               |
+| `channel.watching`      | Bool         | Whether the channel is being watched (requires Chatterino extension)                                       |
+| `channel.live`          | Bool         | Whether the channel is currently live                                                                      |
+| **Flags**               |              | Message-specific flags                                                                                     |
+| `flags.highlighted`     | Bool         | Whether the message is highlighted                                                                         |
+| `flags.points_redeemed` | Bool         | Whether the message was redeemed through channel points                                                    |
+| `flags.sub_message`     | Bool         | Whether the message is a sub/resub/gift message                                                            |
+| `flags.system_message`  | Bool         | Whether the message is a system message (i.e. timeout/ban/info)                                            |
+| `flags.reward_message`  | Bool         | Whether the message is a redeemed channel point reward message (available in [nightly] since [c0f4a410])   |
+| `flags.first_message`   | Bool         | Whether the message is the author's first message in the channel (available in [nightly] since [e033f8e4]) |
+| `flags.whisper`         | Bool         | Whether the message is a whisper                                                                           |
+| **Message**             |              | Actual message sent                                                                                        |
+| `message.content`       | String       | Message content                                                                                            |
+| `message.length`        | Int          | Message length                                                                                             |
 
 \*Note: To compare a `Color`, compare it to a color hex code string: `author.color == "#FF0000"`
 
@@ -148,3 +149,4 @@ Basically, if you're unsure about the order of operations, use extra parentheses
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
 [c0f4a410]: https://github.com/Chatterino/chatterino2/commit/c0f4a410fab95df6f22c921586d6ed10f2b6dc74
+[e033f8e4]: https://github.com/Chatterino/chatterino2/commit/e033f8e43eea9cf52df84c93ed8a8464667b4153
