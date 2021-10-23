@@ -672,18 +672,12 @@
 <p>Simple filters are available through the Channel Filter Creator dialog. Advanced filters take inspiration from many programming languages, and the full description of keywords and operators can be found below.</p>
 <h2 id="example-filters">Example filters<a class="headerlink" href="#example-filters" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>message.content contains "hello"</code><ul>
+<li><code>message.content contains "hello"</code></li>
 <li>Only messages that contain the phrase <code>hello</code></li>
-</ul>
-</li>
-<li><code>message.length &lt; 40 || author.subbed</code><ul>
+<li><code>message.length &lt; 40 || author.subbed</code></li>
 <li>Messages that are less than 40 characters log, OR are sent by a subscriber.</li>
-</ul>
-</li>
-<li><code>channel.name == "somestreamer" &amp;&amp; author.badges contains "moderator"</code><ul>
+<li><code>channel.name == "somestreamer" &amp;&amp; author.badges contains "moderator"</code></li>
 <li>Messages that originated in the channel <code>somestreamer</code> AND are from users with a moderator badge</li>
-</ul>
-</li>
 </ul>
 <h2 id="filter-syntax">Filter syntax<a class="headerlink" href="#filter-syntax" title="Permanent link">&para;</a></h2>
 <p>A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single <code>True</code> or <code>False</code> value to decide whether to filter a message. Evaluating to something other than <code>True</code> or <code>False</code> will lead to all messages being filtered out.</p>
@@ -720,12 +714,16 @@
 </tbody>
 </table>
 <h3 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">&para;</a></h3>
-<p>Binary operators act on two values:
-- <code>1 + 2</code>
-- <code>author.subbed &amp;&amp; flags.highlighted</code>
-- <code>"long sentence" contains "ten"</code></p>
-<p>Unary operators act on one value:
-- <code>!author.subbed</code></p>
+<p>Binary operators act on two values:</p>
+<ul>
+<li><code>1 + 2</code></li>
+<li><code>author.subbed &amp;&amp; flags.highlighted</code></li>
+<li><code>"long sentence" contains "ten"</code></li>
+</ul>
+<p>Unary operators act on one value:</p>
+<ul>
+<li><code>!author.subbed</code></li>
+</ul>
 <p>The following operators are available:</p>
 <table>
 <thead>
@@ -930,20 +928,22 @@
 <p>*Note: To compare a <code>Color</code>, compare it to a color hex code string: <code>author.color == "#FF0000"</code></p>
 <h3 id="data-types">Data types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h3>
 <p>Generally, data types won't be much of an issue. However, mismatching datatypes can cause confusing results.</p>
-<p>For example: 
-- <code>"abc" + 123 == "abc123"</code> but <code>123 + "abc" != "123abc"</code> 
-- <code>1 + "2" == 3</code> and <code>1 + "2" == "3"</code>. </p>
+<p>For example:</p>
+<ul>
+<li><code>"abc" + 123 == "abc123"</code> but <code>123 + "abc" != "123abc"</code></li>
+<li><code>1 + "2" == 3</code> and <code>1 + "2" == "3"</code>.</li>
+</ul>
 <p>Chatterino will try to transform incompatible types for operations, but it isn't always successful.
-If two types can't mix, <code>False</code> or <code>0</code> will be returned, depending on the context. </p>
+If two types can't mix, <code>False</code> or <code>0</code> will be returned, depending on the context.</p>
 <p>Double check the table above to see the types of each variable to prevent unexpected results.</p>
 <h3 id="regular-expressions">Regular Expressions<a class="headerlink" href="#regular-expressions" title="Permanent link">&para;</a></h3>
 <p>Chatterino can match string variables to a regular expression, returning whether the expression matched or, optionally, the value of a capture group.</p>
 <h4 id="simple-matching">Simple matching<a class="headerlink" href="#simple-matching" title="Permanent link">&para;</a></h4>
-<p><code>"some string" match r"some regex"</code> returns <code>True</code> or <code>False</code>. </p>
+<p><code>"some string" match r"some regex"</code> returns <code>True</code> or <code>False</code>.</p>
 <p>For example: <code>message.content match r"\d\d"</code></p>
 <h4 id="group-capturing">Group capturing<a class="headerlink" href="#group-capturing" title="Permanent link">&para;</a></h4>
 <p><code>"some string" match {r"some regex", capture number}</code> returns <code>False</code> if no match or the value of the nth captured group.</p>
-<p>For example: <code>message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}</code> matches the year component of a date like <code>12/31/2020</code>. </p>
+<p>For example: <code>message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}</code> matches the year component of a date like <code>12/31/2020</code>.</p>
 <p><code>(message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}) == "2020"</code> will filter only messages that contain a written date with 2020 as the year.</p>
 <h3 id="about-the-order-of-operations">About the order of operations<a class="headerlink" href="#about-the-order-of-operations" title="Permanent link">&para;</a></h3>
 <p>The order of operations in filters may not be exactly what you expect.</p>
@@ -962,7 +962,7 @@ If two types can't mix, <code>False</code> or <code>0</code> will be returned, d
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 19, 2021 08:40:56</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 23, 2021 11:01:26</span>
       
     
   </small>
