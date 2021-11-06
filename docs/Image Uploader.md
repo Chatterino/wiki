@@ -4,7 +4,7 @@ You can drag and drop images to Chatterino or paste them from clipboard to uploa
 By default, the image uploader is turned off. You can enable by checking the `Chatterino Settings -> External Tools -> Image Uploader -> Enable image uploader` option and configuring per one of the below options.
 
 Note to advanced users: This module sends multipart-form requests via POST method, so uploading via SFTP/FTP won't work.
-However, popular hosts like [imgur.com](https://imgur.com) are [s-ul.eu](https://s-ul.eu) supported. Scroll down to see example cofiguration.
+However, popular hosts like [imgur.com](https://imgur.com) and [s-ul.eu](https://s-ul.eu) are supported. Scroll down to see example cofiguration.
 
 ## Configuration Explanation
 |Row|Description|
