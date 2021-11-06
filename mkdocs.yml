@@ -21,6 +21,7 @@ theme:
 
   features:
     - navigation.instant
+    - navigation.top
   icon:
     repo: fontawesome/brands/github
 plugins:

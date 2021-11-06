@@ -12,7 +12,7 @@ Basic patterns:
 |`x+`       |`x`, repeated any number of times but at least 1|
 |`^`        |The start of the text|
 |`$`        |The end of the text|
-|`x\|y`      |`x` or `y`|
+|`x|y`      |`x` or `y`|
 
 You can group multiple statements with `()`:
 
