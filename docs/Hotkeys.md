@@ -12,7 +12,7 @@ By default Chatterino contains a set of default _hotkeys_. A hotkey can be descr
 
 ### Categories
 
-Categories describe where in the app the hotkey's action take place. For example:
+Categories describe where in the app the hotkeys action takes place. For example:
 
 - Sending a message by pressing enter takes place in the **Split input box**,
 - Closing the current split takes place in the current **Split**.
@@ -22,7 +22,7 @@ Categories describe where in the app the hotkey's action take place. For example
 An action simply describes what a hotkey does. For example:
 
 - The **Reconnect to chat** action in a Split causes Chatterino to reconnect to Twitch/IRC.
-- The **Zoom in/out** action in a Window causes Chatterino to zoom in or out (depending on the [arguments][#hotkey-arguments] given)
+- The **Zoom in/out** action in a Window causes Chatterino to zoom in or out (depending on the [arguments](#hotkey-arguments) given)
 
 ### Hotkey Arguments
 
