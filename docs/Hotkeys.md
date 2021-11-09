@@ -22,7 +22,7 @@ Categories describe where in the app the hotkeys action takes place. For example
 An action simply describes what a hotkey does. For example:
 
 - The **Reconnect to chat** action in a Split causes Chatterino to reconnect to Twitch/IRC.
-- The **Zoom in/out** action in a Window causes Chatterino to zoom in or out (depending on the [arguments](#hotkey-arguments) given)
+- The **Zoom in/out** action in a Window causes Chatterino to zoom in or out (depending on the [arguments](#arguments) given)
 
 ### Keybindings
 
