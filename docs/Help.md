@@ -71,6 +71,11 @@ If you still can't see it, ask fourtf on [Chatterino Discord](https://discord.gg
 ### Login expired error
 If you're getting the `Login expired for user <user>! Try adding your account again.` error, simply re-add your account and it will start working again.
 
+
+### "Always on top" crashes on linux.
+right click on the top of the title bar and press on always on top
+
+
 ### How do I add Chatterino as an OBS dock?
 This is not natively supported, but there is a work around:
 
