@@ -69,7 +69,8 @@ Donate €10 to fourtf [here](https://streamelements.com/fourtf/tip) (can be don
 If you still can't see it, ask fourtf on [Chatterino Discord](https://discord.gg/qq7DDxjste) for assistance.
 
 ### How do I disable the supporter badge?
-login to the [manage page] (https://manage.chatterino.com/) and click on disable your Chatterino badge
+Log in to the [badge manager](https://manage.chatterino.com/) and click on *Disable My Chatterino Badge*.
+
 ### Login expired error
 If you're getting the `Login expired for user <user>! Try adding your account again.` error, simply re-add your account and it will start working again.
 
