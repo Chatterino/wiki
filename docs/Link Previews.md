@@ -1,5 +1,13 @@
+# Link Previews
+
 Link Previews make it easy to check what's behind a link without visiting the link in the browser.
 All links go through [github.com/chatterino/api](https://github.com/chatterino/api) to protect your IP from any leaks.
+
+# Privacy Policy & Terms of Service
+
+Enabling this feature means your client will send additional data to our API to power this feature.  
+You should read the [Privacy Policy](https://braize.pajlada.com/chatterino/legal/privacy-policy) and [Terms of Service](https://braize.pajlada.com/chatterino/legal/terms-of-service) before enabling this feature.  
+If you have any questions about this, please contact us through the [GitHub repo](https://github.com/Chatterino/chatterino2/issues/new/choose).
 
 # Enabling
 
@@ -10,7 +18,7 @@ Optionally also turn on thumbnails in your preferred size for an even richer lin
 
 # Supported Links
 
-By default chatterino will use [Open Graph](https://ogp.me/) tags to enrich tooltips. 
+By default chatterino will use [Open Graph](https://ogp.me/) tags to enrich tooltips.
 To enhance the tooltips even more, we have custom integrations for the following sites:
 
 - [Betterttv](https://betterttv.com/)
