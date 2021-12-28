@@ -1,3 +1,5 @@
+# Link Previews
+
 Link Previews make it easy to check what's behind a link without visiting the link in the browser.
 All links go through [github.com/chatterino/api](https://github.com/chatterino/api) to protect your IP from any leaks.
 
