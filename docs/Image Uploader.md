@@ -4,7 +4,7 @@ You can drag and drop images to Chatterino or paste them from clipboard to uploa
 By default, the image uploader is turned off. You can enable by checking the `Chatterino Settings -> External Tools -> Image Uploader -> Enable image uploader` option and configuring per one of the below options.
 
 Note to advanced users: This module sends multipart-form requests via POST method, so uploading via SFTP/FTP won't work.
-However, popular hosts like [imgur.com](https://imgur.com) and [s-ul.eu](https://s-ul.eu) are supported. Scroll down to see example cofiguration.
+However, popular hosts like [imgur.com](https://imgur.com), [s-ul.eu](https://s-ul.eu) and [ctrlv.link](https://ctrlv.link) are supported. Scroll down to see example cofiguration.
 
 ## Configuration Explanation
 |Row|Description|
@@ -16,6 +16,16 @@ However, popular hosts like [imgur.com](https://imgur.com) and [s-ul.eu](https:/
 |Deletion link|Same as above.|
 
 ## Examples
+### ctrlv.link
+|Row|Description|
+|-|-|
+|Request URL|`https://ctrlv.link/upload.php`|
+|Form field|`img`|
+|Image link|`https://ctrlv.link/{link}`|
+|Deletion link|`https://ctrlv.link/delete.php?token={token}&id={link}`|
+
+You can also replace ctrlv.link with ctrlv.cz or ctrlv.sk to your language convenience.
+
 ### i.nuuls.com
 
 |Row|Description|
