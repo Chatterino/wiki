@@ -21,7 +21,7 @@ Optionally also turn on thumbnails in your preferred size for an even richer lin
 By default chatterino will use [Open Graph](https://ogp.me/) tags to enrich tooltips.
 To enhance the tooltips even more, we have custom integrations for the following sites:
 
-- [Betterttv](https://betterttv.com/)
+- [BetterTTV](https://betterttv.com/)
 - [Discord](https://discord.com/)
 - [FrankerFaceZ](https://www.frankerfacez.com/)
 - [Imgur](https://imgur.com)

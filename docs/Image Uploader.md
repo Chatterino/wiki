@@ -4,12 +4,12 @@ You can drag and drop images to Chatterino or paste them from clipboard to uploa
 By default, the image uploader is turned off. You can enable by checking the `Chatterino Settings -> External Tools -> Image Uploader -> Enable image uploader` option and configuring per one of the below options.
 
 Note to advanced users: This module sends multipart-form requests via POST method, so uploading via SFTP/FTP won't work.
-However, popular hosts like [imgur.com](https://imgur.com) and [s-ul.eu](https://s-ul.eu) are supported. Scroll down to see example cofiguration.
+However, popular hosts like [imgur.com](https://imgur.com) and [s-ul.eu](https://s-ul.eu) are supported. Scroll down to see example configuration.
 
 ## Configuration Explanation
 |Row|Description|
 |-|-|
-|Request URL|Link to an API endpoint, which is requested by chatterino. Any needed URL parameters should be included here.|
+|Request URL|Link to an API endpoint, which is requested by Chatterino. Any needed URL parameters should be included here.|
 |Form field|Name of a field, which contains image data.|
 |Extra headers|Extra headers, that will be included in the request. Header name and value must be separated by colon (`:`). Multiple headers need to be separated with semicolons (`;`).<br>Example: `Authorization: supaKey ; NextHeader: value`.|
 |Image link|Schema that tells where is the link in service's response. Leave empty if server's response is just the link itself. Refer to json properties by `{property}`. Supports dot-notation, example: `{property.anotherProperty}`.|
