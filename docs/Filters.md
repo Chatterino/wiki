@@ -17,7 +17,7 @@ Simple filters are available through the Channel Filter Creator dialog. Advanced
 
 ## Filter syntax
 
-A filter must be a valid expression. An expression is composed of conditions and values which are evaluated to a single `True` or `False` value to decide whether to filter a message. Evaluating to something other than `True` or `False` will lead to all messages being filtered out.
+A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single `True` or `False` value to decide whether to filter a message. Evaluating to something other than `True` or `False` will lead to all messages being filtered out.
 
 ### Values
 

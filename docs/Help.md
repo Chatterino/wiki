@@ -11,7 +11,7 @@ questions, feel free to [join the Discord](https://discord.gg/qq7DDxjste).
 ### Basic troubleshooting
 Prior to starting on the below, you should first try the basic troubleshooting steps listed here. These steps can resolve a variety of issues:
 
-- Ensure that your Chatterino is up-to-date.
+- Ensure that your Chatterino is up to date.
 - [Windows] Try running Chatterino in administrator mode.
 - [Windows] Ensure that you have the x64 Visual C++ Redistributables installed **AND** have restarted your PC after installation:
     - x64: <https://aka.ms/vs/16/release/vc_redist.x64.exe>
@@ -22,7 +22,7 @@ Chatterino extension issues should be posted [here](https://github.com/Chatterin
 
 ### Chatterino not starting/Crashing upon startup
 - [Windows] Try running Chatterino in administrator mode.
-- [Windows] Adding Chatterino to your antivirus/malware whitelist.
+- [Windows] Adding Chatterino to your anti-virus/malware whitelist.
 - [Windows] If nothing else works, try resetting your settings using the `Fresh Install` option in the installer.
 
 ### Does using Chatterino accumulate Twitch channel points?
@@ -72,7 +72,7 @@ If you still can't see it, ask fourtf on [Chatterino Discord](https://discord.gg
 Log in to the [badge manager](https://manage.chatterino.com/) and click on *Disable My Chatterino Badge*.
 
 ### Login expired error
-If you're getting the `Login expired for user <user>! Try adding your account again.` error, simply re-add your account, and it will start working again.
+If you're getting the `Login expired for user <user>! Try adding your account again.` error, simply re-add your account and it will start working again.
 
 ### How do I add Chatterino as an OBS dock?
 This is not natively supported, but there is a workaround:
@@ -99,7 +99,7 @@ Nightly is a "developer release" of Chatterino. It is released every time there'
     - On **Mac**, open the dmg file and drag Chatterino into the Applications folder.
 
 ##### Updating
-Nightly ignores version checking, and it will not attempt to update on its own. Because of that it will not notify you when a new stable update is available. To update, repeat steps above. If you want to switch back to stable release, download and install it from [Chatterino's website](https://chatterino.com/#downloads).
+Nightly ignores version checking and it will not attempt to update on its own. Because of that it will not notify you when a new stable update is available. To update, repeat steps above. If you want to switch back to stable release, download and install it from [Chatterino's website](https://chatterino.com/#downloads).
 
 ##### Issues
 Since nightly is a testing release, it may be a little unstable. If you find any bugs, make sure to report an issue on [GitHub](https://github.com/Chatterino/chatterino2/issues/new/choose). Before opening an issue make sure you're on latest nightly (to check it, go to Settings > About and compare commit hash) and that there's no duplicate issue already open.

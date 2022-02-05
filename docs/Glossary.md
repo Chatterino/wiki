@@ -9,7 +9,7 @@ Explain common words used in Chatterino.
 |Term|Description|
 |-|-|
 |Split|Includes the chat, input field and a split header|
-|Split Header|Contains split title, moderation actions, Viewer List, split menu button and add split button|
+|Split Header|Contains split title, moderation actions, viewer list, split menu button and add split button|
 |Split Menu|Settings or actions for the specific split|
 |Tab|Can contain multiple splits|
 
