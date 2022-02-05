@@ -62,3 +62,14 @@ Replace `XXXXXXXXXXXXXXX` with your Base64-encoded user and password
 |Extra headers|`Authorization: Basic XXXXXXXXXXXXXXX`|
 |Image link||
 |Deletion link||
+
+### [ctrlv.link](https://ctrlv.link)
+Ctrlv is fast printscreen sharing service. It hosts any image for month by default.
+
+|Row|Description|
+|-|-|
+|Request URL|`https://ctrlv.link/upload.php`|
+|Form field|`img`|
+|Extra headers||
+|Image link|`https://ctrlv.link/{link}`|
+|Deletion link|`https://ctrlv.link/delete.php?token={token}&id={link}`|
