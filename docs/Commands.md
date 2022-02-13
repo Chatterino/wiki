@@ -34,11 +34,11 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
 - `{my.id}` can be used to insert the Twitch account ID of the currently selected account.  
   _Available in [nightly][nightly] since [9b9fd7d][com1]._
 
-- `{stream.title}` can be used to insert the title set in the current channel.  
+- `{stream.title}` can be used to insert the title set in the current channel. Only works if the channel is live.  
   Example: Add Command `The title is {stream.title}` with trigger `/title`. Now typing `/title` will send a message like `The title is Programming.S04E74.1440p.MP4-XD.NVENC`  
   _Available in [nightly][nightly] since [9b9fd7d][com1]._
 
-- `{stream.game}` can be used to insert the game set in the current channel.  
+- `{stream.game}` can be used to insert the game set in the current channel. Only works if the channel is live.  
   Example: Add Command `I'm currently playing {stream.game}` with trigger `/game`. Now typing `/game` will send a message like `I'm currently playing World of Warcraft`.  
   _Available in [nightly][nightly] since [9b9fd7d][com1]._
 
