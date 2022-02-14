@@ -696,7 +696,7 @@
 <h3 id="values">Values<a class="headerlink" href="#values" title="Permanent link">&para;</a></h3>
 <p>A value can be an integer (<code>123</code>, <code>5</code>), a string (<code>"hello"</code>, <code>"this is a string"</code>), a variable (<code>author.name</code>, <code>message.length</code>), a list of values (<code>{123, "hello", author.name}</code>), or a regular expression (<code>r"\d\d\d\d"</code>).</p>
 <p>Lists are surrounded by braces (<code>{}</code>) and list items are separated by commas. A list item can be a value (e.g. <code>"hello"</code>) or an expression wrapped in parentheses (e.g. <code>(author.sub_length * message.length)</code>).</p>
-<p>Regular expressions are similar to strings, but are denoted with an <code>r</code> before the opening quotation mark (e.g. <code>r"something"</code>). To make a regular expression case insensitive, use <code>ri</code> before the opening quotation mark (e.g. <code>ri"something"</code>).</p>
+<p>Regular expressions are similar to strings, but are denoted with an <code>r</code> before the opening quotation mark (e.g. <code>r"something"</code>). To make a regular expression case-insensitive, use <code>ri</code> before the opening quotation mark (e.g. <code>ri"something"</code>).</p>
 <p>When a filter is evaluated, variables are replaced with the values they represent.</p>
 <p><strong>Literals:</strong></p>
 <table>
@@ -944,7 +944,7 @@
 </table>
 <p>*Note: To compare a <code>Color</code>, compare it to a color hex code string: <code>author.color == "#FF0000"</code></p>
 <h3 id="data-types">Data types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h3>
-<p>Generally, data types won't be much of an issue. However, mismatching datatypes can cause confusing results.</p>
+<p>Generally, data types won't be much of an issue. However, mismatching data types can cause confusing results.</p>
 <p>For example:</p>
 <ul>
 <li><code>"abc" + 123 == "abc123"</code> but <code>123 + "abc" != "123abc"</code></li>
@@ -977,7 +977,7 @@ If two types can't mix, <code>False</code> or <code>0</code> will be returned, d
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 14, 2022 08:14:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 14, 2022 08:18:44</span>
       
     
   </small>
