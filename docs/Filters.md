@@ -25,7 +25,7 @@ A value can be an integer (`123`, `5`), a string (`"hello"`, `"this is a string"
 
 Lists are surrounded by braces (`{}`) and list items are separated by commas. A list item can be a value (e.g. `"hello"`) or an expression wrapped in parentheses (e.g. `(author.sub_length * message.length)`).
 
-Regular expressions are similar to strings, but are denoted with an `r` before the opening quotation mark (e.g. `r"something"`). To make a regular expression case insensitive, use `ri` before the opening quotation mark (e.g. `ri"something"`).
+Regular expressions are similar to strings, but are denoted with an `r` before the opening quotation mark (e.g. `r"something"`). To make a regular expression case-insensitive, use `ri` before the opening quotation mark (e.g. `ri"something"`).
 
 When a filter is evaluated, variables are replaced with the values they represent.
 
@@ -106,7 +106,7 @@ The following variables are available:
 
 ### Data types
 
-Generally, data types won't be much of an issue. However, mismatching datatypes can cause confusing results.
+Generally, data types won't be much of an issue. However, mismatching data types can cause confusing results.
 
 For example:
 

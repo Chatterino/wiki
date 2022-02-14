@@ -1,6 +1,6 @@
 ## Introduction to Hotkeys
 
-By default Chatterino contains a set of default hotkeys. A hotkey can be described using five parameters:
+By default, Chatterino contains a set of default hotkeys. A hotkey can be described using five parameters:
 
 - Its name
 - A [category](#categories)

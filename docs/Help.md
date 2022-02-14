@@ -75,7 +75,7 @@ Log in to the [badge manager](https://manage.chatterino.com/) and click on *Disa
 If you're getting the `Login expired for user <user>! Try adding your account again.` error, simply re-add your account and it will start working again.
 
 ### How do I add Chatterino as an OBS dock?
-This is not natively supported, but there is a work around:
+This is not natively supported, but there is a workaround:
 
 1. Add a dock into OBS for standard Twitch chat.
 2. Turn on `Always on top` in Chatterino.
@@ -94,7 +94,7 @@ Nightly is a "developer release" of Chatterino. It is released every time there'
     - For **Linux** download `test-cmake-Chatterino-x86_64.AppImage`
     - For **Mac** download `test-cmake-chatterino-osx.dmg`
 1. Install nightly:
-    - On **Windows**, right click the archive > `Extract All` > `Extract` (Override files if prompted). Open the newly extracted folder and create a shortcut for the `chatterino.exe` file to the Desktop for easy access.
+    - On **Windows**, right-click the archive > `Extract All` > `Extract` (Override files if prompted). Open the newly extracted folder and create a shortcut for the `chatterino.exe` file to the Desktop for easy access.
     - On **Linux**, open up the download directory in your terminal and execute the following command `chmod +x test-cmake-Chatterino-x86_64.AppImage && sudo mv test-cmake-Chatterino-x86_64.AppImage /usr/local/bin`
     - On **Mac**, open the dmg file and drag Chatterino into the Applications folder.
 
