@@ -1,3 +1,6 @@
+# unsupported sites
+# catbox.moe
+It's not possible yet to upload to catbox.moe due to how their upload method is constructed.
 # Image Uploader
 You can drag and drop images to Chatterino or paste them from clipboard to upload them to an external service.
 
@@ -64,6 +67,5 @@ Replace `XXXXXXXXXXXXXXX` with your Base64-encoded user and password
 |Deletion link||
 
 
-### [catbox.moe](https://catbox.moe/)
-It's not possible yet to upload to catbox.moe due to how their upload method is constructed. It requires you to add extra form fields, which unfortunately cannot be done in Chatterino's uploader yet.
+
 
