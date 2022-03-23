@@ -15,14 +15,14 @@ Moderators are able to log all the channels they are in using the logging featur
 ![Logging](./images/moderation/logging.png)
 
 ## Moderation Mode
-Moderation mode is enabled by clicking ![ModModeDisabled](./images/moderation/modModeDisabled.png){: width=18; height=18 } in a channel that you moderate. Available variables are `{user.name}`, `{msg.id}` & `{channel.name}`. Below is a list of examples that can be used:
+Moderation mode is enabled by clicking ![ModModeDisabled](./images/moderation/modModeDisabled.png){: width=18; height=18 } in a channel that you moderate. Available variables are `{user.name}`, `{msg-id}` & `{channel.name}`. Below is a list of examples that can be used:
 
 | Function | Action |
 | - | - |
 | Ban a user | `/ban {user.name}` |
 | Unban a user | `/unban {user.name}` |
 | Timeout a user | `/timeout {user.name} 600` |
-| Delete a user's message | `/delete {msg.id}` |
+| Delete a user's message | `/delete {msg-id}` |
 | pajbot2 report | `/w botname #{channel.name} !report {user.name} being rude` |
 | pajbot2 longreport | `/w botname #{channel.name} !longreport {user.name} being very rude` |
 | Open the user's usercard | `/user {user.name}` |
