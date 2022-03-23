@@ -26,6 +26,7 @@ Moderation mode is enabled by clicking ![ModModeDisabled](./images/moderation/mo
 | pajbot2 report | `/w botname #{channel.name} !report {user.name} being rude` |
 | pajbot2 longreport | `/w botname #{channel.name} !longreport {user.name} being very rude` |
 | Open the user's usercard | `/user {user.name}` |
+
 ###### As of [nightly][nightly] [9b9fd7d][com1] `{msg.id}` can also be used. <a name="note-1"></a>
 
 ## User Timeout Buttons
