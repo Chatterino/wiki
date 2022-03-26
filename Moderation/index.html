@@ -568,7 +568,7 @@
 <p>Moderators are able to log all the channels they are in using the logging feature.</p>
 <p><img alt="Logging" src="../images/moderation/logging.png" /></p>
 <h2 id="moderation-mode">Moderation Mode<a class="headerlink" href="#moderation-mode" title="Permanent link">&para;</a></h2>
-<p>Moderation mode is enabled by clicking <img alt="ModModeDisabled" height="18" src="../images/moderation/modModeDisabled.png" width="18;" /> in a channel that you moderate. Available variables are <code>{user.name}</code>, <code>{msg.id}</code> &amp; <code>{channel.name}</code>. Below is a list of examples that can be used:</p>
+<p>Moderation mode is enabled by clicking <img alt="ModModeDisabled" height="18" src="../images/moderation/modModeDisabled.png" width="18;" /> in a channel that you moderate. Available variables are <code>{user.name}</code>, <code>{msg-id}</code>¹ &amp; <code>{channel.name}</code>. Below is a list of examples that can be used:</p>
 <table>
 <thead>
 <tr>
@@ -591,7 +591,7 @@
 </tr>
 <tr>
 <td>Delete a user's message</td>
-<td><code>/delete {msg.id}</code></td>
+<td><code>/delete {msg-id}</code>¹</td>
 </tr>
 <tr>
 <td>pajbot2 report</td>
@@ -607,6 +607,9 @@
 </tr>
 </tbody>
 </table>
+<ol>
+<li>As of <a href="../Help/#what-is-nightly-and-how-to-use-install-it">nightly</a> <a href="https://github.com/Chatterino/chatterino2/commit/9b9fd7d403a0b3bd047ba7134de158c4e2fecbc7">9b9fd7d</a> <code>{msg.id}</code> can also be used.</li>
+</ol>
 <h2 id="user-timeout-buttons">User Timeout Buttons<a class="headerlink" href="#user-timeout-buttons" title="Permanent link">&para;</a></h2>
 <p>User timeout buttons are very useful while looking at a user's logs. All 8 buttons can be configured to various timeout lengths:</p>
 <p><img alt="UserTimeoutButtonsConfig" src="../images/moderation/userTimeoutButtonsConfig.png" /></p>
@@ -618,7 +621,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 26, 2022 00:10:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 26, 2022 12:13:34</span>
       
     
   </small>
