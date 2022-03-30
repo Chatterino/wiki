@@ -62,9 +62,6 @@ Replace `XXXXXXXXXXXXXXX` with your Base64-encoded user and password
 |Extra headers|`Authorization: Basic XXXXXXXXXXXXXXX`|
 |Image link||
 |Deletion link||
-# unsupported sites
-# catbox.moe
-It's not possible yet to upload to catbox.moe due to how their upload method is constructed.
 
-
-
+# Unsupported sites
+- `catbox.moe`: It's not possible yet to upload to catbox.moe due to how their upload method is constructed.
