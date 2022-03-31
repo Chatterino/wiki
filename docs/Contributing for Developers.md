@@ -1,5 +1,5 @@
 # Contribution Guidelines
-This is a set of guidelines for contributing to Chatterino. The goal is to teach programmers without C++ background (java/python/etc.), people who haven't used Qt or otherwise have different experience the idioms of the codebase. Thus we will focus on those which are different from those other environments. There are extra guidelines available [here](https://hackmd.io/@fourtf/chatterino-pendantic-guidelines) but they are considered as extras and not as important.
+This is a set of guidelines for contributing to Chatterino. The goal is to teach programmers without C++ background (java/python/etc.), people who haven't used Qt or otherwise have different experience the idioms of the codebase. Thus, we will focus on those which are different from those other environments. There are extra guidelines available [here](https://hackmd.io/@fourtf/chatterino-pendantic-guidelines), but they are considered as extras and not as important.
 
 ## Tooling
 Formatting

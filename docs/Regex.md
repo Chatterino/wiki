@@ -1,6 +1,8 @@
 # Regex
 _Regular expressions_ (or short _regexes_) are often used to check if a text matches a certain pattern. For example the regex `ab?c` would match `abc` or `ac`, but not `abbc` or `123`. In Chatterino, you can use them to highlight messages (and more) based on complex conditions.
 
+You can try out your regex patterns on a website like [regex101](https://regex101.com), using the `PCRE2` flavor.
+
 Basic patterns:
 
 |Pattern    |Matches|
@@ -10,7 +12,7 @@ Basic patterns:
 |`x+`       |`x`, repeated any number of times but at least 1|
 |`^`        |The start of the text|
 |`$`        |The end of the text|
-|`x\|y`      |`x` or `y`|
+|`x|y`      |`x` or `y`|
 
 You can group multiple statements with `()`:
 
@@ -42,6 +44,3 @@ Special patterns:
 |`\S`       |Not spaces, tabs, etc.|
 |`\b`       |Word boundaries (between \w and \W)|
 |`\B`       |Non-word boundaries|
-
-
-You can try out your regex pattern on websites like [regex101](https://regex101.com).

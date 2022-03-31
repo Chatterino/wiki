@@ -1,6 +1,12 @@
 Having issues with Chatterino or need general assistance? Check the below troubleshooting below corresponding to your operating system for assistance!
 
-[Report a bug/issue](https://github.com/Chatterino/chatterino2/issues/new?assignees=&labels=bug%2C+needs+triage&template=bug_report.md&title=) | [Make a feature suggestion](https://github.com/Chatterino/chatterino2/issues/new?assignees=&labels=enhancement%2C+needs+triage&template=feature-suggestion.md&title=) | [Join the Discord](https://discord.gg/qq7DDxjste)
+Please search for your problem in the [GitHub Issues][githubissues].  If there
+is no such issue, please [create a new one][newissue]. If you have more
+questions, feel free to [join the Discord](https://discord.gg/qq7DDxjste).
+
+[githubissues]: https://github.com/Chatterino/chatterino2/issues?q=is%3Aissue+sort%3Aupdated-desc
+[newissue]: https://github.com/Chatterino/chatterino2/issues/new/choose
+
 
 ### Basic troubleshooting
 Prior to starting on the below, you should first try the basic troubleshooting steps listed here. These steps can resolve a variety of issues:
@@ -62,42 +68,19 @@ Chatterino only makes a connection to the necessary APIs to fetch these emotes, 
 Donate €10 to fourtf [here](https://streamelements.com/fourtf/tip) (can be done in multiple donations). You should get your badge automatically after about 5 minutes. Make sure to restart Chatterino if you can't see the badge.  
 If you still can't see it, ask fourtf on [Chatterino Discord](https://discord.gg/qq7DDxjste) for assistance.
 
+### How do I disable the supporter badge?
+Log in to the [badge manager](https://manage.chatterino.com/) and click on *Disable My Chatterino Badge*.
+
 ### Login expired error
 If you're getting the `Login expired for user <user>! Try adding your account again.` error, simply re-add your account and it will start working again.
 
 ### How do I add Chatterino as an OBS dock?
-This is not natively supported, but there is a work around:
+This is not natively supported, but there is a workaround:
 
 1. Add a dock into OBS for standard Twitch chat.
 2. Turn on `Always on top` in Chatterino.
 3. Click the 3 dots up the top of a channel split and click `Popup`.
 4. Move and resize the chat to overlay on top of the standard Twitch chat.
-
-### Where is my Chatterino folder located?
-On **Windows**:
-`%APPDATA%/Chatterino2`
-
-On **Linux**:
-`$HOME/.local/share/chatterino`
-
-On **Mac**:
-`$HOME/Library/Application Support/chatterino`
-
-### How do I delete the Chatterino cache / settings?
-Navigate to your [Chatterino folder](#where-is-my-chatterino-folder-located) and remove corresponding folders.
-
- * The *Cache* folder contains cached network requests from Chatterino.
- * The *Logs* folder contains chat logs from chats you've had open in Chatterino.
- * The *Misc* folder contains internal information about the current running instance of Chatterino.
- * The *Settings* folder contains any settings you may have configured in Chatterino (e.g. font size, highlight phrases) and your list of channels open.
-
-### My settings / commands / window layout are not saving
-This is usually a case because Chatterino is unable to save settings on your disk. To fix that, try following steps:
-
-1. Run Chatterino as Administrator.
-2. Back up your settings by copying them from your [Chatterino folder](#where-is-chatterino-folder-located) to a safe location on your disk and delete them. Restart your computer and try launching Chatterino again.
-3. Back up your settings, uninstall Chatterino and install it again, but make sure `Fresh Install` option is checked.
-4. Try running Chatterino in portable mode.
 
 ### What is nightly and how to use / install it
 
@@ -111,7 +94,7 @@ Nightly is a "developer release" of Chatterino. It is released every time there'
     - For **Linux** download `test-cmake-Chatterino-x86_64.AppImage`
     - For **Mac** download `test-cmake-chatterino-osx.dmg`
 1. Install nightly:
-    - On **Windows**, right click the archive > `Extract All` > `Extract` (Override files if prompted). Open the newly extracted folder and create a shortcut for the `chatterino.exe` file to the Desktop for easy access.
+    - On **Windows**, right-click the archive > `Extract All` > `Extract` (Override files if prompted). Open the newly extracted folder and create a shortcut for the `chatterino.exe` file to the Desktop for easy access.
     - On **Linux**, open up the download directory in your terminal and execute the following command `chmod +x test-cmake-Chatterino-x86_64.AppImage && sudo mv test-cmake-Chatterino-x86_64.AppImage /usr/local/bin`
     - On **Mac**, open the dmg file and drag Chatterino into the Applications folder.
 
@@ -120,3 +103,7 @@ Nightly ignores version checking and it will not attempt to update on its own. B
 
 ##### Issues
 Since nightly is a testing release, it may be a little unstable. If you find any bugs, make sure to report an issue on [GitHub](https://github.com/Chatterino/chatterino2/issues/new/choose). Before opening an issue make sure you're on latest nightly (to check it, go to Settings > About and compare commit hash) and that there's no duplicate issue already open.
+
+### I see white borders on full screen
+This is a Windows issue, it can be mitigated by turning on Compatibility mode for Chatterino. Right click `chatterino.exe` -> Properties -> Compatibility -> Enable "Run this program in compatibility mode for:" -> Select Windows 8 in the drop-down menu. 
+![Change to Windows 8 in Properties Tab](images/help/borders.png)
