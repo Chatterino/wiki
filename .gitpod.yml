@@ -1,0 +1,4 @@
+image: gitpod/workspace-python
+
+tasks:
+  - init: make
