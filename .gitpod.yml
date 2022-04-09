@@ -2,3 +2,7 @@ image: gitpod/workspace-python
 
 tasks:
   - init: make
+
+ports:
+  - port: 8000
+    onOpen: open-preview
