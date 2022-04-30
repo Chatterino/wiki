@@ -18,6 +18,7 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
     - `timeout` or `ban` - filters moderation messages
     - `highlighted` - filters highlighted messages
     - `system` - filters system messages (grey text ones like: "Now hosting username", "streamer is live", etc.)
+    - `first-msg` - filters a user's first message in the channel (added in [nightly release](../Help/#what-is-nightly-and-how-to-use-install-it))
 - `regex:<regex>` - shows messages matching a given regex (added in [nightly release](../Help/#what-is-nightly-and-how-to-use-install-it))
 
 ## Examples
