@@ -4,7 +4,7 @@ Commands are used as shortcuts for long messages. If a message starts with the "
 
 ## Built-in commands
 
-Chatterino comes with default commands to perform actions TODO
+Chatterino comes with a collection of built-in commands to help with channel management, Twitch interaction, and other misc. features.
 
 ### `/block` & `/unblock`
 
