@@ -2,11 +2,17 @@
 
 Commands are used as shortcuts for long messages. If a message starts with the "trigger" then the message will be replaced with the Command.
 
-#### Example
+## Built-in commands
+
+Chatterino comes with default commands to perform actions TODO
+
+## Custom commands
+
+### Example
 
 Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in chat will send `Hello chat :)` instead of `/hello`.
 
-## Advanced
+### Advanced
 
 - The trigger has to be matched at the **start** of the message but there is a setting to also match them at the **end**.
 - Triggers don't need to start with `/`
