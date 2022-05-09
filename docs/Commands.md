@@ -48,10 +48,6 @@ Usage: `/fakemsg <raw message>`
 
 Displays the provided IRC messsage in chat as if it was sent from Twitch's IRC server.
 
-### `/follow` & `/unfollow`
-
-TODO: put a description in here with a note about it being removed for people that are confused?
-
 ### `/ignore` & `/uningore`
 
 Usage: `/(ignore|unignore) <user>`
