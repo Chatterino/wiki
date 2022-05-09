@@ -58,7 +58,7 @@ Ignores or unignores messages for the specified user on Twitch. Ignoring will hi
 
 Usage: `/marker`
 
-Moderator only, creates a [stream marker](https://help.twitch.tv/s/article/creating-highlights-and-stream-markers?language=en_US#markers) in the current stream. Streamer must be live to create markers.
+[Editor](https://help.twitch.tv/s/article/Managing-Roles-for-your-Channel#types) only, creates a [stream marker](https://help.twitch.tv/s/article/creating-highlights-and-stream-markers?language=en_US#markers) in the current stream. Streamer must be live to create markers.
 
 ### `/openurl`
 
