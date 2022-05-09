@@ -47,13 +47,6 @@ Moderator only, deletes a message in chat with the provided ID. Usually used in 
 Usage: `/fakemsg <raw message>`
 
 Displays the provided IRC messsage in chat as if it was sent from Twitch's IRC server.
-
-### `/ignore` & `/uningore`
-
-Usage: `/(ignore|unignore) <user>`
-
-Ignores or unignores messages for the specified user on Twitch. Ignoring will hide that user's messages/whispers. For more information about ignoring, see [Twitch's help article](https://help.twitch.tv/s/article/how-to-manage-harassment-in-chat?language=en_US#UseTheIgnoreFeature).
-
 ### `/marker`
 
 Usage: `/marker`
