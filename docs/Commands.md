@@ -8,83 +8,121 @@ Chatterino comes with default commands to perform actions TODO
 
 ### `/block` & `/unblock`
 
-TODO
+Usage: `/(block|unblock) <user>` 
+
+Blocks or unblocks the specified user. Blocking will hide that user's messages/whispers as well as disassociate them from you on Twitch. For more information about blocking, see [Twitch's help article](https://help.twitch.tv/s/article/how-to-manage-harassment-in-chat?language=en_US#BlockWhispersandMessagesfromStrangers).
 
 ### `/chatters`
 
-TODO
+Usage: `/chatters`
+
+Shows the total amount of chatters currently connected to the channel.
 
 ### `/clearmessages`
 
-TODO
+Usage: `/clearmessages`
+
+Clears all messages from the current split/channel. This command is purely visual and is not related to the clearchat moderator command. 
 
 ### `/clip`
 
-TODO
+Usage: `/clip`
+
+Creates a clip from the last 30 seconds of the current channel. Also provides an edit link to edit a clip from the current point in time.
 
 ### `/debug-args`
 
-TODO
+Usage: `/debug-args`
+
+Displays the arguments that chatterino was launched with.
 
 ### `/delete`
 
-TODO
+Usage: `/delete <msg-id>`
+
+Moderator only, deletes a message in chat with the provided ID. Usually used in mod actions as they can pass through the message ID.
 
 ### `/fakemsg`
 
-TODO
+Usage: `/fakemsg <raw message>`
+
+Displays the provided IRC messsage in chat as if it was sent from Twitch's IRC server.
 
 ### `/follow` & `/unfollow`
 
-TODO (removed in v2.3.4)
+TODO: put a description in here with a note about it being removed for people that are confused?
 
 ### `/ignore` & `/uningore`
 
-TODO
+Usage: `/(ignore|unignore) <user>`
+
+Ignores or unignores messages for the specified user on Twitch. Ignoring will hide that user's messages/whispers. For more information about ignoring, see [Twitch's help article](https://help.twitch.tv/s/article/how-to-manage-harassment-in-chat?language=en_US#UseTheIgnoreFeature).
 
 ### `/marker`
 
-TODO
+Usage: `/marker`
+
+Moderator only, creates a [stream marker](https://help.twitch.tv/s/article/creating-highlights-and-stream-markers?language=en_US#markers) in the current stream. Streamer must be live to create markers.
 
 ### `/openurl`
 
-TODO
+Usage: `/openurl`
+
+Opens a URL in the default web browser. Useful in custom commands.
 
 ### `/popout`
 
-TODO
+Usage: `/popout [channel]`
+
+Opens the current channel or provided channel's chat in Twitch's popout webchat, using your default browser.
 
 ### `/popup`
 
-TODO
+Usage: `/popup [channel]`
+
+Opens the current channel or provided channel's chat in a new window.
 
 ### `/setgame`
 
-TODO
+Usage: `/setgame <game>`
+
+Broadcaster only, sets the current channel's game to the best match of the provided game name.
 
 ### `/settitle`
 
-TODO
+Usage: `/settitle <title>`
+
+Broadcaster only, sets the current channel's title to the provided text.
 
 ### `/streamlink`
 
-TODO
+Usage: `/streamlink [channel]`
+
+Attempts to open current or specified stream in streamlink. For more information, see [Streamlink's website](https://streamlink.github.io/).
 
 ### `/uptime`
 
-TODO
+Usage: `/uptime`
+
+Displays the uptime of the current channel's livestream.
 
 ### `/user`
 
-TODO
+Usage: `/user <user> [channel]`
+
+Opens the specified user's Twitch usercard for the given channel (or the channel provided) in the default browser.
 
 ### `/usercard`
 
-TODO
+Usage: `/user <user> [channel]`
 
-### `/w`
+Opens the specified user's Chatterino usercard for the given channel or the channel provided.
 
-TODO
+### `/w (Whisper)`
+
+Usage: `/w <user> <message>`
+
+Whispers the provided text to a user on Twitch. See [Chatterino's whisper FAQ item](https://wiki.chatterino.com/Help/#i-am-unable-to-send-whispers-from-chatterino) for whisper-related issues.
 
 ## Custom commands
 
