@@ -6,6 +6,86 @@ Commands are used as shortcuts for long messages. If a message starts with the "
 
 Chatterino comes with default commands to perform actions TODO
 
+### `/block` & `/unblock`
+
+TODO
+
+### `/chatters`
+
+TODO
+
+### `/clearmessages`
+
+TODO
+
+### `/clip`
+
+TODO
+
+### `/debug-args`
+
+TODO
+
+### `/delete`
+
+TODO
+
+### `/fakemsg`
+
+TODO
+
+### `/follow` & `/unfollow`
+
+TODO (removed in v2.3.4)
+
+### `/ignore` & `/uningore`
+
+TODO
+
+### `/marker`
+
+TODO
+
+### `/openurl`
+
+TODO
+
+### `/popout`
+
+TODO
+
+### `/popup`
+
+TODO
+
+### `/setgame`
+
+TODO
+
+### `/settitle`
+
+TODO
+
+### `/streamlink`
+
+TODO
+
+### `/uptime`
+
+TODO
+
+### `/user`
+
+TODO
+
+### `/usercard`
+
+TODO
+
+### `/w`
+
+TODO
+
 ## Custom commands
 
 ### Example
