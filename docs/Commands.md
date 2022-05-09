@@ -22,7 +22,7 @@ Shows the total amount of chatters currently connected to the channel.
 
 Usage: `/clearmessages`
 
-Clears all messages from the current split/channel. This command is purely visual and is not related to the clearchat moderator command. 
+Clears all messages from the current split/channel. This command is purely visual and is not related to the `/clear` moderator command. 
 
 ### `/clip`
 
