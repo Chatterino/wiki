@@ -29,8 +29,8 @@ To enhance the tooltips even more, we have custom integrations for the following
 - [Supinic](https://supinic.com/)
 - [Twitch](https://twitch.tv)
 - [Twitter](https://twitter.com)
-- [YouTube](https://youtube.com)
 - [Wikipedia](https://www.wikipedia.org/)
+- [YouTube](https://youtube.com)
 
 # Demo
 
