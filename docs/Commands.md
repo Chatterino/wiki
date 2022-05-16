@@ -71,6 +71,12 @@ Usage: `/popup [channel]`
 
 Opens the current channel or provided channel's chat in a new window.
 
+### `/r`
+
+Usage: `/r <message>`
+
+Replies to the last received whisper.
+
 ### `/setgame`
 
 Usage: `/setgame <game>`
