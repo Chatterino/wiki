@@ -2,11 +2,131 @@
 
 Commands are used as shortcuts for long messages. If a message starts with the "trigger" then the message will be replaced with the Command.
 
-#### Example
+## Built-in commands
+
+Chatterino comes with a collection of built-in commands to help with channel management, Twitch interaction, and other misc. features.
+
+### `/block` & `/unblock`
+
+Usage: `/(block|unblock) <user>` 
+
+Blocks or unblocks the specified user. Blocking will hide that user's messages/whispers as well as disassociate them from you on Twitch. For more information about blocking, see [Twitch's help article](https://help.twitch.tv/s/article/how-to-manage-harassment-in-chat?language=en_US#BlockWhispersandMessagesfromStrangers).
+
+### `/chatters`
+
+Usage: `/chatters`
+
+Shows the total amount of chatters currently connected to the channel.
+
+### `/clearmessages`
+
+Usage: `/clearmessages`
+
+Clears all messages from the current split/channel. This command is purely visual and is not related to the `/clear` moderator command. 
+
+### `/clip`
+
+Usage: `/clip`
+
+Creates a clip from the last 30 seconds of the current channel. Also provides an edit link to edit a clip from the current point in time.
+
+### `/debug-args`
+
+Usage: `/debug-args`
+
+Displays the arguments that chatterino was launched with.
+
+### `/delete`
+
+Usage: `/delete <msg-id>`
+
+Moderator only, deletes a message in chat with the provided ID. Usually used in mod actions as they can pass through the message ID.
+
+### `/fakemsg`
+
+Usage: `/fakemsg <raw message>`
+
+Displays the provided IRC messsage in chat as if it was sent from Twitch's IRC server.
+
+### `/marker`
+
+Usage: `/marker`
+
+[Editor](https://help.twitch.tv/s/article/Managing-Roles-for-your-Channel#types) only, creates a [stream marker](https://help.twitch.tv/s/article/creating-highlights-and-stream-markers?language=en_US#markers) in the current stream. Streamer must be live to create markers.
+
+### `/openurl`
+
+Usage: `/openurl <url>`
+
+Opens a URL in the default web browser. Useful in custom commands.
+
+### `/popout`
+
+Usage: `/popout [channel]`
+
+Opens the current channel or provided channel's chat in Twitch's popout webchat, using your default browser.
+
+### `/popup`
+
+Usage: `/popup [channel]`
+
+Opens the current channel or provided channel's chat in a new window.
+
+### `/r`
+
+Usage: `/r <message>`
+
+Replies to the last received whisper.
+
+### `/setgame`
+
+Usage: `/setgame <game>`
+
+Broadcaster only, sets the current channel's game to the best match of the provided game name.
+
+### `/settitle`
+
+Usage: `/settitle <title>`
+
+Broadcaster only, sets the current channel's title to the provided text.
+
+### `/streamlink`
+
+Usage: `/streamlink [channel]`
+
+Attempts to open current or specified stream in streamlink. For more information, see [Streamlink's website](https://streamlink.github.io/).
+
+### `/uptime`
+
+Usage: `/uptime`
+
+Displays the uptime of the current channel's livestream.
+
+### `/user`
+
+Usage: `/user <user> [channel]`
+
+Opens the specified user's Twitch usercard for the given channel (or the channel provided) in the default browser.
+
+### `/usercard`
+
+Usage: `/usercard <user> [channel]`
+
+Opens the specified user's Chatterino usercard for the given channel or the channel provided.
+
+### `/w` (Whisper)
+
+Usage: `/w <user> <message>`
+
+Whispers the provided text to a user on Twitch. See [Chatterino's whisper FAQ item](https://wiki.chatterino.com/Help/#i-am-unable-to-send-whispers-from-chatterino) for whisper-related issues.
+
+## Custom commands
+
+### Example
 
 Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in chat will send `Hello chat :)` instead of `/hello`.
 
-## Advanced
+### Advanced
 
 - The trigger has to be matched at the **start** of the message but there is a setting to also match them at the **end**.
 - Triggers don't need to start with `/`
