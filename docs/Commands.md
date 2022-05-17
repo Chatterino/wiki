@@ -47,6 +47,7 @@ Moderator only, deletes a message in chat with the provided ID. Usually used in 
 Usage: `/fakemsg <raw message>`
 
 Displays the provided IRC messsage in chat as if it was sent from Twitch's IRC server.
+
 ### `/marker`
 
 Usage: `/marker`
