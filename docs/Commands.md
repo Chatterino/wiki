@@ -56,7 +56,7 @@ Usage: `/marker`
 
 ### `/openurl`
 
-Usage: `/openurl`
+Usage: `/openurl <url>`
 
 Opens a URL in the default web browser. Useful in custom commands.
 
