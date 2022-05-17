@@ -114,7 +114,7 @@ Usage: `/usercard <user> [channel]`
 
 Opens the specified user's Chatterino usercard for the given channel or the channel provided.
 
-### `/w (Whisper)`
+### `/w` (Whisper)
 
 Usage: `/w <user> <message>`
 
