@@ -110,7 +110,7 @@ Opens the specified user's Twitch usercard for the given channel (or the channel
 
 ### `/usercard`
 
-Usage: `/user <user> [channel]`
+Usage: `/usercard <user> [channel]`
 
 Opens the specified user's Chatterino usercard for the given channel or the channel provided.
 
