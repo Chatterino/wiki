@@ -15,7 +15,7 @@ Moderators are able to log all the channels they are in using the logging featur
 ![Logging](./images/moderation/logging.png)
 
 ## Moderation Mode
-Moderation mode is enabled by clicking ![ModModeDisabled](./images/moderation/modModeDisabled.png){: width=18; height=18 } in a channel that you moderate. Available variables are `{user.name}`, `{msg-id}`¹ & `{channel.name}`. Below is a list of examples that can be used:
+Moderation mode is enabled by clicking ![ModModeDisabled](./images/moderation/modModeDisabled.png){: width=18; height=18 } in a channel that you moderate. Available variables are `{user.name}`, `{msg-id}`¹, `{message}`² & `{channel.name}`. Below is a list of examples that can be used:
 
 | Function | Action |
 | - | - |
@@ -28,6 +28,7 @@ Moderation mode is enabled by clicking ![ModModeDisabled](./images/moderation/mo
 | Open the user's usercard | `/user {user.name}` |
 
 1. As of [nightly][nightly] [9b9fd7d][com1] `{msg.id}` can also be used.
+2. As of [nightly][nightly] [9b9fd7d][com1] `{msg.text}` can also be used.
 
 ## User Timeout Buttons
 User timeout buttons are very useful while looking at a user's logs. All 8 buttons can be configured to various timeout lengths:
