@@ -95,8 +95,8 @@ The following variables are available:
 | `flags.points_redeemed` | Bool         | Whether the message was redeemed through channel points                                                    |
 | `flags.sub_message`     | Bool         | Whether the message is a sub/resub/gift message                                                            |
 | `flags.system_message`  | Bool         | Whether the message is a system message (i.e. timeout/ban/info)                                            |
-| `flags.reward_message`  | Bool         | Whether the message is a redeemed channel point reward message (available in [nightly] since [c0f4a410])   |
-| `flags.first_message`   | Bool         | Whether the message is the author's first message in the channel (available in [nightly] since [e033f8e4]) |
+| `flags.reward_message`  | Bool         | Whether the message is a redeemed channel point reward message                                             |
+| `flags.first_message`   | Bool         | Whether the message is the author's first message in the channel                                           |
 | `flags.whisper`         | Bool         | Whether the message is a whisper                                                                           |
 | **Message**             |              | Actual message sent                                                                                        |
 | `message.content`       | String       | Message content                                                                                            |
