@@ -98,6 +98,8 @@ The following variables are available:
 | `flags.reward_message`  | Bool         | Whether the message is a redeemed channel point reward message                                             |
 | `flags.first_message`   | Bool         | Whether the message is the author's first message in the channel                                           |
 | `flags.whisper`         | Bool         | Whether the message is a whisper                                                                           |
+| `flags.reply`           | Bool         | Whether the message is a reply                                                                             |
+| `flags.automod`         | Bool         | Whether the message has automod information or actions                                                     |
 | **Message**             |              | Actual message sent                                                                                        |
 | `message.content`       | String       | Message content                                                                                            |
 | `message.length`        | Int          | Message length                                                                                             |
