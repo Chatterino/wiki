@@ -99,7 +99,7 @@ The following variables are available:
 | `flags.first_message`   | Bool         | Whether the message is the author's first message in the channel                                           |
 | `flags.whisper`         | Bool         | Whether the message is a whisper                                                                           |
 | `flags.reply`           | Bool         | Whether the message is a reply                                                                             |
-| `flags.automod`         | Bool         | Whether the message has automod information or actions                                                     |
+| `flags.automod`         | Bool         | Whether the message has automod information or actions[^1]                                                     |
 | **Message**             |              | Actual message sent                                                                                        |
 | `message.content`       | String       | Message content                                                                                            |
 | `message.length`        | Int          | Message length                                                                                             |
@@ -148,6 +148,8 @@ The order of operations in filters may not be exactly what you expect.
 - `a || b && c || d` is evaluated as `a || (b && c) || d`
 
 Basically, if you're unsure about the order of operations, use extra parentheses.
+
+[^1]: Available since [nightly][nightly] [dcd42cb](https://github.com/Chatterino/chatterino2/commit/dcd42cb28bde2efc17d9afa0e36d6f5f1d3971de)
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
 [c0f4a410]: https://github.com/Chatterino/chatterino2/commit/c0f4a410fab95df6f22c921586d6ed10f2b6dc74
