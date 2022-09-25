@@ -24,7 +24,7 @@ FrankerFaceZ allows supporters to upload custom moderator and VIP badges for the
 
 For Twitch channels, we load emotes and badges from [7TV](https://7tv.app/).
 
-7TV provides [global emotes](https://7tv.app/emote-sets/62cdd34e72a832540de95857) that are available in every channel. These can be disabled with the "Show 7TV global emotes" setting.
+7TV provides [global emotes](https://7tv.app/emote-sets/global) that are available in every channel. These can be disabled with the "Show 7TV global emotes" setting.
 
 7TV provides [channel-specific emotes](https://7tv.app/emotes). What emotes are loaded is up to the owner of the channel you're in. These can be disabled with the "Show 7TV channel emotes" setting.
 
