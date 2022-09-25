@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://wiki.chatterino.com/Regex/">
+        <link rel="canonical" href="https://wiki.chatterino.com/Third_party_services/">
       
       <link rel="icon" href="https://chatterino.com/logo.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
     
     
       
-        <title>Regex - Chatterino</title>
+        <title>Third party services - Chatterino</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#regex" class="md-skip">
+        <a href="#betterttv" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Regex
+              Third party services
             
           </span>
         </div>
@@ -411,21 +411,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Regex/" class="md-nav__link">
         Regex
       </a>
-      
     </li>
   
 
@@ -466,11 +456,69 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Third_party_services/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Third party services
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Third party services
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#betterttv" class="md-nav__link">
+    BetterTTV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frankerfacez" class="md-nav__link">
+    FrankerFaceZ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7tv" class="md-nav__link">
+    7TV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chatterino-api" class="md-nav__link">
+    Chatterino API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -492,8 +540,42 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#betterttv" class="md-nav__link">
+    BetterTTV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frankerfacez" class="md-nav__link">
+    FrankerFaceZ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7tv" class="md-nav__link">
+    7TV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chatterino-api" class="md-nav__link">
+    Chatterino API
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -508,141 +590,27 @@
                   
 
 
-<h1 id="regex">Regex<a class="headerlink" href="#regex" title="Permanent link">&para;</a></h1>
-<p><em>Regular expressions</em> (or short <em>regexes</em>) are often used to check if a text matches a certain pattern. For example the regex <code>ab?c</code> would match <code>abc</code> or <code>ac</code>, but not <code>abbc</code> or <code>123</code>. In Chatterino, you can use them to highlight messages (and more) based on complex conditions.</p>
-<p>You can try out your regex patterns on a website like <a href="https://regex101.com">regex101</a>, using the <code>PCRE2</code> flavor.</p>
-<p>Basic patterns:</p>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Matches</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>x?</code></td>
-<td>nothing or <code>x</code></td>
-</tr>
-<tr>
-<td><code>x*</code></td>
-<td><code>x</code>, repeated any number of times</td>
-</tr>
-<tr>
-<td><code>x+</code></td>
-<td><code>x</code>, repeated any number of times but at least 1</td>
-</tr>
-<tr>
-<td><code>^</code></td>
-<td>The start of the text</td>
-</tr>
-<tr>
-<td><code>$</code></td>
-<td>The end of the text</td>
-</tr>
-<tr>
-<td><code>x|y</code></td>
-<td><code>x</code> or <code>y</code></td>
-</tr>
-</tbody>
-</table>
-<p>You can group multiple statements with <code>()</code>:</p>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Matches</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>asd?</code></td>
-<td><code>asd</code> or <code>as</code></td>
-</tr>
-<tr>
-<td><code>(asd)?</code></td>
-<td><code>asd</code> or nothing</td>
-</tr>
-<tr>
-<td><code>\(asd\)</code></td>
-<td><code>(asd)</code>, literally</td>
-</tr>
-</tbody>
-</table>
-<p>You can also group multiple characters with <code>[]</code>:</p>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Matches</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>[xyz]</code></td>
-<td><code>x</code>, <code>y</code> or <code>z</code></td>
-</tr>
-<tr>
-<td><code>[1-5a-f]</code></td>
-<td><code>1</code>,<code>2</code>,<code>3</code>,<code>4</code>,<code>5</code>,<code>a</code>,<code>b</code>,<code>c</code>,<code>d</code>,<code>e</code>,<code>f</code></td>
-</tr>
-<tr>
-<td><code>[^abc]</code></td>
-<td>Anything, <strong>except</strong> <code>a</code>, <code>b</code> and <code>c</code></td>
-</tr>
-<tr>
-<td><code>[\-]</code></td>
-<td><code>-</code>, literally (escaped with <code>\</code>)</td>
-</tr>
-<tr>
-<td><code>\[xyz\]</code></td>
-<td><code>[xyz]</code>, literally</td>
-</tr>
-</tbody>
-</table>
-<p>Special patterns:</p>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Matches</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>\d</code></td>
-<td>Digit characters (0-9)</td>
-</tr>
-<tr>
-<td><code>\D</code></td>
-<td>Non-digit characters</td>
-</tr>
-<tr>
-<td><code>\w</code></td>
-<td>Word characters (a-zA-Z0-9_)</td>
-</tr>
-<tr>
-<td><code>\W</code></td>
-<td>Non-word characters</td>
-</tr>
-<tr>
-<td><code>\s</code></td>
-<td>Spaces, tabs, etc.</td>
-</tr>
-<tr>
-<td><code>\S</code></td>
-<td>Not spaces, tabs, etc.</td>
-</tr>
-<tr>
-<td><code>\b</code></td>
-<td>Word boundaries (between \w and \W)</td>
-</tr>
-<tr>
-<td><code>\B</code></td>
-<td>Non-word boundaries</td>
-</tr>
-</tbody>
-</table>
+  <h1>Third party services</h1>
+
+<p>Chatterino integrates with a bunch of third party services to provide extended functionality for you.</p>
+<h2 id="betterttv">BetterTTV<a class="headerlink" href="#betterttv" title="Permanent link">&para;</a></h2>
+<p>For Twitch channels, we load emotes from <a href="https://betterttv.com/">BetterTTV</a>.</p>
+<p>BetterTTV provides <a href="https://betterttv.com/emotes/global">global emotes</a> that are available in every channel. These can be disabled with the "Show BTTV global emotes" setting.</p>
+<p>BetterTTV provides <a href="https://betterttv.com/emotes/shared">channel-specific emotes</a>. What emotes are loaded is up to the owner of the channel you're in. These can be disabled with the "Show BTTV channel emotes" setting.</p>
+<h2 id="frankerfacez">FrankerFaceZ<a class="headerlink" href="#frankerfacez" title="Permanent link">&para;</a></h2>
+<p>For Twitch channels, we load emotes and badges from <a href="https://www.frankerfacez.com/">FrankerFaceZ</a>.</p>
+<p>FrankerFaceZ provides <a href="https://www.frankerfacez.com/channel/__ffz_global">global emotes</a> that are available in every channel. These can be disabled with the "Show FFZ global emotes" setting.</p>
+<p>FrankerFaceZ provides <a href="https://www.frankerfacez.com/emoticons/">channel-specific emotes</a>. What emotes are loaded is up to the owner of the channel you're in. These can be disabled with the "Show FFZ channel emotes" setting.</p>
+<p>Badges are for developers &amp; <a href="https://www.frankerfacez.com/donate">supporters</a> of FrankerFaceZ and will be displayed next to their username. These can be disabled with the "FrankerFaceZ" setting under Advanced -&gt; Visible badges.</p>
+<p>FrankerFaceZ allows supporters to upload custom moderator and VIP badges for their channel, these can be disabled with the "Use custom FrankerFaceZ moderator badges" and "Use custom FrankerFaceZ VIP badges" settings.</p>
+<h2 id="7tv">7TV<a class="headerlink" href="#7tv" title="Permanent link">&para;</a></h2>
+<p>For Twitch channels, we load emotes and badges from <a href="https://7tv.app/">7TV</a>.</p>
+<p>7TV provides <a href="https://7tv.app/emote-sets/global">global emotes</a> that are available in every channel. These can be disabled with the "Show 7TV global emotes" setting.</p>
+<p>7TV provides <a href="https://7tv.app/emotes">channel-specific emotes</a>. What emotes are loaded is up to the owner of the channel you're in. These can be disabled with the "Show 7TV channel emotes" setting.</p>
+<!-- TODO: Link to 7TV emote guidelines for clarification on what constitutes an unlisted emote -->
+<p>7TV provides the ability to use unlisted emotes. By default, Chatterino will not display these emotes even if they're added to a Channel. You can modify this behaviour with the "Show unlisted 7TV emotes" setting.</p>
+<p>Badges are for developers &amp; <a href="https://7tv.app/subscribe">supporters</a> of 7TV and will be displayed next to their username. These can be disabled with the "7TV" setting under Advanced -&gt; Visible badges.</p>
+<h2 id="chatterino-api">Chatterino API<a class="headerlink" href="#chatterino-api" title="Permanent link">&para;</a></h2>
 
   <hr>
 <div class="md-source-file">
@@ -679,7 +647,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../Moderation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Moderation" rel="prev">
+        <a href="../Settings/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Settings" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -688,26 +656,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Moderation
+              Settings
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../Search/" class="md-footer__link md-footer__link--next" aria-label="Next: Search" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Search
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
