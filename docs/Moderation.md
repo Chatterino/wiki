@@ -38,4 +38,3 @@ User timeout buttons look like this:
 ![UserTimeoutButtons](./images/moderation/userTimeoutButtons.png)
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
-[com1]: https://github.com/Chatterino/chatterino2/commit/9b9fd7d403a0b3bd047ba7134de158c4e2fecbc7
