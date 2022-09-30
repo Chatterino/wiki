@@ -157,4 +157,3 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
   Example: Add Command `I'm currently playing {stream.game}` with trigger `/game`. Now typing `/game` will send a message like `I'm currently playing World of Warcraft`.  
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
-[com1]: https://github.com/Chatterino/chatterino2/commit/9b9fd7d403a0b3bd047ba7134de158c4e2fecbc7
