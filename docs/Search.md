@@ -55,3 +55,5 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
 #### Shows messages matching a given regex
 `regex:^gachi\w*$`  
 ![`regex:^gachi\w*$`](images/search/example8.png)
+
+[^1] Available since [nightly][nightly] [COMMIT_HASH_HERE](COMMIT_URL_HERE)
