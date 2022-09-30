@@ -19,6 +19,7 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
     - `highlighted` - filters highlighted messages
     - `system` - filters system messages (grey text ones like: "Now hosting username", "streamer is live", etc.)
     - `first-msg` - filters a user's first message in the channel
+    - `elevated-msg` - filters a user's elevated message in the channel (Paid Twitch Feature)
 - `regex:<regex>` - shows messages matching a given regex
 
 ## Examples
