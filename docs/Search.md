@@ -56,6 +56,6 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
 `regex:^gachi\w*$`  
 ![`regex:^gachi\w*$`](images/search/example8.png)
 
-[^1]: Available since [nightly][nightly] [COMMIT_HASH_HERE](COMMIT_URL_HERE)
+[^1]: Available since [nightly][nightly] [d024a1e](https://github.com/Chatterino/chatterino2/commit/d024a1ef7e1b7ed866a5662d562233453cf220b6)
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
