@@ -19,6 +19,7 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
     - `highlighted` - filters highlighted messages
     - `system` - filters system messages (grey text ones like: "Now hosting username", "streamer is live", etc.)
     - `first-msg` - filters a user's first message in the channel
+    - `elevated-msg` - filters a user's elevated message in the channel (Paid Twitch Feature)[^1]
 - `regex:<regex>` - shows messages matching a given regex
 
 ## Examples
@@ -54,3 +55,7 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
 #### Shows messages matching a given regex
 `regex:^gachi\w*$`  
 ![`regex:^gachi\w*$`](images/search/example8.png)
+
+[^1]: Available since [nightly][nightly] [d024a1e](https://github.com/Chatterino/chatterino2/commit/d024a1ef7e1b7ed866a5662d562233453cf220b6)
+
+[nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
