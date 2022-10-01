@@ -532,6 +532,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#shows-messages-from-users-who-have-the-listening-only-badge" class="md-nav__link">
+    Shows messages from users who have the "Listening only" badge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-messages-from-users-who-are-tier-3-subscribed" class="md-nav__link">
+    Shows messages from users who are tier-3 subscribed
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -672,6 +686,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#shows-messages-from-users-who-have-the-listening-only-badge" class="md-nav__link">
+    Shows messages from users who have the "Listening only" badge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-messages-from-users-who-are-tier-3-subscribed" class="md-nav__link">
+    Shows messages from users who are tier-3 subscribed
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -716,6 +744,8 @@ Surround <code>value</code> in quotation marks to use whitespaces within it, use
 </ul>
 </li>
 <li><code>regex:&lt;regex&gt;</code> - shows messages matching a given regex</li>
+<li><code>badge:&lt;value&gt;</code> - shows messages from users that have a given badge<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+<li><code>subtier:&lt;value&gt;</code> - shows messages from users that are subscribed at a given tier<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <h4 id="shows-messages-from-user-fourtf-containing-word-merge">Shows messages from user <code>fourtf</code> containing word <code>merge</code><a class="headerlink" href="#shows-messages-from-user-fourtf-containing-word-merge" title="Permanent link">&para;</a></h4>
@@ -742,11 +772,20 @@ Surround <code>value</code> in quotation marks to use whitespaces within it, use
 <h4 id="shows-messages-matching-a-given-regex">Shows messages matching a given regex<a class="headerlink" href="#shows-messages-matching-a-given-regex" title="Permanent link">&para;</a></h4>
 <p><code>regex:^gachi\w*$</code><br />
 <img alt="regex:^gachi\w*$" src="../images/search/example8.png" /></p>
+<h4 id="shows-messages-from-users-who-have-the-listening-only-badge">Shows messages from users who have the "Listening only" badge<a class="headerlink" href="#shows-messages-from-users-who-have-the-listening-only-badge" title="Permanent link">&para;</a></h4>
+<p><code>badge:no_video</code><br />
+<img alt="badge:no_video" src="../images/search/example-badge-no_video.png" /></p>
+<h4 id="shows-messages-from-users-who-are-tier-3-subscribed">Shows messages from users who are tier-3 subscribed<a class="headerlink" href="#shows-messages-from-users-who-are-tier-3-subscribed" title="Permanent link">&para;</a></h4>
+<p><code>subtier:3</code><br />
+<img alt="subtier:3" src="../images/search/example-subtier-3.png" /></p>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
 <p>Available since <a href="../Help/#what-is-nightly-and-how-to-use-install-it">nightly</a> <a href="https://github.com/Chatterino/chatterino2/commit/d024a1ef7e1b7ed866a5662d562233453cf220b6">d024a1e</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Available since <a href="../Help/#what-is-nightly-and-how-to-use-install-it">nightly</a> <a href="https://github.com/Chatterino/chatterino2/commit/bfcc9ff7a4f042f02b1780b9f506831c0ac2b284">bfcc9ff</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -756,7 +795,7 @@ Surround <code>value</code> in quotation marks to use whitespaces within it, use
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 1, 2022 11:05:36</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 1, 2022 14:55:56</span>
       
     
   </small>
