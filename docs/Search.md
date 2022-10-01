@@ -67,5 +67,6 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
 ![`subtier:3`](images/search/example-subtier-3.png)
 
 [^1]: Available since [nightly][nightly] [d024a1e](https://github.com/Chatterino/chatterino2/commit/d024a1ef7e1b7ed866a5662d562233453cf220b6)
+[^2]: Available since [nightly][nightly] [bfcc9ff](https://github.com/Chatterino/chatterino2/commit/bfcc9ff7a4f042f02b1780b9f506831c0ac2b284)
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
