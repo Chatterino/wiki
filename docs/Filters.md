@@ -151,7 +151,7 @@ The order of operations in filters may not be exactly what you expect.
 Basically, if you're unsure about the order of operations, use extra parentheses.
 
 [^1]: Available since [nightly][nightly] [dcd42cb](https://github.com/Chatterino/chatterino2/commit/dcd42cb28bde2efc17d9afa0e36d6f5f1d3971de)
-[^2]: Available since [nightly][nightly] [COMMIT_HASH_HERE](COMMIT_URL_HERE)
+[^2]: Available since [nightly][nightly] [9e722d0](https://github.com/Chatterino/chatterino2/commit/9e722d05e9c5ffc64cdfd1ccbc5d8c96875ba4c2)
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
 [c0f4a410]: https://github.com/Chatterino/chatterino2/commit/c0f4a410fab95df6f22c921586d6ed10f2b6dc74
