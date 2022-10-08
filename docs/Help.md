@@ -115,4 +115,6 @@ Since nightly is a testing release, it may be a little unstable. If you find any
 This is a Windows issue, it can be mitigated by turning on Compatibility mode for Chatterino. Right click `chatterino.exe` -> Properties -> Compatibility -> Enable "Run this program in compatibility mode for:" -> Select Windows 8 in the drop-down menu. 
 ![Change to Windows 8 in Properties Tab](images/help/borders.png)
 
+[COMMIT_HASH_HERE]: https://github.com/Chatterino/chatterino2/commit/COMMIT_HASH_HERE
+
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
