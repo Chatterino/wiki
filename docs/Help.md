@@ -53,7 +53,7 @@ If you are getting the `Your settings prevent you from sending this whisper` err
 
 - You turning on the `Block Whispers from Strangers` option in your [Twitch account security settings](https://www.twitch.tv/settings/security).
 - Your account is too new to be able to whisper users using IRC. If you wish to whisper a user, you must have that user follow your channel, then use the Twitch website to whisper the user. This was an IRC spam protection measure put in place by Twitch. This is not a Chatterino bug.
-- Starting in [nightly] [COMMIT_HASH_HERE] you are able to send whispers if you have a verified phone number attached to your Twitch account, this will allow you to by-pass the previous limitation due to your account age.  
+- Starting in [nightly] [COMMIT_HASH_HERE] you are able to send whispers if you have a verified phone number attached to your Twitch account, this will allow you to bypass the previous limitation due to your account age.  
 `NOTE:` Phone Number Authentication is **NOT** the same thing as Two-Factor Authentication.
 
     - You can add a phone number to your account in [Twitch Settings.](https://www.twitch.tv/settings/security)
