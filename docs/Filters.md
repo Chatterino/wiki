@@ -153,6 +153,6 @@ Basically, if you're unsure about the order of operations, use extra parentheses
 
 [^1]: Available since [nightly][nightly] [dcd42cb](https://github.com/Chatterino/chatterino2/commit/dcd42cb28bde2efc17d9afa0e36d6f5f1d3971de)
 [^2]: Available since [nightly][nightly] [9e722d0](https://github.com/Chatterino/chatterino2/commit/9e722d05e9c5ffc64cdfd1ccbc5d8c96875ba4c2)
-[^3]: Available since [nightly][nightly] [COMMIT_HASH_HERE](https://github.com/Chatterino/chatterino2/commit/COMMIT_HASH_HERE)
+[^3]: Available since [nightly][nightly] [dd6cb80](https://github.com/Chatterino/chatterino2/commit/dd6cb80)
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
