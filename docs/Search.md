@@ -13,14 +13,14 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
     - `link` - filters messages with links
 - `in:<channel>` - shows messages that originate from certain channels, useful in `#/mentions` channel (added in 2.3.0)
 - `is:<flags>` - shows certain types of messages (added in 2.3.1). List of flags:
-    - `deleted` or `disabled` - filters deleted messages
-    - `sub` or `subscription` - filters subscription messages
-    - `timeout` or `ban` - filters moderation messages
-    - `highlighted` - filters highlighted messages
-    - `system` - filters system messages (grey text ones like: "Now hosting username", "streamer is live", etc.)
-    - `first-msg` - filters a user's first message in the channel
-    - `elevated-msg` - filters a user's elevated message in the channel (Paid Twitch Feature)[^1]
-    - `cheer-msg` - filters messages containing bits[^3]
+    - `deleted` or `disabled` - shows deleted messages
+    - `sub` or `subscription` - shows subscription messages
+    - `timeout` or `ban` - shows moderation messages
+    - `highlighted` - shows highlighted messages
+    - `system` - shows system messages (grey text ones like: "Now hosting username", "streamer is live", etc.)
+    - `first-msg` - shows a user's first message in the channel
+    - `elevated-msg` - shows a user's elevated message in the channel (Paid Twitch Feature)[^1]
+    - `cheer-msg` - shows messages containing bits[^3]
 - `regex:<regex>` - shows messages matching a given regex
 - `badge:<value>` - shows messages from users that have a given badge[^2]
 - `subtier:<value>` - shows messages from users that are subscribed at a given tier[^2]
