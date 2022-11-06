@@ -22,7 +22,7 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
     - `elevated-msg` - filters a user's elevated message in the channel (Paid Twitch Feature)[^1]
     - `cheer-msg` - filters messages containing bits[^3]
     - `redemption` - shows messages that cost the user Twitch channel points[^4]
-    - `is:reply` - shows messages sent using the Twitch reply feature[^5]
+    - `reply` - shows messages sent using the Twitch reply feature[^5]
 - `regex:<regex>` - shows messages matching a given regex
 - `badge:<value>` - shows messages from users that have a given badge[^2]
 - `subtier:<value>` - shows messages from users that are subscribed at a given tier[^2]
