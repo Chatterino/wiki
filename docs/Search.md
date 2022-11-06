@@ -21,6 +21,7 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
     - `first-msg` - filters a user's first message in the channel
     - `elevated-msg` - filters a user's elevated message in the channel (Paid Twitch Feature)[^1]
     - `cheer-msg` - filters messages containing bits[^3]
+    - `redemption` - shows messages that cost the user Twitch channel points[^4]
 - `regex:<regex>` - shows messages matching a given regex
 - `badge:<value>` - shows messages from users that have a given badge[^2]
 - `subtier:<value>` - shows messages from users that are subscribed at a given tier[^2]
@@ -69,6 +70,7 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
 
 [^1]: Available since [nightly][nightly] [d024a1e](https://github.com/Chatterino/chatterino2/commit/d024a1ef7e1b7ed866a5662d562233453cf220b6)
 [^2]: Available since [nightly][nightly] [bfcc9ff](https://github.com/Chatterino/chatterino2/commit/bfcc9ff7a4f042f02b1780b9f506831c0ac2b284)
-[^3]: Available since [nightly][nightly] [dd6cb80](https://github.com/Chatterino/chatterino2/commit/dd6cb80)
+[^3]: Available since [nightly][nightly] [dd6cb80](https://github.com/Chatterino/chatterino2/commit/dd6cb80ab945a4f0a40da9da8de83eea2de1ce08)
+[^4]: Available since [nightly][nightly] [1e6e18f](https://github.com/Chatterino/chatterino2/commit/1e6e18f53aa69335b69bc0adcc555a1a797b5947)
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
