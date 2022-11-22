@@ -18,6 +18,7 @@ Prior to starting on the below, you should first try the basic troubleshooting s
     - Chocolatey: `choco install vcredist140`
 - [MacOS] Open `System Preferences` go to `Security & Privacy [General Tab]` and select `Open Anyway`.
     - ![mac_help](https://user-images.githubusercontent.com/41973452/203405375-2b4eafd3-511a-4820-a5ee-aae1b70d262d.png)
+
 ### I am having an issue with the Chatterino extension
 Chatterino extension issues should be posted [here](https://github.com/Chatterino/chatterino-browser-ext/issues/new).
 
