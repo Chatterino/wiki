@@ -115,6 +115,10 @@ Since nightly is a testing release, it may be a little unstable. If you find any
 This is a Windows issue, it can be mitigated by turning on Compatibility mode for Chatterino. Right click `chatterino.exe` -> Properties -> Compatibility -> Enable "Run this program in compatibility mode for:" -> Select Windows 8 in the drop-down menu. 
 ![Change to Windows 8 in Properties Tab](images/help/borders.png)
 
+### My Reply was sent to the wrong message
+Due to the way Twitch has implemented their Reply Feature, we are forced to reply to the `"head"` message, even if it was your intention to reply to another message in the thread.  
+Using the `/reply` command will reply to a user's most recent message, and create a brand new reply thread, even if that message was apart of an existing reply thread.
+
 [974a8f11]: https://github.com/Chatterino/chatterino2/commit/974a8f11b7e0ce27421fbc3018dc5fa7bd37c576
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
