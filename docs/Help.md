@@ -109,5 +109,5 @@ This is a Windows issue, it can be mitigated by turning on Compatibility mode fo
 ![Change to Windows 8 in Properties Tab](images/help/borders.png)
 
 ### My Reply was sent to the wrong message
-Due to the way Twitch has implemented their Reply Feature, we are forced to reply to the `"head"` message, even if it was your intention to reply to another message in the thread.
+Due to the way Twitch has implemented their Reply Feature, we are forced to reply to the `"head"` message, even if it was your intention to reply to another message in the thread.  
 Using the `/reply` command will reply to a user's most recent message, and create a brand new reply thread, even if that message was apart of an existing reply thread.
