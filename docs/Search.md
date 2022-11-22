@@ -11,7 +11,7 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
 - `from:<username>` - shows messages from certain users
 - `has:<flags>` - shows messages containing specified elements. List of flags:
     - `link` - filters messages with links
-- `in:<channel>` - shows messages that originate from certain channels, useful in `#/mentions` channel (added in 2.3.0)
+- `in:<channel>` - shows messages that originate from certain channels, useful in `#/mentions` channel
 - `is:<flags>` - shows certain types of messages. List of flags:
     - `deleted` or `disabled` - shows deleted messages
     - `sub` or `subscription` - shows subscription messages
