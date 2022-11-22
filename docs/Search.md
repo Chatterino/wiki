@@ -8,11 +8,11 @@ You can use several search filters (format `filter:value`) to narrow down your s
 `value` can have multiple comma-separated entries (look at examples below).  
 Surround `value` in quotation marks to use whitespaces within it, useful for dealing with the regex filter.
 
-- `from:<username>` - shows messages from certain users (added in 2.1.4)
-- `has:<flags>` - shows messages containing specified elements (added in 2.1.4). List of flags:
+- `from:<username>` - shows messages from certain users
+- `has:<flags>` - shows messages containing specified elements. List of flags:
     - `link` - filters messages with links
 - `in:<channel>` - shows messages that originate from certain channels, useful in `#/mentions` channel (added in 2.3.0)
-- `is:<flags>` - shows certain types of messages (added in 2.3.1). List of flags:
+- `is:<flags>` - shows certain types of messages. List of flags:
     - `deleted` or `disabled` - shows deleted messages
     - `sub` or `subscription` - shows subscription messages
     - `timeout` or `ban` - shows moderation messages
