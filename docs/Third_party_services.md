@@ -31,7 +31,7 @@ For Twitch channels, we load emotes and badges from [7TV](https://7tv.app/).
 7TV provides a streaming [Event API](https://github.com/SevenTV/EventAPI) that posts live updates when emotes change in channels. These can be disabled with the "Enable 7TV live emote updates" setting.
 
 7TV provides the ability to use Unlisted emotes.  
-[Unlisted emotes](https://github.com/SevenTV/Website/blob/ec9790a709e9758526a79a11ecda62ffc91325c9/locale/en_US.ts#L188) are emotes that have either `Not yet been approved`, or were `Flagged` for being innappropriate to show on stream, or possibly hazardous to viewers `e.g. epileptic-inducing emotes`.  
+[Unlisted emotes](https://github.com/SevenTV/Website/blob/dev/locale/en_US.ts#L188-#L199) are emotes that have either `Not yet been approved`, or were `Flagged` for being innappropriate to show on stream, or possibly hazardous to viewers `e.g. epileptic-inducing emotes`.  
 By default, Chatterino will not display these emotes even if they're added to a Channel. You can modify this behaviour with the "Show unlisted 7TV emotes" setting.
 
 Badges are for developers & [supporters](https://7tv.app/subscribe) of 7TV and will be displayed next to their username. These can be disabled with the "7TV" setting under Advanced -> Visible badges.
