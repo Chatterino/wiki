@@ -33,5 +33,5 @@ Explain common words used in Chatterino.
 |Term|Description|
 |-|-|
 |Reply Context|Contains the message a user was replying to.|
-|Reply Thread|Contains the history of replies Chatterino has loaded|
+|Reply Thread|Contains the history of replies to a message that Chatterino has loaded|
 |Reply Input|The input box to send a reply. Available in both the normal Chatterino window, and the Reply Thread.|
