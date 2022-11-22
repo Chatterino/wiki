@@ -13,13 +13,19 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
     - `link` - filters messages with links
 - `in:<channel>` - shows messages that originate from certain channels, useful in `#/mentions` channel (added in 2.3.0)
 - `is:<flags>` - shows certain types of messages (added in 2.3.1). List of flags:
-    - `deleted` or `disabled` - filters deleted messages
-    - `sub` or `subscription` - filters subscription messages
-    - `timeout` or `ban` - filters moderation messages
-    - `highlighted` - filters highlighted messages
-    - `system` - filters system messages (grey text ones like: "Now hosting username", "streamer is live", etc.)
-    - `first-msg` - filters a user's first message in the channel
+    - `deleted` or `disabled` - shows deleted messages
+    - `sub` or `subscription` - shows subscription messages
+    - `timeout` or `ban` - shows moderation messages
+    - `highlighted` - shows highlighted messages
+    - `system` - shows system messages (grey text ones like: "Now hosting username", "streamer is live", etc.)
+    - `first-msg` - shows a user's first message in the channel
+    - `elevated-msg` - shows a user's elevated message in the channel (Paid Twitch Feature)[^1]
+    - `cheer-msg` - shows messages containing bits[^3]
+    - `redemption` - shows messages that cost the user Twitch channel points[^4]
+    - `reply` - shows messages sent using the Twitch reply feature[^5]
 - `regex:<regex>` - shows messages matching a given regex
+- `badge:<value>` - shows messages from users that have a given badge[^2]
+- `subtier:<value>` - shows messages from users that are subscribed at a given tier[^2]
 
 ## Examples
 
@@ -54,3 +60,19 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
 #### Shows messages matching a given regex
 `regex:^gachi\w*$`  
 ![`regex:^gachi\w*$`](images/search/example8.png)
+
+#### Shows messages from users who have the "Listening only" badge
+`badge:no_video`  
+![`badge:no_video`](images/search/example-badge-no_video.png)
+
+#### Shows messages from users who are tier-3 subscribed
+`subtier:3`  
+![`subtier:3`](images/search/example-subtier-3.png)
+
+[^1]: Available since [nightly][nightly] [d024a1e](https://github.com/Chatterino/chatterino2/commit/d024a1ef7e1b7ed866a5662d562233453cf220b6)
+[^2]: Available since [nightly][nightly] [bfcc9ff](https://github.com/Chatterino/chatterino2/commit/bfcc9ff7a4f042f02b1780b9f506831c0ac2b284)
+[^3]: Available since [nightly][nightly] [dd6cb80](https://github.com/Chatterino/chatterino2/commit/dd6cb80ab945a4f0a40da9da8de83eea2de1ce08)
+[^4]: Available since [nightly][nightly] [1e6e18f](https://github.com/Chatterino/chatterino2/commit/1e6e18f53aa69335b69bc0adcc555a1a797b5947)
+[^5]: Available since [nightly][nightly] [ac7baf4](https://github.com/Chatterino/chatterino2/commit/ac7baf40736a9ff60b2a07d0310393f3aa33e610)
+
+[nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it

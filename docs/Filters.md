@@ -97,7 +97,11 @@ The following variables are available:
 | `flags.system_message`  | Bool         | Whether the message is a system message (i.e. timeout/ban/info)                                            |
 | `flags.reward_message`  | Bool         | Whether the message is a redeemed channel point reward message                                             |
 | `flags.first_message`   | Bool         | Whether the message is the author's first message in the channel                                           |
+| `flags.elevated_message`| Bool         | Whether the message is a message the author paid to keep in browser chat for an increased duration[^2]     |
+| `flags.cheer_message`   | Bool         | Whether the message includes bits[^3]
 | `flags.whisper`         | Bool         | Whether the message is a whisper                                                                           |
+| `flags.reply`           | Bool         | Whether the message is a reply                                                                             |
+| `flags.automod`         | Bool         | Whether the message has automod information or actions[^1]                                                     |
 | **Message**             |              | Actual message sent                                                                                        |
 | `message.content`       | String       | Message content                                                                                            |
 | `message.length`        | Int          | Message length                                                                                             |
@@ -147,6 +151,8 @@ The order of operations in filters may not be exactly what you expect.
 
 Basically, if you're unsure about the order of operations, use extra parentheses.
 
+[^1]: Available since [nightly][nightly] [dcd42cb](https://github.com/Chatterino/chatterino2/commit/dcd42cb28bde2efc17d9afa0e36d6f5f1d3971de)
+[^2]: Available since [nightly][nightly] [9e722d0](https://github.com/Chatterino/chatterino2/commit/9e722d05e9c5ffc64cdfd1ccbc5d8c96875ba4c2)
+[^3]: Available since [nightly][nightly] [dd6cb80](https://github.com/Chatterino/chatterino2/commit/dd6cb80)
+
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
-[c0f4a410]: https://github.com/Chatterino/chatterino2/commit/c0f4a410fab95df6f22c921586d6ed10f2b6dc74
-[e033f8e4]: https://github.com/Chatterino/chatterino2/commit/e033f8e43eea9cf52df84c93ed8a8464667b4153

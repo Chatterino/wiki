@@ -53,6 +53,13 @@ If you are getting the `Your settings prevent you from sending this whisper` err
 
 - You turning on the `Block Whispers from Strangers` option in your [Twitch account security settings](https://www.twitch.tv/settings/security).
 - Your account is too new to be able to whisper users using IRC. If you wish to whisper a user, you must have that user follow your channel, then use the Twitch website to whisper the user. This was an IRC spam protection measure put in place by Twitch. This is not a Chatterino bug.
+- Starting in [nightly][nightly] [974a8f11] you are able to send whispers if you have a verified phone number attached to your Twitch account, this will allow you to bypass the previous limitation due to your account age.  
+`NOTE:` Phone Number Authentication is **NOT** the same thing as Two-Factor Authentication.
+
+    - You can add a phone number to your account in [Twitch Settings.](https://www.twitch.tv/settings/security)
+    - Once you have added a phone number, you can toggle the setting `Helix timegate /w behaviour` to `Always Use Helix`
+![/w_helix_timegate](https://user-images.githubusercontent.com/41973452/194681515-1f3eb3a8-f54c-41b2-884f-5e7a0d9f329c.png)
+
 
 ### FFZ/BTTV emotes are not working
 You need to be logged in to see emotes.
@@ -90,12 +97,12 @@ Nightly is a "developer release" of Chatterino. It is released every time there'
 ##### Installation
 1. Go to [nightly release page](https://github.com/Chatterino/chatterino2/releases/tag/nightly-build) on GitHub.
 1. Download nightly:
-    - For **Windows** download `test-cmake-chatterino-windows-x86-64.zip`
-    - For **Linux** download `test-cmake-Chatterino-x86_64.AppImage`
-    - For **Mac** download `test-cmake-chatterino-osx.dmg`
+    - For **Windows** download `chatterino-windows-x86-64.zip`
+    - For **Linux** download `Chatterino-x86_64.AppImage`
+    - For **Mac** download `chatterino-osx.dmg`
 1. Install nightly:
     - On **Windows**, right-click the archive > `Extract All` > `Extract` (Override files if prompted). Open the newly extracted folder and create a shortcut for the `chatterino.exe` file to the Desktop for easy access.
-    - On **Linux**, open up the download directory in your terminal and execute the following command `chmod +x test-cmake-Chatterino-x86_64.AppImage && sudo mv test-cmake-Chatterino-x86_64.AppImage /usr/local/bin`
+    - On **Linux**, open up the download directory in your terminal and execute the following command `chmod +x Chatterino-x86_64.AppImage && sudo mv Chatterino-x86_64.AppImage /usr/local/bin`
     - On **Mac**, open the dmg file and drag Chatterino into the Applications folder.
 
 ##### Updating
@@ -111,3 +118,7 @@ This is a Windows issue, it can be mitigated by turning on Compatibility mode fo
 ### My Reply was sent to the wrong message
 Due to the way Twitch has implemented their Reply Feature, we are forced to reply to the `"head"` message, even if it was your intention to reply to another message in the thread.  
 Using the `/reply` command will reply to a user's most recent message, and create a brand new reply thread, even if that message was apart of an existing reply thread.
+
+[974a8f11]: https://github.com/Chatterino/chatterino2/commit/974a8f11b7e0ce27421fbc3018dc5fa7bd37c576
+
+[nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
