@@ -16,6 +16,7 @@ Prior to starting on the below, you should first try the basic troubleshooting s
 - [Windows] Ensure that you have the x64 Visual C++ Redistributables installed **AND** have restarted your PC after installation:
     - x64: <https://aka.ms/vs/16/release/vc_redist.x64.exe>
     - Chocolatey: `choco install vcredist140`
+- [MacOS] Open `System Preferences`, go to `Security & Privacy [General Tab]`, and select `Open Anyway`.
 
 ### I am having an issue with the Chatterino extension
 Chatterino extension issues should be posted [here](https://github.com/Chatterino/chatterino-browser-ext/issues/new).
