@@ -16,6 +16,8 @@ Prior to starting on the below, you should first try the basic troubleshooting s
 - [Windows] Ensure that you have the x64 Visual C++ Redistributables installed **AND** have restarted your PC after installation:
     - x64: <https://aka.ms/vs/16/release/vc_redist.x64.exe>
     - Chocolatey: `choco install vcredist140`
+- [MacOS] Open `System Preferences` go to `Security & Privacy [General Tab]` and select `Open Anyway`.
+![mac_help](images/help/macOS_open_anyway.png)
 
 ### I am having an issue with the Chatterino extension
 Chatterino extension issues should be posted [here](https://github.com/Chatterino/chatterino-browser-ext/issues/new).
@@ -114,6 +116,10 @@ Since nightly is a testing release, it may be a little unstable. If you find any
 ### I see white borders on full screen
 This is a Windows issue, it can be mitigated by turning on Compatibility mode for Chatterino. Right click `chatterino.exe` -> Properties -> Compatibility -> Enable "Run this program in compatibility mode for:" -> Select Windows 8 in the drop-down menu. 
 ![Change to Windows 8 in Properties Tab](images/help/borders.png)
+
+### My Reply was sent to the wrong message
+Due to the way Twitch has implemented their Reply Feature, we are forced to reply to the `"head"` message, even if it was your intention to reply to another message in the thread.  
+Using the `/reply` command will reply to a user's most recent message, and create a brand new reply thread, even if that message was apart of an existing reply thread.
 
 [974a8f11]: https://github.com/Chatterino/chatterino2/commit/974a8f11b7e0ce27421fbc3018dc5fa7bd37c576
 
