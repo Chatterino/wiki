@@ -8,11 +8,11 @@ You can use several search filters (format `filter:value`) to narrow down your s
 `value` can have multiple comma-separated entries (look at examples below).  
 Surround `value` in quotation marks to use whitespaces within it, useful for dealing with the regex filter.
 
-- `from:<username>` - shows messages from certain users (added in 2.1.4)
-- `has:<flags>` - shows messages containing specified elements (added in 2.1.4). List of flags:
+- `from:<username>` - shows messages from certain users
+- `has:<flags>` - shows messages containing specified elements. List of flags:
     - `link` - filters messages with links
-- `in:<channel>` - shows messages that originate from certain channels, useful in `#/mentions` channel (added in 2.3.0)
-- `is:<flags>` - shows certain types of messages (added in 2.3.1). List of flags:
+- `in:<channel>` - shows messages that originate from certain channels, useful in `#/mentions` channel
+- `is:<flags>` - shows certain types of messages. List of flags:
     - `deleted` or `disabled` - shows deleted messages
     - `sub` or `subscription` - shows subscription messages
     - `timeout` or `ban` - shows moderation messages
@@ -20,12 +20,12 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
     - `system` - shows system messages (grey text ones like: "Now hosting username", "streamer is live", etc.)
     - `first-msg` - shows a user's first message in the channel
     - `elevated-msg` - shows a user's elevated message in the channel (Paid Twitch Feature)[^1]
-    - `cheer-msg` - shows messages containing bits[^3]
-    - `redemption` - shows messages that cost the user Twitch channel points[^4]
-    - `reply` - shows messages sent using the Twitch reply feature[^5]
+    - `cheer-msg` - shows messages containing bits[^1]
+    - `redemption` - shows messages that cost the user Twitch channel points[^1]
+    - `reply` - shows messages sent using the Twitch reply feature[^1]
 - `regex:<regex>` - shows messages matching a given regex
-- `badge:<value>` - shows messages from users that have a given badge[^2]
-- `subtier:<value>` - shows messages from users that are subscribed at a given tier[^2]
+- `badge:<value>` - shows messages from users that have a given badge[^1]
+- `subtier:<value>` - shows messages from users that are subscribed at a given tier[^1]
 
 ## Examples
 
@@ -69,10 +69,6 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
 `subtier:3`  
 ![`subtier:3`](images/search/example-subtier-3.png)
 
-[^1]: Available since [nightly][nightly] [d024a1e](https://github.com/Chatterino/chatterino2/commit/d024a1ef7e1b7ed866a5662d562233453cf220b6)
-[^2]: Available since [nightly][nightly] [bfcc9ff](https://github.com/Chatterino/chatterino2/commit/bfcc9ff7a4f042f02b1780b9f506831c0ac2b284)
-[^3]: Available since [nightly][nightly] [dd6cb80](https://github.com/Chatterino/chatterino2/commit/dd6cb80ab945a4f0a40da9da8de83eea2de1ce08)
-[^4]: Available since [nightly][nightly] [1e6e18f](https://github.com/Chatterino/chatterino2/commit/1e6e18f53aa69335b69bc0adcc555a1a797b5947)
-[^5]: Available since [nightly][nightly] [ac7baf4](https://github.com/Chatterino/chatterino2/commit/ac7baf40736a9ff60b2a07d0310393f3aa33e610)
+[^1]: Added in 2.4.0
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
