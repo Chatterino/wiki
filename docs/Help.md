@@ -60,7 +60,7 @@ If you are getting the `Your settings prevent you from sending this whisper` err
 
     - You can add a phone number to your account in [Twitch Settings.](https://www.twitch.tv/settings/security)
     - Once you have added a phone number, you can toggle the setting `Helix timegate /w behaviour` to `Always Use Helix`
-![/w_helix_timegate](https://user-images.githubusercontent.com/41973452/194681515-1f3eb3a8-f54c-41b2-884f-5e7a0d9f329c.png)
+![/w_helix_timegate](images/help/helix_timegate_whispers.png)
 
 
 ### FFZ/BTTV emotes are not working
