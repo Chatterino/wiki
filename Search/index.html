@@ -548,6 +548,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#shows-messages-from-users-who-are-not-gazatu" class="md-nav__link">
+    Shows messages from users who are NOT gazatu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-messages-that-do-not-contain-links" class="md-nav__link">
+    Shows messages that do NOT contain links
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -702,6 +716,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#shows-messages-from-users-who-are-not-gazatu" class="md-nav__link">
+    Shows messages from users who are NOT gazatu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shows-messages-that-do-not-contain-links" class="md-nav__link">
+    Shows messages that do NOT contain links
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -727,7 +755,8 @@
 <h2 id="search-filters">Search filters<a class="headerlink" href="#search-filters" title="Permanent link">&para;</a></h2>
 <p>You can use several search filters (format <code>filter:value</code>) to narrow down your search.<br />
 <code>value</code> can have multiple comma-separated entries (look at examples below).<br />
-Surround <code>value</code> in quotation marks to use whitespaces within it, useful for dealing with the regex filter.</p>
+Surround <code>value</code> in quotation marks to use whitespaces within it, useful for dealing with the regex filter.<br />
+Starting in <a href="../Help/#what-is-nightly-and-how-to-use-install-it">nightly</a> <a href="https://github.com/Chatterino/chatterino2/commit/b7888749fec08996bc7cdbfc8b7f4163f5ad611a">b788874</a>, the ability to negate searches is possible. (format <code>!filter:value</code>)</p>
 <ul>
 <li><code>from:&lt;username&gt;</code> - shows messages from certain users</li>
 <li><code>has:&lt;flags&gt;</code> - shows messages containing specified elements. List of flags:<ul>
@@ -783,6 +812,12 @@ Surround <code>value</code> in quotation marks to use whitespaces within it, use
 <h4 id="shows-messages-from-users-who-are-tier-3-subscribed">Shows messages from users who are tier-3 subscribed<a class="headerlink" href="#shows-messages-from-users-who-are-tier-3-subscribed" title="Permanent link">&para;</a></h4>
 <p><code>subtier:3</code><br />
 <img alt="subtier:3" src="../images/search/example-subtier-3.png" /></p>
+<h4 id="shows-messages-from-users-who-are-not-gazatu">Shows messages from users who are NOT gazatu<a class="headerlink" href="#shows-messages-from-users-who-are-not-gazatu" title="Permanent link">&para;</a></h4>
+<p><code>!from:gazatu</code><br />
+<img alt="!from:gazatu" src="../images/search/example-negate-search-1.png" /></p>
+<h4 id="shows-messages-that-do-not-contain-links">Shows messages that do NOT contain links<a class="headerlink" href="#shows-messages-that-do-not-contain-links" title="Permanent link">&para;</a></h4>
+<p><code>!has:link</code><br />
+<img alt="!has:link" src="../images/search/example-negate-search-2.png" /></p>
 <div class="footnote">
 <hr />
 <ol>
@@ -797,7 +832,7 @@ Surround <code>value</code> in quotation marks to use whitespaces within it, use
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 3, 2022 05:41:38</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2022 18:26:33</span>
       
     
   </small>
