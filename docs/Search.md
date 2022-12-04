@@ -70,11 +70,11 @@ Starting in [nightly][nightly] [b788874], the ability to negate searches is poss
 `subtier:3`  
 ![`subtier:3`](images/search/example-subtier-3.png)
 
-#### Shows messages from users who are **NOT** gazatu
+#### Shows messages from users who are NOT gazatu
 `!from:gazatu`  
 ![`!from:gazatu`](images/search/example-negate-search-1.png)
 
-#### Shows messages that do **NOT** contain links
+#### Shows messages that do NOT contain links
 `!has:link`  
 ![`!has:link`](images/search/example-negate-search-2.png)
 
