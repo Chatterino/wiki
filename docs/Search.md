@@ -6,7 +6,8 @@ Chatterino has a Search Popup which lets you quickly find messages in the chat. 
 
 You can use several search filters (format `filter:value`) to narrow down your search.  
 `value` can have multiple comma-separated entries (look at examples below).  
-Surround `value` in quotation marks to use whitespaces within it, useful for dealing with the regex filter.
+Surround `value` in quotation marks to use whitespaces within it, useful for dealing with the regex filter.  
+Starting in [nightly][nightly] [b788874], the ability to negate searches is possible. (format `!filter:value`)
 
 - `from:<username>` - shows messages from certain users
 - `has:<flags>` - shows messages containing specified elements. List of flags:
@@ -69,6 +70,16 @@ Surround `value` in quotation marks to use whitespaces within it, useful for dea
 `subtier:3`  
 ![`subtier:3`](images/search/example-subtier-3.png)
 
+#### Shows messages from users who are NOT gazatu
+`!from:gazatu`  
+![`!from:gazatu`](images/search/example-negate-search-1.png)
+
+#### Shows messages that do NOT contain links
+`!has:link`  
+![`!has:link`](images/search/example-negate-search-2.png)
+
 [^1]: Added in 2.4.0
+
+[b788874]: https://github.com/Chatterino/chatterino2/commit/b7888749fec08996bc7cdbfc8b7f4163f5ad611a
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
