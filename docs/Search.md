@@ -80,6 +80,6 @@ Starting in [nightly][nightly] [b788874], the ability to negate searches is poss
 
 [^1]: Added in 2.4.0
 
-[b788874]: https://github.com/Chatterino/chatterino2/commit/b788874
+[b788874]: https://github.com/Chatterino/chatterino2/commit/b7888749fec08996bc7cdbfc8b7f4163f5ad611a
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
