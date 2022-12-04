@@ -6,7 +6,7 @@ Chatterino has a Search Popup which lets you quickly find messages in the chat. 
 
 You can use several search filters (format `filter:value`) to narrow down your search.  
 `value` can have multiple comma-separated entries (look at examples below).  
-Surround `value` in quotation marks to use whitespaces within it, useful for dealing with the regex filter.
+Surround `value` in quotation marks to use whitespaces within it, useful for dealing with the regex filter.  
 Starting in [nightly][nightly] [b788874], the ability to negate searches is possible. (format `!filter:value`)
 
 - `from:<username>` - shows messages from certain users
@@ -75,7 +75,7 @@ Starting in [nightly][nightly] [b788874], the ability to negate searches is poss
 ![`!from:gazatu`](images/search/example-negate-search-1.png)
 
 #### Shows messages that do **NOT** contain links
-`!has:link`
+`!has:link`  
 ![`!has:link`](images/search/example-negate-search-2.png)
 
 [^1]: Added in 2.4.0
