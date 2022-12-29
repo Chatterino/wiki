@@ -16,7 +16,7 @@ Prior to starting on the below, you should first try the basic troubleshooting s
 - [Windows] Ensure that you have the x64 Visual C++ Redistributables installed **AND** have restarted your PC after installation:
     - x64: <https://aka.ms/vs/16/release/vc_redist.x64.exe>
     - Chocolatey: `choco install vcredist140`
-- [MacOS] Open `System Preferences` go to `Security & Privacy [General Tab]` and select `Open Anyway`.
+- [MacOS] Open `System Preferences` go to `Security & Privacy [General Tab]` and select `Open Anyway` or see this [Apple support article](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac).
 ![mac_help](images/help/macOS_open_anyway.png)
 
 ### I am having an issue with the Chatterino extension
