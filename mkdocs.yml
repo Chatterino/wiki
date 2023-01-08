@@ -14,7 +14,7 @@ theme:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
-      scheme: chatterino-dark
+      scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
@@ -34,6 +34,9 @@ edit_uri: ""
 markdown_extensions:
   - attr_list
   - footnotes
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
   - toc:
       permalink: true
 extra:
