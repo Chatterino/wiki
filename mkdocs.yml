@@ -22,6 +22,7 @@ theme:
   features:
     - navigation.instant
     - navigation.top
+    - content.code.annotate
   icon:
     repo: fontawesome/brands/github
 plugins:
@@ -36,6 +37,7 @@ markdown_extensions:
   - footnotes
   - pymdownx.highlight:
       anchor_linenums: true
+  - pymdownx.snippets
   - pymdownx.superfences
   - toc:
       permalink: true
