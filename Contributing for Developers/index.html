@@ -124,7 +124,7 @@
           
           
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="chatterino-dark" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
@@ -775,52 +775,52 @@
 </ul>
 <p>Try to structure your code so that comments are not required.</p>
 <h5 id="good-example">Good example<a class="headerlink" href="#good-example" title="Permanent link">&para;</a></h5>
-<pre><code class="language-cpp">/// Result is 0 if a == b, negative if a &lt; b and positive if b &gt; a.
-/// ^^^ You can't know this from the function signature!
-//      Even better: Return a &quot;strong ordering&quot; type.
-//          (but we don't have such a type right now)
-int compare(const QString &amp;a, const QString &amp;b);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">/// Result is 0 if a == b, negative if a &lt; b and positive if b &gt; a.</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">/// ^^^ You can&#39;t know this from the function signature!</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">//      Even better: Return a &quot;strong ordering&quot; type.</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">//          (but we don&#39;t have such a type right now)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+</code></pre></div>
 <h5 id="bad-example">Bad example<a class="headerlink" href="#bad-example" title="Permanent link">&para;</a></h5>
-<pre><code class="language-cpp">/*
- * Matches a link and returns boost::none if it failed and a
- * QRegularExpressionMatch on success. 
- * ^^^ This comment just repeats the function signature!!!
- * 
- * @param text The text that will be checked if it contains a
- * link
- * ^^^ No need to repeat the obvious.
- */
-boost::optional&lt;QRegularExpressionMatch&gt; matchLink(const QString &amp;text);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">/*</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cm"> * Matches a link and returns boost::none if it failed and a</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cm"> * QRegularExpressionMatch on success. </span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cm"> * ^^^ This comment just repeats the function signature!!!</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="cm"> * </span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="cm"> * @param text The text that will be checked if it contains a</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="cm"> * link</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="cm"> * ^^^ No need to repeat the obvious.</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="cm"> */</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">boost</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">QRegularExpressionMatch</span><span class="o">&gt;</span><span class="w"> </span><span class="n">matchLink</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">text</span><span class="p">);</span>
+</code></pre></div>
 <h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
 <h2 id="arithmetic-types">Arithmetic Types<a class="headerlink" href="#arithmetic-types" title="Permanent link">&para;</a></h2>
 <p>Arithmetic types (like char, short, int, long, float and double), bool, and pointers are NOT initialized by default in C++. They keep whatever value is already at their position in the memory. This makes debugging harder and is unpredictable, so we initialize them to zero by using <code>{}</code> after their name when declaring them.</p>
-<pre><code class="language-cpp">class ArithmeticTypes
-{
-    int thisIs0{};
-    QWidget *thisIsNull{};
-    bool thisIsFalse_{};
-    // int a; // &lt;- Initialized to &quot;random&quot; value.
-    // QWidget *randomPtr.
-
-    std::vector&lt;int&gt; myVec; // &lt;- other types call constructors instead, so no need for {}
-    // std::vector&lt;int&gt; myVec{}; &lt;- pointless {}
-
-    int thisIs5 = 5; // &lt;- Also fine, we initialize it with another value.
-};
-
-void myFunc() {
-    int a = 1 + 1; // &lt;- here we initialize it immediately, so it's fine.
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">ArithmeticTypes</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">thisIs0</span><span class="p">{};</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">QWidget</span><span class="w"> </span><span class="o">*</span><span class="n">thisIsNull</span><span class="p">{};</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">thisIsFalse_</span><span class="p">{};</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="c1">// int a; // &lt;- Initialized to &quot;random&quot; value.</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="c1">// QWidget *randomPtr.</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myVec</span><span class="p">;</span><span class="w"> </span><span class="c1">// &lt;- other types call constructors instead, so no need for {}</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="c1">// std::vector&lt;int&gt; myVec{}; &lt;- pointless {}</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">thisIs5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// &lt;- Also fine, we initialize it with another value.</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">};</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="kt">void</span><span class="w"> </span><span class="nf">myFunc</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// &lt;- here we initialize it immediately, so it&#39;s fine.</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">}</span>
+</code></pre></div>
 <h2 id="passing-parameters">Passing parameters<a class="headerlink" href="#passing-parameters" title="Permanent link">&para;</a></h2>
 <p>The way a parameter is passed signals how it is going to be used inside of the function. C++ doesn't have multiple return values so there is "out parameters" (reference to a variable that is going to be assigned inside of the function) to simulate multiple return values.</p>
-<p><strong>Cheap to copy types</strong> like int/enum/etc. can be passed in per value since copying them is fast.</p>
-<pre><code class="language-cpp">void setValue(int value) {
-    // ...
-}
-</code></pre>
+<p><strong>Cheap to copy types</strong> like int/enum/etc. can be passed in per value since copying them is fast.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setValue</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+</code></pre></div></p>
 <p><strong>References</strong> mean that the variable doesn't need to be copied when it is passed to a function.</p>
 <table>
 <thead>
@@ -856,52 +856,52 @@ void myFunc() {
 </tbody>
 </table>
 <p><strong>R-value references</strong> <code>&amp;&amp;</code> work similar to regular references but signal the parameter should be "consumed".</p>
-<pre><code class="language-cpp">void storeLargeObject(LargeObject &amp;&amp;object) {
-    // ...
-}
-
-void storeObject(std::unique_ptr&lt;Object&gt; &amp;&amp;object) {
-    // ...
-}
-
-void main() {
-    // initialize a large object (= will be expensive to copy)
-    LargeObject large = // ...
-
-    // Object accepts an r-value reference + we use std::move()
-    // =&gt; We move the object = no need to copy.
-    storeLargeObject(std::move(large));
-
-    // But even worse, you can't copy a unique_ptr so we need to move here!
-    std::unique_ptr&lt;Object&gt; unique = // ...
-    storeObject(std::move(unique));
-
-    // The pointer contained by unique has now been consumed by &quot;storeObject&quot;
-    // so it just holds a null pointer now.
-    assert(unique.get() == nullptr);
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">storeLargeObject</span><span class="p">(</span><span class="n">LargeObject</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">storeObject</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="c1">// initialize a large object (= will be expensive to copy)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">LargeObject</span><span class="w"> </span><span class="n">large</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1">// ...</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="c1">// Object accepts an r-value reference + we use std::move()</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="c1">// =&gt; We move the object = no need to copy.</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="n">storeLargeObject</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">large</span><span class="p">));</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="c1">// But even worse, you can&#39;t copy a unique_ptr so we need to move here!</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1">// ...</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="n">storeObject</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">unique</span><span class="p">));</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="c1">// The pointer contained by unique has now been consumed by &quot;storeObject&quot;</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="c1">// so it just holds a null pointer now.</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">unique</span><span class="p">.</span><span class="n">get</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="p">}</span>
+</code></pre></div>
 <p>Generally the lowest level of requirement should be used e.g. passing <code>Channel&amp;</code> instead of <code>std::shared_ptr&lt;Channel&gt;&amp;</code> (aka <code>ChannelPtr</code>) if possible.</p>
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
-<p>All functions names are in <code>camelCase</code>. <em>Private</em> member variables are in <code>camelCase_</code> (note the underscore at the end). We don't use the <code>get</code> prefix for getters. We mark functions as <code>const</code> <a href="https://stackoverflow.com/questions/751681/meaning-of-const-last-in-a-function-declaration-of-a-class">if applicable</a>.</p>
-<pre><code class="language-cpp">class NamedObject
-{
-public:
-    const QString &amp;name() const; // &lt;- no &quot;get&quot; prefix.
-    void setName(const QString &amp;name);
-    bool hasLongName() const; // &lt;- &quot;has&quot; or &quot;is&quot; prefix is okay
-
-    static void myStaticFunction(); // &lt;- also lowercase
-    QString publicName;
-
-private:
-    // Private variables have &quot;_&quot; suffix.
-    QString name_;
-    // QString name; &lt;- collides with name() function
-};
-
-void myFreeStandingFunction(); // &lt;- also lower case
-</code></pre>
+<p>All functions names are in <code>camelCase</code>. <em>Private</em> member variables are in <code>camelCase_</code> (note the underscore at the end). We don't use the <code>get</code> prefix for getters. We mark functions as <code>const</code> <a href="https://stackoverflow.com/questions/751681/meaning-of-const-last-in-a-function-declaration-of-a-class">if applicable</a>.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">NamedObject</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"> </span><span class="c1">// &lt;- no &quot;get&quot; prefix.</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">name</span><span class="p">);</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">hasLongName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"> </span><span class="c1">// &lt;- &quot;has&quot; or &quot;is&quot; prefix is okay</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">myStaticFunction</span><span class="p">();</span><span class="w"> </span><span class="c1">// &lt;- also lowercase</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="n">QString</span><span class="w"> </span><span class="n">publicName</span><span class="p">;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="c1">// Private variables have &quot;_&quot; suffix.</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="n">QString</span><span class="w"> </span><span class="n">name_</span><span class="p">;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="c1">// QString name; &lt;- collides with name() function</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="p">};</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="kt">void</span><span class="w"> </span><span class="nf">myFreeStandingFunction</span><span class="p">();</span><span class="w"> </span><span class="c1">// &lt;- also lower case</span>
+</code></pre></div></p>
 <h2 id="casts">Casts<a class="headerlink" href="#casts" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Avoid</strong> c-style casts: <code>(type)variable</code>.</li>
@@ -909,46 +909,46 @@ void myFreeStandingFunction(); // &lt;- also lower case
 <li>Or use one of <a href="https://en.cppreference.com/w/cpp/language/static_cast">static_cast</a>, <a href="https://en.cppreference.com/w/cpp/language/const_cast">const_cast</a> and <a href="https://en.cppreference.com/w/cpp/language/dynamic_cast">dynamic_cast</a> </li>
 <li>Try to avoid <a href="https://en.cppreference.com/w/cpp/language/reinterpret_cast">reinterpret_cast</a> unless necessary.</li>
 </ul>
-<pre><code class="language-cpp">void example() {
-    float f = 123.456;
-    int i = (int)f; // &lt;- don't
-    int i = int(f); // &lt;- do
-
-    Base* base = // ...
-    Derived* derived = (Derived*)base;               // &lt;- don't
-    Derived* derived = dynamic_cast&lt;Derived*&gt;(base); // &lt;- do
-
-    // Only use &quot;const_cast&quot; solved if using proper const correctness doesn't work.
-    const int c = 123;
-    ((int &amp;)c) = 123;           // &lt;- don't
-    const_cast&lt;int &amp;&gt;(c) = 123; // &lt;- do (but only sometimes)
-
-    // &quot;reinterpret_cast&quot; is also only required in very rarely.
-    int p = 123;
-    float *pp = (float*)&amp;p;
-    float *pp = reinterpret_cast&lt;float*&gt;(&amp;p);
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">example</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123.456</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">f</span><span class="p">;</span><span class="w"> </span><span class="c1">// &lt;- don&#39;t</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">f</span><span class="p">);</span><span class="w"> </span><span class="c1">// &lt;- do</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">Base</span><span class="o">*</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1">// ...</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">Derived</span><span class="o">*</span><span class="w"> </span><span class="n">derived</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Derived</span><span class="o">*</span><span class="p">)</span><span class="n">base</span><span class="p">;</span><span class="w">               </span><span class="c1">// &lt;- don&#39;t</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="n">Derived</span><span class="o">*</span><span class="w"> </span><span class="n">derived</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n">Derived</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">base</span><span class="p">);</span><span class="w"> </span><span class="c1">// &lt;- do</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="c1">// Only use &quot;const_cast&quot; solved if using proper const correctness doesn&#39;t work.</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="p">((</span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="p">)</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span><span class="w">           </span><span class="c1">// &lt;- don&#39;t</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="k">const_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span><span class="w"> </span><span class="c1">// &lt;- do (but only sometimes)</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="c1">// &quot;reinterpret_cast&quot; is also only required in very rarely.</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">pp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">pp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">*&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">p</span><span class="p">);</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="p">}</span>
+</code></pre></div>
 <h2 id="this">This<a class="headerlink" href="#this" title="Permanent link">&para;</a></h2>
 <p>Always use <code>this</code> to refer to instance members to make it clear where we use either locals or members.</p>
-<pre><code class="language-cpp">class Test
-{
-    void testFunc(int a);
-    int testInt_{};
-}
-
-Test::testFunc(int a)
-{
-    // do
-    this-&gt;testInt_ += 2;
-    this-&gt;testFunc();
-
-    // don't
-    testInt_ -= 123;
-    testFunc(2);
-    this-&gt;testFunc(testInt_ + 1);
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Test</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">testFunc</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">testInt_</span><span class="p">{};</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">}</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="n">Test</span><span class="o">::</span><span class="n">testFunc</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">{</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="c1">// do</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">testInt_</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">testFunc</span><span class="p">();</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="c1">// don&#39;t</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="n">testInt_</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="n">testFunc</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">testFunc</span><span class="p">(</span><span class="n">testInt_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="p">}</span>
+</code></pre></div>
 <h2 id="managing-resources">Managing resources<a class="headerlink" href="#managing-resources" title="Permanent link">&para;</a></h2>
 <h5 id="regular-classes">Regular classes<a class="headerlink" href="#regular-classes" title="Permanent link">&para;</a></h5>
 <p>Keep the element on the stack if possible. If you need a pointer or have complex ownership you should use one of these classes:
@@ -966,7 +966,7 @@ Test::testFunc(int a)
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 30, 2022 08:32:31</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 8, 2023 13:20:58</span>
       
     
   </small>

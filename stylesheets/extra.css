@@ -1,4 +1,4 @@
-[data-md-color-scheme="chatterino-dark"] {
+[data-md-color-scheme="slate"] {
     --md-default-bg-color: rgb(37, 36, 36);
     --md-code-bg-color: rgb(47, 45, 45);
     --md-code-fg-color: rgb(212, 212, 212);
@@ -13,11 +13,11 @@
     --md-footer-bg-color--dark: rgb(26, 25, 25);
 }
 
-[data-md-color-scheme="chatterino-dark"] .md-typeset table:not([class]) {
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
     background-color: var(--md-code-bg-color);
 }
 
-[data-md-color-scheme="chatterino-dark"] .md-typeset table:not([class]) thead th {
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) thead th {
     background-color: var(--md-footer-bg-color);
     color: var(--md-code-fg-color);
 }
