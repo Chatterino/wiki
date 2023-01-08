@@ -16,27 +16,31 @@ Comments should only be used to:
 Try to structure your code so that comments are not required.
 
 ##### Good example
-``` cpp
-/// Result is 0 if a == b, negative if a < b and positive if b > a.
-/// ^^^ You can't know this from the function signature!
-//      Even better: Return a "strong ordering" type.
-//          (but we don't have such a type right now)
-int compare(const QString &a, const QString &b);
+
+```cpp
+/**
+ * @return 0 if a == b, negative if a < b and positive if b > a. (1)
+ */
+int /* (2)! */ compare(const QString &a, const QString &b);
 ```
 
+1. You can't know this from the function signature, so it's good to clarify this.
+2. Even better: Return a "strong ordering" type (but we don't have such a type right now).
+
 ##### Bad example
-``` cpp
+
+```cpp
 /*
  * Matches a link and returns boost::none if it failed and a
- * QRegularExpressionMatch on success. 
- * ^^^ This comment just repeats the function signature!!!
+ * QRegularExpressionMatch on success. (1)
  * 
- * @param text The text that will be checked if it contains a
- * link
- * ^^^ No need to repeat the obvious.
+ * @param text The text that will be checked if it contains a link. (2)
  */
 boost::optional<QRegularExpressionMatch> matchLink(const QString &text);
 ```
+
+1. This repeats the function signature.
+2. This is obvious from the function and parameter names.
 
 ## Code
 Arithmetic Types
@@ -47,22 +51,30 @@ Arithmetic types (like char, short, int, long, float and double), bool, and poin
 ``` cpp
 class ArithmeticTypes
 {
-    int thisIs0{};
-    QWidget *thisIsNull{};
-    bool thisIsFalse_{};
-    // int a; // <- Initialized to "random" value.
-    // QWidget *randomPtr.
-    
-    std::vector<int> myVec; // <- other types call constructors instead, so no need for {}
-    // std::vector<int> myVec{}; <- pointless {}
-     
-    int thisIs5 = 5; // <- Also fine, we initialize it with another value.
-};
+    // DO
+    int n{}; // (1)!
+    bool isEnabled{}; // (2)!
+    QWidget *myPtr{}; // (3)!
+    int thisIs5 = 5; // (4)!
+    std::vector<int> myVec; // (5)!
 
-void myFunc() {
-    int a = 1 + 1; // <- here we initialize it immediately, so it's fine.
-}
+    // DON'T
+    int m; // (6)!
+    bool isHidden; // (7)!
+    QWidget *yourPtr; // (8)!
+    std::vector<int> myVec{}; // (9)!
+};
 ```
+
+1. Initialized to `0`.
+2. Initialized to `false`.
+3. Initialized to `nullptr`.
+4. Explicitly initialized to `5`.
+5. Other non-arithmetic types call constructors instead, so no need for `{}`.
+6. ⚠ Random value.
+7. ⚠ Random value.
+8. ⚠ Random value. Derefenrencing this will likely segfault.
+9. Unnecessary `{}` as the default constructor will be called even without `{}`.
 
 Passing parameters
 ------
@@ -70,10 +82,19 @@ The way a parameter is passed signals how it is going to be used inside of the f
 
 **Cheap to copy types** like int/enum/etc. can be passed in per value since copying them is fast.
 ``` cpp
-void setValue(int value) {
-    // ...
+void setValue(int value /* (1)! */) {
+    this->value_ = value;
+}
+
+void sendGreeting(const /* (2)! */ User &user /* (3)! */, MessageFlags flags /* (4)! */) {
+    this->sendMessage(user.id(), user.name(), flags);
 }
 ```
+
+1. `int`s are cheap to copy. Here, the parameter will likely be passed in a register.
+2. We only need to read the user's name, so it's marked as `const`.
+3. `User` is a class that contains the user's name and other fields, thus it's expensive to copy - so a reference i used.
+4. `MessageFlags` is an enum, so it's cheap to copy.
 
 **References** mean that the variable doesn't need to be copied when it is passed to a function.
 
@@ -100,22 +121,20 @@ void storeObject(std::unique_ptr<Object> &&object) {
 }
 
 void main() {
-    // initialize a large object (= will be expensive to copy)
-    LargeObject large = // ...
-    
-    // Object accepts an r-value reference + we use std::move()
-    // => We move the object = no need to copy.
-    storeLargeObject(std::move(large));
+    LargeObject large = { /*...*/ };
 
-    // But even worse, you can't copy a unique_ptr so we need to move here!
-    std::unique_ptr<Object> unique = // ...
-    storeObject(std::move(unique));
-    
-    // The pointer contained by unique has now been consumed by "storeObject"
-    // so it just holds a null pointer now.
-    assert(unique.get() == nullptr);
+    storeLargeObject(std::move(large)); // (1)!
+
+    std::unique_ptr<Object> unique = std::make_unique(/*...*/);
+    storeObject(std::move(unique)); // (2)!
+
+    assert(unique.get() == nullptr); // (3)!
 }
 ```
+
+1. `storeLargeObject` accepts an r-value reference and we use `std::move()`, thus we move the object and avoid the need to copy.
+2. You can't copy a `unique_ptr` so we **need** to move here.
+3. The pointer contained by unique has now been consumed by `storeObject`, so it just holds a null pointer now.
 
 Generally the lowest level of requirement should be used e.g. passing `Channel&` instead of `std::shared_ptr<Channel>&` (aka `ChannelPtr`) if possible.
 
@@ -124,25 +143,35 @@ Members
 -----
 
 All functions names are in `camelCase`. *Private* member variables are in `camelCase_` (note the underscore at the end). We don't use the `get` prefix for getters. We mark functions as `const` [if applicable](https://stackoverflow.com/questions/751681/meaning-of-const-last-in-a-function-declaration-of-a-class).
-``` cpp
+
+```cpp
 class NamedObject
 {
 public:
-    const QString &name() const; // <- no "get" prefix.
+    const QString &name() const; // (1)!
     void setName(const QString &name);
-    bool hasLongName() const; // <- "has" or "is" prefix is okay
+    bool hasLongName() const; // (2)!
     
-    static void myStaticFunction(); // <- also lowercase
+    static void myStaticFunction(); // (3)!
     QString publicName;
 
 private:
-    // Private variables have "_" suffix.
-    QString name_;
-    // QString name; <- collides with name() function
+    QString name_; // (4)!
+    // QString name; (5)
+
+    void myPrivateMethod(); // (6)!
 };
 
-void myFreeStandingFunction(); // <- also lower case
+void myFreeStandingFunction(); // (7)!
 ```
+
+1. No `get` prefix.
+2. A `has` or `is` prefix is okay.
+3. Static member functions start lowercase as well.
+4. Private members have a `_` suffix.
+5. This declaration would collide with the `name()` accessor.
+6. Private methods **don't** have a `_` suffix.
+7. Free standing functions start lowercase as well.
 
 Casts
 ------
@@ -153,26 +182,33 @@ Casts
 - Try to avoid [reinterpret_cast](https://en.cppreference.com/w/cpp/language/reinterpret_cast) unless necessary.
 
 ``` cpp
-void example() {
-    float f = 123.456;
-    int i = (int)f; // <- don't
-    int i = int(f); // <- do
+void example(float f, Base *b, const User &user, int p) {
+    // DO
+    int i = int(f); // (1)!
+    Derived* derived = dynamic_cast<Derived*>(base); // (2)!
+    if (derived != nullptr) // (3)!
+    {
+        // use derived
+    }
 
-    Base* base = // ...
-    Derived* derived = (Derived*)base;               // <- don't
-    Derived* derived = dynamic_cast<Derived*>(base); // <- do
-    
-    // Only use "const_cast" solved if using proper const correctness doesn't work.
-    const int c = 123;
-    ((int &)c) = 123;           // <- don't
-    const_cast<int &>(c) = 123; // <- do (but only sometimes)
-    
-    // "reinterpret_cast" is also only required in very rarely.
-    int p = 123;
+    // BE CAREFUL
+    const_cast<User &>(c).setName("foo"); // (4)!
+    float *pp = reinterpret_cast<float*>(&p); // (5)!
+
+    // DON'T (6)
+    int i = (int)f;
+    Derived* derived = (Derived*)base;
+    ((int &)c) = 123;
     float *pp = (float*)&p;
-    float *pp = reinterpret_cast<float*>(&p);
 }
 ```
+
+1. Use explicit type casts.
+2. Use explicit `dynamic_cast`.
+3. Unless extremely obvious, always check the result of `dynamic_cast`.
+4. Only use `const_cast` if using proper const correctness doesn't work.
+5. `reinterpret_cast` is required very rarely.
+6. **Avoid** C-style casts.
 
 
 This
@@ -188,16 +224,18 @@ class Test
 
 Test::testFunc(int a)
 {
-    // do
+    // DO
     this->testInt_ += 2;
     this->testFunc();
     
-    // don't
+    // DON'T
     testInt_ -= 123;
     testFunc(2);
-    this->testFunc(testInt_ + 1);
+    this->testFunc(testInt_/*(1)!*/ + 1);
 }
 ```
+
+1. It's unclear if it's a local or member variable, especially if the method is more complex.
 
 Managing resources
 ------
