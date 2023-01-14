@@ -22,7 +22,9 @@ theme:
   features:
     - navigation.instant
     - navigation.top
+    - navigation.footer
     - content.code.annotate
+    - content.code.copy
   icon:
     repo: fontawesome/brands/github
 plugins:
