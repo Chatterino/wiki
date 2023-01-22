@@ -21,16 +21,16 @@ Optionally also turn on thumbnails in your preferred size for an even richer lin
 By default chatterino will use [Open Graph](https://ogp.me/) tags to enrich tooltips.
 To enhance the tooltips even more, we have custom integrations for the following sites:
 
-- [BetterTTV](https://betterttv.com/)
-- [Discord](https://discord.com/)
-- [FrankerFaceZ](https://www.frankerfacez.com/)
-- [Imgur](https://imgur.com)
-- [Livestreamfails](https://livestreamfails.com/)
-- [Supinic](https://supinic.com/)
-- [Twitch](https://twitch.tv)
-- [Twitter](https://twitter.com)
-- [Wikipedia](https://www.wikipedia.org/)
-- [YouTube](https://youtube.com)
+-   [BetterTTV](https://betterttv.com/)
+-   [Discord](https://discord.com/)
+-   [FrankerFaceZ](https://www.frankerfacez.com/)
+-   [Imgur](https://imgur.com)
+-   [Livestreamfails](https://livestreamfails.com/)
+-   [Supinic](https://supinic.com/)
+-   [Twitch](https://twitch.tv)
+-   [Twitter](https://twitter.com)
+-   [Wikipedia](https://www.wikipedia.org/)
+-   [YouTube](https://youtube.com)
 
 # Demo
 

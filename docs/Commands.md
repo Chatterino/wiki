@@ -8,7 +8,7 @@ Chatterino comes with a collection of built-in commands to help with channel man
 
 ### `/block` & `/unblock`
 
-Usage: `/(block|unblock) <user>` 
+Usage: `/(block|unblock) <user>`
 
 Blocks or unblocks the specified user. Blocking will hide that user's messages/whispers as well as disassociate them from you on Twitch. For more information about blocking, see [Twitch's help article](https://help.twitch.tv/s/article/how-to-manage-harassment-in-chat?language=en_US#BlockWhispersandMessagesfromStrangers).
 
@@ -22,7 +22,7 @@ Shows the total amount of chatters currently connected to the channel.
 
 Usage: `/clearmessages`
 
-Clears all messages from the current split/channel. This command is purely visual and is not related to the `/clear` moderator command. 
+Clears all messages from the current split/channel. This command is purely visual and is not related to the `/clear` moderator command.
 
 ### `/clip`
 
@@ -128,32 +128,32 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
 
 ### Advanced
 
-- The trigger has to be matched at the **start** of the message but there is a setting to also match them at the **end**.
-- Triggers don't need to start with `/`
+-   The trigger has to be matched at the **start** of the message but there is a setting to also match them at the **end**.
+-   Triggers don't need to start with `/`
 
 #### Using placeholders
 
-- `{1}`, `{2}`, `{3}` and so on can be used to insert the 1st, 2nd, 3rd, ... word after the trigger.  
-  Example: Add Command `/timeout {1} 1` with trigger `/warn`. Now typing `/warn user123` will send `/timeout user123 1`
+-   `{1}`, `{2}`, `{3}` and so on can be used to insert the 1st, 2nd, 3rd, ... word after the trigger.  
+    Example: Add Command `/timeout {1} 1` with trigger `/warn`. Now typing `/warn user123` will send `/timeout user123 1`
 
-- Similarly `{1+}` and so on can be used to insert all words starting with the 1st, ... word.  
-  Example: Add Command `Have a {1+} day!` with trigger `/day`. Now typing `/day very super nice` will send `Have a very super nice day!`
+-   Similarly `{1+}` and so on can be used to insert all words starting with the 1st, ... word.  
+    Example: Add Command `Have a {1+} day!` with trigger `/day`. Now typing `/day very super nice` will send `Have a very super nice day!`
 
-- You can use `{{1}` if you want to send `{1}` literally.
+-   You can use `{{1}` if you want to send `{1}` literally.
 
-- `{channel.name}` can be used to insert the name of the current channel.  
-  Example: Add Command `/openurl https://twitch.tv/{channel.name}` with trigger `/openchannel`. Now typing `/openchannel` will open the current channel in your browser.  
+-   `{channel.name}` can be used to insert the name of the current channel.  
+    Example: Add Command `/openurl https://twitch.tv/{channel.name}` with trigger `/openchannel`. Now typing `/openchannel` will open the current channel in your browser.
 
-- `{channel.id}` can be used to insert the Twitch account ID of the owner of current channel.  
+-   `{channel.id}` can be used to insert the Twitch account ID of the owner of current channel.
 
-- `{my.name}` can be used to insert the Twitch username of the currently selected account.  
+-   `{my.name}` can be used to insert the Twitch username of the currently selected account.
 
-- `{my.id}` can be used to insert the Twitch account ID of the currently selected account.  
+-   `{my.id}` can be used to insert the Twitch account ID of the currently selected account.
 
-- `{stream.title}` can be used to insert the title set in the current channel. Only works if the channel is live.  
-  Example: Add Command `The title is {stream.title}` with trigger `/title`. Now typing `/title` will send a message like `The title is Programming.S04E74.1440p.MP4-XD.NVENC`  
+-   `{stream.title}` can be used to insert the title set in the current channel. Only works if the channel is live.  
+    Example: Add Command `The title is {stream.title}` with trigger `/title`. Now typing `/title` will send a message like `The title is Programming.S04E74.1440p.MP4-XD.NVENC`
 
-- `{stream.game}` can be used to insert the game set in the current channel. Only works if the channel is live.  
-  Example: Add Command `I'm currently playing {stream.game}` with trigger `/game`. Now typing `/game` will send a message like `I'm currently playing World of Warcraft`.  
+-   `{stream.game}` can be used to insert the game set in the current channel. Only works if the channel is live.  
+    Example: Add Command `I'm currently playing {stream.game}` with trigger `/game`. Now typing `/game` will send a message like `I'm currently playing World of Warcraft`.
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it

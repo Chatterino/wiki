@@ -8,12 +8,12 @@ Simple filters are available through the Channel Filter Creator dialog. Advanced
 
 ## Example filters
 
-- `message.content contains "hello"`
-  - Only messages that contain the phrase `hello`
-- `message.length < 40 || author.subbed`
-  - Messages that are less than 40 characters log, OR are sent by a subscriber.
-- `channel.name == "somestreamer" && author.badges contains "moderator"`
-  - Messages that originated in the channel `somestreamer` AND are from users with a moderator badge
+-   `message.content contains "hello"`
+    -   Only messages that contain the phrase `hello`
+-   `message.length < 40 || author.subbed`
+    -   Messages that are less than 40 characters log, OR are sent by a subscriber.
+-   `channel.name == "somestreamer" && author.badges contains "moderator"`
+    -   Messages that originated in the channel `somestreamer` AND are from users with a moderator badge
 
 ## Filter syntax
 
@@ -42,20 +42,20 @@ When a filter is evaluated, variables are replaced with the values they represen
 
 Binary operators act on two values:
 
-- `1 + 2`
-- `author.subbed && flags.highlighted`
-- `"long sentence" contains "ten"`
+-   `1 + 2`
+-   `author.subbed && flags.highlighted`
+-   `"long sentence" contains "ten"`
 
 Unary operators act on one value:
 
-- `!author.subbed`
+-   `!author.subbed`
 
 The following operators are available:
 
 | Operator     | Description                                             |
-| ------------ | ------------------------------------------------------- |
+| ------------ | ------------------------------------------------------- | --- | --- |
 | `&&`         | And                                                     |
-| `||`         | Or                                                      |
+| `            |                                                         | `   | Or  |
 | `!`          | Not                                                     |
 | `==`         | Equals                                                  |
 | `!=`         | Not equals                                              |
@@ -77,34 +77,34 @@ The following operators are available:
 
 The following variables are available:
 
-| Variable                | Type         | Description                                                                                                |
-| ----------------------- | ------------ | ---------------------------------------------------------------------------------------------------------- |
-| **Author**              |              | User who sent the message                                                                                  |
-| `author.badges`         | List<String> | List of author's badges                                                                                    |
-| `author.color`          | Color\*      | Color code of author, or none                                                                              |
-| `author.name`           | String       | Display name of author                                                                                     |
-| `author.no_color`       | Bool         | Whether the author has no color set (i.e. gray name)                                                       |
-| `author.subbed`         | Bool         | Whether author is subscribed                                                                               |
-| `author.sub_length`     | Int          | How long author has been subscribed (or zero)                                                              |
-| **Channel**             |              | The channel where the message was sent                                                                     |
-| `channel.name`          | String       | Channel name                                                                                               |
-| `channel.watching`      | Bool         | Whether the channel is being watched (requires Chatterino extension)                                       |
-| `channel.live`          | Bool         | Whether the channel is currently live                                                                      |
-| **Flags**               |              | Message-specific flags                                                                                     |
-| `flags.highlighted`     | Bool         | Whether the message is highlighted                                                                         |
-| `flags.points_redeemed` | Bool         | Whether the message was redeemed through channel points                                                    |
-| `flags.sub_message`     | Bool         | Whether the message is a sub/resub/gift message                                                            |
-| `flags.system_message`  | Bool         | Whether the message is a system message (i.e. timeout/ban/info)                                            |
-| `flags.reward_message`  | Bool         | Whether the message is a redeemed channel point reward message                                             |
-| `flags.first_message`   | Bool         | Whether the message is the author's first message in the channel                                           |
-| `flags.elevated_message`| Bool         | Whether the message is a message the author paid to keep in browser chat for an increased duration[^1]     |
-| `flags.cheer_message`   | Bool         | Whether the message includes bits[^1]
-| `flags.whisper`         | Bool         | Whether the message is a whisper                                                                           |
-| `flags.reply`           | Bool         | Whether the message is a reply                                                                             |
-| `flags.automod`         | Bool         | Whether the message has automod information or actions[^1]                                                     |
-| **Message**             |              | Actual message sent                                                                                        |
-| `message.content`       | String       | Message content                                                                                            |
-| `message.length`        | Int          | Message length                                                                                             |
+| Variable                 | Type         | Description                                                                                            |
+| ------------------------ | ------------ | ------------------------------------------------------------------------------------------------------ |
+| **Author**               |              | User who sent the message                                                                              |
+| `author.badges`          | List<String> | List of author's badges                                                                                |
+| `author.color`           | Color\*      | Color code of author, or none                                                                          |
+| `author.name`            | String       | Display name of author                                                                                 |
+| `author.no_color`        | Bool         | Whether the author has no color set (i.e. gray name)                                                   |
+| `author.subbed`          | Bool         | Whether author is subscribed                                                                           |
+| `author.sub_length`      | Int          | How long author has been subscribed (or zero)                                                          |
+| **Channel**              |              | The channel where the message was sent                                                                 |
+| `channel.name`           | String       | Channel name                                                                                           |
+| `channel.watching`       | Bool         | Whether the channel is being watched (requires Chatterino extension)                                   |
+| `channel.live`           | Bool         | Whether the channel is currently live                                                                  |
+| **Flags**                |              | Message-specific flags                                                                                 |
+| `flags.highlighted`      | Bool         | Whether the message is highlighted                                                                     |
+| `flags.points_redeemed`  | Bool         | Whether the message was redeemed through channel points                                                |
+| `flags.sub_message`      | Bool         | Whether the message is a sub/resub/gift message                                                        |
+| `flags.system_message`   | Bool         | Whether the message is a system message (i.e. timeout/ban/info)                                        |
+| `flags.reward_message`   | Bool         | Whether the message is a redeemed channel point reward message                                         |
+| `flags.first_message`    | Bool         | Whether the message is the author's first message in the channel                                       |
+| `flags.elevated_message` | Bool         | Whether the message is a message the author paid to keep in browser chat for an increased duration[^1] |
+| `flags.cheer_message`    | Bool         | Whether the message includes bits[^1]                                                                  |
+| `flags.whisper`          | Bool         | Whether the message is a whisper                                                                       |
+| `flags.reply`            | Bool         | Whether the message is a reply                                                                         |
+| `flags.automod`          | Bool         | Whether the message has automod information or actions[^1]                                             |
+| **Message**              |              | Actual message sent                                                                                    |
+| `message.content`        | String       | Message content                                                                                        |
+| `message.length`         | Int          | Message length                                                                                         |
 
 \*Note: To compare a `Color`, compare it to a color hex code string: `author.color == "#FF0000"`
 
@@ -114,8 +114,8 @@ Generally, data types won't be much of an issue. However, mismatching data types
 
 For example:
 
-- `"abc" + 123 == "abc123"` but `123 + "abc" != "123abc"`
-- `1 + "2" == 3` and `1 + "2" == "3"`.
+-   `"abc" + 123 == "abc123"` but `123 + "abc" != "123abc"`
+-   `1 + "2" == 3` and `1 + "2" == "3"`.
 
 Chatterino will try to transform incompatible types for operations, but it isn't always successful.
 If two types can't mix, `False` or `0` will be returned, depending on the context.
@@ -144,10 +144,10 @@ For example: `message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}` matches th
 
 The order of operations in filters may not be exactly what you expect.
 
-- Expressions in parentheses are evaluated first
-- Math operations are evaluated from left to right, not by MDAS. `2 + 3 * 4` yields `20`, not `14`.
-- `a && b || c && d` is evaluated as `(a && b) || (c && d)`
-- `a || b && c || d` is evaluated as `a || (b && c) || d`
+-   Expressions in parentheses are evaluated first
+-   Math operations are evaluated from left to right, not by MDAS. `2 + 3 * 4` yields `20`, not `14`.
+-   `a && b || c && d` is evaluated as `(a && b) || (c && d)`
+-   `a || b && c || d` is evaluated as `a || (b && c) || d`
 
 Basically, if you're unsure about the order of operations, use extra parentheses.
 
