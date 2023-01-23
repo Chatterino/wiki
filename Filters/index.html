@@ -724,12 +724,18 @@
 <p>Simple filters are available through the Channel Filter Creator dialog. Advanced filters take inspiration from many programming languages, and the full description of keywords and operators can be found below.</p>
 <h2 id="example-filters">Example filters<a class="headerlink" href="#example-filters" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>message.content contains "hello"</code></li>
+<li><code>message.content contains "hello"</code><ul>
 <li>Only messages that contain the phrase <code>hello</code></li>
-<li><code>message.length &lt; 40 || author.subbed</code></li>
+</ul>
+</li>
+<li><code>message.length &lt; 40 || author.subbed</code><ul>
 <li>Messages that are less than 40 characters log, OR are sent by a subscriber.</li>
-<li><code>channel.name == "somestreamer" &amp;&amp; author.badges contains "moderator"</code></li>
+</ul>
+</li>
+<li><code>channel.name == "somestreamer" &amp;&amp; author.badges contains "moderator"</code><ul>
 <li>Messages that originated in the channel <code>somestreamer</code> AND are from users with a moderator badge</li>
+</ul>
+</li>
 </ul>
 <h2 id="filter-syntax">Filter syntax<a class="headerlink" href="#filter-syntax" title="Permanent link">&para;</a></h2>
 <p>A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single <code>True</code> or <code>False</code> value to decide whether to filter a message. Evaluating to something other than <code>True</code> or <code>False</code> will lead to all messages being filtered out.</p>
@@ -790,7 +796,7 @@
 <td>And</td>
 </tr>
 <tr>
-<td><code>||</code></td>
+<td><code> || </code></td>
 <td>Or</td>
 </tr>
 <tr>
@@ -1045,7 +1051,7 @@ If two types can't mix, <code>False</code> or <code>0</code> will be returned, d
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 20, 2023 09:03:40</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 23, 2023 19:00:33</span>
       
     
   </small>

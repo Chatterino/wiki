@@ -921,14 +921,14 @@
 <h2 id="built-in-commands">Built-in commands<a class="headerlink" href="#built-in-commands" title="Permanent link">&para;</a></h2>
 <p>Chatterino comes with a collection of built-in commands to help with channel management, Twitch interaction, and other misc. features.</p>
 <h3 id="block-unblock"><code>/block</code> &amp; <code>/unblock</code><a class="headerlink" href="#block-unblock" title="Permanent link">&para;</a></h3>
-<p>Usage: <code>/(block|unblock) &lt;user&gt;</code> </p>
+<p>Usage: <code>/(block|unblock) &lt;user&gt;</code></p>
 <p>Blocks or unblocks the specified user. Blocking will hide that user's messages/whispers as well as disassociate them from you on Twitch. For more information about blocking, see <a href="https://help.twitch.tv/s/article/how-to-manage-harassment-in-chat?language=en_US#BlockWhispersandMessagesfromStrangers">Twitch's help article</a>.</p>
 <h3 id="chatters"><code>/chatters</code><a class="headerlink" href="#chatters" title="Permanent link">&para;</a></h3>
 <p>Usage: <code>/chatters</code></p>
 <p>Shows the total amount of chatters currently connected to the channel.</p>
 <h3 id="clearmessages"><code>/clearmessages</code><a class="headerlink" href="#clearmessages" title="Permanent link">&para;</a></h3>
 <p>Usage: <code>/clearmessages</code></p>
-<p>Clears all messages from the current split/channel. This command is purely visual and is not related to the <code>/clear</code> moderator command. </p>
+<p>Clears all messages from the current split/channel. This command is purely visual and is not related to the <code>/clear</code> moderator command.</p>
 <h3 id="clip"><code>/clip</code><a class="headerlink" href="#clip" title="Permanent link">&para;</a></h3>
 <p>Usage: <code>/clip</code></p>
 <p>Creates a clip from the last 30 seconds of the current channel. Also provides an edit link to edit a clip from the current point in time.</p>
@@ -989,35 +989,35 @@
 <ul>
 <li>
 <p><code>{1}</code>, <code>{2}</code>, <code>{3}</code> and so on can be used to insert the 1st, 2nd, 3rd, ... word after the trigger.<br />
-  Example: Add Command <code>/timeout {1} 1</code> with trigger <code>/warn</code>. Now typing <code>/warn user123</code> will send <code>/timeout user123 1</code></p>
+    Example: Add Command <code>/timeout {1} 1</code> with trigger <code>/warn</code>. Now typing <code>/warn user123</code> will send <code>/timeout user123 1</code></p>
 </li>
 <li>
 <p>Similarly <code>{1+}</code> and so on can be used to insert all words starting with the 1st, ... word.<br />
-  Example: Add Command <code>Have a {1+} day!</code> with trigger <code>/day</code>. Now typing <code>/day very super nice</code> will send <code>Have a very super nice day!</code></p>
+    Example: Add Command <code>Have a {1+} day!</code> with trigger <code>/day</code>. Now typing <code>/day very super nice</code> will send <code>Have a very super nice day!</code></p>
 </li>
 <li>
 <p>You can use <code>{{1}</code> if you want to send <code>{1}</code> literally.</p>
 </li>
 <li>
 <p><code>{channel.name}</code> can be used to insert the name of the current channel.<br />
-  Example: Add Command <code>/openurl https://twitch.tv/{channel.name}</code> with trigger <code>/openchannel</code>. Now typing <code>/openchannel</code> will open the current channel in your browser.  </p>
+    Example: Add Command <code>/openurl https://twitch.tv/{channel.name}</code> with trigger <code>/openchannel</code>. Now typing <code>/openchannel</code> will open the current channel in your browser.</p>
 </li>
 <li>
-<p><code>{channel.id}</code> can be used to insert the Twitch account ID of the owner of current channel.  </p>
+<p><code>{channel.id}</code> can be used to insert the Twitch account ID of the owner of current channel.</p>
 </li>
 <li>
-<p><code>{my.name}</code> can be used to insert the Twitch username of the currently selected account.  </p>
+<p><code>{my.name}</code> can be used to insert the Twitch username of the currently selected account.</p>
 </li>
 <li>
-<p><code>{my.id}</code> can be used to insert the Twitch account ID of the currently selected account.  </p>
+<p><code>{my.id}</code> can be used to insert the Twitch account ID of the currently selected account.</p>
 </li>
 <li>
 <p><code>{stream.title}</code> can be used to insert the title set in the current channel. Only works if the channel is live.<br />
-  Example: Add Command <code>The title is {stream.title}</code> with trigger <code>/title</code>. Now typing <code>/title</code> will send a message like <code>The title is Programming.S04E74.1440p.MP4-XD.NVENC</code>  </p>
+    Example: Add Command <code>The title is {stream.title}</code> with trigger <code>/title</code>. Now typing <code>/title</code> will send a message like <code>The title is Programming.S04E74.1440p.MP4-XD.NVENC</code></p>
 </li>
 <li>
 <p><code>{stream.game}</code> can be used to insert the game set in the current channel. Only works if the channel is live.<br />
-  Example: Add Command <code>I'm currently playing {stream.game}</code> with trigger <code>/game</code>. Now typing <code>/game</code> will send a message like <code>I'm currently playing World of Warcraft</code>.  </p>
+    Example: Add Command <code>I'm currently playing {stream.game}</code> with trigger <code>/game</code>. Now typing <code>/game</code> will send a message like <code>I'm currently playing World of Warcraft</code>.</p>
 </li>
 </ul>
 
@@ -1026,7 +1026,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 20, 2023 09:03:40</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 23, 2023 19:00:33</span>
       
     
   </small>
