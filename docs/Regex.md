@@ -6,14 +6,14 @@ You can try out your regex patterns on a website like [regex101](https://regex10
 
 Basic patterns:
 
-| Pattern | Matches                                          |
-| ------- | ------------------------------------------------ | ---------- |
-| `x?`    | nothing or `x`                                   |
-| `x*`    | `x`, repeated any number of times                |
-| `x+`    | `x`, repeated any number of times but at least 1 |
-| `^`     | The start of the text                            |
-| `$`     | The end of the text                              |
-| `x      | y`                                               | `x` or `y` |
+| Pattern           | Matches                                          |
+| ----------------- | ------------------------------------------------ |
+| `x?`              | nothing or `x`                                   |
+| `x*`              | `x`, repeated any number of times                |
+| `x+`              | `x`, repeated any number of times but at least 1 |
+| `^`               | The start of the text                            |
+| `$`               | The end of the text                              |
+| <code>x\|y</code> | `x` or `y`                                       |
 
 You can group multiple statements with `()`:
 

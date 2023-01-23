@@ -52,26 +52,26 @@ Unary operators act on one value:
 
 The following operators are available:
 
-| Operator     | Description                                             |
-| ------------ | ------------------------------------------------------- | --- | --- |
-| `&&`         | And                                                     |
-| `            |                                                         | `   | Or  |
-| `!`          | Not                                                     |
-| `==`         | Equals                                                  |
-| `!=`         | Not equals                                              |
-| `<`          | Less than                                               |
-| `<=`         | Less than or equal to                                   |
-| `>`          | Greater than                                            |
-| `>=`         | Greater than or equal to                                |
-| `contains`   | String, List, or Map contains                           |
-| `startswith` | String or List starts with text or string, respectively |
-| `endswith`   | String or List ends with text or string, respectively   |
-| `match`      | Match string with regular expression                    |
-| `+`          | Add (or string concatenation)                           |
-| `-`          | Subtract                                                |
-| `*`          | Multiply                                                |
-| `/`          | Divide (integer)                                        |
-| `%`          | Modulus                                                 |
+| Operator            | Description                                             |
+| ------------------- | ------------------------------------------------------- |
+| `&&`                | And                                                     |
+| <code> \|\| </code> | Or                                                      |
+| `!`                 | Not                                                     |
+| `==`                | Equals                                                  |
+| `!=`                | Not equals                                              |
+| `<`                 | Less than                                               |
+| `<=`                | Less than or equal to                                   |
+| `>`                 | Greater than                                            |
+| `>=`                | Greater than or equal to                                |
+| `contains`          | String, List, or Map contains                           |
+| `startswith`        | String or List starts with text or string, respectively |
+| `endswith`          | String or List ends with text or string, respectively   |
+| `match`             | Match string with regular expression                    |
+| `+`                 | Add (or string concatenation)                           |
+| `-`                 | Subtract                                                |
+| `*`                 | Multiply                                                |
+| `/`                 | Divide (integer)                                        |
+| `%`                 | Modulus                                                 |
 
 ### Variables
 
