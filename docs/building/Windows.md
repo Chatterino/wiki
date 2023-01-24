@@ -157,7 +157,7 @@ In your editor, you need to add `-DUSE_CONAN=On` to the CMake confiugure command
         - [default](https://github.com/microsoft/vcpkg/blob/master/docs/users/triplets.md#additional-remarks) is `x86-windows`
     - `set VCPKG_ROOT=C:\path\to\vcpkg\`
     - `set PATH=%PATH%;%VCPKG_ROOT%`
-      <!-- TODO: mention setx? -->
+          <!-- TODO: mention setx? -->
 3. In your cloned repository (e.g. `chatterino2`), open a terminal, and install the dependencies:
 
 ```powershell
@@ -231,7 +231,7 @@ Qt creator should now format the documents when saving it.
         - If you're using conan: `-DUSE_CONAN=On`
         - If you're using vcpkg: `-DCMAKE_TOOLCHAIN_FILE="$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake"` where `$VCPKG_ROOT` is the `VCPKG_ROOT` environment variable
     - Save with <kbd>CTRL</kbd> + <kbd>S</kbd>
-      <!-- TODO: Screenshot -->
+          <!-- TODO: Screenshot -->
 3. Click on the down-arrow next to `▶ Select Startup Item...` and select `chatterino.exe (bin/chatterino.exe)`.
 4. Build the project using <kbd>CTRL</kbd> + <kbd>B</kbd> or `Build > Build chatterino.exe`.
 5. If you're not using vcpkg, after the first build or after updating Qt, open the terminal (`View > Terminal`) and run `windeployqt` in the `build` folder:
@@ -270,7 +270,7 @@ You need to install the following extensions/extension packs:
     - The path to your Qt installation (if non-standard): `-DCMAKE_PREFIX_PATH=C:\Qt\5.15.2\msvc2019_64\lib\cmake\Qt5`
     - If you're using conan: `-DUSE_CONAN=On`
     - If you're using vcpkg: `-DCMAKE_TOOLCHAIN_FILE="$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake"` where `$VCPKG_ROOT` is the `VCPKG_ROOT` environment variable
-      <!-- TODO: Screenshot -->
+          <!-- TODO: Screenshot -->
 3. You should be prompted (in the bottom right) to configure the CMake project (if not, run `CMake: Configure` from the command pallette). Select `Yes`. <!-- TODO: Screenshot -->
 4. When you're prompted to choose a kit, select `Visual Studio Community 2022 Release amd64 (x64)`. <!-- TODO: Screenshot -->
 5. Once your project is configured, set the build target either from the bottom next to the `⚙ Build` button or through the command pallette (CMake: Set Build Target) to `chatterino` (EXECUTABLE). <!-- TODO: Screenshot -->
