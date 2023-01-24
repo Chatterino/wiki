@@ -46,7 +46,12 @@ If you want to use [vcpkg](#vcpkg), then you don't need to install Qt.
 2. Scroll down to the bottom
 3. Then select "Download the Qt Online Installer"
 
-<!-- TODO: Screenshot -->
+<details markdown>
+<summary>Screenshot of the download page</summary>
+
+![Screenshot of Qt download page](../images/building/qt-website-download.png)
+
+</details>
 
 #### When prompted which components to install
 
@@ -61,7 +66,14 @@ If you want to use [vcpkg](#vcpkg), then you don't need to install Qt.
 
 Note: This installation will take about 2 GB of disk space.
 
-<!-- TODO: Screenshot -->
+<details markdown>
+<summary>Screenshot of example configuration</summary>
+
+Items circled in red are required.
+
+![Screenshot of example configuration](../images/building/qt-maintenance-tool-installation.png)
+
+</details>
 
 ## Additional Libraries
 
@@ -224,32 +236,59 @@ Qt creator should now format the documents when saving it.
 
 1. Open the folder in Visual Studio.
 2. A window/tab should open where you can click on `Open CMake Settings editor` (Configure CMake). You can also open this through `Project > CMake Settings`.
+    <!-- prettier-ignore -->
+    <details markdown>
+    <summary>Screenshot of welcome screen</summary>
+    ![Screenshot of welcome screen](../images/building/win-vs-cmake-welcome.png)
+    </details>
+3. Make the following modifications:
     - Set the _Build Root_ to `${projectDir}\build`
     - Add the following to _CMake Command Arguments_ (if needed):
         - The path to your Qt installation (if non-standard): `-DCMAKE_PREFIX_PATH=C:\Qt\5.15.2\msvc2019_64\lib\cmake\Qt5`
         - If you're using conan: `-DUSE_CONAN=On`
-        - If you're using vcpkg: `-DCMAKE_TOOLCHAIN_FILE="$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake"` where `$VCPKG_ROOT` is the `VCPKG_ROOT` environment variable
-    - Save with <kbd>CTRL</kbd> + <kbd>S</kbd> <!-- TODO: Screenshot -->
-3. Click on the down-arrow next to `▶ Select Startup Item...` and select `chatterino.exe (bin/chatterino.exe)`.
-4. Build the project using <kbd>CTRL</kbd> + <kbd>B</kbd> or `Build > Build chatterino.exe`.
-5. If you're not using vcpkg, after the first build or after updating Qt, open the terminal (`View > Terminal`) and run `windeployqt` in the `build` folder:
+        - If you're using vcpkg, you don't need to add anything.
+    - If you have multiple compilers, you might need to set the _Toolset_ to `msvc_x64` (CMake should eventually output `The CXX compiler identification is MSVC <version>`).
+    - Save with <kbd>CTRL</kbd> + <kbd>S</kbd>
+    <details markdown>
+    <summary>Screenshot of example configuration</summary>
+    ![Screenshot of example configuration](../images/building/win-vs-cmake-example-config.png)
+    </details>
+4. Click on the down-arrow next to `▶ Select Startup Item...` and select `chatterino.exe (bin/chatterino.exe)`.
+    <!-- prettier-ignore-start -->
+    <details markdown>
+    <summary>Screenshot of menu</summary>
+    ![Screenshot of menu](../images/building/win-vs-select-startup-item.png)
+    </details>
+    <!-- prettier-ignore-end -->
+5. Build the project using <kbd>CTRL</kbd> + <kbd>B</kbd> or `Build > Build chatterino.exe`.
+6. If you're not using vcpkg, after the first build or after updating Qt, open the terminal (`View > Terminal`) and run `windeployqt` in the `build` folder:
 
 ```powershell
 cd build
-C:\Qt\5.15.2\msvc2019_64\bin\windeployqt bin\chatterino.exe --debug --no-compiler-runtime --no-translations --no-opengl-sw --dir bin/
+C:\Qt\5.15.2\msvc2019_64\bin\windeployqt\bin\chatterino.exe --debug --no-compiler-runtime --no-translations --no-opengl-sw --dir bin/
 ```
 
 6. (Optionally) install the [`Qt Visual Studio Tools`](https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools2022) by searching for it in `Extensions > Manage Extensions... > Online`. This will provide debugger visualizations.
 
-<!-- TODO: Screenshot -->
+<details markdown>
+<summary>Screenshot of extension manager</summary>
+
+![Screenshot of extension manager](../images/building/win-vs-qt-extension.png)
+
+</details>
 
 #### Running and Debugging
 
 To run chatterino, you can click the ▶ button at the top. It's advised to add `portable` into a `modes` file in `build/bin`.
 
-When using profiling tools, you might want to see names of Qt functions. To see these, add `C:\Qt\5.15.2\msvc2019_64\bin` in the settings under `Debugging > Symbols`.
+When using profiling tools, you might want to see names of Qt functions. To see these, add `C:\Qt\5.15.2\msvc2019_64\bin` (your Qt path) in the settings under `Debugging > Symbols`.
 
-<!-- TODO: Screenshot -->
+<details markdown>
+<summary>Screenshot of settings</summary>
+
+![Screenshot of settings](../images/building/win-vs-debug-symbols.png)
+
+</details>
 
 ### Visual Studio Code
 
@@ -265,19 +304,47 @@ You need to install the following extensions/extension packs:
 
 1. Open the folder where you cloned the repository in VS Code.
 2. Open the (workspace) settings and add the following arguments (if needed) to `CMake: Configure Args` (`cmake.configureArgs`):
+
     - The path to your Qt installation (if non-standard): `-DCMAKE_PREFIX_PATH=C:\Qt\5.15.2\msvc2019_64\lib\cmake\Qt5`
     - If you're using conan: `-DUSE_CONAN=On`
-    - If you're using vcpkg: `-DCMAKE_TOOLCHAIN_FILE="$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake"` where `$VCPKG_ROOT` is the `VCPKG_ROOT` environment variable <!-- TODO: Screenshot -->
-3. You should be prompted (in the bottom right) to configure the CMake project (if not, run `CMake: Configure` from the command pallette). Select `Yes`. <!-- TODO: Screenshot -->
-4. When you're prompted to choose a kit, select `Visual Studio Community 2022 Release amd64 (x64)`. <!-- TODO: Screenshot -->
-5. Once your project is configured, set the build target either from the bottom next to the `⚙ Build` button or through the command pallette (CMake: Set Build Target) to `chatterino` (EXECUTABLE). <!-- TODO: Screenshot -->
+    - If you're using vcpkg: `-DCMAKE_TOOLCHAIN_FILE="$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake"` where `$VCPKG_ROOT` is the `VCPKG_ROOT` environment variable
+      <details markdown>
+      <summary>Screenshot of example settings (UI)</summary>
+      ![Screenshot of example settings (UI)](../images/building/win-vscode-settings-ui-example.png)
+      </details>
+
+3. You should be prompted (in the bottom right) to configure the CMake project (if not, run `CMake: Configure` from the command pallette). Select `Yes`.
+4. When you're prompted to choose a kit, select `Visual Studio Community 2022 Release amd64 (x64)`.
+ <details markdown>
+ <summary>Screenshot of configure dialog</summary>
+ ![Screenshot of kit selection](../images/building/win-vscode-select-kit.png)
+ </details>
+5. Once your project is configured, set the build target either from the bottom next to the `⚙ Build` button or through the command pallette (CMake: Set Build Target) to `chatterino` (EXECUTABLE).
+ <details markdown>
+ <summary>Screenshot of target dialog</summary>
+ ![Screenshot of target dialog](../images/building/win-vscode-select-target.png)
+ </details>
 6. (Optionally) set your generator for your workspace to e.g. `Ninja` (through `cmake.generator`).
 7. Build chatterino by either clicking on the `⚙ Build` button in the bottom or using the command pallette (CMake: Build Target).
 8. If you're not using vcpkg, after the first build or after updating Qt, open the terminal and run `windeployqt` in the `build` folder:
 
 ```powershell
-cd build && C:\Qt\5.15.2\msvc2019_64\bin\windeployqt bin\chatterino.exe --debug --no-compiler-runtime --no-translations --no-opengl-sw --dir bin/
+cd build && C:\Qt\5.15.2\msvc2019_64\bin\windeployqt\bin\chatterino.exe --debug --no-compiler-runtime --no-translations --no-opengl-sw --dir bin/
 ```
+
+```json title=".vscode/settings.json"
+{
+    "cmake.configureArgs": [
+        // (1)!
+        "-DCMAKE_PREFIX_PATH=G:\\QT\\5.15.2\\msvc2019_64\\lib\\cmake\\Qt5",
+        "-DUSE_CONAN=ON"
+    ],
+    "cmake.generator": "Ninja" // (2)!
+}
+```
+
+1. Here you should specify your arguments (See step 2).
+2. This is optional.
 
 <!-- TODO: example vscode json workspace config -->
 
@@ -390,6 +457,6 @@ You can now create a zip archive of all the contents in the installation directo
 
 ## Next Steps
 
-Take a look at the [Contribution Guidelines](https://wiki.chatterino.com/Contributing%20for%20Developers/).
+Take a look at the [Contribution Guidelines](../../Contributing%20for%20Developers/).
 
 [llvm-download]: https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.6/LLVM-15.0.6-win64.exe
