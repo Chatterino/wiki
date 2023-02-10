@@ -58,16 +58,16 @@ Try closing splits in Chatterino in order to fix this.
 
 ### I am unable to send whispers from Chatterino
 
-If you are getting the `Your settings prevent you from sending this whisper` error message, it may be due to:
+You may be unable to send a whisper via Chatterino for the following reasons:
 
--   You turning on the `Block Whispers from Strangers` option in your [Twitch account security settings](https://www.twitch.tv/settings/security).
--   Your account is too new to be able to whisper users using IRC. If you wish to whisper a user, you must have that user follow your channel, then use the Twitch website to whisper the user. This was an IRC spam protection measure put in place by Twitch. This is not a Chatterino bug.
--   Starting in 2.4.0 you are able to send whispers if you have a verified phone number attached to your Twitch account, this will allow you to bypass the previous limitation due to your account age.  
-     `NOTE:` Phone Number Authentication is **NOT** the same thing as Two-Factor Authentication.
-
+- You don't have a verified phone number attached to your Twitch account.
+    - Twitch requires users to have a verified Phone Number attached to their account to send whispers from Chatterino.
+    - `NOTE:` A Verified Phone Number is **NOT** the same thing as Two-Factor Authentication.
     -   You can add a phone number to your account in [Twitch Settings.](https://www.twitch.tv/settings/security)
-    -   Once you have added a phone number, you can toggle the setting `Helix timegate /w behaviour` to `Always Use Helix`
         ![/w_helix_timegate](images/help/helix_timegate_whispers.png)
+
+- You are on a Chatterino version older than 2.4.0:
+    - On February 24th 2023 Twitch shutdown the service old versions of Chatterino used to send whispers. You must update to 2.4.0 or newer to continue sending whispers.
 
 ### FFZ/BTTV emotes are not working
 
