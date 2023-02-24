@@ -424,6 +424,26 @@
     I am unable to send whispers from Chatterino
   </a>
   
+    <nav class="md-nav" aria-label="I am unable to send whispers from Chatterino">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#you-dont-have-a-verified-phone-number-attached-to-your-twitch-account" class="md-nav__link">
+    You don't have a verified phone number attached to your Twitch account.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-are-on-a-chatterino-version-older-than-240" class="md-nav__link">
+    You are on a Chatterino version older than 2.4.0:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -729,6 +749,26 @@
     I am unable to send whispers from Chatterino
   </a>
   
+    <nav class="md-nav" aria-label="I am unable to send whispers from Chatterino">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#you-dont-have-a-verified-phone-number-attached-to-your-twitch-account" class="md-nav__link">
+    You don't have a verified phone number attached to your Twitch account.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-are-on-a-chatterino-version-older-than-240" class="md-nav__link">
+    You are on a Chatterino version older than 2.4.0:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -890,20 +930,14 @@ This will however work with most chatbots, as they simply take you being connect
 <p>If you are having troubles with Chatterino repeatedly connecting/disconnecting, it is likely due to the large amount of channels you are connected to. The maximum channel limit is usually around the 100 mark, but may differ from user to user.
 Try closing splits in Chatterino in order to fix this.</p>
 <h3 id="i-am-unable-to-send-whispers-from-chatterino">I am unable to send whispers from Chatterino<a class="headerlink" href="#i-am-unable-to-send-whispers-from-chatterino" title="Permanent link">&para;</a></h3>
-<p>If you are getting the <code>Your settings prevent you from sending this whisper</code> error message, it may be due to:</p>
-<ul>
-<li>You turning on the <code>Block Whispers from Strangers</code> option in your <a href="https://www.twitch.tv/settings/security">Twitch account security settings</a>.</li>
-<li>Your account is too new to be able to whisper users using IRC. If you wish to whisper a user, you must have that user follow your channel, then use the Twitch website to whisper the user. This was an IRC spam protection measure put in place by Twitch. This is not a Chatterino bug.</li>
-<li>
-<p>Starting in 2.4.0 you are able to send whispers if you have a verified phone number attached to your Twitch account, this will allow you to bypass the previous limitation due to your account age.<br />
-<code>NOTE:</code> Phone Number Authentication is <strong>NOT</strong> the same thing as Two-Factor Authentication.</p>
-<ul>
-<li>You can add a phone number to your account in <a href="https://www.twitch.tv/settings/security">Twitch Settings.</a></li>
-<li>Once you have added a phone number, you can toggle the setting <code>Helix timegate /w behaviour</code> to <code>Always Use Helix</code>
-    <img alt="/w_helix_timegate" src="../images/help/helix_timegate_whispers.png" /></li>
-</ul>
-</li>
-</ul>
+<p>You may be unable to send a whisper via Chatterino for the following reasons:</p>
+<h4 id="you-dont-have-a-verified-phone-number-attached-to-your-twitch-account">You don't have a verified phone number attached to your Twitch account.<a class="headerlink" href="#you-dont-have-a-verified-phone-number-attached-to-your-twitch-account" title="Permanent link">&para;</a></h4>
+<p>Twitch requires users to have a verified Phone Number attached to their account to send whispers from Chatterino.<br />
+<code>NOTE:</code> A Verified Phone Number is <strong>NOT</strong> the same thing as Two-Factor Authentication.<br />
+You can add a phone number to your account in <a href="https://www.twitch.tv/settings/security">Twitch Settings.</a>
+<img alt="twitch_phone_auth" src="../images/help/twitch_phone_auth.png" /></p>
+<h4 id="you-are-on-a-chatterino-version-older-than-240">You are on a Chatterino version older than 2.4.0:<a class="headerlink" href="#you-are-on-a-chatterino-version-older-than-240" title="Permanent link">&para;</a></h4>
+<p>On February 24th 2023 Twitch shutdown the service old versions of Chatterino used to send whispers. You must update to 2.4.0 or newer to continue sending whispers.</p>
 <h3 id="ffzbttv-emotes-are-not-working">FFZ/BTTV emotes are not working<a class="headerlink" href="#ffzbttv-emotes-are-not-working" title="Permanent link">&para;</a></h3>
 <p>You need to be logged in to see emotes.
 Try hitting F5 once to manually refresh the emotes.</p>
@@ -963,7 +997,7 @@ Using the <code>/reply</code> command will reply to a user's most recent message
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 24, 2023 10:04:46</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 24, 2023 22:02:05</span>
       
     
   </small>
