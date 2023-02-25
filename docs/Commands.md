@@ -12,7 +12,7 @@ Usage: `/banid <userID>`
 
 Bans a user by their userID instead of their username. Useful for banning users who are temporarily suspended from Twitch, which `/ban` cannot do anymore.
 
-*Note*: If you ban a suspended user this way, they cannot be unbanned from Chatterino, you must wait until their suspension ends or unban them from browser chat.
+`Note:` If you ban a suspended user this way, they cannot be unbanned from Chatterino, you must wait until their suspension ends or unban them from browser chat.
 
 ### `/block` & `/unblock`
 
