@@ -293,6 +293,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#banid1" class="md-nav__link">
+    /banid1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#block-unblock" class="md-nav__link">
     /block &amp; /unblock
   </a>
@@ -723,6 +730,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#banid1" class="md-nav__link">
+    /banid1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#block-unblock" class="md-nav__link">
     /block &amp; /unblock
   </a>
@@ -919,6 +933,10 @@
 <p>Commands are used as shortcuts for long messages. If a message starts with the "trigger" then the message will be replaced with the Command.</p>
 <h2 id="built-in-commands">Built-in commands<a class="headerlink" href="#built-in-commands" title="Permanent link">&para;</a></h2>
 <p>Chatterino comes with a collection of built-in commands to help with channel management, Twitch interaction, and other misc. features.</p>
+<h3 id="banid1"><code>/banid</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup><a class="headerlink" href="#banid1" title="Permanent link">&para;</a></h3>
+<p>Usage: <code>/banid &lt;userID&gt;</code></p>
+<p>Bans a user by their userID instead of their username. Useful for banning users who are temporarily suspended from Twitch, which <code>/ban</code> cannot do anymore.</p>
+<p><code>Note:</code> If you ban a suspended user this way, they cannot be unbanned from Chatterino, you must wait until their suspension ends or unban them from browser chat.</p>
 <h3 id="block-unblock"><code>/block</code> &amp; <code>/unblock</code><a class="headerlink" href="#block-unblock" title="Permanent link">&para;</a></h3>
 <p>Usage: <code>/(block|unblock) &lt;user&gt;</code></p>
 <p>Blocks or unblocks the specified user. Blocking will hide that user's messages/whispers as well as disassociate them from you on Twitch. For more information about blocking, see <a href="https://help.twitch.tv/s/article/how-to-manage-harassment-in-chat?language=en_US#BlockWhispersandMessagesfromStrangers">Twitch's help article</a>.</p>
@@ -1019,13 +1037,21 @@
     Example: Add Command <code>I'm currently playing {stream.game}</code> with trigger <code>/game</code>. Now typing <code>/game</code> will send a message like <code>I'm currently playing World of Warcraft</code>.</p>
 </li>
 </ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Available since <a href="../Help/#what-is-nightly-and-how-to-use-install-it">nightly</a> <a href="https://github.com/Chatterino/chatterino2/commit/b5b85501ee4446961b5f3d412c441de6adaaabc3">b5b8550</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 24, 2023 22:02:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 26, 2023 21:25:27</span>
       
     
   </small>
