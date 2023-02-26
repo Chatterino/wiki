@@ -6,7 +6,7 @@ Commands are used as shortcuts for long messages. If a message starts with the "
 
 Chatterino comes with a collection of built-in commands to help with channel management, Twitch interaction, and other misc. features.
 
-### `/banid`
+### `/banid`[^1]
 
 Usage: `/banid <userID>`
 
@@ -163,5 +163,7 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
 
 -   `{stream.game}` can be used to insert the game set in the current channel. Only works if the channel is live.  
     Example: Add Command `I'm currently playing {stream.game}` with trigger `/game`. Now typing `/game` will send a message like `I'm currently playing World of Warcraft`.
+
+[^1]: Available since [nightly][nightly] [shortHashHere](https://github.com/Chatterino/chatterino2/commit/longHashHere)
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
