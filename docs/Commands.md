@@ -6,6 +6,14 @@ Commands are used as shortcuts for long messages. If a message starts with the "
 
 Chatterino comes with a collection of built-in commands to help with channel management, Twitch interaction, and other misc. features.
 
+### `/banid`[^1]
+
+Usage: `/banid <userID>`
+
+Bans a user by their userID instead of their username. Useful for banning users who are temporarily suspended from Twitch, which `/ban` cannot do anymore.
+
+`Note:` If you ban a suspended user this way, they cannot be unbanned from Chatterino, you must wait until their suspension ends or unban them from browser chat.
+
 ### `/block` & `/unblock`
 
 Usage: `/(block|unblock) <user>`
@@ -155,5 +163,7 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
 
 -   `{stream.game}` can be used to insert the game set in the current channel. Only works if the channel is live.  
     Example: Add Command `I'm currently playing {stream.game}` with trigger `/game`. Now typing `/game` will send a message like `I'm currently playing World of Warcraft`.
+
+[^1]: Available since [nightly][nightly] [b5b8550](https://github.com/Chatterino/chatterino2/commit/b5b85501ee4446961b5f3d412c441de6adaaabc3)
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
