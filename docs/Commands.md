@@ -6,9 +6,9 @@ Commands are used as shortcuts for long messages. If a message starts with the "
 
 Chatterino comes with a collection of built-in commands to help with channel management, Twitch interaction, and other misc. features.
 
-### `/banid`[^1]
+### `/banid`
 
-Usage: `/banid <userID>`
+Usage: `/banid <userID>`[^1]
 
 Bans a user by their userID instead of their username. Useful for banning users who are temporarily suspended from Twitch, which `/ban` cannot do anymore.
 
