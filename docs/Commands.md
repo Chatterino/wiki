@@ -164,6 +164,6 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
 -   `{stream.game}` can be used to insert the game set in the current channel. Only works if the channel is live.  
     Example: Add Command `I'm currently playing {stream.game}` with trigger `/game`. Now typing `/game` will send a message like `I'm currently playing World of Warcraft`.
 
-[^1]: Available since [nightly][nightly] [b5b8550](https://github.com/Chatterino/chatterino2/commit/b5b85501ee4446961b5f3d412c441de6adaaabc3)
+[^1]: Added in 2.4.2
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
