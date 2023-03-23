@@ -11,7 +11,7 @@ Simple filters are available through the Channel Filter Creator dialog. Advanced
 -   `message.content contains "hello"`
     -   Only messages that contain the phrase `hello`
 -   `message.length < 40 || author.subbed`
-    -   Messages that are less than 40 characters log, OR are sent by a subscriber.
+    -   Messages that are less than 40 characters long, OR are sent by a subscriber.
 -   `channel.name == "somestreamer" && author.badges contains "moderator"`
     -   Messages that originated in the channel `somestreamer` AND are from users with a moderator badge
 
