@@ -2,7 +2,7 @@
 
 When running on Windows, Chatterino 2.4.1 and later will automatically save information about a crash in a [minidump](https://docs.sentry.io/platforms/native/guides/minidumps/).
 
-Crashdumps are saved inside the `Crashes/reports` folder in your [Chatterino folder](Settings/#where-is-my-chatterino-folder-located).
+Crashdumps are saved inside the `Crashes/reports` folder in your [Chatterino folder](/Settings/#where-is-my-chatterino-folder-located).
 
 There are several ways of analyzing crashes. To get started, you need to have a symbol (PDB) file for your installation. **These files are unique per build** meaning that you need to download the file (this is especially important when using nightly builds). For GitHub builds, you can find the PDB file in the release - it's zipped in an archive ending in `.pdb.7z`. For simplicity, extract the `.pdb` to the location of your `chatterino.exe`.
 
