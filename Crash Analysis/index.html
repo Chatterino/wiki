@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://wiki.chatterino.com/Settings/">
+        <link rel="canonical" href="https://wiki.chatterino.com/Crash%20Analysis/">
       
       
-        <link rel="prev" href="../Search/">
+        <link rel="prev" href="../Contributing%20for%20Developers/">
       
       
-        <link rel="next" href="../Third_party_services/">
+        <link rel="next" href="../Environment%20Variables/">
       
       <link rel="icon" href="https://chatterino.com/logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>Settings - Chatterino</title>
+        <title>Crash Analysis - Chatterino</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#where-is-my-chatterino-folder-located" class="md-skip">
+        <a href="#crash-analysis" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Settings
+              Crash Analysis
             
           </span>
         </div>
@@ -281,11 +281,59 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Crash%20Analysis/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Crash Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Crash Analysis
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windbg" class="md-nav__link">
+    WinDbg
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minidump-stackwalk" class="md-nav__link">
+    minidump-stackwalk
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -461,82 +509,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Settings
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Settings/" class="md-nav__link">
         Settings
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#where-is-my-chatterino-folder-located" class="md-nav__link">
-    Where is my Chatterino folder located?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
-    Files
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#help" class="md-nav__link">
-    Help
-  </a>
-  
-    <nav class="md-nav" aria-label="Help">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-do-i-delete-the-chatterino-cache-settings" class="md-nav__link">
-    How do I delete the Chatterino cache / settings?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-settings-commands-window-layout-are-not-saving" class="md-nav__link">
-    My settings / commands / window layout are not saving
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -573,6 +550,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -581,43 +560,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#where-is-my-chatterino-folder-located" class="md-nav__link">
-    Where is my Chatterino folder located?
+  <a href="#windbg" class="md-nav__link">
+    WinDbg
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
-    Files
+  <a href="#minidump-stackwalk" class="md-nav__link">
+    minidump-stackwalk
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#help" class="md-nav__link">
-    Help
-  </a>
-  
-    <nav class="md-nav" aria-label="Help">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-do-i-delete-the-chatterino-cache-settings" class="md-nav__link">
-    How do I delete the Chatterino cache / settings?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#my-settings-commands-window-layout-are-not-saving" class="md-nav__link">
-    My settings / commands / window layout are not saving
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -636,40 +588,34 @@
                   
 
 
-  <h1>Settings</h1>
+<h1 id="crash-analysis">Crash Analysis<a class="headerlink" href="#crash-analysis" title="Permanent link">&para;</a></h1>
+<p>When running on Windows, Chatterino 2.4.1 and later will automatically save information about a crash in a <a href="https://docs.sentry.io/platforms/native/guides/minidumps/">minidump</a>.</p>
+<p>Crashdumps are saved inside the <code>Crashes/reports</code> folder in your <a href="/Settings/#where-is-my-chatterino-folder-located">Chatterino folder</a>.</p>
+<p>There are several ways of analyzing crashes. To get started, you need to have a symbol (PDB) file for your installation. <strong>These files are unique per build</strong> meaning that you need to download the file (this is especially important when using nightly builds). For GitHub builds, you can find the PDB file in the release - it's zipped in an archive ending in <code>.pdb.7z</code>. For simplicity, extract the <code>.pdb</code> to the location of your <code>chatterino.exe</code>.</p>
+<h2 id="windbg">WinDbg<a class="headerlink" href="#windbg" title="Permanent link">&para;</a></h2>
+<p>For analyzing with a GUI, install <a href="https://apps.microsoft.com/store/detail/windbg-preview/9PGJGD53TN86">WinDbg Preview</a> from the Microsoft Store. After the installation, you should be able to open the crashdumps (<code>.dmp</code> files) right from the Windows Explorer. By default, you won't get much information.</p>
+<p>To add names to functions (symbols), open the settings (<em>Home &gt; Settings</em>), go to <em>Debugging Settings</em>, and add the directory you extracted your symbol file to the <em>Symbol path</em>. If there's no <code>srv*</code> entry, consider adding one - this will try to load symbols from servers for system libraries.</p>
+<p>To add source-files, clone the repository and checkout the source-tree at the version of your executable. Then add this path to <em>Source Path</em> in the <em>Debugging Settings</em>.</p>
+<p><em>Note:</em> You might need to reload your window to have your changes be picked up.</p>
+<details>
+<summary>Example Settings</summary>
 
-<h3 id="where-is-my-chatterino-folder-located">Where is my Chatterino folder located?<a class="headerlink" href="#where-is-my-chatterino-folder-located" title="Permanent link">&para;</a></h3>
-<p>On <strong>Windows</strong>:
-<code>%APPDATA%/Chatterino2</code></p>
-<p>On <strong>Linux</strong>:
-<code>$HOME/.local/share/chatterino</code></p>
-<p>On <strong>Mac</strong>:
-<code>$HOME/Library/Application Support/chatterino</code></p>
-<h3 id="files">Files<a class="headerlink" href="#files" title="Permanent link">&para;</a></h3>
-<p>Commands and Settings have a small backup mechanism that saves the older version in a file like commands.json.bkp-2 in case you want to return to older versions of the file.</p>
-<ul>
-<li>commands.json - Will contain all your Chatterino commands</li>
-<li>settings.json - This contains most of your settings, including sensitive data like your login token</li>
-<li>window-layout.json - This contains information which tabs and splits you have open and how they are positioned</li>
-<li>irc.json - When you have a non-twitch IRC connection, this contains the configured servers and settings</li>
-</ul>
-<h2 id="help">Help<a class="headerlink" href="#help" title="Permanent link">&para;</a></h2>
-<h3 id="how-do-i-delete-the-chatterino-cache-settings">How do I delete the Chatterino cache / settings?<a class="headerlink" href="#how-do-i-delete-the-chatterino-cache-settings" title="Permanent link">&para;</a></h3>
-<p>Navigate to your <a href="#where-is-my-chatterino-folder-located">Chatterino folder</a> and remove corresponding folders.</p>
-<ul>
-<li>The <em>Cache</em> folder contains cached network requests from Chatterino.</li>
-<li>The <em>Logs</em> folder contains chat logs from chats you've had open in Chatterino.</li>
-<li>The <em>Misc</em> folder contains internal information about the current running instance of Chatterino.</li>
-<li>The <em>Settings</em> folder contains any settings you may have configured in Chatterino (e.g. font size, highlight phrases) and your list of channels open.</li>
-</ul>
-<h3 id="my-settings-commands-window-layout-are-not-saving">My settings / commands / window layout are not saving<a class="headerlink" href="#my-settings-commands-window-layout-are-not-saving" title="Permanent link">&para;</a></h3>
-<p>This is usually a case because Chatterino is unable to save settings on your disk. To fix that, try following steps:</p>
+<img alt="Example screenshot of WinDbg settings" src="/images/crashes/windbg-settings.png" />
+
+</details>
+
+<h2 id="minidump-stackwalk">minidump-stackwalk<a class="headerlink" href="#minidump-stackwalk" title="Permanent link">&para;</a></h2>
+<p>If you want to use the terminal or don't have a Windows machine, you can use <a href="https://github.com/rust-minidump/rust-minidump/tree/main/minidump-stackwalk"><code>minidump-stackwalk</code></a>. Install <a href="https://crates.io/crates/minidump-stackwalk"><code>minidump-stackwalk</code></a> and <a href="https://crates.io/crates/dump_syms"><code>dump_syms</code></a> with cargo (<a href="https://doc.rust-lang.org/cargo/getting-started/installation.html">installation</a>): <code>cargo install &lt;app&gt;</code>.</p>
+<p>First, you need to generate a symbol-store from the PDB file with <code>dump_syms</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dump_syms<span class="w"> </span>chatterino.exe<span class="w"> </span>-s<span class="w"> </span>&lt;store-path&gt;<span class="w"> </span><span class="c1"># (1)!</span>
+</code></pre></div>
 <ol>
-<li>Run Chatterino as Administrator.</li>
-<li>Back up your settings by copying them from your <a href="#where-is-my-chatterino-folder-located">Chatterino folder</a> to a safe location on your disk and delete them. Restart your computer and try launching Chatterino again.</li>
-<li>Back up your settings, uninstall Chatterino and install it again, but make sure <code>Fresh Install</code> option is checked.</li>
-<li>Try running Chatterino in portable mode.</li>
+<li>This can be any folder you want. Symbols will be extracted here.</li>
 </ol>
+<p>After you dumped the symbols, run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>minidump_stackwalk<span class="w"> </span>&lt;path-to-crashdump&gt;<span class="w"> </span>--symbols-path<span class="w"> </span>&lt;store-path&gt;
+</code></pre></div>
+<p>Since Chatterino has quite a few threads, the output will be long. Most of the time, you're interested in the first thread (GUI thread) since it's the crashing thread.</p>
 
   <hr>
 <div class="md-source-file">
