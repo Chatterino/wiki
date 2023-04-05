@@ -19,7 +19,7 @@ _Note:_ You might need to reload your window to have your changes be picked up.
 <details>
 <summary>Example Settings</summary>
 
-<img alt="Example screenshot of WinDbg settings" src="images/crashes/windbg-settings.png" />
+<img alt="Example screenshot of WinDbg settings" src="/images/crashes/windbg-settings.png" />
 
 </details>
 
