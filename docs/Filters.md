@@ -1,3 +1,7 @@
+Filters are a powerful tool to create your own custom, filtered channel splits. Filters allow you to selectively show messages that satisfy your own custom criteria: show subscribers' messages, moderator messages, channel point redemptions, new subscriptions, and more.  
+
+Looking for inspiration? Look at some [example filters](#example-filters).
+
 ## Introduction to Filters
 
 Filters can be applied to splits to provide a selective view of messages. Filters are created in the Settings page and are applied by opening the Split menu (three dots) and selecting "Set filters". Applied filters are saved when you close and open Chatterino.
@@ -5,6 +9,44 @@ Filters can be applied to splits to provide a selective view of messages. Filter
 Multiple filters can be applied to a Split. A message must pass all applied filters for it to be displayed.
 
 Simple filters are available through the Channel Filter Creator dialog. Advanced filters take inspiration from many programming languages, and the full description of keywords and operators can be found below.
+
+### Writing your own filters
+
+To begin writing your own filters: 
+
+1. Take a look at the available operators below. 
+    - For most tasks involving the message content, you can make use of the `contains` operator or the `matches` operator with a RegEx. 
+2. Then, try to break your desired behavior into multiple conditions. 
+3. Combine these parts using AND (`&&`), OR (`||`), and NOT (`!`). 
+    - If you need all the conditions satisfied, combine them with AND
+    - If you only need *one* of the conditions, combine them with OR
+    - If you need the *opposite* of one of the conditions, wrap it with parentheses and add a NOT: `!(condition)`
+
+#### Example
+For example, consider the following intention: "Only show me messages that are from moderators and mention me". We can break this filter into two individual conditions:
+
+1. Messages that are from moderators
+2. Messages that mention me
+
+We can then write the corresponding filter parts:
+
+1. `author.badges contains "moderator"`
+2. `message.content contains "@my_name"`
+
+Finally, because we want *both* of these conditions to be true, we combine them with the AND operator, `&&`:
+
+`(author.badges contains "moderator") && (message.content contains "@my_name")`
+
+Note that parentheses are usually not required (but don't hurt).
+
+### Terminology
+
+Here is some terminology that you'll encounter in the rest of this document.
+
+1. Value: A value is the simplest element of a filter. It can take on multiple forms: a number, a string (i.e. text), a [regular expression](https://en.wikipedia.org/wiki/Regular_expression), or a list of multiple values.
+2. Type: A type describes the general form of a value. For example, every number has type Int. Every string has type String.
+3. Variable: A variable is a placeholder for some information about a message. For example, the variable `message.content` represents the text of a message
+4. Operator: An operator acts on one or two values and evaluates to another value. For example, the plus operator `+` can add two numbers, `1 + 1` or concatenate strings, `"a" + "b"`
 
 ## Example filters
 
@@ -15,19 +57,26 @@ Simple filters are available through the Channel Filter Creator dialog. Advanced
 -   `channel.name == "somestreamer" && author.badges contains "moderator"`
     -   Messages that originated in the channel `somestreamer` AND are from users with a moderator badge
 
-## Filter syntax
+## Filter Syntax + Semantics
+
+This section is aimed at technical users who have experience with general purpose programming languages.
 
 A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single `True` or `False` value to decide whether to filter a message. Evaluating to something other than `True` or `False` will lead to all messages being filtered out.
 
 ### Values
 
-A value can be an integer (`123`, `5`), a string (`"hello"`, `"this is a string"`), a variable (`author.name`, `message.length`), a list of values (`{123, "hello", author.name}`), or a regular expression (`r"\d\d\d\d"`).
+A value can be:
 
-Lists are surrounded by braces (`{}`) and list items are separated by commas. A list item can be a value (e.g. `"hello"`) or an expression wrapped in parentheses (e.g. `(author.sub_length * message.length)`).
+1. An integer (`123`, `5`)
+2. A string (`"hello"`, `"this is a string"`)
+3. A variable (`author.name`, `message.length`)
+    - Technically, a variable isn't a value, but is given value by substitution
+    - When a filter is evaluated, variables are replaced with the values they represent
+4. A regular expression (`r"\d\d\d\d"`)
+5. A list of values (`{123, "hello", author.name}`)
 
 Regular expressions are similar to strings, but are denoted with an `r` before the opening quotation mark (e.g. `r"something"`). To make a regular expression case-insensitive, use `ri` before the opening quotation mark (e.g. `ri"something"`).
 
-When a filter is evaluated, variables are replaced with the values they represent.
 
 **Literals:**
 
@@ -52,26 +101,28 @@ Unary operators act on one value:
 
 The following operators are available:
 
-| Operator            | Description                                             |
-| ------------------- | ------------------------------------------------------- |
-| `&&`                | And                                                     |
-| <code> \|\| </code> | Or                                                      |
-| `!`                 | Not                                                     |
-| `==`                | Equals                                                  |
-| `!=`                | Not equals                                              |
-| `<`                 | Less than                                               |
-| `<=`                | Less than or equal to                                   |
-| `>`                 | Greater than                                            |
-| `>=`                | Greater than or equal to                                |
-| `contains`          | String, List, or Map contains                           |
-| `startswith`        | String or List starts with text or string, respectively |
-| `endswith`          | String or List ends with text or string, respectively   |
-| `match`             | Match string with regular expression                    |
-| `+`                 | Add (or string concatenation)                           |
-| `-`                 | Subtract                                                |
-| `*`                 | Multiply                                                |
-| `/`                 | Divide (integer)                                        |
-| `%`                 | Modulus                                                 |
+| Operator            | Description                                                      |
+| ------------------- | ---------------------------------------------------------------- |
+| `&&`                | [Logical AND](https://en.wikipedia.org/wiki/Logical_conjunction) |
+| <code> \|\| </code> | [Logical OR](https://en.wikipedia.org/wiki/Logical_disjunction)  |
+| `!`                 | [Negation](https://en.wikipedia.org/wiki/Negation)               |
+| `==`                | Equals                                                           |
+| `!=`                | Not equals                                                       |
+| `<`                 | Less than                                                        |
+| `<=`                | Less than or equal to                                            |
+| `>`                 | Greater than                                                     |
+| `>=`                | Greater than or equal to                                         |
+| `contains`          | String, List, or Map contains                                    |
+| `startswith`        | String or List starts with text or value, respectively           |
+| `endswith`          | String or List ends with text or value, respectively             |
+| `match`             | Match string with regular expression                             |
+| `+`                 | Add (or string concatenation)                                    |
+| `-`                 | Subtract                                                         |
+| `*`                 | Multiply                                                         |
+| `/`                 | Divide (integer)                                                 |
+| `%`                 | Modulus                                                          |
+
+Please read about the [type rules](#type-rules) to better understand the evaluation semantics for operators that take multiple data types.
 
 ### Variables
 
@@ -110,17 +161,36 @@ The following variables are available:
 
 ### Data types
 
-Generally, data types won't be much of an issue. However, mismatching data types can cause confusing results.
+The Chatterino filter language is typed, meaning that every value has a type and only specific combinations of types are allowed when using operators. Generally, you won't run in to issues. The type system exists to warn you about any mistakes that your filter contains.
 
-For example:
+#### Type Rules
 
--   `"abc" + 123 == "abc123"` but `123 + "abc" != "123abc"`
--   `1 + "2" == 3` and `1 + "2" == "3"`.
+| Operator          | Form                            | Result   | Description                                                    |
+| ----------------- | ------------------------------- | -------- | -------------------------------------------------------------- |
+| `+`               | `Int + Int`                     | `Int`    | Adds two integers                                              |
+| `+`               | `String + Any`                  | `String` | Concatenates the first string with the second argument         |
+| `-`               | `Int - Int`                     | `Int`    | Subtracts two integers                                         |
+| `*`               | `Int * Int`                     | `Int`    | Multiplies two integers                                        |
+| `/`               | `Int / Int`                     | `Int`    | Divides two integers, discarding the remainder                 |
+| `%`               | `Int % Int`                     | `Int`    | Computes the modulus of two integers                           |
+| `&&`              | `Bool && Bool`                  | `Bool`   | Logical AND of two booleans                                    |
+| <code>\|\|</code> | <code>Bool \|\| Bool</code>     | `Bool`   | Logical OR of two booleans                                     |
+| `==`              | `Any == Any`                    | `Bool`   | Equality comparison of any two values                          |
+| `!=`              | `Any != Any`                    | `Bool`   | Inequality comparison of any two values                        |
+| `>`               | `Int > Int`                     | `Bool`   | Greater than comparison of two integers                        |
+| `>=`              | `Int >= Int`                    | `Bool`   | Greater than or equal to comparison of two integers            |
+| `<`               | `Int < Int`                     | `Bool`   | Less than comparison of two integers                           |
+| `<=`              | `Int <= Int`                    | `Bool`   | Less than or equal to comparison of two integers               |
+| `startswith`      | `List startswith Any`           | `Bool`   | Checks whether the list has the given value as its first value |
+| `startswith`      | `String startswith String`      | `Bool`   | Checks whether the first string starts with the second string  |
+| `endswith`        | `List endswith Any`             | `Bool`   | Checks whether the list has the given value as its last value  |
+| `endswith`        | `String endswith String`        | `Bool`   | Checks whether the first string ends with the second string    |
+| `contains`        | `List contains Any`             | `Bool`   | Checks whether the list contains the given value               |
+| `contains`        | `Map contains Any`              | `Bool`   | Checks whether the map has the given value as a key            |
+| `contains`        | `String contains String`        | `Bool`   | Checks whether the first string contains the second string     |
+| `match`           | `String match RegEx`            | `Bool`   | Checks whether the string matches the given regular expression |
+| `match`           | `String match {RegEx, n : Int}` | `String` | Returns the `n`th matching capture group, or the empty string  |
 
-Chatterino will try to transform incompatible types for operations, but it isn't always successful.
-If two types can't mix, `False` or `0` will be returned, depending on the context.
-
-Double check the table above to see the types of each variable to prevent unexpected results.
 
 ### Regular Expressions
 
@@ -140,7 +210,7 @@ For example: `message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}` matches th
 
 `(message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}) == "2020"` will filter only messages that contain a written date with 2020 as the year.
 
-### About the order of operations
+### Order of Operations
 
 The order of operations in filters may not be exactly what you expect.
 
