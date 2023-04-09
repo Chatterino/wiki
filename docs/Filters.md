@@ -1,4 +1,4 @@
-Filters are a powerful tool to create your own custom, filtered channel splits. Filters allow you to selectively show messages that satisfy your own custom criteria: show subscribers' messages, moderator messages, channel point redemptions, new subscriptions, and more.  
+Filters are a powerful tool to create your own custom, filtered channel splits. Filters allow you to selectively show messages that satisfy your own custom criteria: show subscribers' messages, moderator messages, channel point redemptions, new subscriptions, and more.
 
 Looking for inspiration? Look at some [example filters](#example-filters).
 
@@ -23,6 +23,7 @@ To begin writing your own filters:
     - If you need the *opposite* of one of the conditions, wrap it with parentheses and add a NOT: `!(condition)`
 
 #### Example
+
 For example, consider the following intention: "Only show me messages that are from moderators and mention me". We can break this filter into two individual conditions:
 
 1. Messages that are from moderators
@@ -33,7 +34,7 @@ We can then write the corresponding filter parts:
 1. `author.badges contains "moderator"`
 2. `message.content contains "@my_name"`
 
-Finally, because we want *both* of these conditions to be true, we combine them with the AND operator, `&&`:
+Finally, because we want _both_ of these conditions to be true, we combine them with the AND operator, `&&`:
 
 `(author.badges contains "moderator") && (message.content contains "@my_name")`
 
@@ -76,7 +77,6 @@ A value can be:
 5. A list of values (`{123, "hello", author.name}`)
 
 Regular expressions are similar to strings, but are denoted with an `r` before the opening quotation mark (e.g. `r"something"`). To make a regular expression case-insensitive, use `ri` before the opening quotation mark (e.g. `ri"something"`).
-
 
 **Literals:**
 
@@ -190,7 +190,6 @@ The Chatterino filter language is typed, meaning that every value has a type and
 | `contains`        | `String contains String`        | `Bool`   | Checks whether the first string contains the second string     |
 | `match`           | `String match RegEx`            | `Bool`   | Checks whether the string matches the given regular expression |
 | `match`           | `String match {RegEx, n : Int}` | `String` | Returns the `n`th matching capture group, or the empty string  |
-
 
 ### Regular Expressions
 
