@@ -362,6 +362,39 @@
     Introduction to Filters
   </a>
   
+    <nav class="md-nav" aria-label="Introduction to Filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#writing-your-own-filters" class="md-nav__link">
+    Writing your own filters
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing your own filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    Terminology
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -372,11 +405,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#filter-syntax" class="md-nav__link">
-    Filter syntax
+  <a href="#filter-syntax-semantics" class="md-nav__link">
+    Filter Syntax + Semantics
   </a>
   
-    <nav class="md-nav" aria-label="Filter syntax">
+    <nav class="md-nav" aria-label="Filter Syntax + Semantics">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -404,6 +437,19 @@
   <a href="#data-types" class="md-nav__link">
     Data types
   </a>
+  
+    <nav class="md-nav" aria-label="Data types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-rules" class="md-nav__link">
+    Type Rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -435,8 +481,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#about-the-order-of-operations" class="md-nav__link">
-    About the order of operations
+  <a href="#order-of-operations" class="md-nav__link">
+    Order of Operations
   </a>
   
 </li>
@@ -633,6 +679,39 @@
     Introduction to Filters
   </a>
   
+    <nav class="md-nav" aria-label="Introduction to Filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#writing-your-own-filters" class="md-nav__link">
+    Writing your own filters
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing your own filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    Terminology
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -643,11 +722,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#filter-syntax" class="md-nav__link">
-    Filter syntax
+  <a href="#filter-syntax-semantics" class="md-nav__link">
+    Filter Syntax + Semantics
   </a>
   
-    <nav class="md-nav" aria-label="Filter syntax">
+    <nav class="md-nav" aria-label="Filter Syntax + Semantics">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -675,6 +754,19 @@
   <a href="#data-types" class="md-nav__link">
     Data types
   </a>
+  
+    <nav class="md-nav" aria-label="Data types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-rules" class="md-nav__link">
+    Type Rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -706,8 +798,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#about-the-order-of-operations" class="md-nav__link">
-    About the order of operations
+  <a href="#order-of-operations" class="md-nav__link">
+    Order of Operations
   </a>
   
 </li>
@@ -734,10 +826,42 @@
 
   <h1>Filters</h1>
 
+<p>Filters are a powerful tool to create your own custom, filtered channel splits. Filters allow you to selectively show messages that satisfy your own custom criteria: show subscribers' messages, moderator messages, channel point redemptions, new subscriptions, and more.</p>
+<p>Looking for inspiration? Look at some <a href="#example-filters">example filters</a>.</p>
 <h2 id="introduction-to-filters">Introduction to Filters<a class="headerlink" href="#introduction-to-filters" title="Permanent link">&para;</a></h2>
 <p>Filters can be applied to splits to provide a selective view of messages. Filters are created in the Settings page and are applied by opening the Split menu (three dots) and selecting "Set filters". Applied filters are saved when you close and open Chatterino.</p>
 <p>Multiple filters can be applied to a Split. A message must pass all applied filters for it to be displayed.</p>
 <p>Simple filters are available through the Channel Filter Creator dialog. Advanced filters take inspiration from many programming languages, and the full description of keywords and operators can be found below.</p>
+<h3 id="writing-your-own-filters">Writing your own filters<a class="headerlink" href="#writing-your-own-filters" title="Permanent link">&para;</a></h3>
+<p>To begin writing your own filters, take a look at the available <a href="#operators">operators</a> and <a href="#variables">variables</a> below.</p>
+<p>For most tasks involving the message content, you can make use of the <code>contains</code> operator, or the <code>matches</code> operator with a <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expression</a>.<br />
+Then, try to break your desired behavior into multiple conditions. Combine them like this:</p>
+<ul>
+<li>If you need <em>all</em> the conditions satisfied, combine them with AND (<code>condition1 &amp;&amp; condition2</code>)</li>
+<li>If you only need <em>one</em> of the conditions, combine them with OR (<code>condition1 || condition2</code>)</li>
+<li>If you need the <em>opposite</em> of one of the conditions, wrap it with parentheses and add a NOT: <code>!(condition)</code></li>
+</ul>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<p>Consider the following intention: "Only show me messages that are from moderators <strong>and</strong> mention me". We can break this filter into two individual conditions:</p>
+<ol>
+<li>Messages that are from moderators</li>
+<li>Messages that mention me</li>
+</ol>
+<p>We can then write the corresponding filter parts:</p>
+<ol>
+<li><code>author.badges contains "moderator"</code></li>
+<li><code>message.content contains "@my_name"</code></li>
+</ol>
+<p>Finally, because we want <em>both</em> of these conditions to be true, we combine them with the AND operator <code>&amp;&amp;</code> and end up with this final filter:</p>
+<p><code>(author.badges contains "moderator") &amp;&amp; (message.content contains "@my_name")</code></p>
+<h3 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h3>
+<p>Here is some terminology that you'll encounter in the rest of this document.</p>
+<ol>
+<li>Value: A value is the simplest element of a filter. It can take on multiple forms: a number, a string (i.e. text), a <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expression</a>, or a list of multiple values.</li>
+<li>Type: A type describes the general form of a value. For example, every number has type Int. Every string has type String.</li>
+<li>Variable: A variable is a placeholder for some information about a message. For example, the variable <code>message.content</code> represents the text of a message</li>
+<li>Operator: An operator acts on one or two values and evaluates to another value. For example, the plus operator <code>+</code> can add two numbers, <code>1 + 1</code> or concatenate strings, <code>"a" + "b"</code></li>
+</ol>
 <h2 id="example-filters">Example filters<a class="headerlink" href="#example-filters" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>message.content contains "hello"</code><ul>
@@ -753,13 +877,23 @@
 </ul>
 </li>
 </ul>
-<h2 id="filter-syntax">Filter syntax<a class="headerlink" href="#filter-syntax" title="Permanent link">&para;</a></h2>
+<h2 id="filter-syntax-semantics">Filter Syntax + Semantics<a class="headerlink" href="#filter-syntax-semantics" title="Permanent link">&para;</a></h2>
+<p>This section is aimed at technical users who have experience with general purpose programming languages.</p>
 <p>A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single <code>True</code> or <code>False</code> value to decide whether to filter a message. Evaluating to something other than <code>True</code> or <code>False</code> will lead to all messages being filtered out.</p>
 <h3 id="values">Values<a class="headerlink" href="#values" title="Permanent link">&para;</a></h3>
-<p>A value can be an integer (<code>123</code>, <code>5</code>), a string (<code>"hello"</code>, <code>"this is a string"</code>), a variable (<code>author.name</code>, <code>message.length</code>), a list of values (<code>{123, "hello", author.name}</code>), or a regular expression (<code>r"\d\d\d\d"</code>).</p>
-<p>Lists are surrounded by braces (<code>{}</code>) and list items are separated by commas. A list item can be a value (e.g. <code>"hello"</code>) or an expression wrapped in parentheses (e.g. <code>(author.sub_length * message.length)</code>).</p>
+<p>A value can be:</p>
+<ol>
+<li>An integer (<code>123</code>, <code>5</code>)</li>
+<li>A string (<code>"hello"</code>, <code>"this is a string"</code>)</li>
+<li>A variable (<code>author.name</code>, <code>message.length</code>)<ul>
+<li>Technically, a variable isn't a value, but is given value by substitution</li>
+<li>When a filter is evaluated, variables are replaced with the values they represent</li>
+</ul>
+</li>
+<li>A regular expression (<code>r"\d\d\d\d"</code>)</li>
+<li>A list of values (<code>{123, "hello", author.name}</code>)</li>
+</ol>
 <p>Regular expressions are similar to strings, but are denoted with an <code>r</code> before the opening quotation mark (e.g. <code>r"something"</code>). To make a regular expression case-insensitive, use <code>ri</code> before the opening quotation mark (e.g. <code>ri"something"</code>).</p>
-<p>When a filter is evaluated, variables are replaced with the values they represent.</p>
 <p><strong>Literals:</strong></p>
 <table>
 <thead>
@@ -809,15 +943,15 @@
 <tbody>
 <tr>
 <td><code>&amp;&amp;</code></td>
-<td>And</td>
+<td><a href="https://en.wikipedia.org/wiki/Logical_conjunction">Logical AND</a></td>
 </tr>
 <tr>
 <td><code> || </code></td>
-<td>Or</td>
+<td><a href="https://en.wikipedia.org/wiki/Logical_disjunction">Logical OR</a></td>
 </tr>
 <tr>
 <td><code>!</code></td>
-<td>Not</td>
+<td><a href="https://en.wikipedia.org/wiki/Negation">Negation</a></td>
 </tr>
 <tr>
 <td><code>==</code></td>
@@ -849,11 +983,11 @@
 </tr>
 <tr>
 <td><code>startswith</code></td>
-<td>String or List starts with text or string, respectively</td>
+<td>String or List starts with text or value, respectively</td>
 </tr>
 <tr>
 <td><code>endswith</code></td>
-<td>String or List ends with text or string, respectively</td>
+<td>String or List ends with text or value, respectively</td>
 </tr>
 <tr>
 <td><code>match</code></td>
@@ -881,6 +1015,7 @@
 </tr>
 </tbody>
 </table>
+<p>Please read about the <a href="#type-rules">type rules</a> to better understand the evaluation semantics for operators that take multiple data types.</p>
 <h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
 <p>The following variables are available:</p>
 <table>
@@ -1026,15 +1161,158 @@
 </table>
 <p>*Note: To compare a <code>Color</code>, compare it to a color hex code string: <code>author.color == "#FF0000"</code></p>
 <h3 id="data-types">Data types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h3>
-<p>Generally, data types won't be much of an issue. However, mismatching data types can cause confusing results.</p>
-<p>For example:</p>
-<ul>
-<li><code>"abc" + 123 == "abc123"</code> but <code>123 + "abc" != "123abc"</code></li>
-<li><code>1 + "2" == 3</code> and <code>1 + "2" == "3"</code>.</li>
-</ul>
-<p>Chatterino will try to transform incompatible types for operations, but it isn't always successful.
-If two types can't mix, <code>False</code> or <code>0</code> will be returned, depending on the context.</p>
-<p>Double check the table above to see the types of each variable to prevent unexpected results.</p>
+<p>The Chatterino filter language is typed, meaning that every value has a type and only specific combinations of types are allowed when using operators. Generally, you won't run in to issues. The type system exists to warn you about any mistakes that your filter contains.</p>
+<h4 id="type-rules">Type Rules<a class="headerlink" href="#type-rules" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Form</th>
+<th>Result</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td><code>Int + Int</code></td>
+<td><code>Int</code></td>
+<td>Adds two integers</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td><code>String + Any</code></td>
+<td><code>String</code></td>
+<td>Concatenates the first string with the second argument</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td><code>Int - Int</code></td>
+<td><code>Int</code></td>
+<td>Subtracts two integers</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td><code>Int * Int</code></td>
+<td><code>Int</code></td>
+<td>Multiplies two integers</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td><code>Int / Int</code></td>
+<td><code>Int</code></td>
+<td>Divides two integers, discarding the remainder</td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td><code>Int % Int</code></td>
+<td><code>Int</code></td>
+<td>Computes the modulus of two integers</td>
+</tr>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td><code>Bool &amp;&amp; Bool</code></td>
+<td><code>Bool</code></td>
+<td>Logical AND of two booleans</td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td><code>Bool || Bool</code></td>
+<td><code>Bool</code></td>
+<td>Logical OR of two booleans</td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td><code>Any == Any</code></td>
+<td><code>Bool</code></td>
+<td>Equality comparison of any two values</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td><code>Any != Any</code></td>
+<td><code>Bool</code></td>
+<td>Inequality comparison of any two values</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td><code>Int &gt; Int</code></td>
+<td><code>Bool</code></td>
+<td>Greater than comparison of two integers</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td><code>Int &gt;= Int</code></td>
+<td><code>Bool</code></td>
+<td>Greater than or equal to comparison of two integers</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td><code>Int &lt; Int</code></td>
+<td><code>Bool</code></td>
+<td>Less than comparison of two integers</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td><code>Int &lt;= Int</code></td>
+<td><code>Bool</code></td>
+<td>Less than or equal to comparison of two integers</td>
+</tr>
+<tr>
+<td><code>startswith</code></td>
+<td><code>List startswith Any</code></td>
+<td><code>Bool</code></td>
+<td>Checks whether the list has the given value as its first value</td>
+</tr>
+<tr>
+<td><code>startswith</code></td>
+<td><code>String startswith String</code></td>
+<td><code>Bool</code></td>
+<td>Checks whether the first string starts with the second string</td>
+</tr>
+<tr>
+<td><code>endswith</code></td>
+<td><code>List endswith Any</code></td>
+<td><code>Bool</code></td>
+<td>Checks whether the list has the given value as its last value</td>
+</tr>
+<tr>
+<td><code>endswith</code></td>
+<td><code>String endswith String</code></td>
+<td><code>Bool</code></td>
+<td>Checks whether the first string ends with the second string</td>
+</tr>
+<tr>
+<td><code>contains</code></td>
+<td><code>List contains Any</code></td>
+<td><code>Bool</code></td>
+<td>Checks whether the list contains the given value</td>
+</tr>
+<tr>
+<td><code>contains</code></td>
+<td><code>Map contains Any</code></td>
+<td><code>Bool</code></td>
+<td>Checks whether the map has the given value as a key</td>
+</tr>
+<tr>
+<td><code>contains</code></td>
+<td><code>String contains String</code></td>
+<td><code>Bool</code></td>
+<td>Checks whether the first string contains the second string</td>
+</tr>
+<tr>
+<td><code>match</code></td>
+<td><code>String match RegEx</code></td>
+<td><code>Bool</code></td>
+<td>Checks whether the string matches the given regular expression</td>
+</tr>
+<tr>
+<td><code>match</code></td>
+<td><code>String match {RegEx, n : Int}</code></td>
+<td><code>String</code></td>
+<td>Returns the <code>n</code>th matching capture group, or the empty string</td>
+</tr>
+</tbody>
+</table>
 <h3 id="regular-expressions">Regular Expressions<a class="headerlink" href="#regular-expressions" title="Permanent link">&para;</a></h3>
 <p>Chatterino can match string variables to a regular expression, returning whether the expression matched or, optionally, the value of a capture group.</p>
 <h4 id="simple-matching">Simple matching<a class="headerlink" href="#simple-matching" title="Permanent link">&para;</a></h4>
@@ -1044,7 +1322,7 @@ If two types can't mix, <code>False</code> or <code>0</code> will be returned, d
 <p><code>"some string" match {r"some regex", capture number}</code> returns <code>False</code> if no match or the value of the nth captured group.</p>
 <p>For example: <code>message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}</code> matches the year component of a date like <code>12/31/2020</code>.</p>
 <p><code>(message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}) == "2020"</code> will filter only messages that contain a written date with 2020 as the year.</p>
-<h3 id="about-the-order-of-operations">About the order of operations<a class="headerlink" href="#about-the-order-of-operations" title="Permanent link">&para;</a></h3>
+<h3 id="order-of-operations">Order of Operations<a class="headerlink" href="#order-of-operations" title="Permanent link">&para;</a></h3>
 <p>The order of operations in filters may not be exactly what you expect.</p>
 <ul>
 <li>Expressions in parentheses are evaluated first</li>
@@ -1067,7 +1345,7 @@ If two types can't mix, <code>False</code> or <code>0</code> will be returned, d
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 5, 2023 16:39:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 9, 2023 21:36:13</span>
       
     
   </small>
