@@ -12,19 +12,18 @@ Simple filters are available through the Channel Filter Creator dialog. Advanced
 
 ### Writing your own filters
 
-To begin writing your own filters: 
+To begin writing your own filters, take a look at the available [operators](#operators) and [variables](#variables) below.
 
-1. Take a look at the available operators below. 
-    - For most tasks involving the message content, you can make use of the `contains` operator or the `matches` operator with a RegEx. 
-2. Then, try to break your desired behavior into multiple conditions. 
-3. Combine these parts using AND (`&&`), OR (`||`), and NOT (`!`). 
-    - If you need all the conditions satisfied, combine them with AND
-    - If you only need *one* of the conditions, combine them with OR
-    - If you need the *opposite* of one of the conditions, wrap it with parentheses and add a NOT: `!(condition)`
+For most tasks involving the message content, you can make use of the `contains` operator, or the `matches` operator with a [regular expression](https://en.wikipedia.org/wiki/Regular_expression).  
+Then, try to break your desired behavior into multiple conditions. Combine them like this:
+
+-   If you need _all_ the conditions satisfied, combine them with AND (`condition1 && condition2`)
+-   If you only need _one_ of the conditions, combine them with OR (`condition1 || condition2`)
+-   If you need the _opposite_ of one of the conditions, wrap it with parentheses and add a NOT: `!(condition)`
 
 #### Example
 
-For example, consider the following intention: "Only show me messages that are from moderators and mention me". We can break this filter into two individual conditions:
+Consider the following intention: "Only show me messages that are from moderators **and** mention me". We can break this filter into two individual conditions:
 
 1. Messages that are from moderators
 2. Messages that mention me
@@ -34,11 +33,9 @@ We can then write the corresponding filter parts:
 1. `author.badges contains "moderator"`
 2. `message.content contains "@my_name"`
 
-Finally, because we want _both_ of these conditions to be true, we combine them with the AND operator, `&&`:
+Finally, because we want _both_ of these conditions to be true, we combine them with the AND operator `&&` and end up with this final filter:
 
 `(author.badges contains "moderator") && (message.content contains "@my_name")`
-
-Note that parentheses are usually not required (but don't hurt).
 
 ### Terminology
 
