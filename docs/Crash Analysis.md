@@ -38,7 +38,7 @@ dump_syms chatterino.exe -s <store-path> # (1)!
 After you dumped the symbols, run:
 
 ```sh
-minidump_stackwalk <path-to-crashdump> --symbols-path <store-path>
+minidump-stackwalk <path-to-crashdump> --symbols-path <store-path>
 ```
 
 Since Chatterino has quite a few threads, the output will be long. Most of the time, you're interested in the first thread (GUI thread) since it's the crashing thread.
