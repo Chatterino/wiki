@@ -4,11 +4,11 @@ This is a set of guidelines for contributing to Chatterino. The goal is to teach
 
 ## Tooling
 
-## Formatting
+### Formatting
 
 Code is automatically formatted using `clang-format`. It takes the burden off of the programmer and ensures that all contributors use the same style (even if mess something up accidentally). We recommend that you set up automatic formatting on file save in your editor.
 
-## Comments
+### Comments
 
 Comments should only be used to:
 
@@ -17,7 +17,7 @@ Comments should only be used to:
 
 Try to structure your code so that comments are not required.
 
-##### Good example
+#### Good example
 
 ```cpp
 /**
@@ -29,7 +29,7 @@ int /* (2)! */ compare(const QString &a, const QString &b);
 1. You can't know this from the function signature, so it's good to clarify this.
 2. Even better: Return a "strong ordering" type (but we don't have such a type right now).
 
-##### Bad example
+#### Bad example
 
 ```cpp
 /*
@@ -46,7 +46,7 @@ boost::optional<QRegularExpressionMatch> matchLink(const QString &text);
 
 ## Code
 
-## Arithmetic Types
+### Arithmetic Types
 
 Arithmetic types (like char, short, int, long, float and double), bool, and pointers are NOT initialized by default in C++. They keep whatever value is already at their position in the memory. This makes debugging harder and is unpredictable, so we initialize them to zero by using `{}` after their name when declaring them.
 
@@ -78,7 +78,7 @@ class ArithmeticTypes
 8. ⚠ Random value. Derefenrencing this will likely segfault.
 9. Unnecessary `{}` as the default constructor will be called even without `{}`.
 
-## Passing parameters
+### Passing parameters
 
 The way a parameter is passed signals how it is going to be used inside of the function. C++ doesn't have multiple return values so there is "out parameters" (reference to a variable that is going to be assigned inside of the function) to simulate multiple return values.
 
@@ -141,7 +141,7 @@ void main() {
 
 Generally the lowest level of requirement should be used e.g. passing `Channel&` instead of `std::shared_ptr<Channel>&` (aka `ChannelPtr`) if possible.
 
-## Members
+### Members
 
 All functions names are in `camelCase`. _Private_ member variables are in `camelCase_` (note the underscore at the end). We don't use the `get` prefix for getters. We mark functions as `const` [if applicable](https://stackoverflow.com/questions/751681/meaning-of-const-last-in-a-function-declaration-of-a-class).
 
@@ -174,7 +174,7 @@ void myFreeStandingFunction(); // (7)!
 6. Private methods **don't** have a `_` suffix.
 7. Free standing functions start lowercase as well.
 
-## Casts
+### Casts
 
 -   **Avoid** c-style casts: `(type)variable`.
 -   Instead use explicit type casts: `type(variable)`
@@ -210,7 +210,7 @@ void example(float f, Base *b, const User &user, int p) {
 5. `reinterpret_cast` is required very rarely.
 6. **Avoid** C-style casts.
 
-## This
+### This
 
 Always use `this` to refer to instance members to make it clear where we use either locals or members.
 
@@ -236,16 +236,16 @@ Test::testFunc(int a)
 
 1. It's unclear if it's a local or member variable, especially if the method is more complex.
 
-## Managing resources
+### Managing resources
 
-##### Regular classes
+#### Regular classes
 
 Keep the element on the stack if possible. If you need a pointer or have complex ownership you should use one of these classes:
 
 -   Use `std::unique_ptr` if the resource has a single owner.
 -   Use `std::shared_ptr` if the resource has multiple owners.
 
-##### QObject classes
+#### QObject classes
 
 -   Use the [object tree](https://doc.qt.io/qt-5/objecttrees.html#) to manage lifetime where possible. Objects are destroyed when their parent object is destroyed.
 -   If you have to explicitly delete an object use `variable->deleteLater()` instead of `delete variable`. This ensures that it will be deleted on the correct thread.
