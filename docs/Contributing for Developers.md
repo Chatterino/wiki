@@ -248,8 +248,8 @@ Keep the element on the stack if possible. If you need a pointer or have complex
 #### QObject classes
 
 -   Use the [object tree](https://doc.qt.io/qt-6/objecttrees.html) to manage lifetime where possible. Objects are destroyed when their parent object is destroyed.
--   If you have to explicitly delete an object use `variable->deleteLater()` instead of `delete variable`. This ensures that it will be deleted on the correct thread.
--   If an object doesn't have a parent consider using `std::unique_ptr<Type, DeleteLater>` with `DeleteLater` from "common/Common.hpp". This will call `deleteLater()` on the pointer once it goes out of scope or the object is destroyed.
+-   If you have to explicitly delete an object use [`variable->deleteLater()`][delete-later] instead of `delete variable`. This ensures that it will be deleted on the correct thread.
+-   If an object doesn't have a parent consider using `std::unique_ptr<Type, DeleteLater>` with `DeleteLater` from "common/Common.hpp". This will call [`deleteLater()`][delete-later] on the pointer once it goes out of scope or the object is destroyed.
 
 [static_cast]: https://en.cppreference.com/w/cpp/language/static_cast
 [const_cast]: https://en.cppreference.com/w/cpp/language/const_cast
@@ -257,3 +257,4 @@ Keep the element on the stack if possible. If you need a pointer or have complex
 [reinterpret_cast]: https://en.cppreference.com/w/cpp/language/reinterpret_cast
 [unique_ptr]: https://en.cppreference.com/w/cpp/memory/unique_ptr
 [shared_ptr]: https://en.cppreference.com/w/cpp/memory/shared_ptr
+[delete-later]: https://doc.qt.io/qt-6/qobject.html#deleteLater
