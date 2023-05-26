@@ -136,7 +136,7 @@ void main() {
 ```
 
 1. `storeLargeObject` accepts an r-value reference and we use `std::move()`, thus we move the object and avoid the need to copy.
-2. You can't copy a `unique_ptr` so we **need** to move here.
+2. You can't copy a [`std::unique_ptr`][unique_ptr] so we **need** to move here.
 3. The pointer contained by unique has now been consumed by `storeObject`, so it just holds a null pointer now.
 
 Generally the lowest level of requirement should be used e.g. passing `Channel&` instead of `std::shared_ptr<Channel>&` (aka `ChannelPtr`) if possible.
@@ -178,8 +178,8 @@ void myFreeStandingFunction(); // (7)!
 
 -   **Avoid** c-style casts: `(type)variable`.
 -   Instead use explicit type casts: `type(variable)`
--   Or use one of [static_cast](https://en.cppreference.com/w/cpp/language/static_cast), [const_cast](https://en.cppreference.com/w/cpp/language/const_cast) and [dynamic_cast](https://en.cppreference.com/w/cpp/language/dynamic_cast)
--   Try to avoid [reinterpret_cast](https://en.cppreference.com/w/cpp/language/reinterpret_cast) unless necessary.
+-   Or use one of [static_cast], [const_cast] and [dynamic_cast]
+-   Try to avoid [reinterpret_cast] unless necessary.
 
 ```cpp
 void example(float f, Base *b, const User &user, int p) {
@@ -204,10 +204,10 @@ void example(float f, Base *b, const User &user, int p) {
 ```
 
 1. Use explicit type casts.
-2. Use explicit `dynamic_cast`.
-3. Unless extremely obvious, always check the result of `dynamic_cast`.
-4. Only use `const_cast` if using proper const correctness doesn't work.
-5. `reinterpret_cast` is required very rarely.
+2. Use explicit [dynamic_cast].
+3. Unless extremely obvious, always check the result of [dynamic_cast].
+4. Only use [const_cast] if using proper const correctness doesn't work.
+5. [reinterpret_cast] is required very rarely.
 6. **Avoid** C-style casts.
 
 ### This
@@ -242,11 +242,18 @@ Test::testFunc(int a)
 
 Keep the element on the stack if possible. If you need a pointer or have complex ownership you should use one of these classes:
 
--   Use `std::unique_ptr` if the resource has a single owner.
--   Use `std::shared_ptr` if the resource has multiple owners.
+-   Use [`std::unique_ptr`][unique_ptr] if the resource has a single owner.
+-   Use [`std::shared_ptr`][shared_ptr] if the resource has multiple owners.
 
 #### QObject classes
 
 -   Use the [object tree](https://doc.qt.io/qt-6/objecttrees.html) to manage lifetime where possible. Objects are destroyed when their parent object is destroyed.
 -   If you have to explicitly delete an object use `variable->deleteLater()` instead of `delete variable`. This ensures that it will be deleted on the correct thread.
 -   If an object doesn't have a parent consider using `std::unique_ptr<Type, DeleteLater>` with `DeleteLater` from "common/Common.hpp". This will call `deleteLater()` on the pointer once it goes out of scope or the object is destroyed.
+
+[static_cast]: https://en.cppreference.com/w/cpp/language/static_cast
+[const_cast]: https://en.cppreference.com/w/cpp/language/const_cast
+[dynamic_cast]: https://en.cppreference.com/w/cpp/language/dynamic_cast
+[reinterpret_cast]: https://en.cppreference.com/w/cpp/language/reinterpret_cast
+[unique_ptr]: https://en.cppreference.com/w/cpp/memory/unique_ptr
+[shared_ptr]: https://en.cppreference.com/w/cpp/memory/shared_ptr
