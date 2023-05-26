@@ -15,7 +15,7 @@ Comments should only be used to:
 -   Increase readability (e.g. grouping member variables).
 -   Containing information that can't be expressed in code.
 
-Try to structure your code so that comments are not required.
+Try to structure your code, so that comments are not required.
 
 #### Good example
 
