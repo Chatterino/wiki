@@ -75,12 +75,12 @@ class ArithmeticTypes
 5. Other non-arithmetic types call constructors instead, so no need for `{}`.
 6. ⚠ Random value.
 7. ⚠ Random value.
-8. ⚠ Random value. Derefenrencing this will likely segfault.
+8. ⚠ Random value. Dereferencing this will likely segfault.
 9. Unnecessary `{}` as the default constructor will be called even without `{}`.
 
 ### Passing parameters
 
-The way a parameter is passed signals how it is going to be used inside of the function. C++ doesn't have multiple return values so there is "out parameters" (reference to a variable that is going to be assigned inside of the function) to simulate multiple return values.
+The way a parameter is passed signals how it is going to be used inside the function. C++ doesn't have multiple return values, so there is "out parameters" (reference to a variable that is going to be assigned inside the function) to simulate multiple return values.
 
 **Cheap to copy types** like int/enum/etc. can be passed in per value since copying them is fast.
 
@@ -96,15 +96,15 @@ void sendGreeting(const /* (2)! */ User &user /* (3)! */, MessageFlags flags /* 
 
 1. `int`s are cheap to copy. Here, the parameter will likely be passed in a register.
 2. We only need to read the user's name, so it's marked as `const`.
-3. `User` is a class that contains the user's name and other fields, thus it's expensive to copy - so a reference i used.
+3. `User` is a class that contains the user's name and other fields, thus it's expensive to copy - so a reference is used.
 4. `MessageFlags` is an enum, so it's cheap to copy.
 
 **References** mean that the variable doesn't need to be copied when it is passed to a function.
 
-| type               | meaning                                                                                  |
-| ------------------ | ---------------------------------------------------------------------------------------- |
-| `const Type& name` | _in_ Parameter. It is NOT going to be modified and may be copied inside of the function. |
-| `Type& name`       | _out_ or _in+out_ Parameter. It will be modified.                                        |
+| type               | meaning                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------- |
+| `const Type& name` | _in_ Parameter. It is NOT going to be modified and may be copied inside the function. |
+| `Type& name`       | _out_ or _in+out_ Parameter. It will be modified.                                     |
 
 **Pointers** signal that objects are managed manually. While the above are only guaranteed to live as long as the function call (= don't store and use later) these may have more complex lifetimes.
 
@@ -135,8 +135,8 @@ void main() {
 }
 ```
 
-1. `storeLargeObject` accepts an r-value reference and we use [`std::move()`](https://en.cppreference.com/w/cpp/utility/move), thus we move the object and avoid the need to copy.
-2. You can't copy a [`std::unique_ptr`][unique_ptr] so we **need** to move here.
+1. `storeLargeObject` accepts an r-value reference, and we use [`std::move()`](https://en.cppreference.com/w/cpp/utility/move), thus we move the object and avoid the need to copy.
+2. You can't copy a [`std::unique_ptr`][unique_ptr], so we **need** to move here.
 3. The pointer contained by unique has now been consumed by `storeObject`, so it just holds a null pointer now.
 
 Generally the lowest level of requirement should be used e.g. passing `Channel&` instead of `std::shared_ptr<Channel>&` (aka `ChannelPtr`) if possible.
