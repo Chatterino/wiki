@@ -48,7 +48,7 @@ boost::optional<QRegularExpressionMatch> matchLink(const QString &text);
 
 ### Arithmetic Types
 
-Arithmetic types (like char, short, int, long, float and double), bool, and pointers are NOT initialized by default in C++. They keep whatever value is already at their position in the memory. This makes debugging harder and is unpredictable, so we initialize them to zero by using `{}` after their name when declaring them.
+Arithmetic types (like `char`, `int`, `float` or `size_t`), `bool`, and pointers are NOT initialized by default in C++. They keep whatever value is already at their position in the memory. This makes debugging harder and is unpredictable, so we initialize them to zero by using `{}` after their name when declaring them.
 
 ```cpp
 class ArithmeticTypes
