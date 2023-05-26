@@ -101,14 +101,14 @@ void sendGreeting(const /* (2)! */ User &user /* (3)! */, MessageFlags flags /* 
 
 **References** mean that the variable doesn't need to be copied when it is passed to a function.
 
-| type               | meaning                                                                               |
+| Type               | Meaning                                                                               |
 | ------------------ | ------------------------------------------------------------------------------------- |
 | `const Type& name` | _in_ Parameter. It is NOT going to be modified and may be copied inside the function. |
 | `Type& name`       | _out_ or _in+out_ Parameter. It will be modified.                                     |
 
 **Pointers** signal that objects are managed manually. While the above are only guaranteed to live as long as the function call (= don't store and use later) these may have more complex lifetimes.
 
-| type         | meaning                                                                                                                                                                |
+| Type         | Meaning                                                                                                                                                                |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Type* name` | The lifetime of the parameter may exceed the length of the function call. It may use the `QObject` parent/children system (see [_QObject Classes_](#qobject-classes)). |
 
