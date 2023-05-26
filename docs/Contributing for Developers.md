@@ -108,9 +108,9 @@ void sendGreeting(const /* (2)! */ User &user /* (3)! */, MessageFlags flags /* 
 
 **Pointers** signal that objects are managed manually. While the above are only guaranteed to live as long as the function call (= don't store and use later) these may have more complex lifetimes.
 
-| type         | meaning                                                                                                                    |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| `Type* name` | The lifetime of the parameter may exceed the length of the function call. It may use the `QObject` parent/children system. |
+| type         | meaning                                                                                                                                                                |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Type* name` | The lifetime of the parameter may exceed the length of the function call. It may use the `QObject` parent/children system (see [_QObject Classes_](#qobject-classes)). |
 
 **R-value references** `&&` work similar to regular references but signal the parameter should be "consumed".
 
