@@ -135,7 +135,7 @@ void main() {
 }
 ```
 
-1. `storeLargeObject` accepts an r-value reference and we use `std::move()`, thus we move the object and avoid the need to copy.
+1. `storeLargeObject` accepts an r-value reference and we use [`std::move()`](https://en.cppreference.com/w/cpp/utility/move), thus we move the object and avoid the need to copy.
 2. You can't copy a [`std::unique_ptr`][unique_ptr] so we **need** to move here.
 3. The pointer contained by unique has now been consumed by `storeObject`, so it just holds a null pointer now.
 
