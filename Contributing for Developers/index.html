@@ -312,16 +312,30 @@
     Tooling
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Tooling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#formatting" class="md-nav__link">
     Formatting
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+    <nav class="md-nav" aria-label="Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#comments" class="md-nav__link">
     Comments
   </a>
@@ -347,50 +361,56 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    Code
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#code_1" class="md-nav__link">
+    Code
+  </a>
+  
+    <nav class="md-nav" aria-label="Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#arithmetic-types" class="md-nav__link">
     Arithmetic Types
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#passing-parameters" class="md-nav__link">
     Passing parameters
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#members" class="md-nav__link">
     Members
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#casts" class="md-nav__link">
     Casts
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#this" class="md-nav__link">
     This
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#managing-resources" class="md-nav__link">
     Managing resources
   </a>
@@ -409,6 +429,11 @@
   <a href="#qobject-classes" class="md-nav__link">
     QObject classes
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -666,16 +691,30 @@
     Tooling
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Tooling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#formatting" class="md-nav__link">
     Formatting
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+    <nav class="md-nav" aria-label="Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#comments" class="md-nav__link">
     Comments
   </a>
@@ -701,50 +740,56 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    Code
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#code_1" class="md-nav__link">
+    Code
+  </a>
+  
+    <nav class="md-nav" aria-label="Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#arithmetic-types" class="md-nav__link">
     Arithmetic Types
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#passing-parameters" class="md-nav__link">
     Passing parameters
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#members" class="md-nav__link">
     Members
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#casts" class="md-nav__link">
     Casts
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#this" class="md-nav__link">
     This
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#managing-resources" class="md-nav__link">
     Managing resources
   </a>
@@ -763,6 +808,11 @@
   <a href="#qobject-classes" class="md-nav__link">
     QObject classes
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -789,16 +839,17 @@
 <h1 id="contribution-guidelines">Contribution Guidelines<a class="headerlink" href="#contribution-guidelines" title="Permanent link">&para;</a></h1>
 <p>This is a set of guidelines for contributing to Chatterino. The goal is to teach programmers without C++ background (java/python/etc.), people who haven't used Qt or otherwise have different experience the idioms of the codebase. Thus, we will focus on those which are different from those other environments. There are extra guidelines available <a href="https://hackmd.io/@fourtf/chatterino-pendantic-guidelines">here</a>, but they are considered as extras and not as important.</p>
 <h2 id="tooling">Tooling<a class="headerlink" href="#tooling" title="Permanent link">&para;</a></h2>
-<h2 id="formatting">Formatting<a class="headerlink" href="#formatting" title="Permanent link">&para;</a></h2>
-<p>Code is automatically formatted using <code>clang-format</code>. It takes the burden off of the programmer and ensures that all contributors use the same style (even if mess something up accidentally). We recommend that you set up automatic formatting on file save in your editor.</p>
-<h2 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">&para;</a></h2>
+<h3 id="formatting">Formatting<a class="headerlink" href="#formatting" title="Permanent link">&para;</a></h3>
+<p>Code is automatically formatted using <a href="https://clang.llvm.org/docs/ClangFormat.html"><code>clang-format</code></a>. It takes the burden off of the programmer and ensures that all contributors use the same style (even if mess something up accidentally). We recommend that you set up automatic formatting on file save in your editor.</p>
+<h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
+<h3 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">&para;</a></h3>
 <p>Comments should only be used to:</p>
 <ul>
 <li>Increase readability (e.g. grouping member variables).</li>
 <li>Containing information that can't be expressed in code.</li>
 </ul>
 <p>Try to structure your code so that comments are not required.</p>
-<h5 id="good-example">Good example<a class="headerlink" href="#good-example" title="Permanent link">&para;</a></h5>
+<h4 id="good-example">Good example<a class="headerlink" href="#good-example" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/**</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm"> * @return 0 if a == b, negative if a &lt; b and positive if b &gt; a. (1)</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cm"> */</span>
@@ -808,7 +859,7 @@
 <li>You can't know this from the function signature, so it's good to clarify this.</li>
 <li>Even better: Return a "strong ordering" type (but we don't have such a type right now).</li>
 </ol>
-<h5 id="bad-example">Bad example<a class="headerlink" href="#bad-example" title="Permanent link">&para;</a></h5>
+<h4 id="bad-example">Bad example<a class="headerlink" href="#bad-example" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">/*</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cm"> * Matches a link and returns boost::none if it failed and a</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cm"> * QRegularExpressionMatch on success. (1)</span>
@@ -821,9 +872,9 @@
 <li>This repeats the function signature.</li>
 <li>This is obvious from the function and parameter names.</li>
 </ol>
-<h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
-<h2 id="arithmetic-types">Arithmetic Types<a class="headerlink" href="#arithmetic-types" title="Permanent link">&para;</a></h2>
-<p>Arithmetic types (like char, short, int, long, float and double), bool, and pointers are NOT initialized by default in C++. They keep whatever value is already at their position in the memory. This makes debugging harder and is unpredictable, so we initialize them to zero by using <code>{}</code> after their name when declaring them.</p>
+<h2 id="code_1">Code<a class="headerlink" href="#code_1" title="Permanent link">&para;</a></h2>
+<h3 id="arithmetic-types">Arithmetic Types<a class="headerlink" href="#arithmetic-types" title="Permanent link">&para;</a></h3>
+<p>Arithmetic types (like <code>char</code>, <code>int</code>, <code>float</code> or <code>size_t</code>), <code>bool</code>, and pointers are NOT initialized by default in C++. They keep whatever value is already at their position in the memory. This makes debugging harder and is unpredictable, so we initialize them to zero by using <code>{}</code> after their name when declaring them.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">ArithmeticTypes</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="c1">// DO</span>
@@ -848,11 +899,11 @@
 <li>Other non-arithmetic types call constructors instead, so no need for <code>{}</code>.</li>
 <li>⚠ Random value.</li>
 <li>⚠ Random value.</li>
-<li>⚠ Random value. Derefenrencing this will likely segfault.</li>
+<li>⚠ Random value. Dereferencing this will likely segfault.</li>
 <li>Unnecessary <code>{}</code> as the default constructor will be called even without <code>{}</code>.</li>
 </ol>
-<h2 id="passing-parameters">Passing parameters<a class="headerlink" href="#passing-parameters" title="Permanent link">&para;</a></h2>
-<p>The way a parameter is passed signals how it is going to be used inside of the function. C++ doesn't have multiple return values so there is "out parameters" (reference to a variable that is going to be assigned inside of the function) to simulate multiple return values.</p>
+<h3 id="passing-parameters">Passing parameters<a class="headerlink" href="#passing-parameters" title="Permanent link">&para;</a></h3>
+<p>The way a parameter is passed signals how it is going to be used inside the function. C++ doesn't have multiple return values, so there is "out parameters" (reference to a variable that is going to be assigned inside the function) to simulate multiple return values.</p>
 <p><strong>Cheap to copy types</strong> like int/enum/etc. can be passed in per value since copying them is fast.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">setValue</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="cm">/* (1)! */</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">value_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
@@ -865,21 +916,21 @@
 <ol>
 <li><code>int</code>s are cheap to copy. Here, the parameter will likely be passed in a register.</li>
 <li>We only need to read the user's name, so it's marked as <code>const</code>.</li>
-<li><code>User</code> is a class that contains the user's name and other fields, thus it's expensive to copy - so a reference i used.</li>
+<li><code>User</code> is a class that contains the user's name and other fields, thus it's expensive to copy - so a reference is used.</li>
 <li><code>MessageFlags</code> is an enum, so it's cheap to copy.</li>
 </ol>
 <p><strong>References</strong> mean that the variable doesn't need to be copied when it is passed to a function.</p>
 <table>
 <thead>
 <tr>
-<th>type</th>
-<th>meaning</th>
+<th>Type</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>const Type&amp; name</code></td>
-<td><em>in</em> Parameter. It is NOT going to be modified and may be copied inside of the function.</td>
+<td><em>in</em> Parameter. It is NOT going to be modified and may be copied inside the function.</td>
 </tr>
 <tr>
 <td><code>Type&amp; name</code></td>
@@ -891,14 +942,14 @@
 <table>
 <thead>
 <tr>
-<th>type</th>
-<th>meaning</th>
+<th>Type</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Type* name</code></td>
-<td>The lifetime of the parameter may exceed the length of the function call. It may use the <code>QObject</code> parent/children system.</td>
+<td>The lifetime of the parameter may exceed the length of the function call. It may use the <code>QObject</code> parent/children system (see <a href="#qobject-classes"><em>QObject Classes</em></a>).</td>
 </tr>
 </tbody>
 </table>
@@ -923,12 +974,12 @@
 <a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="p">}</span>
 </code></pre></div>
 <ol>
-<li><code>storeLargeObject</code> accepts an r-value reference and we use <code>std::move()</code>, thus we move the object and avoid the need to copy.</li>
-<li>You can't copy a <code>unique_ptr</code> so we <strong>need</strong> to move here.</li>
+<li><code>storeLargeObject</code> accepts an r-value reference, and we use <a href="https://en.cppreference.com/w/cpp/utility/move"><code>std::move()</code></a>, thus we move the object and avoid the need to copy.</li>
+<li>You can't copy a <a href="https://en.cppreference.com/w/cpp/memory/unique_ptr"><code>std::unique_ptr</code></a>, so we <strong>need</strong> to move here.</li>
 <li>The pointer contained by unique has now been consumed by <code>storeObject</code>, so it just holds a null pointer now.</li>
 </ol>
 <p>Generally the lowest level of requirement should be used e.g. passing <code>Channel&amp;</code> instead of <code>std::shared_ptr&lt;Channel&gt;&amp;</code> (aka <code>ChannelPtr</code>) if possible.</p>
-<h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
+<h3 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h3>
 <p>All functions names are in <code>camelCase</code>. <em>Private</em> member variables are in <code>camelCase_</code> (note the underscore at the end). We don't use the <code>get</code> prefix for getters. We mark functions as <code>const</code> <a href="https://stackoverflow.com/questions/751681/meaning-of-const-last-in-a-function-declaration-of-a-class">if applicable</a>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">NamedObject</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">{</span>
@@ -958,7 +1009,7 @@
 <li>Private methods <strong>don't</strong> have a <code>_</code> suffix.</li>
 <li>Free standing functions start lowercase as well.</li>
 </ol>
-<h2 id="casts">Casts<a class="headerlink" href="#casts" title="Permanent link">&para;</a></h2>
+<h3 id="casts">Casts<a class="headerlink" href="#casts" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Avoid</strong> c-style casts: <code>(type)variable</code>.</li>
 <li>Instead use explicit type casts: <code>type(variable)</code></li>
@@ -987,13 +1038,13 @@
 </code></pre></div>
 <ol>
 <li>Use explicit type casts.</li>
-<li>Use explicit <code>dynamic_cast</code>.</li>
-<li>Unless extremely obvious, always check the result of <code>dynamic_cast</code>.</li>
-<li>Only use <code>const_cast</code> if using proper const correctness doesn't work.</li>
-<li><code>reinterpret_cast</code> is required very rarely.</li>
+<li>Use explicit <a href="https://en.cppreference.com/w/cpp/language/dynamic_cast">dynamic_cast</a>.</li>
+<li>Unless extremely obvious, always check the result of <a href="https://en.cppreference.com/w/cpp/language/dynamic_cast">dynamic_cast</a>.</li>
+<li>Only use <a href="https://en.cppreference.com/w/cpp/language/const_cast">const_cast</a> if using proper const correctness doesn't work.</li>
+<li><a href="https://en.cppreference.com/w/cpp/language/reinterpret_cast">reinterpret_cast</a> is required very rarely.</li>
 <li><strong>Avoid</strong> C-style casts.</li>
 </ol>
-<h2 id="this">This<a class="headerlink" href="#this" title="Permanent link">&para;</a></h2>
+<h3 id="this">This<a class="headerlink" href="#this" title="Permanent link">&para;</a></h3>
 <p>Always use <code>this</code> to refer to instance members to make it clear where we use either locals or members.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Test</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">{</span>
@@ -1016,18 +1067,18 @@
 <ol>
 <li>It's unclear if it's a local or member variable, especially if the method is more complex.</li>
 </ol>
-<h2 id="managing-resources">Managing resources<a class="headerlink" href="#managing-resources" title="Permanent link">&para;</a></h2>
-<h5 id="regular-classes">Regular classes<a class="headerlink" href="#regular-classes" title="Permanent link">&para;</a></h5>
+<h3 id="managing-resources">Managing resources<a class="headerlink" href="#managing-resources" title="Permanent link">&para;</a></h3>
+<h4 id="regular-classes">Regular classes<a class="headerlink" href="#regular-classes" title="Permanent link">&para;</a></h4>
 <p>Keep the element on the stack if possible. If you need a pointer or have complex ownership you should use one of these classes:</p>
 <ul>
-<li>Use <code>std::unique_ptr</code> if the resource has a single owner.</li>
-<li>Use <code>std::shared_ptr</code> if the resource has multiple owners.</li>
+<li>Use <a href="https://en.cppreference.com/w/cpp/memory/unique_ptr"><code>std::unique_ptr</code></a> if the resource has a single owner.</li>
+<li>Use <a href="https://en.cppreference.com/w/cpp/memory/shared_ptr"><code>std::shared_ptr</code></a> if the resource has multiple owners.</li>
 </ul>
-<h5 id="qobject-classes">QObject classes<a class="headerlink" href="#qobject-classes" title="Permanent link">&para;</a></h5>
+<h4 id="qobject-classes">QObject classes<a class="headerlink" href="#qobject-classes" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Use the <a href="https://doc.qt.io/qt-5/objecttrees.html#">object tree</a> to manage lifetime where possible. Objects are destroyed when their parent object is destroyed.</li>
-<li>If you have to explicitly delete an object use <code>variable-&gt;deleteLater()</code> instead of <code>delete variable</code>. This ensures that it will be deleted on the correct thread.</li>
-<li>If an object doesn't have a parent consider using <code>std::unique_ptr&lt;Type, DeleteLater&gt;</code> with <code>DeleteLater</code> from "src/common/Common.hpp". This will call <code>deleteLater()</code> on the pointer once it goes out of scope or the object is destroyed.</li>
+<li>Use the <a href="https://doc.qt.io/qt-6/objecttrees.html">object tree</a> to manage lifetime where possible. Objects are destroyed when their parent object is destroyed.</li>
+<li>If you have to explicitly delete an object use <a href="https://doc.qt.io/qt-6/qobject.html#deleteLater"><code>variable-&gt;deleteLater()</code></a> instead of <code>delete variable</code>. This ensures that it will be deleted on the correct thread.</li>
+<li>If an object doesn't have a parent consider using <code>std::unique_ptr&lt;Type, DeleteLater&gt;</code> with <code>DeleteLater</code> from "common/Common.hpp". This will call <a href="https://doc.qt.io/qt-6/qobject.html#deleteLater"><code>deleteLater()</code></a> on the pointer once it goes out of scope or the object is destroyed.</li>
 </ul>
 
   <hr>
@@ -1035,7 +1086,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 22, 2023 15:04:18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 27, 2023 09:21:19</span>
       
     
   </small>
