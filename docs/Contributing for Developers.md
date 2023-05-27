@@ -8,6 +8,8 @@ This is a set of guidelines for contributing to Chatterino. The goal is to teach
 
 Code is automatically formatted using [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html). It takes the burden off of the programmer and ensures that all contributors use the same style (even if mess something up accidentally). We recommend that you set up automatic formatting on file save in your editor.
 
+## Code
+
 ### Comments
 
 Comments should only be used to:
