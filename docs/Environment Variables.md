@@ -43,6 +43,12 @@ Default value: `443`
 Bool value used to tell Chatterino whether to try to connect securely (secure irc) to the Twitch chat server.  
 Default value: `true`
 
+### CHATTERINO2_PROXY_URL
+
+Used to set a proxy for network interactions of Chatterino. Both HTTP and SOCKS5[^1] proxies are supported. The URL supports username and password authentication. Example: `http://username:password@127.0.0.1:1080` or `socks5://127.0.0.1` (defaults to port `1080`).
+
+[^1]: When using SOCKS5 proxies, WebSockets (Twitch PubSub, 7TV EventAPI, and BTTV EventSockets) are **not proxied**. IRC and HTTP requests are proxied.
+
 ### QT_LOGGING_RULES
 
 Used to enable/disable logging at run time. For example: `QT_LOGGING_RULES="chatterino.*.debug=true"` to enable debug logging in release builds. (It's on by default in debug builds). See [Qt docs](https://doc.qt.io/qt-5/qloggingcategory.html) for more details.
