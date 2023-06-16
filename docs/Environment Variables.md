@@ -47,7 +47,7 @@ Default value: `true`
 
 Used to set a proxy for network interactions of Chatterino. Both HTTP and SOCKS5[^1] proxies are supported. The URL supports username and password authentication. Example: `http://username:password@127.0.0.1:1080` or `socks5://127.0.0.1` (defaults to port `1080`).
 
-[^1]: When using SOCKS5 proxies, WebSockets (Twitch PubSub, 7TV EventAPI, and BTTV EventSockets) are **not proxied**. IRC and HTTP requests are proxied.
+[^1]: When using a SOCKS5 proxy, WebSockets (Twitch PubSub, 7TV EventAPI, and BTTV EventSockets) are **not proxied**. Only IRC and HTTP requests are proxied.
 
 ### QT_LOGGING_RULES
 
