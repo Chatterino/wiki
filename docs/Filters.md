@@ -37,6 +37,11 @@ Finally, because we want _both_ of these conditions to be true, we combine them 
 
 `(author.badges contains "moderator") && (message.content contains "@my_name")`
 
+### Quick Add
+
+If you already have a filter, you can use the `Quick Add` button and paste your filter into the `Filter` section.
+![quickAdd](images/filters/quickAdd.gif)
+
 ### Terminology
 
 Here is some terminology that you'll encounter in the rest of this document.
