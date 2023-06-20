@@ -40,7 +40,7 @@ Finally, because we want _both_ of these conditions to be true, we combine them 
 ### Quick Add
 
 If you already have a filter, you can use the `Quick Add` button and paste your filter into the `Filter` section.
-![quickAdd](images/filters/quickAdd.gif
+![quickAdd](images/filters/quickAdd.gif)
 
 ### Terminology
 
