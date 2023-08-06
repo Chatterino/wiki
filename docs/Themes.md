@@ -14,6 +14,7 @@ To create a theme, it's best to use one of the built-in themes as the starting p
 You can find them in the [`resources/themes`][res-themes] folder inside the source-code.
 Copy one into the `Themes` folder and restart Chatterino.
 When you open the settings and select a theme, you should see one prefixed with `Custom:`.
+Make sure, you're familiar with the [common words used in Chatterino](Glossary.md).
 
 ### Schema
 
