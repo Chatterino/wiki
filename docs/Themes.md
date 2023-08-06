@@ -56,7 +56,7 @@ Technically, the values are passed to [`QColor`](https://doc.qt.io/qt-6/qcolor.h
 -   <code>#AA<span style="color: red">RR</span><span style="color: green">GG</span><span style="color: blue">BB</span></code> _This format is different from the CSS Color Moudle Level 4 [`<hex-color>`](https://developer.mozilla.org/docs/Web/CSS/hex-color), where the alpha value is at the end._
 
 -   <code>#<span style="color: red">RRR</span><span style="color: green">GGG</span><span style="color: blue">BBB</span></code>
--   <code>#<span style="color: red">RRRR</span><span style="color: green">GGGG</span><span style="color: blue">BBB</span></code>
+-   <code>#<span style="color: red">RRRR</span><span style="color: green">GGGG</span><span style="color: blue">BBBB</span></code>
 
 #### Named Colors
 
