@@ -150,11 +150,11 @@ The following variables are available:
 | `flags.system_message`   | Bool         | Whether the message is a system message (i.e. timeout/ban/info)                                        |
 | `flags.reward_message`   | Bool         | Whether the message is a redeemed channel point reward message                                         |
 | `flags.first_message`    | Bool         | Whether the message is the author's first message in the channel                                       |
-| `flags.elevated_message` | Bool         | Whether the message is a message the author paid to keep in browser chat for an increased duration[^1] |
-| `flags.cheer_message`    | Bool         | Whether the message includes bits[^1]                                                                  |
+| `flags.elevated_message` | Bool         | Whether the message is a message the author paid to keep in browser chat for an increased duration     |
+| `flags.cheer_message`    | Bool         | Whether the message includes bits                                                                      |
 | `flags.whisper`          | Bool         | Whether the message is a whisper                                                                       |
 | `flags.reply`            | Bool         | Whether the message is a reply                                                                         |
-| `flags.automod`          | Bool         | Whether the message has automod information or actions[^1]                                             |
+| `flags.automod`          | Bool         | Whether the message has automod information or actions                                                 |
 | **Message**              |              | Actual message sent                                                                                    |
 | `message.content`        | String       | Message content                                                                                        |
 | `message.length`         | Int          | Message length                                                                                         |
@@ -221,7 +221,5 @@ The order of operations in filters may not be exactly what you expect.
 -   `a || b && c || d` is evaluated as `a || (b && c) || d`
 
 Basically, if you're unsure about the order of operations, use extra parentheses.
-
-[^1]: Added in 2.4.0
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
