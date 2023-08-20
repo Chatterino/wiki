@@ -34,6 +34,7 @@ plugins:
 repo_url: https://github.com/chatterino/chatterino2
 edit_uri: ""
 markdown_extensions:
+  - admonition
   - attr_list
   - footnotes
   - pymdownx.highlight:
