@@ -8,7 +8,7 @@
 
 Chatterino supports custom-made themes since [nightly][nightly] [`5d0bdc1`][5d0bdc1].
 
-Custom themes are JSON files that are stored in the `Themes` folder inside your [Chatterino directory][chatterino-dir].
+Custom themes are JSON files that are stored in the `Themes` folder inside your [Chatterino folder][chatterino-folder].
 
 ## Creating A Theme
 
@@ -71,5 +71,5 @@ This section contains added, updated, and removed properties in a release, and c
 
 [nightly]: Help.md/#what-is-nightly-and-how-to-use-install-it
 [5d0bdc1]: https://github.com/Chatterino/chatterino2/commit/5d0bdc195e42863c5176d8ba3c0ecd2409d50805
-[chatterino-dir]: Settings.md/#where-is-my-chatterino-folder-located
+[chatterino-folder]: Settings.md/#where-is-my-chatterino-folder-located
 [res-themes]: https://github.com/Chatterino/chatterino2/tree/master/resources/themes
