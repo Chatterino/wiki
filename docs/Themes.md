@@ -65,6 +65,12 @@ Technically, the values are passed to [`QColor`](https://doc.qt.io/qt-6/qcolor.h
 -   **[SVG color keyword names](https://www.w3.org/TR/SVG11/types.html#ColorKeywords)** - For example `red`{ style="color: red" }, `mediumspringgreen`{ style="color: mediumspringgreen" }. Note that these color names are technically case-insensitive and accept spaces, but this isn't supported by the [schema](#schema), which only accepts lower-case names.
 -   `transparent`
 
+## Alternate editors
+
+These are some alternate ways of creating your own custom themes:
+
+-   [Chatterino Theme Creator](https://chatterino-theme-creator-web.vercel.app/) by `doge41732`
+
 ## Migrations
 
 This section contains added, updated, and removed properties in a release, and commit for [nightly] versions.
