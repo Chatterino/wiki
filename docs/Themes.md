@@ -4,6 +4,8 @@
 !!! warning "Beta Warning"
     Custom themes are not yet stable. There may be breaking changes in the future (see [Migrations](#migrations)).
 
+<!-- TODO: v2.4.5 release -->
+
 Chatterino supports custom-made themes since [nightly][nightly] [`5d0bdc1`][5d0bdc1].
 
 Custom themes are JSON files that are stored in the `Themes` folder inside your [Chatterino directory][chatterino-dir].
