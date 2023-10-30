@@ -21,6 +21,7 @@ theme:
 
   features:
     - navigation.instant
+    - navigation.sections
     - navigation.top
     - content.code.annotate
     - content.code.copy
@@ -54,3 +55,26 @@ extra:
     - icon: fontawesome/solid/dollar-sign
       link: https://streamelements.com/fourtf/tip
       name: Donate
+
+nav:
+  - Home: index.md
+  - Chat:
+      - Commands: Commands.md
+      - Filters: Filters.md
+      - Search: Search.md
+      - Regex: Regex.md
+  - Features:
+      - Twitch: Features.md
+      - Hotkeys: Hotkeys.md
+      - Image Uploader: Image Uploader.md
+      - Link Previews: Link Previews.md
+      - Moderation: Moderation.md
+      - Themes: Themes.md
+  - Help: Help.md
+  - Settings: Settings.md
+  - Third party services: Third_party_services.md
+  - Glossary: Glossary.md
+  - Developers:
+      - Environment Variables: Environment Variables.md
+      - Crash Analysis: Crash Analysis.md
+      - Contributing: Contributing for Developers.md
