@@ -140,5 +140,5 @@ This is a Windows issue, it can be mitigated by turning on Compatibility mode fo
 
 Twitch updated replies to add the functionally we needed to correct this, it was fixed in [SHORT_HASH_HERE] and the fixed version can be obtained by downloading the latest [nightly][nightly] build.
 
-[974a8f11]: https://github.com/Chatterino/chatterino2/commit/974a8f11b7e0ce27421fbc3018dc5fa7bd37c576
+[SHORT_HASH_HERE]: https://github.com/Chatterino/chatterino2/commit/LONG_HASH_HERE
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
