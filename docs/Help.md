@@ -138,8 +138,7 @@ This is a Windows issue, it can be mitigated by turning on Compatibility mode fo
 
 ### My Reply was sent to the wrong message
 
-Due to the way Twitch has implemented their Reply Feature, we are forced to reply to the `"head"` message, even if it was your intention to reply to another message in the thread.  
-Using the `/reply` command will reply to a user's most recent message, and create a brand new reply thread, even if that message was apart of an existing reply thread.
+Twitch updated replies to add the functionally we needed to correct this, it was fixed in [5209e47] and the fixed version can be obtained by downloading the latest [nightly][nightly] build.
 
-[974a8f11]: https://github.com/Chatterino/chatterino2/commit/974a8f11b7e0ce27421fbc3018dc5fa7bd37c576
+[5209e47]: https://github.com/Chatterino/chatterino2/commit/5209e47df18d102925b9d59c79716cab8d89292c
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
