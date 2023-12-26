@@ -4,7 +4,7 @@ When running on Windows, Chatterino 2.4.1 and later will automatically save info
 
 Crashdumps are saved inside the `Crashes/reports` folder in your [Chatterino folder](/Settings/#where-is-my-chatterino-folder-located).
 
-Minidumps contain the stacks of all threads, their state (registers), the exception associated with the crash and some metadata about the CPU and the OS. If you are unsure if your crashdump contains sensitive information, ask a Chatterino developer on the [Discord server](https://discord.gg/qq7DDxjste).
+Minidumps contain the stacks of all threads, their state (registers), the exception associated with the crash, and some metadata about the CPU and the OS. If you are unsure if your crashdump contains sensitive information, ask a Chatterino developer on the [Discord server](https://discord.gg/qq7DDxjste).
 
 There are several ways of analyzing crashes. To get started, you need to have a symbol (PDB) file for your installation. **These files are unique per build** meaning that you need to download the file (this is especially important when using nightly builds). For GitHub builds, you can find the PDB file in the release - it's zipped in an archive ending in `.pdb.7z`. For simplicity, extract the `.pdb` to the location of your `chatterino.exe`.
 
