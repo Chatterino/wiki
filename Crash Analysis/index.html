@@ -882,9 +882,10 @@
 <h1 id="crash-analysis">Crash Analysis<a class="headerlink" href="#crash-analysis" title="Permanent link">&para;</a></h1>
 <p>When running on Windows, Chatterino 2.4.1 and later will automatically save information about a crash in a <a href="https://docs.sentry.io/platforms/native/guides/minidumps/">minidump</a>.</p>
 <p>Crashdumps are saved inside the <code>Crashes/reports</code> folder in your <a href="/Settings/#where-is-my-chatterino-folder-located">Chatterino folder</a>.</p>
+<p>Minidumps contain the stacks of all threads, their state (registers), the exception associated with the crash, and some metadata about the CPU and the OS. If you are unsure if your crashdump contains sensitive information, ask a Chatterino developer on the <a href="https://discord.gg/qq7DDxjste">Discord server</a>.</p>
 <p>There are several ways of analyzing crashes. To get started, you need to have a symbol (PDB) file for your installation. <strong>These files are unique per build</strong> meaning that you need to download the file (this is especially important when using nightly builds). For GitHub builds, you can find the PDB file in the release - it's zipped in an archive ending in <code>.pdb.7z</code>. For simplicity, extract the <code>.pdb</code> to the location of your <code>chatterino.exe</code>.</p>
 <h2 id="windbg">WinDbg<a class="headerlink" href="#windbg" title="Permanent link">&para;</a></h2>
-<p>For analyzing with a GUI, install <a href="https://apps.microsoft.com/store/detail/windbg-preview/9PGJGD53TN86">WinDbg Preview</a> from the Microsoft Store. After the installation, you should be able to open the crashdumps (<code>.dmp</code> files) right from the Windows Explorer. By default, you won't get much information.</p>
+<p>For analyzing with a GUI, install <a href="https://learn.microsoft.com/windows-hardware/drivers/debugger/">WinDbg</a>. After the installation, you should be able to open the crashdumps (<code>.dmp</code> files) right from the Windows Explorer. By default, you won't get much information.</p>
 <p>To add names to functions (symbols), open the settings (<em>Home &gt; Settings</em>), go to <em>Debugging Settings</em>, and add the directory you extracted your symbol file to the <em>Symbol path</em>. If there's no <code>srv*</code> entry, consider adding one - this will try to load symbols from servers for system libraries.</p>
 <p>To add source-files, clone the repository and checkout the source-tree at the version of your executable. Then add this path to <em>Source Path</em> in the <em>Debugging Settings</em>.</p>
 <p><em>Note:</em> You might need to reload your window to have your changes be picked up.</p>
@@ -927,7 +928,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 25, 2023 11:27:53</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 27, 2023 00:16:54</span>
   </span>
 
     
