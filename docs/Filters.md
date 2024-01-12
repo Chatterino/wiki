@@ -87,7 +87,7 @@ Regular expressions are similar to strings, but are denoted with an `r` before t
 | Int    | `123`, `5`                            |
 | String | `"Hello there"`, `"Escaped \" quote"` |
 | RegEx  | `r"\d\d\d\d"`, `ri"something.*"`      |
-| List   | `{"list item", 123}                   |
+| List   | `{"list item", 123}`                  |
 
 ### Operators
 
