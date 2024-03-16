@@ -20,7 +20,6 @@ Starting in 2.4.1 the ability to negate searches is possible. (format `!filter:v
     -   `highlighted` - shows highlighted messages
     -   `system` - shows system messages (grey text ones like: "Now hosting username", "streamer is live", etc.)
     -   `first-msg` - shows a user's first message in the channel
-    -   `hype-chat` - shows a user's hype chat in the channel (Paid Twitch Feature)[^1]
     -   `cheer-msg` - shows messages containing bits
     -   `redemption` - shows messages that cost the user Twitch channel points
     -   `reply` - shows messages sent using the Twitch reply feature
@@ -89,7 +88,5 @@ Starting in 2.4.1 the ability to negate searches is possible. (format `!filter:v
 
 `!has:link`  
 ![`!has:link`](images/search/example-negate-search-2.png)
-
-[^1]: Replaced `is:elevated-msg` in 2.4.5
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
