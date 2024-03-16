@@ -145,10 +145,10 @@ The following variables are available:
 | `channel.live`          | Bool         | Whether the channel is currently live                                                                  |
 | **Flags**               |              | Message-specific flags                                                                                 |
 | `flags.highlighted`     | Bool         | Whether the message is highlighted                                                                     |
-| `flags.points_redeemed` | Bool         | Whether the message was redeemed through channel points                                                |
+| `flags.reward_message`  | Bool         | Whether the message is a redeemed channel point reward message (except "Highlight my Message")         |
+| `flags.points_redeemed` | Bool         | Whether the message was redeemed through the channel point reward "Highlight my Message"               |
 | `flags.sub_message`     | Bool         | Whether the message is a sub/resub/gift message                                                        |
 | `flags.system_message`  | Bool         | Whether the message is a system message (i.e. timeout/ban/info)                                        |
-| `flags.reward_message`  | Bool         | Whether the message is a redeemed channel point reward message                                         |
 | `flags.first_message`   | Bool         | Whether the message is the author's first message in the channel                                       |
 | `flags.hype_chat`       | Bool         | Whether the message is a message the author paid to keep in browser chat for an increased duration[^1] |
 | `flags.cheer_message`   | Bool         | Whether the message includes bits                                                                      |
