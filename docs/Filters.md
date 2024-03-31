@@ -157,6 +157,10 @@ The following variables are available:
 | **Message**             |              | Actual message sent                                                                            |
 | `message.content`       | String       | Message content                                                                                |
 | `message.length`        | Int          | Message length                                                                                 |
+| **Reward**              |              | Information about the channel point redemption of this message, if any                         |
+| `reward.title`[^1]      | String       | Title of the redemption (e.g. Drink water!)                                                    |
+| `reward.cost`[^1]       | Int          | Cost of the redemption (e.g. 500)                                                              |
+| `reward.id`[^1]         | String       | ID of the redemption (e.g. 1ed437f5-9dc3-4510-8a3f-abcad67985e1)                               |
 
 \*Note: To compare a `Color`, compare it to a color hex code string: `author.color == "#FF0000"`
 
@@ -222,3 +226,5 @@ The order of operations in filters may not be exactly what you expect.
 Basically, if you're unsure about the order of operations, use extra parentheses.
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
+
+[^1]: Available since [nightly] [69bdac9](https://github.com/Chatterino/chatterino2/commit/69bdac9936cd981679a8f5d2bf15b7873292b83f)
