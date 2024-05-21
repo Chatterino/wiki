@@ -8,7 +8,7 @@ Chatterino comes with a collection of built-in commands to help with channel man
 
 ### `/banid`
 
-Usage: `/banid <userID>`[^1]
+Usage: `/banid <userID>`
 
 Bans a user by their userID instead of their username. Useful for banning users who are temporarily suspended from Twitch, which `/ban` cannot do anymore.
 
@@ -163,7 +163,5 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
 
 -   `{stream.game}` can be used to insert the game set in the current channel. Only works if the channel is live.  
     Example: Add Command `I'm currently playing {stream.game}` with trigger `/game`. Now typing `/game` will send a message like `I'm currently playing World of Warcraft`.
-
-[^1]: Added in 2.4.2
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
