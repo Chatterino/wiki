@@ -1,6 +1,6 @@
 # Crash Analysis
 
-When running on Windows, Chatterino 2.4.1 and later will automatically save information about a crash in a [minidump](https://docs.sentry.io/platforms/native/guides/minidumps/).
+When running on Windows, Chatterino will automatically save information about a crash in a [minidump](https://docs.sentry.io/platforms/native/guides/minidumps/).
 
 Crashdumps are saved inside the `Crashes/reports` folder in your [Chatterino folder](/Settings/#where-is-my-chatterino-folder-located).
 
