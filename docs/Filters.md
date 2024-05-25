@@ -227,4 +227,4 @@ Basically, if you're unsure about the order of operations, use extra parentheses
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
 
-[^1]: Available since [nightly] [69bdac9](https://github.com/Chatterino/chatterino2/commit/69bdac9936cd981679a8f5d2bf15b7873292b83f)
+[^1]: Available since 2.5.1

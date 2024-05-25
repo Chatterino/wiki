@@ -67,10 +67,6 @@ Twitch requires users to have a verified Phone Number attached to their account 
 You can add a phone number to your account in [Twitch Settings.](https://www.twitch.tv/settings/security)
 ![twitch_phone_auth](images/help/twitch_phone_auth.png)
 
-#### You are on a Chatterino version older than 2.4.0:
-
-On February 24th 2023 Twitch shutdown the service old versions of Chatterino used to send whispers. You must update to 2.4.0 or newer to continue sending whispers.
-
 ### FFZ/BTTV emotes are not working
 
 You need to be logged in to see emotes.
