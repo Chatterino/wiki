@@ -145,18 +145,18 @@ The following variables are available:
 | `channel.live`          | Bool         | Whether the channel is currently live                                                          |
 | **Flags**               |              | Message-specific flags                                                                         |
 | `flags.action`          | Bool         | Weather the message was sent with `/me`                                                        |
+| `flags.automod`         | Bool         | Whether the message has automod information or actions                                         |
+| `flags.cheer_message`   | Bool         | Whether the message includes bits                                                              |
+| `flags.first_message`   | Bool         | Whether the message is the author's first message in the channel                               |
 | `flags.highlighted`     | Bool         | Whether the message is highlighted                                                             |
-| `flags.reward_message`  | Bool         | Whether the message is a redeemed channel point reward message (except "Highlight my Message") |
 | `flags.points_redeemed` | Bool         | Whether the message was redeemed through the channel point reward "Highlight my Message"       |
+| `flags.reply`           | Bool         | Whether the message is a reply                                                                 |
+| `flags.restricted`      | Bool         | Whether the message comes from a restricted user                                               |
+| `flags.reward_message`  | Bool         | Whether the message is a redeemed channel point reward message (except "Highlight my Message") |
+| `flags.shared`          | Bool         | Whether the message comes from a another channel                                               |
 | `flags.sub_message`     | Bool         | Whether the message is a sub/resub/gift message                                                |
 | `flags.system_message`  | Bool         | Whether the message is a system message (i.e. timeout/ban/info)                                |
-| `flags.first_message`   | Bool         | Whether the message is the author's first message in the channel                               |
-| `flags.cheer_message`   | Bool         | Whether the message includes bits                                                              |
 | `flags.whisper`         | Bool         | Whether the message is a whisper                                                               |
-| `flags.reply`           | Bool         | Whether the message is a reply                                                                 |
-| `flags.automod`         | Bool         | Whether the message has automod information or actions                                         |
-| `flags.restricted`      | Bool         | Whether the message comes from a restricted user                                               |
-| `flags.shared`          | Bool         | Whether the message comes from a another channel                                               |
 | **Message**             |              | Actual message sent                                                                            |
 | `message.content`       | String       | Message content                                                                                |
 | `message.length`        | Int          | Message length                                                                                 |
