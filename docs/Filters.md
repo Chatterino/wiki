@@ -144,7 +144,7 @@ The following variables are available:
 | `channel.watching`      | Bool         | Whether the channel is being watched (requires Chatterino extension)                           |
 | `channel.live`          | Bool         | Whether the channel is currently live                                                          |
 | **Flags**               |              | Message-specific flags                                                                         |
-| `flags.action`          | Bool         | Weather the message was sent with `/me`                                                        |
+| `flags.action`          | Bool         | Whether the message was sent with `/me`                                                        |
 | `flags.automod`         | Bool         | Whether the message has automod information or actions                                         |
 | `flags.cheer_message`   | Bool         | Whether the message includes bits                                                              |
 | `flags.first_message`   | Bool         | Whether the message is the author's first message in the channel                               |
