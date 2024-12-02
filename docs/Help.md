@@ -111,7 +111,7 @@ Nightly is a "developer release" of Chatterino. It is released every time there'
 
 1. Go to [nightly release page](https://github.com/Chatterino/chatterino2/releases/tag/nightly-build) on GitHub.
 1. Download nightly:
-    - For **Windows** download `chatterino-windows-x86-64-Qt-6.7.1.zip `
+    - For **Windows** download `chatterino-windows-x86-64-Qt-6.7.1.zip`
     - For **Linux** download `Chatterino-x86_64.AppImage`
     - For **Mac** download `Chatterino.dmg`
 1. Install nightly:
