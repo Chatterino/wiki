@@ -21,3 +21,7 @@
   background-color: var(--md-footer-bg-color);
   color: var(--md-code-fg-color);
 }
+
+.no-wrap-tbl code {
+  white-space: nowrap;
+}
