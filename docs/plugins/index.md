@@ -6,6 +6,10 @@ Since version 2.5.2, you're able to extend Chatterino with Lua plugins. They all
 !!! note
     Version 2.5.2 is not yet released. You can try out the plugin system by downloading the latest [nightly build](../Help.md#what-is-nightly-and-how-to-use-install-it).
 
+<!-- prettier-ignore -->
+!!! warning
+    The plugin system is still in development. The API is subject to change, and some features might not work as expected. If you encounter any issues, please report them on the [Chatterino GitHub repository](https://github.com/Chatterino/chatterino2/issues).
+
 ## Getting Started
 
 Plugins are disabled by default. To enable them, open the settings, go to `Plugins` and check the `Enable plugins` checkbox.
