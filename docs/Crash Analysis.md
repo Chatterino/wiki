@@ -2,7 +2,7 @@
 
 When running on Windows, Chatterino will automatically save information about a crash in a [minidump](https://docs.sentry.io/platforms/native/guides/minidumps/).
 
-Crashdumps are saved inside the `Crashes/reports` folder in your [Chatterino folder](/Settings/#where-is-my-chatterino-folder-located).
+Crashdumps are saved inside the `Crashes/reports` folder in your [Chatterino folder](./Settings.md/#where-is-my-chatterino-folder-located).
 
 Minidumps contain the stacks of all threads, their state (registers), the exception associated with the crash, and some metadata about the CPU and the OS. If you are unsure if your crashdump contains sensitive information, ask a Chatterino developer on the [Discord server](https://discord.gg/qq7DDxjste).
 

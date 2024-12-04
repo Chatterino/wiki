@@ -23,6 +23,8 @@ theme:
     - navigation.instant
     - navigation.sections
     - navigation.top
+    - content.action.edit
+    - content.action.view
     - content.code.annotate
     - content.code.copy
   icon:
@@ -33,7 +35,8 @@ plugins:
       type: datetime
       fallback_to_build_date: true
 repo_url: https://github.com/chatterino/chatterino2
-edit_uri: ""
+repo_name: Chatterino/Chatterino2
+edit_uri: "https://github.com/Chatterino/wiki/edit/master/docs/"
 markdown_extensions:
   - admonition
   - attr_list
