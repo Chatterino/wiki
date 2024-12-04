@@ -31,17 +31,17 @@ Each plugin must have an `info.json` file. It contains metadata about the plugin
 
 <div class="no-wrap-tbl" markdown>
 
-| Key           | Required           | Type           | Description                                                                                |
-| ------------- | ------------------ | -------------- | ------------------------------------------------------------------------------------------ |
-| `$schema`     | :x:                | `string`       | The URL to the JSON schema for the `info.json` file.                                       |
-| `name`        | :white_check_mark: | `string`       | The name of the plugin.                                                                    |
-| `description` | :white_check_mark: | `string`       | A description of the plugin.                                                               |
-| `authors`     | :white_check_mark: | `string[]`     | An array of authors of the plugin.                                                         |
-| `version`     | :white_check_mark: | `string`       | The version of the plugin. Must be SemVer compliant. See [https://semver.org/](semver.org) |
-| `license`     | :white_check_mark: | `string`       | SPDX identifier for license of this plugin. See [https://spdx.org/licenses/](spdx.org)     |
-| `permissions` | :x:                | `Permission[]` | An array of permissions required by the plugin. See [permissions](#permissions).           |
-| `homepage`    | :x:                | `string`       | The URL to the plugin's homepage (a GitHub repository for example).                        |
-| `tags`        | :x:                | `string[]`     | An array of tags for the plugin.                                                           |
+| Key           | Required           | Type           | Description                                                                                        |
+| ------------- | ------------------ | -------------- | -------------------------------------------------------------------------------------------------- |
+| `$schema`     | :x:                | `string`       | The URL to the JSON schema for the `info.json` file.                                               |
+| `name`        | :white_check_mark: | `string`       | The name of the plugin.                                                                            |
+| `description` | :white_check_mark: | `string`       | A description of the plugin.                                                                       |
+| `authors`     | :white_check_mark: | `string[]`     | An array of authors of the plugin.                                                                 |
+| `version`     | :white_check_mark: | `string`       | The version of the plugin. Must be SemVer compliant. See [https://semver.org/](https://semver.org) |
+| `license`     | :white_check_mark: | `string`       | SPDX identifier for license of this plugin. See [https://spdx.org/licenses/](https://spdx.org)     |
+| `permissions` | :x:                | `Permission[]` | An array of permissions required by the plugin. See [permissions](#permissions).                   |
+| `homepage`    | :x:                | `string`       | The URL to the plugin's homepage (a GitHub repository for example).                                |
+| `tags`        | :x:                | `string[]`     | An array of tags for the plugin.                                                                   |
 
 </div>
 
