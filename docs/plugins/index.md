@@ -3,10 +3,6 @@
 Since version 2.5.2, you're able to extend Chatterino with Lua plugins. They allow you to extend the functionality of Chatterino in various ways, such as adding new commands or custom tab-completions.
 
 <!-- prettier-ignore -->
-!!! note
-    Version 2.5.2 is not yet released. You can try out the plugin system by downloading the latest [nightly build](../Help.md#what-is-nightly-and-how-to-use-install-it).
-
-<!-- prettier-ignore -->
 !!! warning
     The plugin system is still in development. The API is subject to change, and some features might not work as expected. If you encounter any issues, please report them on the [Chatterino GitHub repository](https://github.com/Chatterino/chatterino2/issues).
 
@@ -71,7 +67,7 @@ To create your first plugin, create a new folder inside the `Plugins` directory.
     end)
     ```
 
-    1. In Lua, `#!lua v:method()` is equivalent to `#!lua v.method(v)`. The `add_system_message` method is called on the `ctx.channel` object with the message as an argument.
+    1. In Lua, `#!lua v:method()` is equivalent to `#!lua v.method(v)`. The [`add_system_message`](https://github.com/Chatterino/chatterino2/blob/master/docs/wip-plugins.md#channeladd_system_messagemessage) method is called on the `ctx.channel` object with the message as an argument.
 === ":material-code-json: `info.json`"
     ```json
     {
