@@ -134,7 +134,6 @@ This is a Windows issue, it can be mitigated by turning on Compatibility mode fo
 
 ### My Reply was sent to the wrong message
 
-Twitch updated replies to add the functionally we needed to correct this, it was fixed in [5209e47] and the fixed version can be obtained by downloading the latest [nightly][nightly] build.
+Twitch updated replies to add the functionally we needed to correct this, it was fixed in [5209e47] and the fixed version can be obtained by downloading the latest [nightly](#what-is-nightly-and-how-to-use-install-it) build.
 
 [5209e47]: https://github.com/Chatterino/chatterino2/commit/5209e47df18d102925b9d59c79716cab8d89292c
-[nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
