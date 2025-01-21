@@ -35,7 +35,6 @@ plugins:
       type: datetime
       fallback_to_build_date: true
 repo_url: https://github.com/chatterino/chatterino2
-repo_name: Chatterino/Chatterino2
 edit_uri: "https://github.com/Chatterino/wiki/edit/master/docs/"
 markdown_extensions:
   - admonition
