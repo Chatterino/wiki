@@ -152,6 +152,7 @@ The following variables are available:
 | `flags.points_redeemed` | Bool         | Whether the message was redeemed through the channel point reward "Highlight my Message"       |
 | `flags.reply`           | Bool         | Whether the message is a reply                                                                 |
 | `flags.restricted`      | Bool         | Whether the message comes from a restricted user                                               |
+| `flags.monitored`       | Bool         | Whether the message comes from a monitored user (currently doesn't work)                       |
 | `flags.reward_message`  | Bool         | Whether the message is a redeemed channel point reward message (except "Highlight my Message") |
 | `flags.shared`          | Bool         | Whether the message comes from a another channel                                               |
 | `flags.sub_message`     | Bool         | Whether the message is a sub/resub/gift message                                                |
