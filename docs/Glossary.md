@@ -17,7 +17,6 @@ The split title's elements in the Split Header are enabled or disabled in Settin
 
 [Chat modes](https://safety.twitch.tv/s/article/Chat-Tools#9ChatModes) (e.g. Follower-Only) will only appear in the Split Header if one or more are set. For example, "follow(10m)" means viewers must follow the channel for 10 minutes before they can chat.
 
-
 ## Moderation
 
 ![moderation](images/glossary/moderation.png)
