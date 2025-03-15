@@ -6,12 +6,17 @@ Explain common words used in Chatterino.
 
 ![overview](images/glossary/overview.png)
 
-| Term         | Highlight | Description                                                                                    |
-| ------------ | --------- | ---------------------------------------------------------------------------------------------- |
-| Split        | Green     | Includes the chat, input field and a split header.                                             |
-| Split Header | Blue      | Contains split title, moderation actions, viewer list, split menu button and add split button. |
-| Split Menu   | Red       | Settings or actions for the specific split.                                                    |
-| Tab          | Purple    | Can contain multiple splits.                                                                   |
+| Term         | Highlight | Description                                                                                                                          |
+| ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Split        | Green     | Includes the chat, input field and a split header.                                                                                   |
+| Split Header | Blue      | Contains split title, chat modes, moderation actions (if mod), viewer list (if mod), split menu button (⋮) and add split button (+). |
+| Split Menu   | Red       | Settings or actions for the specific split.                                                                                          |
+| Tab          | Purple    | Can contain multiple splits.                                                                                                         |
+
+The split title's elements in the Split Header are enabled or disabled in Settings > General > Advanced > Chat title.
+
+[Chat modes](https://safety.twitch.tv/s/article/Chat-Tools#9ChatModes) (e.g. Follower-Only) will only appear in the Split Header if one or more are set. For example, "follow(10m)" means viewers must follow the channel for 10 minutes before they can chat.
+
 
 ## Moderation
 
