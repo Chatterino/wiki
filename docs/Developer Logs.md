@@ -30,7 +30,7 @@ Multiple rules can be concatenated with `;`: `chatterino.*.debug=true;chatterino
 === ":simple-linux:/:simple-apple: Linux/macOS"
     ```console
     $ export QT_LOGGING_RULES="chatterino.*.debug=true"
-    $ <path-to>/chatterino.exe
+    $ <path-to>/chatterino
     chatterino.hotkeys: Try add default "close popup window"
     chatterino.hotkeys: Already exists
     ...
