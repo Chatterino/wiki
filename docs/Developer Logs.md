@@ -38,7 +38,8 @@ Multiple rules can be concatenated with `;`: `chatterino.*.debug=true;chatterino
 <!-- prettier-ignore-end -->
 
 If you want to get live output of a running Chatterino instance, you can attach a debugger.
-On Windows, [c2-logs] can help with attaching to running instances and changing their logging levels.
+You can use the command `/c2-set-logging-rules` to set the rules from Chatterino itself at runtime.
+On Windows, [c2-logs] can help with attaching to running instances and changing their logging levels from the command line.
 
 [qt-env-vars]: https://doc.qt.io/qt-6/debug.html#environment-variables-recognized-by-qt
 [qt-logging-rules]: https://doc.qt.io/qt-6/qloggingcategory.html#configuring-categories
