@@ -51,8 +51,8 @@ Used to set a proxy for network interactions of Chatterino. Both HTTP and SOCKS5
 
 ### QT_LOGGING_RULES
 
-Used to enable/disable logging at run time. For example: `QT_LOGGING_RULES="chatterino.*.debug=true"` to enable debug logging in release builds. (It's on by default in debug builds). See [Qt docs](https://doc.qt.io/qt-5/qloggingcategory.html) for more details.
+Used to enable/disable logging at run time. For example: `QT_LOGGING_RULES="chatterino.*.debug=true"` to enable debug logging in release builds. (It's on by default in debug builds). See [Qt docs](https://doc.qt.io/qt-6/qloggingcategory.html#configuring-categories) and [Logging](Developer Logs.md) for more details.
 
 ### QT_MESSAGE_PATTERN
 
-Used to customize logging at run time. For example: `QT_MESSAGE_PATTERN="%{time hh:mm:ss.zzz} %{category}: %{function} %{message}"` enables a timestamp and function name in log messages. See [Qt docs](https://doc.qt.io/qt-5/qloggingcategory.html) for more details.
+Used to customize logging at run time. For example: `QT_MESSAGE_PATTERN="%{time hh:mm:ss.zzz} %{category}: %{function} %{message}"` enables a timestamp and function name in log messages. See [Qt docs](https://doc.qt.io/qt-6/qtlogging.html#qSetMessagePattern) and [Logging](Developer Logs.md) for more details.

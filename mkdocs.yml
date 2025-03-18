@@ -44,8 +44,13 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 extra:
   social:
     - icon: fontawesome/brands/discord
@@ -80,3 +85,4 @@ nav:
       - Environment Variables: Environment Variables.md
       - Crash Analysis: Crash Analysis.md
       - Contributing: Contributing for Developers.md
+      - Logging: Developer Logs.md
