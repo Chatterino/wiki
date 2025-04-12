@@ -159,6 +159,7 @@ The following variables are available:
 | `flags.sub_message`     | Bool         | Whether the message is a sub/resub/gift message                                                |
 | `flags.system_message`  | Bool         | Whether the message is a system message (i.e. timeout/ban/info)                                |
 | `flags.whisper`         | Bool         | Whether the message is a whisper                                                               |
+| `flags.similar`         | Bool         | Whether the message is marked as similar to a previous message based on your R9K settings      |
 | **Message**             |              | Actual message sent                                                                            |
 | `message.content`       | String       | Message content                                                                                |
 | `message.length`        | Int          | Message length                                                                                 |
