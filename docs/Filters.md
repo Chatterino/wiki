@@ -136,6 +136,7 @@ The following variables are available:
 | `author.badges`         | List<String> | List of author's badges                                                                        |
 | `author.color`          | Color\*      | Color code of author, or none                                                                  |
 | `author.name`           | String       | Display name of author                                                                         |
+| `author.user_id`        | String       | The Twitch User ID of author                                                                   |
 | `author.no_color`       | Bool         | Whether the author has no color set (i.e. gray name)                                           |
 | `author.subbed`         | Bool         | Whether author is subscribed                                                                   |
 | `author.sub_length`     | Int          | How long author has been subscribed (or zero)                                                  |
