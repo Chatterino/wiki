@@ -18,14 +18,6 @@ Arguments:
 
 -   `%1` = Escaped URL the link resolver should resolve
 
-### CHATTERINO2_TWITCH_EMOTE_SET_RESOLVER_URL
-
-Used to change the URL that Chatterino2 uses when trying to get emote set information
-Default value: `https://braize.pajlada.com/chatterino/twitchemotes/set/%1/`  
-Arguments:
-
--   `%1` = Emote set ID
-
 ### CHATTERINO2_TWITCH_SERVER_HOST
 
 String value used to change what Twitch chat server host to connect to.  
