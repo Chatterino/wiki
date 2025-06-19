@@ -69,16 +69,6 @@ Replace `XXXXXXXXXXXXXXX` with your Base64-encoded user and password
 | Image link    |                                        |
 | Deletion link |                                        |
 
-### [kappa.lol](https://kappa.lol)
-
-| Row           | Description                    |
-| ------------- | ------------------------------ |
-| Request URL   | `https://kappa.lol/api/upload` |
-| Form field    | `file`                         |
-| Extra headers |                                |
-| Image link    | `{link}`                       |
-| Deletion link | `{delete}`                     |
-
 # Unsupported sites
 
 -   `catbox.moe`: It's not possible yet to upload to catbox.moe due to how their upload method is constructed.
