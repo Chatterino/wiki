@@ -15,10 +15,10 @@ Multiple rules can be concatenated with `;`: `chatterino.*.debug=true;chatterino
 <!-- prettier-ignore-start -->
 === ":fontawesome-brands-windows: Windows PowerShell"
     ```pwsh-session
-    > $Env:QT_WIN_DEBUG_CONSOLE="new"
-    > $Env:QT_LOGGING_RULES="chatterino.*.debug=true"
-    > <path-to>/chatterino.exe
-    (a new console window will show)
+    $Env:QT_WIN_DEBUG_CONSOLE="new"
+    $Env:QT_LOGGING_RULES="chatterino.*.debug=true"
+    <path-to>/chatterino.exe
+    # (a new console window will show)
     ```
 === ":fontawesome-brands-windows: Windows CMD"
     ```doscon
