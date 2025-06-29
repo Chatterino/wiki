@@ -5,8 +5,8 @@ extra_css:
   - stylesheets/extra.css
 theme:
   name: material
-  logo: https://chatterino.com/logo.png
-  favicon: https://chatterino.com/logo.png
+  logo: https://chatterino.com/logo.svg
+  favicon: https://chatterino.com/logo.svg
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
