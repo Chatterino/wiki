@@ -65,6 +65,10 @@ Here is some terminology that you'll encounter in the rest of this document.
 
 `channel.name == "somestreamer" && author.badges contains "moderator"`
 
+### Hide messages that start with the phrase `!points`
+
+`!(message.content startswith "!points")`
+
 ## Filter Syntax + Semantics
 
 This section is aimed at technical users who have experience with general purpose programming languages.
