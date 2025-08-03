@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://wiki.chatterino.com/Crash%20Analysis.html">
+        <link rel="canonical" href="https://wiki.chatterino.com/Features/">
       
       
-        <link rel="prev" href="Environment%20Variables.html">
+        <link rel="prev" href="../Regex/">
       
       
-        <link rel="next" href="Contributing%20for%20Developers.html">
+        <link rel="next" href="../Hotkeys/">
       
       
       <link rel="icon" href="https://chatterino.com/logo.svg">
@@ -22,14 +22,14 @@
     
     
       
-        <title>Crash Analysis - Chatterino</title>
+        <title>Twitch - Chatterino</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#crash-analysis" class="md-skip">
+        <a href="#features" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Chatterino" class="md-header__button md-logo" aria-label="Chatterino" data-md-component="logo">
+    <a href=".." title="Chatterino" class="md-header__button md-logo" aria-label="Chatterino" data-md-component="logo">
       
   <img src="https://chatterino.com/logo.svg" alt="logo">
 
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Crash Analysis
+              Twitch
             
           </span>
         </div>
@@ -227,7 +227,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Chatterino" class="md-nav__button md-logo" aria-label="Chatterino" data-md-component="logo">
+    <a href=".." title="Chatterino" class="md-nav__button md-logo" aria-label="Chatterino" data-md-component="logo">
       
   <img src="https://chatterino.com/logo.svg" alt="logo">
 
@@ -256,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -321,7 +321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Commands.html" class="md-nav__link">
+      <a href="../Commands/" class="md-nav__link">
         
   
   
@@ -344,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Filters.html" class="md-nav__link">
+      <a href="../Filters/" class="md-nav__link">
         
   
   
@@ -367,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Search.html" class="md-nav__link">
+      <a href="../Search/" class="md-nav__link">
         
   
   
@@ -390,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Regex.html" class="md-nav__link">
+      <a href="../Regex/" class="md-nav__link">
         
   
   
@@ -417,8 +417,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -429,11 +431,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -449,7 +451,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Features
@@ -460,10 +462,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Features.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Twitch
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -474,6 +498,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#replies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replies
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -486,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Hotkeys.html" class="md-nav__link">
+      <a href="../Hotkeys/" class="md-nav__link">
         
   
   
@@ -509,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Image%20Uploader.html" class="md-nav__link">
+      <a href="../Image%20Uploader/" class="md-nav__link">
         
   
   
@@ -532,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Link%20Previews.html" class="md-nav__link">
+      <a href="../Link%20Previews/" class="md-nav__link">
         
   
   
@@ -555,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Moderation.html" class="md-nav__link">
+      <a href="../Moderation/" class="md-nav__link">
         
   
   
@@ -578,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Themes.html" class="md-nav__link">
+      <a href="../Themes/" class="md-nav__link">
         
   
   
@@ -608,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Help.html" class="md-nav__link">
+      <a href="../Help/" class="md-nav__link">
         
   
   
@@ -630,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Settings.html" class="md-nav__link">
+      <a href="../Settings/" class="md-nav__link">
         
   
   
@@ -652,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Third_party_services.html" class="md-nav__link">
+      <a href="../Third_party_services/" class="md-nav__link">
         
   
   
@@ -674,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Glossary.html" class="md-nav__link">
+      <a href="../Glossary/" class="md-nav__link">
         
   
   
@@ -693,8 +746,6 @@
       
   
   
-    
-  
   
   
     
@@ -707,11 +758,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
@@ -727,7 +778,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Developers
@@ -741,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Environment%20Variables.html" class="md-nav__link">
+      <a href="../Environment%20Variables/" class="md-nav__link">
         
   
   
@@ -761,32 +812,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Crash Analysis
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Crash%20Analysis.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Crash%20Analysis/" class="md-nav__link">
         
   
   
@@ -797,44 +826,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#windbg" class="md-nav__link">
-    <span class="md-ellipsis">
-      WinDbg
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#minidump-stackwalk" class="md-nav__link">
-    <span class="md-ellipsis">
-      minidump-stackwalk
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -847,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Contributing%20for%20Developers.html" class="md-nav__link">
+      <a href="../Contributing%20for%20Developers/" class="md-nav__link">
         
   
   
@@ -870,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Developer%20Logs.html" class="md-nav__link">
+      <a href="../Developer%20Logs/" class="md-nav__link">
         
   
   
@@ -920,18 +911,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#windbg" class="md-nav__link">
+  <a href="#replies" class="md-nav__link">
     <span class="md-ellipsis">
-      WinDbg
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#minidump-stackwalk" class="md-nav__link">
-    <span class="md-ellipsis">
-      minidump-stackwalk
+      Replies
     </span>
   </a>
   
@@ -953,7 +935,7 @@
 
 
   
-    <a href="https://github.com/Chatterino/wiki/edit/master/docs/Crash Analysis.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Chatterino/wiki/edit/master/docs/Features.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -962,42 +944,18 @@
     
       
     
-    <a href="https://github.com/Chatterino/wiki/raw/master/docs/Crash Analysis.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/Chatterino/wiki/raw/master/docs/Features.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="crash-analysis">Crash Analysis<a class="headerlink" href="#crash-analysis" title="Permanent link">&para;</a></h1>
-<p>When running on Windows, Chatterino will automatically save information about a crash in a <a href="https://docs.sentry.io/platforms/native/guides/minidumps/">minidump</a>.</p>
-<p>Crashdumps are saved inside the <code>Crashes/reports</code> folder in your <a href="Settings.html#where-is-my-chatterino-folder-located">Chatterino folder</a>.</p>
-<p>Minidumps contain the stacks of all threads, their state (registers), the exception associated with the crash, and some metadata about the CPU and the OS. If you are unsure if your crashdump contains sensitive information, ask a Chatterino developer on the <a href="https://discord.gg/qq7DDxjste">Discord server</a>.</p>
-<p>There are several ways of analyzing crashes. To get started, you need to have a symbol (PDB) file for your installation. <strong>These files are unique per build</strong> meaning that you need to download the file (this is especially important when using nightly builds). For GitHub builds, you can find the PDB file in the release - it's zipped in an archive ending in <code>.pdb.7z</code>. For simplicity, extract the <code>.pdb</code> to the location of your <code>chatterino.exe</code>.</p>
-<h2 id="windbg">WinDbg<a class="headerlink" href="#windbg" title="Permanent link">&para;</a></h2>
-<p>For analyzing with a GUI, install <a href="https://learn.microsoft.com/windows-hardware/drivers/debugger/">WinDbg</a>. After the installation, you should be able to open the crashdumps (<code>.dmp</code> files) right from the Windows Explorer. By default, you won't get much information.</p>
-<p>To add names to functions (symbols), open the settings (<em>Home &gt; Settings</em>), go to <em>Debugging Settings</em>, and add the directory you extracted your symbol file to the <em>Symbol path</em>. If there's no <code>srv*</code> entry, consider adding one - this will try to load symbols from servers for system libraries.</p>
-<p>To add source-files, clone the repository and checkout the source-tree at the version of your executable. Then add this path to <em>Source Path</em> in the <em>Debugging Settings</em>.</p>
-<p><em>Note:</em> You might need to reload your window to have your changes be picked up.</p>
-<details>
-<summary>Example Settings</summary>
-
-<img alt="Example screenshot of WinDbg settings" src="/images/crashes/windbg-settings.png" />
-
-</details>
-
-<h2 id="minidump-stackwalk">minidump-stackwalk<a class="headerlink" href="#minidump-stackwalk" title="Permanent link">&para;</a></h2>
-<p>If you want to use the terminal or don't have a Windows machine, you can use <a href="https://github.com/rust-minidump/rust-minidump/tree/main/minidump-stackwalk"><code>minidump-stackwalk</code></a>. Install <a href="https://crates.io/crates/minidump-stackwalk"><code>minidump-stackwalk</code></a> and <a href="https://crates.io/crates/dump_syms"><code>dump_syms</code></a> with cargo (<a href="https://doc.rust-lang.org/cargo/getting-started/installation.html">installation</a>): <code>cargo install &lt;app&gt;</code>.</p>
-<p>First, you need to generate a symbol-store from the PDB file with <code>dump_syms</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dump_syms<span class="w"> </span>chatterino.exe<span class="w"> </span>-s<span class="w"> </span>&lt;store-path&gt;<span class="w"> </span><span class="c1"># (1)!</span>
-</code></pre></div>
-<ol>
-<li>This can be any folder you want. Symbols will be extracted here.</li>
-</ol>
-<p>After you dumped the symbols, run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>minidump-stackwalk<span class="w"> </span>&lt;path-to-crashdump&gt;<span class="w"> </span>--symbols-path<span class="w"> </span>&lt;store-path&gt;
-</code></pre></div>
-<p>Since Chatterino has quite a few threads, the output will be long. Most of the time, you're interested in the first thread (GUI thread) since it's the crashing thread.</p>
+<h1 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h1>
+<h2 id="replies">Replies<a class="headerlink" href="#replies" title="Permanent link">&para;</a></h2>
+<p>We support Twitch's <a href="https://help.twitch.tv/s/article/chat-basics?language=en_US#replies">Chat Replies</a> feature.</p>
+<p>A reply can be executed by right-clicking a message, and selecting <code>Reply to message</code>, or by opening an existing Reply Thread and sending your message there.<br />
+Users who replied to your message, or messages sent in a reply thread you participated in, are highlighted and can be customized in the highlight setting <code>Participated Reply Threads</code>.</p>
 
 
 
@@ -1018,7 +976,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="August 2, 2025 08:40:24 UTC">August 2, 2025 08:40:24</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="August 3, 2025 11:39:44 UTC">August 3, 2025 11:39:44</span>
   </span>
 
     
@@ -1101,10 +1059,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.sections", "navigation.top", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.top", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>
