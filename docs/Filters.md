@@ -53,12 +53,17 @@ Here is some terminology that you'll encounter in the rest of this document.
 
 ## Example filters
 
--   `message.content contains "hello"`
-    -   Only messages that contain the phrase `hello`
--   `message.length < 40 || author.subbed`
-    -   Messages that are less than 40 characters long, OR are sent by a subscriber.
--   `channel.name == "somestreamer" && author.badges contains "moderator"`
-    -   Messages that originated in the channel `somestreamer` AND are from users with a moderator badge
+### Only show messages that contain the phrase `hello`
+
+`message.content contains "hello"`
+
+### Only show messages that are less than 40 characters long, OR are sent by a subscriber
+
+`message.length < 40 || author.subbed`
+
+### Only show messages originated in channel `somestreamer` AND are from users with a moderator badge
+
+`channel.name == "somestreamer" && author.badges contains "moderator"`
 
 ## Filter Syntax + Semantics
 
