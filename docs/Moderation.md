@@ -12,7 +12,7 @@ You can choose from: Emote only, Subscriber only, Slow mode, R9K mode and Follow
 
 ## Logging
 
-Moderators are able to log all the channels they are in using the logging feature.
+Users are able to log all the channels they are in using the logging feature. This writes the messages to a text file with date and time.
 
 ![Logging](./images/moderation/logging.png)
 
