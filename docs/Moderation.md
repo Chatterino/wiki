@@ -16,6 +16,10 @@ Users are able to log all the channels they are in using the logging feature. Th
 
 ![Logging](./images/moderation/logging.png)
 
+The log file looks like this:
+
+![LogFileExample](./images/moderation/logExample.png)
+
 ## Moderation Mode
 
 Moderation mode is enabled by clicking ![ModModeDisabled](./images/moderation/modModeDisabled.png){: width=18; height=18 } in a channel that you moderate. Available variables are `{user.name}`, `{msg.id}`, `{msg.text}` & `{channel.name}`. Below is a list of examples that can be used:
