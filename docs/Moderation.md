@@ -18,7 +18,7 @@ Users are able to log all the channels they are in using the logging feature. Th
 
 An example log file is shown below:
 
-`
+```
 [13:39] connected
 [13:39] joined channel
 [13:39] marinapicher: daba mal rollito
@@ -32,7 +32,7 @@ An example log file is shown below:
 [13:44] theflipper__: !visit h
 [13:44] karolfunez23: auronRisitas
 [13:44] eliotgame34: !vicit m
-`
+```
 
 ## Moderation Mode
 
