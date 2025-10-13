@@ -18,7 +18,21 @@ Users are able to log all the channels they are in using the logging feature. Th
 
 An example log file is shown below:
 
-![LogFileExample](./images/moderation/logExample.png)
+`
+[13:39] connected
+[13:39] joined channel
+[13:39] marinapicher: daba mal rollito
+[13:39] nacari07: Aduana
+[13:39] bizen_fg has been timed out for 5m.
+[13:40] nakoabro: Jajajajaja
+[13:40] lui01010: Holaaaa
+[13:40] lui01010 subscribed at Tier 1. They've subscribed for 2 months, currently on a 1 month streak!
+[13:43] A message from davidpol91 was deleted: Lskcjdjxjdjdjdndjddjdjdjdjxxjxbxbxbxbxbx
+[13:44] brennu1retardado has been permanently banned.
+[13:44] theflipper__: !visit h
+[13:44] karolfunez23: auronRisitas
+[13:44] eliotgame34: !vicit m
+`
 
 ## Moderation Mode
 
