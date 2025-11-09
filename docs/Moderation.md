@@ -12,7 +12,7 @@ You can choose from: Emote only, Subscriber only, Slow mode, R9K mode and Follow
 
 ## Logging
 
-Users are able to log all the channels they are in using the logging feature. This writes the messages to a text file with date and time. You can choose a timestamp format or none, log only selected channels from a list, and have each channel logged to separate files.
+Users are able to log all the channels they are in using the logging feature. This writes the messages to a text file with date and time. You can choose a timestamp format or none, log only selected channels from a list, and have each stream logged to separate files.
 
 ![Logging](./images/moderation/logging.png)
 
