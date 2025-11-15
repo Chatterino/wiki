@@ -12,9 +12,27 @@ You can choose from: Emote only, Subscriber only, Slow mode, R9K mode and Follow
 
 ## Logging
 
-Moderators are able to log all the channels they are in using the logging feature.
+Users are able to log all the channels they are in using the logging feature. This writes the messages to a text file with date and time. You can choose a timestamp format or none, log only selected channels from a list, and have each stream logged to separate files.
 
 ![Logging](./images/moderation/logging.png)
+
+An example log file is shown below:
+
+```
+[13:39] connected
+[13:39] joined channel
+[13:39] marinapicher: daba mal rollito
+[13:39] nacari07: Aduana
+[13:39] bizen_fg has been timed out for 5m.
+[13:40] nakoabro: Jajajajaja
+[13:40] lui01010: Holaaaa
+[13:40] lui01010 subscribed at Tier 1. They've subscribed for 2 months, currently on a 1 month streak!
+[13:43] A message from davidpol91 was deleted: Lskcjdjxjdjdjdndjddjdjdjdjxxjxbxbxbxbxbx
+[13:44] brennu1retardado has been permanently banned.
+[13:44] theflipper__: !visit h
+[13:44] karolfunez23: auronRisitas
+[13:44] eliotgame34: !vicit m
+```
 
 ## Moderation Mode
 
