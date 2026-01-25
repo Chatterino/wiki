@@ -13,10 +13,10 @@ On **Mac**:
 
 Commands and Settings have a small backup mechanism that saves the older version in a file like commands.json.bkp-2 in case you want to return to older versions of the file.
 
--   commands.json - Will contain all your Chatterino commands
--   settings.json - This contains most of your settings, including sensitive data like your login token
--   window-layout.json - This contains information which tabs and splits you have open and how they are positioned
--   irc.json - When you have a non-twitch IRC connection, this contains the configured servers and settings
+- commands.json - Will contain all your Chatterino commands
+- settings.json - This contains most of your settings, including sensitive data like your login token
+- window-layout.json - This contains information which tabs and splits you have open and how they are positioned
+- irc.json - When you have a non-twitch IRC connection, this contains the configured servers and settings
 
 ## Help
 
@@ -24,10 +24,10 @@ Commands and Settings have a small backup mechanism that saves the older version
 
 Navigate to your [Chatterino folder](#where-is-my-chatterino-folder-located) and remove corresponding folders.
 
--   The _Cache_ folder contains cached network requests from Chatterino.
--   The _Logs_ folder contains chat logs from chats you've had open in Chatterino.
--   The _Misc_ folder contains internal information about the current running instance of Chatterino.
--   The _Settings_ folder contains any settings you may have configured in Chatterino (e.g. font size, highlight phrases) and your list of channels open.
+- The _Cache_ folder contains cached network requests from Chatterino.
+- The _Logs_ folder contains chat logs from chats you've had open in Chatterino.
+- The _Misc_ folder contains internal information about the current running instance of Chatterino.
+- The _Settings_ folder contains any settings you may have configured in Chatterino (e.g. font size, highlight phrases) and your list of channels open.
 
 ### My settings / commands / window layout are not saving
 
