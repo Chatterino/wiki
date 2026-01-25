@@ -14,8 +14,8 @@ Code is automatically formatted using [`clang-format`](https://clang.llvm.org/do
 
 Comments should only be used to:
 
--   Increase readability (e.g. grouping member variables).
--   Containing information that can't be expressed in code.
+- Increase readability (e.g. grouping member variables).
+- Containing information that can't be expressed in code.
 
 Try to structure your code so that comments are not required.
 
@@ -178,10 +178,10 @@ void myFreeStandingFunction(); // (7)!
 
 ### Casts
 
--   **Avoid** c-style casts: `(type)variable`.
--   Instead use explicit type casts: `type(variable)`
--   Or use one of [static_cast], [const_cast] and [dynamic_cast]
--   Try to avoid [reinterpret_cast] unless necessary.
+- **Avoid** c-style casts: `(type)variable`.
+- Instead use explicit type casts: `type(variable)`
+- Or use one of [static_cast], [const_cast] and [dynamic_cast]
+- Try to avoid [reinterpret_cast] unless necessary.
 
 ```cpp
 void example(float f, Base *b, const User &user, int p) {
@@ -244,14 +244,14 @@ Test::testFunc(int a)
 
 Keep the element on the stack if possible. If you need a pointer or have complex ownership you should use one of these classes:
 
--   Use [`std::unique_ptr`][unique_ptr] if the resource has a single owner.
--   Use [`std::shared_ptr`][shared_ptr] if the resource has multiple owners.
+- Use [`std::unique_ptr`][unique_ptr] if the resource has a single owner.
+- Use [`std::shared_ptr`][shared_ptr] if the resource has multiple owners.
 
 #### QObject classes
 
--   Use the [object tree](https://doc.qt.io/qt-6/objecttrees.html) to manage lifetime where possible. Objects are destroyed when their parent object is destroyed.
--   If you have to explicitly delete an object use [`variable->deleteLater()`][delete-later] instead of `delete variable`. This ensures that it will be deleted on the correct thread.
--   If an object doesn't have a parent consider using `std::unique_ptr<Type, DeleteLater>` with `DeleteLater` from "common/Common.hpp". This will call [`deleteLater()`][delete-later] on the pointer once it goes out of scope or the object is destroyed.
+- Use the [object tree](https://doc.qt.io/qt-6/objecttrees.html) to manage lifetime where possible. Objects are destroyed when their parent object is destroyed.
+- If you have to explicitly delete an object use [`variable->deleteLater()`][delete-later] instead of `delete variable`. This ensures that it will be deleted on the correct thread.
+- If an object doesn't have a parent consider using `std::unique_ptr<Type, DeleteLater>` with `DeleteLater` from "common/Common.hpp". This will call [`deleteLater()`][delete-later] on the pointer once it goes out of scope or the object is destroyed.
 
 [static_cast]: https://en.cppreference.com/w/cpp/language/static_cast
 [const_cast]: https://en.cppreference.com/w/cpp/language/const_cast

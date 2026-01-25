@@ -9,23 +9,23 @@ You can use several search filters (format `filter:value`) to narrow down your s
 Surround `value` in quotation marks to use whitespaces within it, useful for dealing with the regex filter.  
 The ability to negate searches is also possible. (format `!filter:value`)
 
--   `from:<username>` - shows messages from certain users
--   `has:<flags>` - shows messages containing specified elements. List of flags:
-    -   `link` - filters messages with links
--   `in:<channel>` - shows messages that originate from certain channels, useful in `#/mentions` channel
--   `is:<flags>` - shows certain types of messages. List of flags:
-    -   `deleted` or `disabled` - shows deleted messages
-    -   `sub` or `subscription` - shows subscription messages
-    -   `timeout` or `ban` - shows moderation messages
-    -   `highlighted` - shows highlighted messages
-    -   `system` - shows system messages (grey text ones like: "Now hosting username", "streamer is live", etc.)
-    -   `first-msg` - shows a user's first message in the channel
-    -   `cheer-msg` - shows messages containing bits
-    -   `redemption` - shows messages that cost the user Twitch channel points
-    -   `reply` - shows messages sent using the Twitch reply feature
--   `regex:<regex>` - shows messages matching a given regex
--   `badge:<value>` - shows messages from users that have a given badge
--   `subtier:<value>` - shows messages from users that are subscribed at a given tier
+- `from:<username>` - shows messages from certain users
+- `has:<flags>` - shows messages containing specified elements. List of flags:
+    - `link` - filters messages with links
+- `in:<channel>` - shows messages that originate from certain channels, useful in `#/mentions` channel
+- `is:<flags>` - shows certain types of messages. List of flags:
+    - `deleted` or `disabled` - shows deleted messages
+    - `sub` or `subscription` - shows subscription messages
+    - `timeout` or `ban` - shows moderation messages
+    - `highlighted` - shows highlighted messages
+    - `system` - shows system messages (grey text ones like: "Now hosting username", "streamer is live", etc.)
+    - `first-msg` - shows a user's first message in the channel
+    - `cheer-msg` - shows messages containing bits
+    - `redemption` - shows messages that cost the user Twitch channel points
+    - `reply` - shows messages sent using the Twitch reply feature
+- `regex:<regex>` - shows messages matching a given regex
+- `badge:<value>` - shows messages from users that have a given badge
+- `subtier:<value>` - shows messages from users that are subscribed at a given tier
 
 ## Examples
 
