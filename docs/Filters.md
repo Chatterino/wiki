@@ -17,9 +17,9 @@ To begin writing your own filters, take a look at the available [operators](#ope
 For most tasks involving the message content, you can make use of the `contains` operator, or the `matches` operator with a [regular expression](https://en.wikipedia.org/wiki/Regular_expression).  
 Then, try to break your desired behavior into multiple conditions. Combine them like this:
 
--   If you need _all_ the conditions satisfied, combine them with AND (`condition1 && condition2`)
--   If you only need _one_ of the conditions, combine them with OR (`condition1 || condition2`)
--   If you need the _opposite_ of one of the conditions, wrap it with parentheses and add a NOT: `!(condition)`
+- If you need _all_ the conditions satisfied, combine them with AND (`condition1 && condition2`)
+- If you only need _one_ of the conditions, combine them with OR (`condition1 || condition2`)
+- If you need the _opposite_ of one of the conditions, wrap it with parentheses and add a NOT: `!(condition)`
 
 #### Example
 
@@ -102,13 +102,13 @@ Regular expressions are similar to strings, but are denoted with an `r` before t
 
 Binary operators act on two values:
 
--   `1 + 2`
--   `author.subbed && flags.highlighted`
--   `"long sentence" contains "ten"`
+- `1 + 2`
+- `author.subbed && flags.highlighted`
+- `"long sentence" contains "ten"`
 
 Unary operators act on one value:
 
--   `!author.subbed`
+- `!author.subbed`
 
 The following operators are available:
 
@@ -233,10 +233,10 @@ For example: `message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}` matches th
 
 The order of operations in filters may not be exactly what you expect.
 
--   Expressions in parentheses are evaluated first
--   Math operations are evaluated from left to right, not by MDAS. `2 + 3 * 4` yields `20`, not `14`.
--   `a && b || c && d` is evaluated as `(a && b) || (c && d)`
--   `a || b && c || d` is evaluated as `a || (b && c) || d`
+- Expressions in parentheses are evaluated first
+- Math operations are evaluated from left to right, not by MDAS. `2 + 3 * 4` yields `20`, not `14`.
+- `a && b || c && d` is evaluated as `(a && b) || (c && d)`
+- `a || b && c || d` is evaluated as `a || (b && c) || d`
 
 Basically, if you're unsure about the order of operations, use extra parentheses.
 

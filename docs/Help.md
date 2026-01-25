@@ -11,13 +11,13 @@ questions, feel free to [join the Discord](https://discord.gg/qq7DDxjste).
 
 Prior to starting on the below, you should first try the basic troubleshooting steps listed here. These steps can resolve a variety of issues:
 
--   Ensure that your Chatterino is up to date.
--   [Windows] Try running Chatterino in administrator mode.
--   [Windows] Ensure that you have the x64 Visual C++ Redistributables installed **AND** have restarted your PC after installation:
-    -   x64: <https://aka.ms/vs/16/release/vc_redist.x64.exe>
-    -   Chocolatey: `choco install vcredist140`
--   [MacOS] Open `System Preferences` go to `Security & Privacy [General Tab]` and select `Open Anyway` or see this [Apple support article](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac).
-    ![mac_help](images/help/macOS_open_anyway.png)
+- Ensure that your Chatterino is up to date.
+- [Windows] Try running Chatterino in administrator mode.
+- [Windows] Ensure that you have the x64 Visual C++ Redistributables installed **AND** have restarted your PC after installation:
+    - x64: <https://aka.ms/vs/16/release/vc_redist.x64.exe>
+    - Chocolatey: `choco install vcredist140`
+- [MacOS] Open `System Preferences` go to `Security & Privacy [General Tab]` and select `Open Anyway` or see this [Apple support article](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac).
+  ![mac_help](images/help/macOS_open_anyway.png)
 
 ### I am having an issue with the Chatterino extension
 
@@ -25,9 +25,9 @@ Chatterino extension issues should be posted [here](https://github.com/Chatterin
 
 ### Chatterino not starting/Crashing upon startup
 
--   [Windows] Try running Chatterino in administrator mode.
--   [Windows] Adding Chatterino to your anti-virus/malware whitelist.
--   [Windows] If nothing else works, try resetting your settings using the `Fresh Install` option in the installer.
+- [Windows] Try running Chatterino in administrator mode.
+- [Windows] Adding Chatterino to your anti-virus/malware whitelist.
+- [Windows] If nothing else works, try resetting your settings using the `Fresh Install` option in the installer.
 
 ### Does using Chatterino accumulate Twitch channel points?
 
@@ -42,10 +42,10 @@ You definitely can, but it's not recommended. We suggest using a service similar
 
 There's a few things to cover here:
 
--   If your message is not sent in Chatterino, it is likely not sent in webchat either. Webchat renders messages whether they are sent or not, Chatterino will only render the message if it is accepted by the server.
--   If you're trying to type in a chat where there are a lot of active chatters, then your message may be dropped by Twitch's chat servers (due to the volume).
--   If an alt account has been banned in that chat, you have likely been shadowbanned by Twitch in that channel. Which prevents any of your other accounts from speaking in that channel.
--   If you have spammed too much in another chat, you have likely been temporarily shadowbanned by Twitch in channels where you are not: Subscribed, VIP or Moderator.
+- If your message is not sent in Chatterino, it is likely not sent in webchat either. Webchat renders messages whether they are sent or not, Chatterino will only render the message if it is accepted by the server.
+- If you're trying to type in a chat where there are a lot of active chatters, then your message may be dropped by Twitch's chat servers (due to the volume).
+- If an alt account has been banned in that chat, you have likely been shadowbanned by Twitch in that channel. Which prevents any of your other accounts from speaking in that channel.
+- If you have spammed too much in another chat, you have likely been temporarily shadowbanned by Twitch in channels where you are not: Subscribed, VIP or Moderator.
 
 If all else fails, you may be having connection issues to Twitch or your network may be blocking the necessary IRC ports in order to connect.
 
@@ -76,8 +76,8 @@ Chatterino only makes a connection to the necessary APIs to fetch these emotes, 
 
 ### I have link information turned on, but am unable to see the information when hovering over a link
 
--   The server (braize) used to fetch the link information may be down. Braize uptime can be found [here](https://braize.pajlada.com/chatterino/health/uptime).
--   Your network may be having issues connecting to braize. Try restarting your PC and router.
+- The server (braize) used to fetch the link information may be down. Braize uptime can be found [here](https://braize.pajlada.com/chatterino/health/uptime).
+- Your network may be having issues connecting to braize. Try restarting your PC and router.
 
 ### How do I get the supporter badge?
 

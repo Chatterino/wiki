@@ -53,23 +53,23 @@ Technically, the values are passed to [`QColor`](https://doc.qt.io/qt-6/qcolor.h
 
 `A`, `R`{ style="color: red" }, `G`{ style="color: green" }, and `B`{ style="color: blue" } are single hex digits (0-9, a-f, A-F).
 
--   <code>#<span style="color: red">R</span><span style="color: green">G</span><span style="color: blue">B</span></code>
--   <code>#<span style="color: red">RR</span><span style="color: green">GG</span><span style="color: blue">BB</span></code>
--   <code>#AA<span style="color: red">RR</span><span style="color: green">GG</span><span style="color: blue">BB</span></code> _This format is different from the CSS Color Moudle Level 4 [`<hex-color>`](https://developer.mozilla.org/docs/Web/CSS/hex-color), where the alpha value is at the end._
+- <code>#<span style="color: red">R</span><span style="color: green">G</span><span style="color: blue">B</span></code>
+- <code>#<span style="color: red">RR</span><span style="color: green">GG</span><span style="color: blue">BB</span></code>
+- <code>#AA<span style="color: red">RR</span><span style="color: green">GG</span><span style="color: blue">BB</span></code> _This format is different from the CSS Color Moudle Level 4 [`<hex-color>`](https://developer.mozilla.org/docs/Web/CSS/hex-color), where the alpha value is at the end._
 
--   <code>#<span style="color: red">RRR</span><span style="color: green">GGG</span><span style="color: blue">BBB</span></code>
--   <code>#<span style="color: red">RRRR</span><span style="color: green">GGGG</span><span style="color: blue">BBBB</span></code>
+- <code>#<span style="color: red">RRR</span><span style="color: green">GGG</span><span style="color: blue">BBB</span></code>
+- <code>#<span style="color: red">RRRR</span><span style="color: green">GGGG</span><span style="color: blue">BBBB</span></code>
 
 #### Named Colors
 
--   **[SVG color keyword names](https://www.w3.org/TR/SVG11/types.html#ColorKeywords)** - For example `red`{ style="color: red" }, `mediumspringgreen`{ style="color: mediumspringgreen" }. Note that these color names are technically case-insensitive and accept spaces, but this isn't supported by the [schema](#schema), which only accepts lower-case names.
--   `transparent`
+- **[SVG color keyword names](https://www.w3.org/TR/SVG11/types.html#ColorKeywords)** - For example `red`{ style="color: red" }, `mediumspringgreen`{ style="color: mediumspringgreen" }. Note that these color names are technically case-insensitive and accept spaces, but this isn't supported by the [schema](#schema), which only accepts lower-case names.
+- `transparent`
 
 ## Alternate editors
 
 These are some alternate ways of creating your own custom themes:
 
--   [Chatterino Theme Creator](https://chatterino-theme-creator-web.vercel.app/) by `doge41732`
+- [Chatterino Theme Creator](https://chatterino-theme-creator-web.vercel.app/) by `doge41732`
 
 ## Migrations
 
