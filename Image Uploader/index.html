@@ -660,17 +660,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#imgurcom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        imgur.com
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#s-uleu" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1137,17 +1126,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#imgurcom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        imgur.com
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#s-uleu" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1211,7 +1189,7 @@
 <p>You can drag and drop images to Chatterino or paste them from clipboard to upload them to an external service.</p>
 <p>By default, the image uploader is turned off. You can enable by checking the <code>Chatterino Settings -&gt; External Tools -&gt; Image Uploader -&gt; Enable image uploader</code> option and configuring per one of the below options.</p>
 <p>Note to advanced users: This module sends multipart-form requests via POST method, so uploading via SFTP/FTP won't work.
-However, popular hosts like <a href="https://imgur.com">imgur.com</a> and <a href="https://s-ul.eu">s-ul.eu</a> are supported. Scroll down to see example configurations.</p>
+However, popular hosts like <a href="https://s-ul.eu">s-ul.eu</a> are supported. Scroll down to see example configurations.</p>
 <h2 id="configuration-explanation">Configuration Explanation<a class="headerlink" href="#configuration-explanation" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1264,40 +1242,6 @@ However, popular hosts like <a href="https://imgur.com">imgur.com</a> and <a hre
 </tbody>
 </table>
 <p>Other fields empty.</p>
-<h3 id="imgurcom">imgur.com<a class="headerlink" href="#imgurcom" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Row</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Request URL</td>
-<td><code>https://api.imgur.com/3/image</code></td>
-</tr>
-<tr>
-<td>Form field</td>
-<td><code>image</code></td>
-</tr>
-<tr>
-<td>Extra headers</td>
-<td><code>Authorization: Client-ID c898c0bb848ca39</code></td>
-</tr>
-<tr>
-<td>Image link</td>
-<td><code>{data.link}</code></td>
-</tr>
-<tr>
-<td>Deletion link</td>
-<td><code>https://imgur.com/delete/{data.deletehash}</code></td>
-</tr>
-</tbody>
-</table>
-<p>You can also upload images to your imgur account by putting the following as <code>Extra headers</code>:</p>
-<p>Replace <code>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</code> with the token which you can obtain <a href="https://zneix.eu/imgurauth">here</a>.</p>
-<p><code>Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</code></p>
 <h3 id="s-uleu">s-ul.eu<a class="headerlink" href="#s-uleu" title="Permanent link">&para;</a></h3>
 <p>Replace <code>XXXXXXXXXXXXXXX</code> with your API key from s-ul.eu. It can be found on <a href="https://s-ul.eu/account/configurations">your account's configuration page</a>.</p>
 <table>
@@ -1366,6 +1310,7 @@ Replace <code>XXXXXXXXXXXXXXX</code> with your Base64-encoded user and password<
 <h1 id="unsupported-sites">Unsupported sites<a class="headerlink" href="#unsupported-sites" title="Permanent link">&para;</a></h1>
 <ul>
 <li><code>catbox.moe</code>: It's not possible yet to upload to catbox.moe due to how their upload method is constructed.</li>
+<li><code>imgur.com</code>: imgur's upload API is broken.</li>
 </ul>
 
 
@@ -1387,7 +1332,7 @@ Replace <code>XXXXXXXXXXXXXXX</code> with your Base64-encoded user and password<
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="December 20, 2025 10:35:04 UTC">December 20, 2025 10:35:04</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="January 25, 2026 11:24:48 UTC">January 25, 2026 11:24:48</span>
   </span>
 
     
