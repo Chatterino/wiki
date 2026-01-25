@@ -13,9 +13,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
 
       - name: Check formatting with Prettier
-        uses: actionsx/prettier@3d9f7c3fa44c9cb819e68292a328d7f4384be206
-        with:
-          # prettier CLI arguments.
-          args: --check .
+        run: |
+          npx prettier@3.8.1 --check .
