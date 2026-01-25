@@ -33,6 +33,7 @@ plugins:
   - git-revision-date-localized:
       type: datetime
       fallback_to_build_date: true
+      enable_parallel_processing: false
 repo_url: https://github.com/chatterino/chatterino2
 edit_uri: "https://github.com/Chatterino/wiki/edit/master/docs/"
 markdown_extensions:
