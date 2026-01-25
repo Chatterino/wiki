@@ -5,7 +5,7 @@ You can drag and drop images to Chatterino or paste them from clipboard to uploa
 By default, the image uploader is turned off. You can enable by checking the `Chatterino Settings -> External Tools -> Image Uploader -> Enable image uploader` option and configuring per one of the below options.
 
 Note to advanced users: This module sends multipart-form requests via POST method, so uploading via SFTP/FTP won't work.
-However, popular hosts like [imgur.com](https://imgur.com) and [s-ul.eu](https://s-ul.eu) are supported. Scroll down to see example configurations.
+However, popular hosts like [s-ul.eu](https://s-ul.eu) are supported. Scroll down to see example configurations.
 
 ## Configuration Explanation
 
@@ -27,22 +27,6 @@ However, popular hosts like [imgur.com](https://imgur.com) and [s-ul.eu](https:/
 | Form field  | `attachment`                 |
 
 Other fields empty.
-
-### imgur.com
-
-| Row           | Description                                  |
-| ------------- | -------------------------------------------- |
-| Request URL   | `https://api.imgur.com/3/image`              |
-| Form field    | `image`                                      |
-| Extra headers | `Authorization: Client-ID c898c0bb848ca39`   |
-| Image link    | `{data.link}`                                |
-| Deletion link | `https://imgur.com/delete/{data.deletehash}` |
-
-You can also upload images to your imgur account by putting the following as `Extra headers`:
-
-Replace `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` with the token which you can obtain [here](https://zneix.eu/imgurauth).
-
-`Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
 
 ### s-ul.eu
 
@@ -71,4 +55,5 @@ Replace `XXXXXXXXXXXXXXX` with your Base64-encoded user and password
 
 # Unsupported sites
 
--   `catbox.moe`: It's not possible yet to upload to catbox.moe due to how their upload method is constructed.
+- `catbox.moe`: It's not possible yet to upload to catbox.moe due to how their upload method is constructed.
+- `imgur.com`: imgur's upload API is broken.
