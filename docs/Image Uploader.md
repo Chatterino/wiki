@@ -40,6 +40,17 @@ Replace `XXXXXXXXXXXXXXX` with your API key from s-ul.eu. It can be found on [yo
 | Image link    | `{url}`                                                          |
 | Deletion link | `https://s-ul.eu/delete.php?file={filename}&key=XXXXXXXXXXXXXXX` |
 
+### [imgdrip.com](https://imgdrip.com)
+
+Similar to nuuls, this is an anonymous image and video upload tool with a default expiration of 30 days.
+
+| Row           | Description                      |
+| ------------- | -------------------------------- |
+| Request URL   | `https://imgdrip.com/api/upload` |
+| Form field    | `file`                           |
+| Image link    | `{url}`                          |
+| Deletion link | `{deleteUrl}`                    |
+
 ### [i.fourtf.com](https://github.com/fourtf/i)
 
 This is not a hosted service, but rather a service that can be self-hosted. Click on the URL for more information.
