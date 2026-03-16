@@ -73,6 +73,58 @@ Here is some terminology that you'll encounter in the rest of this document.
 
 `!(flags.system_message && message.content match ri".* redeemed .* for \d+ Bits")`
 
+### Channel point rewards
+
+Only show channel point rewards
+
+`flags.reward_message`
+
+Only show channel point rewards with a specific title or point cost
+
+`flags.reward_message && reward.title == "Game Wheel"` or `flags.reward_message && flags.points_redeemed == 1500`
+
+### Hide the connected/disconnected message
+
+`!(flags.system_message && (message.content match r"(connect)"))`
+
+### Hide the connected/disconnected message and JOIN/PART messages
+
+`!(flags.system_message && (message.content match r"(Users|connect)"))`
+
+### Subathon
+
+Only show messages related to your subathon (bit rewards, subs, gift subs, or donation messages from your chat bot)
+
+```
+(flags.cheer_message ||
+ reward.title == "Message Effects" ||
+ reward.title == "Gigantify an Emote" ||
+ reward.title == "On-Screen Celebration") ||
+(flags.system_message &&
+(!message.content contains " gifted a Tier " ||
+ (message.content contains " gifted a Tier " &&
+ (message.content contains "They have given " ||
+  message.content contains "This is their first "))) &&
+ !message.content contains "Announcement" &&
+ !message.content contains "is paying forward the Gift they got") &&
+(flags.sub_message &&
+(!message.content contains " raiders from ")) &&
+(!message.content contains " consecutive streams ") ||
+("CHATBOTNAME" == author.name && (message.content contains "donated" || message.content contains "tipped"))
+```
+
+### Hide fishing minigame
+
+Certain parameters will depend on the bot/fishing minigame in question (there are surprisingly many!)
+
+```
+!(author.badges contains "Broadcaster" &&
+ (message.content contains "gold! You now have"
+  || message.content contains "total casts!")
+) &&
+!(message.content contains "!fish")
+```
+
 ## Filter Syntax + Semantics
 
 This section is aimed at technical users who have experience with general purpose programming languages.
