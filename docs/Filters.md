@@ -30,12 +30,12 @@ Consider the following intention: "Only show me messages that are from moderator
 
 We can then write the corresponding filter parts:
 
-1. `author.badges contains "moderator"`
-2. `message.content contains "@my_name"`
+1. `#!c2-filter author.badges contains "moderator"`
+2. `#!c2-filter message.content contains "@my_name"`
 
 Finally, because we want _both_ of these conditions to be true, we combine them with the AND operator `&&` and end up with this final filter:
 
-`(author.badges contains "moderator") && (message.content contains "@my_name")`
+`#!c2-filter (author.badges contains "moderator") && (message.content contains "@my_name")`
 
 ### Quick Add
 
@@ -48,54 +48,54 @@ Here is some terminology that you'll encounter in the rest of this document.
 
 1. Value: A value is the simplest element of a filter. It can take on multiple forms: a number, a string (i.e. text), a [regular expression](https://en.wikipedia.org/wiki/Regular_expression), or a list of multiple values.
 2. Type: A type describes the general form of a value. For example, every number has type Int. Every string has type String.
-3. Variable: A variable is a placeholder for some information about a message. For example, the variable `message.content` represents the text of a message
-4. Operator: An operator acts on one or two values and evaluates to another value. For example, the plus operator `+` can add two numbers, `1 + 1` or concatenate strings, `"a" + "b"`
+3. Variable: A variable is a placeholder for some information about a message. For example, the variable `#!c2-filter message.content` represents the text of a message
+4. Operator: An operator acts on one or two values and evaluates to another value. For example, the plus operator `+` can add two numbers, `#!c2-filter 1 + 1` or concatenate strings, `#!c2-filter "a" + "b"`
 
 ## Example filters
 
 ### Only show messages that contain the phrase `hello`
 
-`message.content contains "hello"`
+`#!c2-filter message.content contains "hello"`
 
 ### Only show messages that are less than 40 characters long, OR are sent by a subscriber
 
-`message.length < 40 || author.subbed`
+`#!c2-filter message.length < 40 || author.subbed`
 
 ### Only show messages originated in channel `somestreamer` AND are from users with a moderator badge
 
-`channel.name == "somestreamer" && author.badges contains "moderator"`
+`#!c2-filter channel.name == "somestreamer" && author.badges contains "moderator"`
 
 ### Hide messages that start with the phrase `!points`
 
-`!(message.content startswith "!points")`
+`#!c2-filter !(message.content startswith "!points")`
 
 ### Hide bits combo messages
 
-`!(flags.system_message && message.content match ri".* redeemed .* for \d+ Bits")`
+`#!c2-filter !(flags.system_message && message.content match ri".* redeemed .* for \d+ Bits")`
 
 ### Channel point rewards
 
 Only show channel point rewards
 
-`flags.reward_message`
+`#!c2-filter flags.reward_message`
 
 Only show channel point rewards with a specific title or point cost
 
-`flags.reward_message && reward.title == "Game Wheel"` or `flags.reward_message && flags.points_redeemed == 1500`
+`#!c2-filter flags.reward_message && reward.title == "Game Wheel"` or `#!c2-filter flags.reward_message && flags.points_redeemed == 1500`
 
 ### Hide the connected/disconnected message
 
-`!(flags.system_message && (message.content match r"(connect)"))`
+`#!c2-filter !(flags.system_message && (message.content match r"(connect)"))`
 
 ### Hide the connected/disconnected message and JOIN/PART messages
 
-`!(flags.system_message && (message.content match r"(Users|connect)"))`
+`#!c2-filter !(flags.system_message && (message.content match r"(Users|connect)"))`
 
 ### Subathon
 
 Only show messages related to your subathon (bit rewards, subs, gift subs, or donation messages from your chat bot)
 
-```
+```c2-filter
 (flags.cheer_message ||
  reward.title == "Message Effects" ||
  reward.title == "Gigantify an Emote" ||
@@ -117,7 +117,7 @@ Only show messages related to your subathon (bit rewards, subs, gift subs, or do
 
 Certain parameters will depend on the bot/fishing minigame in question (there are surprisingly many!)
 
-```
+```c2-filter
 !(author.badges contains "Broadcaster" &&
  (message.content contains "gold! You now have"
   || message.content contains "total casts!")
@@ -135,36 +135,36 @@ A filter must be a valid expression. An expression is comprised of conditions an
 
 A value can be:
 
-1. An integer (`123`, `5`)
-2. A string (`"hello"`, `"this is a string"`)
-3. A variable (`author.name`, `message.length`)
+1. An integer (`#!c2-filter 123`, `#!c2-filter 5`)
+2. A string (`#!c2-filter "hello"`, `#!c2-filter "this is a string"`)
+3. A variable (`#!c2-filter author.name`, `#!c2-filter message.length`)
     - Technically, a variable isn't a value, but is given value by substitution
     - When a filter is evaluated, variables are replaced with the values they represent
-4. A regular expression (`r"\d\d\d\d"`)
-5. A list of values (`{123, "hello", author.name}`)
+4. A regular expression (`#!c2-filter r"\d\d\d\d"`)
+5. A list of values (`#!c2-filter {123, "hello", author.name}`)
 
-Regular expressions are similar to strings, but are denoted with an `r` before the opening quotation mark (e.g. `r"something"`). To make a regular expression case-insensitive, use `ri` before the opening quotation mark (e.g. `ri"something"`).
+Regular expressions are similar to strings, but are denoted with an `r` before the opening quotation mark (e.g. `#!c2-filter r"something"`). To make a regular expression case-insensitive, use `ri` before the opening quotation mark (e.g. `#!c2-filter ri"something"`).
 
 **Literals:**
 
-| Name   | Example                               |
-| ------ | ------------------------------------- |
-| Int    | `123`, `5`                            |
-| String | `"Hello there"`, `"Escaped \" quote"` |
-| RegEx  | `r"\d\d\d\d"`, `ri"something.*"`      |
-| List   | `{"list item", 123}`                  |
+| Name   | Example                                                       |
+| ------ | ------------------------------------------------------------- |
+| Int    | `#!c2-filter 123`, `#!c2-filter 5`                            |
+| String | `#!c2-filter "Hello there"`, `#!c2-filter "Escaped \" quote"` |
+| RegEx  | `#!c2-filter r"\d\d\d\d"`, `#!c2-filter ri"something.*"`      |
+| List   | `#!c2-filter {"list item", 123}`                              |
 
 ### Operators
 
 Binary operators act on two values:
 
-- `1 + 2`
-- `author.subbed && flags.highlighted`
-- `"long sentence" contains "ten"`
+- `#!c2-filter 1 + 2`
+- `#!c2-filter author.subbed && flags.highlighted`
+- `#!c2-filter "long sentence" contains "ten"`
 
 Unary operators act on one value:
 
-- `!author.subbed`
+- `#!c2-filter !author.subbed`
 
 The following operators are available:
 
@@ -233,7 +233,7 @@ The following variables are available:
 | `reward.cost`[^1]       | Int          | Cost of the redemption (e.g. 500)                                                              |
 | `reward.id`[^1]         | String       | ID of the redemption (e.g. 1ed437f5-9dc3-4510-8a3f-abcad67985e1)                               |
 
-\*Note: To compare a `Color`, compare it to a color hex code string: `author.color == "#FF0000"`
+\*Note: To compare a `Color`, compare it to a color hex code string: `#!c2-filter author.color == "#FF0000"`
 
 ### Data types
 
@@ -273,26 +273,26 @@ Chatterino can match string variables to a regular expression, returning whether
 
 #### Simple matching
 
-`"some string" match r"some regex"` returns `True` or `False`.
+`#!c2-filter "some string" match r"some regex"` returns `True` or `False`.
 
-For example: `message.content match r"\d\d"`
+For example: `#!c2-filter message.content match r"\d\d"`
 
 #### Group capturing
 
-`"some string" match {r"some regex", capture number}` returns `False` if no match or the value of the nth captured group.
+`#!c2-filter "some string" match {r"some regex", capture number}` returns `False` if no match or the value of the nth captured group.
 
-For example: `message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}` matches the year component of a date like `12/31/2020`.
+For example: `#!c2-filter message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}` matches the year component of a date like `12/31/2020`.
 
-`(message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}) == "2020"` will filter only messages that contain a written date with 2020 as the year.
+`#!c2-filter (message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}) == "2020"` will filter only messages that contain a written date with 2020 as the year.
 
 ### Order of Operations
 
 The order of operations in filters may not be exactly what you expect.
 
 - Expressions in parentheses are evaluated first
-- Math operations are evaluated from left to right, not by MDAS. `2 + 3 * 4` yields `20`, not `14`.
-- `a && b || c && d` is evaluated as `(a && b) || (c && d)`
-- `a || b && c || d` is evaluated as `a || (b && c) || d`
+- Math operations are evaluated from left to right, not by MDAS. `#!c2-filter 2 + 3 * 4` yields `20`, not `14`.
+- `#!c2-filter a && b || c && d` is evaluated as `#!c2-filter (a && b) || (c && d)`
+- `#!c2-filter a || b && c || d` is evaluated as `#!c2-filter a || (b && c) || d`
 
 Basically, if you're unsure about the order of operations, use extra parentheses.
 
