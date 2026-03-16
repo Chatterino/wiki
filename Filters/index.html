@@ -556,6 +556,61 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#channel-point-rewards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channel point rewards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hide-the-connecteddisconnected-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hide the connected/disconnected message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hide-the-connecteddisconnected-message-and-joinpart-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hide the connected/disconnected message and JOIN/PART messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subathon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subathon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hide-fishing-minigame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hide fishing minigame
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1425,6 +1480,61 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#channel-point-rewards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channel point rewards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hide-the-connecteddisconnected-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hide the connected/disconnected message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hide-the-connecteddisconnected-message-and-joinpart-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hide the connected/disconnected message and JOIN/PART messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subathon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subathon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hide-fishing-minigame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hide fishing minigame
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1643,6 +1753,41 @@ Then, try to break your desired behavior into multiple conditions. Combine them 
 <p><code>!(message.content startswith "!points")</code></p>
 <h3 id="hide-bits-combo-messages">Hide bits combo messages<a class="headerlink" href="#hide-bits-combo-messages" title="Permanent link">&para;</a></h3>
 <p><code>!(flags.system_message &amp;&amp; message.content match ri".* redeemed .* for \d+ Bits")</code></p>
+<h3 id="channel-point-rewards">Channel point rewards<a class="headerlink" href="#channel-point-rewards" title="Permanent link">&para;</a></h3>
+<p>Only show channel point rewards</p>
+<p><code>flags.reward_message</code></p>
+<p>Only show channel point rewards with a specific title or point cost</p>
+<p><code>flags.reward_message &amp;&amp; reward.title == "Game Wheel"</code> or <code>flags.reward_message &amp;&amp; flags.points_redeemed == 1500</code></p>
+<h3 id="hide-the-connecteddisconnected-message">Hide the connected/disconnected message<a class="headerlink" href="#hide-the-connecteddisconnected-message" title="Permanent link">&para;</a></h3>
+<p><code>!(flags.system_message &amp;&amp; (message.content match r"(connect)"))</code></p>
+<h3 id="hide-the-connecteddisconnected-message-and-joinpart-messages">Hide the connected/disconnected message and JOIN/PART messages<a class="headerlink" href="#hide-the-connecteddisconnected-message-and-joinpart-messages" title="Permanent link">&para;</a></h3>
+<p><code>!(flags.system_message &amp;&amp; (message.content match r"(Users|connect)"))</code></p>
+<h3 id="subathon">Subathon<a class="headerlink" href="#subathon" title="Permanent link">&para;</a></h3>
+<p>Only show messages related to your subathon (bit rewards, subs, gift subs, or donation messages from your chat bot)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>(flags.cheer_message ||
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> reward.title == &quot;Message Effects&quot; ||
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> reward.title == &quot;Gigantify an Emote&quot; ||
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> reward.title == &quot;On-Screen Celebration&quot;) ||
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>(flags.system_message &amp;&amp;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>(!message.content contains &quot; gifted a Tier &quot; ||
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a> (message.content contains &quot; gifted a Tier &quot; &amp;&amp;
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a> (message.content contains &quot;They have given &quot; ||
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  message.content contains &quot;This is their first &quot;))) &amp;&amp;
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a> !message.content contains &quot;Announcement&quot; &amp;&amp;
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a> !message.content contains &quot;is paying forward the Gift they got&quot;) &amp;&amp;
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>(flags.sub_message &amp;&amp;
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>(!message.content contains &quot; raiders from &quot;)) &amp;&amp;
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>(!message.content contains &quot; consecutive streams &quot;) ||
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>(&quot;CHATBOTNAME&quot; == author.name &amp;&amp; (message.content contains &quot;donated&quot; || message.content contains &quot;tipped&quot;))
+</code></pre></div>
+<h3 id="hide-fishing-minigame">Hide fishing minigame<a class="headerlink" href="#hide-fishing-minigame" title="Permanent link">&para;</a></h3>
+<p>Certain parameters will depend on the bot/fishing minigame in question (there are surprisingly many!)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!(author.badges contains &quot;Broadcaster&quot; &amp;&amp;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a> (message.content contains &quot;gold! You now have&quot;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  || message.content contains &quot;total casts!&quot;)
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>) &amp;&amp;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>!(message.content contains &quot;!fish&quot;)
+</code></pre></div>
 <h2 id="filter-syntax-semantics">Filter Syntax + Semantics<a class="headerlink" href="#filter-syntax-semantics" title="Permanent link">&para;</a></h2>
 <p>This section is aimed at technical users who have experience with general purpose programming languages.</p>
 <p>A filter must be a valid expression. An expression is comprised of conditions and values which are evaluated to a single <code>True</code> or <code>False</code> value to decide whether to filter a message. Evaluating to something other than <code>True</code> or <code>False</code> will lead to all messages being filtered out.</p>
@@ -2170,7 +2315,7 @@ Then, try to break your desired behavior into multiple conditions. Combine them 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 16, 2026 12:12:55 UTC">March 16, 2026 12:12:55</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 16, 2026 18:34:28 UTC">March 16, 2026 18:34:28</span>
   </span>
 
     
