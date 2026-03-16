@@ -69,6 +69,10 @@ Here is some terminology that you'll encounter in the rest of this document.
 
 `!(message.content startswith "!points")`
 
+### Hide bits combo messages
+
+`!(flags.system_message && message.content match ri".* redeemed .* for \d+ Bits")`
+
 ## Filter Syntax + Semantics
 
 This section is aimed at technical users who have experience with general purpose programming languages.
