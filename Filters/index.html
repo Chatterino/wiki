@@ -1726,11 +1726,11 @@ Then, try to break your desired behavior into multiple conditions. Combine them 
 </ol>
 <p>We can then write the corresponding filter parts:</p>
 <ol>
-<li><code>author.badges contains "moderator"</code></li>
-<li><code>message.content contains "@my_name"</code></li>
+<li><code class="highlight"><span class="k">author.badges</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;moderator&quot;</span></code></li>
+<li><code class="highlight"><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;@my_name&quot;</span></code></li>
 </ol>
 <p>Finally, because we want <em>both</em> of these conditions to be true, we combine them with the AND operator <code>&amp;&amp;</code> and end up with this final filter:</p>
-<p><code>(author.badges contains "moderator") &amp;&amp; (message.content contains "@my_name")</code></p>
+<p><code class="highlight"><span class="p">(</span><span class="k">author.badges</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;moderator&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;@my_name&quot;</span><span class="p">)</span></code></p>
 <h3 id="quick-add">Quick Add<a class="headerlink" href="#quick-add" title="Permanent link">&para;</a></h3>
 <p>If you already have a filter, you can use the <code>Quick Add</code> button and paste your filter into the <code>Filter</code> section.
 <img alt="quickAdd" src="../images/filters/quickAdd.gif" /></p>
@@ -1739,54 +1739,54 @@ Then, try to break your desired behavior into multiple conditions. Combine them 
 <ol>
 <li>Value: A value is the simplest element of a filter. It can take on multiple forms: a number, a string (i.e. text), a <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expression</a>, or a list of multiple values.</li>
 <li>Type: A type describes the general form of a value. For example, every number has type Int. Every string has type String.</li>
-<li>Variable: A variable is a placeholder for some information about a message. For example, the variable <code>message.content</code> represents the text of a message</li>
-<li>Operator: An operator acts on one or two values and evaluates to another value. For example, the plus operator <code>+</code> can add two numbers, <code>1 + 1</code> or concatenate strings, <code>"a" + "b"</code></li>
+<li>Variable: A variable is a placeholder for some information about a message. For example, the variable <code class="highlight"><span class="k">message.content</span></code> represents the text of a message</li>
+<li>Operator: An operator acts on one or two values and evaluates to another value. For example, the plus operator <code>+</code> can add two numbers, <code class="highlight"><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span></code> or concatenate strings, <code class="highlight"><span class="s">&quot;a&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;b&quot;</span></code></li>
 </ol>
 <h2 id="example-filters">Example filters<a class="headerlink" href="#example-filters" title="Permanent link">&para;</a></h2>
 <h3 id="only-show-messages-that-contain-the-phrase-hello">Only show messages that contain the phrase <code>hello</code><a class="headerlink" href="#only-show-messages-that-contain-the-phrase-hello" title="Permanent link">&para;</a></h3>
-<p><code>message.content contains "hello"</code></p>
+<p><code class="highlight"><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;hello&quot;</span></code></p>
 <h3 id="only-show-messages-that-are-less-than-40-characters-long-or-are-sent-by-a-subscriber">Only show messages that are less than 40 characters long, OR are sent by a subscriber<a class="headerlink" href="#only-show-messages-that-are-less-than-40-characters-long-or-are-sent-by-a-subscriber" title="Permanent link">&para;</a></h3>
-<p><code>message.length &lt; 40 || author.subbed</code></p>
+<p><code class="highlight"><span class="k">message.length</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">author.subbed</span></code></p>
 <h3 id="only-show-messages-originated-in-channel-somestreamer-and-are-from-users-with-a-moderator-badge">Only show messages originated in channel <code>somestreamer</code> AND are from users with a moderator badge<a class="headerlink" href="#only-show-messages-originated-in-channel-somestreamer-and-are-from-users-with-a-moderator-badge" title="Permanent link">&para;</a></h3>
-<p><code>channel.name == "somestreamer" &amp;&amp; author.badges contains "moderator"</code></p>
+<p><code class="highlight"><span class="k">channel.name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;somestreamer&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">author.badges</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;moderator&quot;</span></code></p>
 <h3 id="hide-messages-that-start-with-the-phrase-points">Hide messages that start with the phrase <code>!points</code><a class="headerlink" href="#hide-messages-that-start-with-the-phrase-points" title="Permanent link">&para;</a></h3>
-<p><code>!(message.content startswith "!points")</code></p>
+<p><code class="highlight"><span class="o">!</span><span class="p">(</span><span class="k">message.content</span><span class="w"> </span><span class="ow">startswith</span><span class="w"> </span><span class="s">&quot;!points&quot;</span><span class="p">)</span></code></p>
 <h3 id="hide-bits-combo-messages">Hide bits combo messages<a class="headerlink" href="#hide-bits-combo-messages" title="Permanent link">&para;</a></h3>
-<p><code>!(flags.system_message &amp;&amp; message.content match ri".* redeemed .* for \d+ Bits")</code></p>
+<p><code class="highlight"><span class="o">!</span><span class="p">(</span><span class="k">flags.system_message</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">message.content</span><span class="w"> </span><span class="ow">match</span><span class="w"> </span><span class="sr">ri&quot;.* redeemed .* for \d+ Bits&quot;</span><span class="p">)</span></code></p>
 <h3 id="channel-point-rewards">Channel point rewards<a class="headerlink" href="#channel-point-rewards" title="Permanent link">&para;</a></h3>
 <p>Only show channel point rewards</p>
-<p><code>flags.reward_message</code></p>
+<p><code class="highlight"><span class="k">flags.reward_message</span></code></p>
 <p>Only show channel point rewards with a specific title or point cost</p>
-<p><code>flags.reward_message &amp;&amp; reward.title == "Game Wheel"</code> or <code>flags.reward_message &amp;&amp; flags.points_redeemed == 1500</code></p>
+<p><code class="highlight"><span class="k">flags.reward_message</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">reward.title</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Game Wheel&quot;</span></code> or <code class="highlight"><span class="k">flags.reward_message</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">flags.points_redeemed</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1500</span></code></p>
 <h3 id="hide-the-connecteddisconnected-message">Hide the connected/disconnected message<a class="headerlink" href="#hide-the-connecteddisconnected-message" title="Permanent link">&para;</a></h3>
-<p><code>!(flags.system_message &amp;&amp; (message.content match r"(connect)"))</code></p>
+<p><code class="highlight"><span class="o">!</span><span class="p">(</span><span class="k">flags.system_message</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="k">message.content</span><span class="w"> </span><span class="ow">match</span><span class="w"> </span><span class="sr">r&quot;(connect)&quot;</span><span class="p">))</span></code></p>
 <h3 id="hide-the-connecteddisconnected-message-and-joinpart-messages">Hide the connected/disconnected message and JOIN/PART messages<a class="headerlink" href="#hide-the-connecteddisconnected-message-and-joinpart-messages" title="Permanent link">&para;</a></h3>
-<p><code>!(flags.system_message &amp;&amp; (message.content match r"(Users|connect)"))</code></p>
+<p><code class="highlight"><span class="o">!</span><span class="p">(</span><span class="k">flags.system_message</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="k">message.content</span><span class="w"> </span><span class="ow">match</span><span class="w"> </span><span class="sr">r&quot;(Users|connect)&quot;</span><span class="p">))</span></code></p>
 <h3 id="subathon">Subathon<a class="headerlink" href="#subathon" title="Permanent link">&para;</a></h3>
 <p>Only show messages related to your subathon (bit rewards, subs, gift subs, or donation messages from your chat bot)</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>(flags.cheer_message ||
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> reward.title == &quot;Message Effects&quot; ||
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> reward.title == &quot;Gigantify an Emote&quot; ||
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> reward.title == &quot;On-Screen Celebration&quot;) ||
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>(flags.system_message &amp;&amp;
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>(!message.content contains &quot; gifted a Tier &quot; ||
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a> (message.content contains &quot; gifted a Tier &quot; &amp;&amp;
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a> (message.content contains &quot;They have given &quot; ||
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  message.content contains &quot;This is their first &quot;))) &amp;&amp;
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a> !message.content contains &quot;Announcement&quot; &amp;&amp;
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a> !message.content contains &quot;is paying forward the Gift they got&quot;) &amp;&amp;
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>(flags.sub_message &amp;&amp;
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>(!message.content contains &quot; raiders from &quot;)) &amp;&amp;
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>(!message.content contains &quot; consecutive streams &quot;) ||
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>(&quot;CHATBOTNAME&quot; == author.name &amp;&amp; (message.content contains &quot;donated&quot; || message.content contains &quot;tipped&quot;))
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">(</span><span class="k">flags.cheer_message</span><span class="w"> </span><span class="o">||</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"> </span><span class="k">reward.title</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Message Effects&quot;</span><span class="w"> </span><span class="o">||</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w"> </span><span class="k">reward.title</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Gigantify an Emote&quot;</span><span class="w"> </span><span class="o">||</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w"> </span><span class="k">reward.title</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;On-Screen Celebration&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">(</span><span class="k">flags.system_message</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">(</span><span class="o">!</span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot; gifted a Tier &quot;</span><span class="w"> </span><span class="o">||</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w"> </span><span class="p">(</span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot; gifted a Tier &quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w"> </span><span class="p">(</span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;They have given &quot;</span><span class="w"> </span><span class="o">||</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;This is their first &quot;</span><span class="p">)))</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w"> </span><span class="o">!</span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;Announcement&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w"> </span><span class="o">!</span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;is paying forward the Gift they got&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">(</span><span class="k">flags.sub_message</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">(</span><span class="o">!</span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot; raiders from &quot;</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">(</span><span class="o">!</span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot; consecutive streams &quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">(</span><span class="s">&quot;CHATBOTNAME&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">author.name</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;donated&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;tipped&quot;</span><span class="p">))</span>
 </code></pre></div>
 <h3 id="hide-fishing-minigame">Hide fishing minigame<a class="headerlink" href="#hide-fishing-minigame" title="Permanent link">&para;</a></h3>
 <p>Certain parameters will depend on the bot/fishing minigame in question (there are surprisingly many!)</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!(author.badges contains &quot;Broadcaster&quot; &amp;&amp;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a> (message.content contains &quot;gold! You now have&quot;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  || message.content contains &quot;total casts!&quot;)
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>) &amp;&amp;
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>!(message.content contains &quot;!fish&quot;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">!</span><span class="p">(</span><span class="k">author.badges</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;Broadcaster&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w"> </span><span class="p">(</span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;gold! You now have&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="o">||</span><span class="w"> </span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;total casts!&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="o">!</span><span class="p">(</span><span class="k">message.content</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;!fish&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="filter-syntax-semantics">Filter Syntax + Semantics<a class="headerlink" href="#filter-syntax-semantics" title="Permanent link">&para;</a></h2>
 <p>This section is aimed at technical users who have experience with general purpose programming languages.</p>
@@ -1794,17 +1794,17 @@ Then, try to break your desired behavior into multiple conditions. Combine them 
 <h3 id="values">Values<a class="headerlink" href="#values" title="Permanent link">&para;</a></h3>
 <p>A value can be:</p>
 <ol>
-<li>An integer (<code>123</code>, <code>5</code>)</li>
-<li>A string (<code>"hello"</code>, <code>"this is a string"</code>)</li>
-<li>A variable (<code>author.name</code>, <code>message.length</code>)<ul>
+<li>An integer (<code class="highlight"><span class="m">123</span></code>, <code class="highlight"><span class="m">5</span></code>)</li>
+<li>A string (<code class="highlight"><span class="s">&quot;hello&quot;</span></code>, <code class="highlight"><span class="s">&quot;this is a string&quot;</span></code>)</li>
+<li>A variable (<code class="highlight"><span class="k">author.name</span></code>, <code class="highlight"><span class="k">message.length</span></code>)<ul>
 <li>Technically, a variable isn't a value, but is given value by substitution</li>
 <li>When a filter is evaluated, variables are replaced with the values they represent</li>
 </ul>
 </li>
-<li>A regular expression (<code>r"\d\d\d\d"</code>)</li>
-<li>A list of values (<code>{123, "hello", author.name}</code>)</li>
+<li>A regular expression (<code class="highlight"><span class="sr">r&quot;\d\d\d\d&quot;</span></code>)</li>
+<li>A list of values (<code class="highlight"><span class="p">{</span><span class="m">123</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">author.name</span><span class="p">}</span></code>)</li>
 </ol>
-<p>Regular expressions are similar to strings, but are denoted with an <code>r</code> before the opening quotation mark (e.g. <code>r"something"</code>). To make a regular expression case-insensitive, use <code>ri</code> before the opening quotation mark (e.g. <code>ri"something"</code>).</p>
+<p>Regular expressions are similar to strings, but are denoted with an <code>r</code> before the opening quotation mark (e.g. <code class="highlight"><span class="sr">r&quot;something&quot;</span></code>). To make a regular expression case-insensitive, use <code>ri</code> before the opening quotation mark (e.g. <code class="highlight"><span class="sr">ri&quot;something&quot;</span></code>).</p>
 <p><strong>Literals:</strong></p>
 <table>
 <thead>
@@ -1816,32 +1816,32 @@ Then, try to break your desired behavior into multiple conditions. Combine them 
 <tbody>
 <tr>
 <td>Int</td>
-<td><code>123</code>, <code>5</code></td>
+<td><code class="highlight"><span class="m">123</span></code>, <code class="highlight"><span class="m">5</span></code></td>
 </tr>
 <tr>
 <td>String</td>
-<td><code>"Hello there"</code>, <code>"Escaped \" quote"</code></td>
+<td><code class="highlight"><span class="s">&quot;Hello there&quot;</span></code>, <code class="highlight"><span class="s">&quot;Escaped </span><span class="se">\&quot;</span><span class="s"> quote&quot;</span></code></td>
 </tr>
 <tr>
 <td>RegEx</td>
-<td><code>r"\d\d\d\d"</code>, <code>ri"something.*"</code></td>
+<td><code class="highlight"><span class="sr">r&quot;\d\d\d\d&quot;</span></code>, <code class="highlight"><span class="sr">ri&quot;something.*&quot;</span></code></td>
 </tr>
 <tr>
 <td>List</td>
-<td><code>{"list item", 123}</code></td>
+<td><code class="highlight"><span class="p">{</span><span class="s">&quot;list item&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">123</span><span class="p">}</span></code></td>
 </tr>
 </tbody>
 </table>
 <h3 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">&para;</a></h3>
 <p>Binary operators act on two values:</p>
 <ul>
-<li><code>1 + 2</code></li>
-<li><code>author.subbed &amp;&amp; flags.highlighted</code></li>
-<li><code>"long sentence" contains "ten"</code></li>
+<li><code class="highlight"><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span></code></li>
+<li><code class="highlight"><span class="k">author.subbed</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">flags.highlighted</span></code></li>
+<li><code class="highlight"><span class="s">&quot;long sentence&quot;</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s">&quot;ten&quot;</span></code></li>
 </ul>
 <p>Unary operators act on one value:</p>
 <ul>
-<li><code>!author.subbed</code></li>
+<li><code class="highlight"><span class="o">!</span><span class="k">author.subbed</span></code></li>
 </ul>
 <p>The following operators are available:</p>
 <table>
@@ -2115,7 +2115,7 @@ Then, try to break your desired behavior into multiple conditions. Combine them 
 </tr>
 </tbody>
 </table>
-<p>*Note: To compare a <code>Color</code>, compare it to a color hex code string: <code>author.color == "#FF0000"</code></p>
+<p>*Note: To compare a <code>Color</code>, compare it to a color hex code string: <code class="highlight"><span class="k">author.color</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;#FF0000&quot;</span></code></p>
 <h3 id="data-types">Data types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h3>
 <p>The Chatterino filter language is typed, meaning that every value has a type and only specific combinations of types are allowed when using operators. Generally, you won't run in to issues. The type system exists to warn you about any mistakes that your filter contains.</p>
 <h4 id="type-rules">Type Rules<a class="headerlink" href="#type-rules" title="Permanent link">&para;</a></h4>
@@ -2272,19 +2272,19 @@ Then, try to break your desired behavior into multiple conditions. Combine them 
 <h3 id="regular-expressions">Regular Expressions<a class="headerlink" href="#regular-expressions" title="Permanent link">&para;</a></h3>
 <p>Chatterino can match string variables to a regular expression, returning whether the expression matched or, optionally, the value of a capture group.</p>
 <h4 id="simple-matching">Simple matching<a class="headerlink" href="#simple-matching" title="Permanent link">&para;</a></h4>
-<p><code>"some string" match r"some regex"</code> returns <code>True</code> or <code>False</code>.</p>
-<p>For example: <code>message.content match r"\d\d"</code></p>
+<p><code class="highlight"><span class="s">&quot;some string&quot;</span><span class="w"> </span><span class="ow">match</span><span class="w"> </span><span class="sr">r&quot;some regex&quot;</span></code> returns <code>True</code> or <code>False</code>.</p>
+<p>For example: <code class="highlight"><span class="k">message.content</span><span class="w"> </span><span class="ow">match</span><span class="w"> </span><span class="sr">r&quot;\d\d&quot;</span></code></p>
 <h4 id="group-capturing">Group capturing<a class="headerlink" href="#group-capturing" title="Permanent link">&para;</a></h4>
-<p><code>"some string" match {r"some regex", capture number}</code> returns <code>False</code> if no match or the value of the nth captured group.</p>
-<p>For example: <code>message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}</code> matches the year component of a date like <code>12/31/2020</code>.</p>
-<p><code>(message.content match {r"(\d\d)/(\d\d)/(\d\d\d\d)", 3}) == "2020"</code> will filter only messages that contain a written date with 2020 as the year.</p>
+<p><code class="highlight"><span class="s">&quot;some string&quot;</span><span class="w"> </span><span class="ow">match</span><span class="w"> </span><span class="p">{</span><span class="sr">r&quot;some regex&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">capture</span><span class="w"> </span><span class="k">number</span><span class="p">}</span></code> returns <code>False</code> if no match or the value of the nth captured group.</p>
+<p>For example: <code class="highlight"><span class="k">message.content</span><span class="w"> </span><span class="ow">match</span><span class="w"> </span><span class="p">{</span><span class="sr">r&quot;(\d\d)/(\d\d)/(\d\d\d\d)&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">}</span></code> matches the year component of a date like <code>12/31/2020</code>.</p>
+<p><code class="highlight"><span class="p">(</span><span class="k">message.content</span><span class="w"> </span><span class="ow">match</span><span class="w"> </span><span class="p">{</span><span class="sr">r&quot;(\d\d)/(\d\d)/(\d\d\d\d)&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">})</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;2020&quot;</span></code> will filter only messages that contain a written date with 2020 as the year.</p>
 <h3 id="order-of-operations">Order of Operations<a class="headerlink" href="#order-of-operations" title="Permanent link">&para;</a></h3>
 <p>The order of operations in filters may not be exactly what you expect.</p>
 <ul>
 <li>Expressions in parentheses are evaluated first</li>
-<li>Math operations are evaluated from left to right, not by MDAS. <code>2 + 3 * 4</code> yields <code>20</code>, not <code>14</code>.</li>
-<li><code>a &amp;&amp; b || c &amp;&amp; d</code> is evaluated as <code>(a &amp;&amp; b) || (c &amp;&amp; d)</code></li>
-<li><code>a || b &amp;&amp; c || d</code> is evaluated as <code>a || (b &amp;&amp; c) || d</code></li>
+<li>Math operations are evaluated from left to right, not by MDAS. <code class="highlight"><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">4</span></code> yields <code>20</code>, not <code>14</code>.</li>
+<li><code class="highlight"><span class="k">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">b</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">d</span></code> is evaluated as <code class="highlight"><span class="p">(</span><span class="k">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">b</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="k">c</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">d</span><span class="p">)</span></code></li>
+<li><code class="highlight"><span class="k">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">b</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">d</span></code> is evaluated as <code class="highlight"><span class="k">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="k">b</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">c</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">d</span></code></li>
 </ul>
 <p>Basically, if you're unsure about the order of operations, use extra parentheses.</p>
 <div class="footnote">
@@ -2315,7 +2315,7 @@ Then, try to break your desired behavior into multiple conditions. Combine them 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 16, 2026 18:34:28 UTC">March 16, 2026 18:34:28</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 22, 2026 10:57:52 UTC">March 22, 2026 10:57:52</span>
   </span>
 
     
