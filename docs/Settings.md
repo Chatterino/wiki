@@ -3,11 +3,14 @@
 On **Windows**:
 `%APPDATA%/Chatterino2`
 
+On **Mac**:
+`$HOME/Library/Application Support/chatterino`
+
 On **Linux**:
 `$HOME/.local/share/chatterino`
 
-On **Mac**:
-`$HOME/Library/Application Support/chatterino`
+On **Linux** with Flatpak:
+`$HOME/.var/app/com.chatterino.chatterino/data/chatterino`
 
 ### Files
 
