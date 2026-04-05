@@ -220,6 +220,8 @@ The following variables are available:
 | `author.no_color`        | Bool         | Whether the author has no color set (i.e. gray name)                                           |
 | `author.subbed`          | Bool         | Whether author is subscribed                                                                   |
 | `author.sub_length`      | Int          | How long author has been subscribed (or zero)                                                  |
+| **Bits**                 |              | Bits involved in the message                                                                   |
+| `bits.amount`            | Int          | How many bits were cheered in this message.[^1]                                                |
 | **Channel**              |              | The channel where the message was sent                                                         |
 | `channel.name`           | String       | Channel name                                                                                   |
 | `channel.watching`       | Bool         | Whether the channel is being watched (requires Chatterino extension)                           |
@@ -312,4 +314,6 @@ The order of operations in filters may not be exactly what you expect.
 
 Basically, if you're unsure about the order of operations, use extra parentheses.
 
-[nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
+[nightly]: Help.md/#what-is-nightly-and-how-to-use-install-it
+
+[^1]: Available since [nightly] [b8d09e9](https://github.com/Chatterino/chatterino2/commit/b8d09e9084e5f1649c8e8385cb15251232867422)
