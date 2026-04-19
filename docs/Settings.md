@@ -19,7 +19,6 @@ Commands and Settings have a small backup mechanism that saves the older version
 - commands.json - Will contain all your Chatterino commands
 - settings.json - This contains most of your settings, including sensitive data like your login token
 - window-layout.json - This contains information which tabs and splits you have open and how they are positioned
-- irc.json - When you have a non-twitch IRC connection, this contains the configured servers and settings
 
 ## Help
 
