@@ -14,7 +14,7 @@ On **Linux** with Flatpak:
 
 ### Files
 
-Commands and Settings have a small backup mechanism that saves the older version in a file like commands.json.bkp-2 in case you want to return to older versions of the file.
+All files have a backup mechanism that saves the older version in a file like commands.json.bkp-2 in case you want to return to older versions of the file.
 
 - commands.json - Will contain all your Chatterino commands
 - settings.json - This contains most of your settings, including sensitive data like your login token
