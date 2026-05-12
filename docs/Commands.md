@@ -50,12 +50,6 @@ Usage: `/delete <msg-id>`
 
 Moderator only, deletes a message in chat with the provided ID. Usually used in mod actions as they can pass through the message ID.
 
-### `/fakemsg`
-
-Usage: `/fakemsg <raw message>`
-
-Displays the provided IRC messsage in chat as if it was sent from Twitch's IRC server.
-
 ### `/marker`
 
 Usage: `/marker`
@@ -127,6 +121,12 @@ Opens the specified user's Chatterino usercard for the given channel or the chan
 Usage: `/w <user> <message>`
 
 Whispers the provided text to a user on Twitch. See [Chatterino's whisper FAQ item](https://wiki.chatterino.com/Help/#i-am-unable-to-send-whispers-from-chatterino) for whisper-related issues.
+
+### `/fakemsg`
+
+Usage: `/fakemsg <raw message>`
+
+**Debug mode only**, displays the provided IRC messsage in chat as if it was sent from Twitch's IRC server.
 
 ## Custom commands
 
