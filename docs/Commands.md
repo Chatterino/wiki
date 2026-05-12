@@ -126,7 +126,7 @@ Whispers the provided text to a user on Twitch. See [Chatterino's whisper FAQ it
 
 Usage: `/fakemsg <raw message>`
 
-**Debug mode only**, displays the provided IRC messsage in chat as if it was sent from Twitch's IRC server.
+**Debug build only**, displays the provided IRC messsage in chat as if it was sent from Twitch's IRC server.
 
 ## Custom commands
 
