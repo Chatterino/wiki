@@ -11,8 +11,7 @@ version = "0.0.0"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "mkdocs-material==9.7.6",
-    "mkdocs-git-revision-date-localized-plugin==1.5.1",
+    "zensical==0.0.32",
 ]
 
 [project.entry-points."pygments.lexers"]
