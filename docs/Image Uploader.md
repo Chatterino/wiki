@@ -44,12 +44,11 @@ Replace `XXXXXXXXXXXXXXX` with your API key from s-ul.eu. It can be found on [yo
 
 Similar to nuuls, this is an anonymous image and video upload tool with a default expiration of 30 days.
 
-| Row           | Description                      |
-| ------------- | -------------------------------- |
-| Request URL   | `https://imgdrip.com/api/upload` |
-| Form field    | `file`                           |
-| Image link    | `{url}`                          |
-| Deletion link | `{deleteUrl}`                    |
+| Row         | Description                      |
+| ----------- | -------------------------------- |
+| Request URL | `https://imgdrip.com/api/upload` |
+| Form field  | `file`                           |
+| Image link  | `{url}`                          |
 
 ### [i.fourtf.com](https://github.com/fourtf/i)
 
