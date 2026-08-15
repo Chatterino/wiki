@@ -164,6 +164,6 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
 - `{stream.game}` can be used to insert the game set in the current channel. Only works if the channel is live.  
   Example: Add Command `I'm currently playing {stream.game}` with trigger `/game`. Now typing `/game` will send a message like `I'm currently playing World of Warcraft`.
 
-- `{element.copytext}` can be used to insert the copytext of the righ-clicked element (e.g. Emote/Link). Only works when executing a command through the right-click menu.
+- `{element.copytext}` can be used to insert the copytext of the right-clicked element (e.g. Emote/Link). Only works when executing a command through the right-click menu.
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
