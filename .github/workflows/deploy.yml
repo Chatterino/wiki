@@ -28,7 +28,7 @@ jobs:
           mkdocs build --verbose
 
       - name: Deploy 🚀
-        #if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/master'
         uses: JamesIves/github-pages-deploy-action@v4.8.0
         with:
           branch: gh-pages # The branch the action should deploy to. (gh-pages is the default but I wanted to keep changes minimal)
