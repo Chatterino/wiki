@@ -172,4 +172,8 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
 
 - `{input.text}` can be used when executing a command on a message/with a hotkey to insert the text in the split input.
 
+- `{element.copytext}` can be used to insert the copytext of the right-clicked element (e.g. Emote/Link). Only works when executing a command through the right-click menu. [^1]
+
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
+
+[^1]: Available since [nightly] [b8d09e9](https://github.com/Chatterino/chatterino2/commit/834a3c6763283f1211b484411fd9374120263b7e)
