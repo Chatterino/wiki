@@ -14,21 +14,21 @@ Multiple rules can be concatenated with `;`: `chatterino.*.debug=true;chatterino
 
 <!-- prettier-ignore-start -->
 === ":fontawesome-brands-windows: Windows PowerShell"
-    ```pwsh-session
+    ``` { .pwsh-session .no-copy }
     > $Env:QT_WIN_DEBUG_CONSOLE="new"
     > $Env:QT_LOGGING_RULES="chatterino.*.debug=true"
     > <path-to>/chatterino.exe
     (a new console window will show)
     ```
 === ":fontawesome-brands-windows: Windows CMD"
-    ```doscon
+    ``` { .doscon .no-copy }
     > set QT_WIN_DEBUG_CONSOLE=new
     > set QT_LOGGING_RULES=chatterino.*.debug=true
     > <path-to>/chatterino.exe
     (a new console window will show)
     ```
 === ":simple-linux:/:simple-apple: Linux/macOS"
-    ```console
+    ``` { .console .no-copy }
     $ export QT_LOGGING_RULES="chatterino.*.debug=true"
     $ <path-to>/chatterino
     chatterino.hotkeys: Try add default "close popup window"
