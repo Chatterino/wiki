@@ -75,6 +75,6 @@ These are some alternate ways of creating your own custom themes:
 
 This section contains added, updated, and removed properties in a release, and commit for [nightly] versions.
 
-[nightly]: Help.md/#what-is-nightly-and-how-to-use-install-it
-[chatterino-folder]: Settings.md/#where-is-my-chatterino-folder-located
+[nightly]: Help.md#what-is-nightly-and-how-to-use-install-it
+[chatterino-folder]: Settings.md#where-is-my-chatterino-folder-located
 [res-themes]: https://github.com/Chatterino/chatterino2/tree/master/resources/themes

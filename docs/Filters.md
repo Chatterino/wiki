@@ -314,6 +314,6 @@ The order of operations in filters may not be exactly what you expect.
 
 Basically, if you're unsure about the order of operations, use extra parentheses.
 
-[nightly]: Help.md/#what-is-nightly-and-how-to-use-install-it
+[nightly]: Help.md#what-is-nightly-and-how-to-use-install-it
 
 [^1]: Available since [nightly] [b8d09e9](https://github.com/Chatterino/chatterino2/commit/b8d09e9084e5f1649c8e8385cb15251232867422)
