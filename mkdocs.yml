@@ -72,7 +72,7 @@ nav:
       - Search: Search.md
       - Regex: Regex.md
   - Features:
-      - Twitch: Features.md
+      - Twitch: Twitch.md
       - Hotkeys: Hotkeys.md
       - Image Uploader: Image Uploader.md
       - Link Previews: Link Previews.md
