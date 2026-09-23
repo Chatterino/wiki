@@ -11,7 +11,7 @@ version = "0.0.0"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "zensical==0.0.62"
+    "zensical==0.0.63"
 ]
 
 [project.entry-points."pygments.lexers"]
