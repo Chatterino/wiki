@@ -51,7 +51,7 @@ nav = [
   	{ "Regex" = "Regex.md"}
   ] },
   { "Features" = [
-  	{ "Twitch" = "Commands.md"},
+  	{ "Twitch" = "Twitch.md"},
   	{ "Hotkeys" = "Hotkeys.md"},
   	{ "Image Uploader" = "Image Uploader.md"},
   	{ "Link Previews" = "Link Previews.md"},
