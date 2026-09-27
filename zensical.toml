@@ -30,7 +30,7 @@ site_author = "Chatterino Contributors"
 site_url = "https://wiki.chatterino.com"
 
 # https://zensical.org/docs/setup/basics/#use_directory_urls
-use_directory_urls = false
+use_directory_urls = true
 
 # https://zensical.org/docs/setup/repository/
 repo_url = "https://github.com/chatterino/chatterino2"
