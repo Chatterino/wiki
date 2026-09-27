@@ -93,8 +93,11 @@ extra_css = ["stylesheets/extra.css"]
 # ----------------------------------------------------------------------------
 [project.theme]
 
+# https://zensical.org/docs/setup/fonts/#autoloading
+font = false
+
 # change this to "classic" to use the traditional Material for MkDocs look.
-#variant = "classic"
+variant = "classic"
 
 # Zensical allows you to override specific blocks, partials, or whole
 # templates as well as to define your own templates. To do this, uncomment
