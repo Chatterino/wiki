@@ -146,18 +146,18 @@ features = [
     # will generate an edit button for the page. This works for common
     # repository hosting services.
     # https://zensical.org/docs/setup/repository/#content-actions
-    # "content.action.edit",
+    "content.action.edit",
 
     # If you have a repository configured and turn on this feature, Zensical
     # will generate a button that allows the user to view the Markdown
     # code for the current page.
     # https://zensical.org/docs/setup/repository/#content-actions
-    # "content.action.view",
+    "content.action.view",
 
     # Code annotations allow you to add an icon with a tooltip to your
     # code blocks to provide explanations at crucial points.
     # https://zensical.org/docs/authoring/code-blocks/#code-annotations
-    # "content.code.annotate",
+    "content.code.annotate",
 
     # This feature turns on a button in code blocks that allow users to
     # copy the content to their clipboard without first selecting it.
