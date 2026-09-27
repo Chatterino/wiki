@@ -94,7 +94,7 @@ extra_css = ["stylesheets/extra.css"]
 [project.theme]
 
 # https://zensical.org/docs/setup/fonts/#autoloading
-# font = false
+font = false
 
 # change this to "classic" to use the traditional Material for MkDocs look.
 #variant = "classic"
@@ -299,9 +299,9 @@ repo = "fontawesome/brands/github"
 # of suitably licensed fonts. There are options for a normal text font and for
 # a monospaced font used in code blocks.
 # ----------------------------------------------------------------------------
-[project.theme.font]
-text = "Roboto"
-code = "Roboto Mono"
+#[project.theme.font]
+#text = "Inter"
+#code = "Jetbrains Mono"
 
 # ----------------------------------------------------------------------------
 # In the "palette" subsection you can configure options for the color scheme.
