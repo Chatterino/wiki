@@ -7,16 +7,25 @@
         <loc>https://wiki.chatterino.com/Commands/</loc>
       </url>
       <url>
+        <loc>https://wiki.chatterino.com/Contributing%20for%20Developers/</loc>
+      </url>
+      <url>
+        <loc>https://wiki.chatterino.com/Crash%20Analysis/</loc>
+      </url>
+      <url>
+        <loc>https://wiki.chatterino.com/Developer%20Logs/</loc>
+      </url>
+      <url>
+        <loc>https://wiki.chatterino.com/Environment%20Variables/</loc>
+      </url>
+      <url>
         <loc>https://wiki.chatterino.com/Filters/</loc>
       </url>
       <url>
-        <loc>https://wiki.chatterino.com/Search/</loc>
+        <loc>https://wiki.chatterino.com/Glossary/</loc>
       </url>
       <url>
-        <loc>https://wiki.chatterino.com/Regex/</loc>
-      </url>
-      <url>
-        <loc>https://wiki.chatterino.com/Twitch/</loc>
+        <loc>https://wiki.chatterino.com/Help/</loc>
       </url>
       <url>
         <loc>https://wiki.chatterino.com/Hotkeys/</loc>
@@ -31,30 +40,21 @@
         <loc>https://wiki.chatterino.com/Moderation/</loc>
       </url>
       <url>
-        <loc>https://wiki.chatterino.com/Themes/</loc>
+        <loc>https://wiki.chatterino.com/Regex/</loc>
       </url>
       <url>
-        <loc>https://wiki.chatterino.com/Help/</loc>
+        <loc>https://wiki.chatterino.com/Search/</loc>
       </url>
       <url>
         <loc>https://wiki.chatterino.com/Settings/</loc>
       </url>
       <url>
+        <loc>https://wiki.chatterino.com/Themes/</loc>
+      </url>
+      <url>
         <loc>https://wiki.chatterino.com/Third_party_services/</loc>
       </url>
       <url>
-        <loc>https://wiki.chatterino.com/Glossary/</loc>
-      </url>
-      <url>
-        <loc>https://wiki.chatterino.com/Environment%20Variables/</loc>
-      </url>
-      <url>
-        <loc>https://wiki.chatterino.com/Crash%20Analysis/</loc>
-      </url>
-      <url>
-        <loc>https://wiki.chatterino.com/Contributing%20for%20Developers/</loc>
-      </url>
-      <url>
-        <loc>https://wiki.chatterino.com/Developer%20Logs/</loc>
+        <loc>https://wiki.chatterino.com/Twitch/</loc>
       </url>
 </urlset>
