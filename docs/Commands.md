@@ -136,7 +136,6 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
 
 ### Advanced
 
-- The trigger has to be matched at the **start** of the message but there is a setting to also match them at the **end**.
 - Triggers don't need to start with `/`
 
 #### Using placeholders
