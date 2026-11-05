@@ -173,8 +173,8 @@ Add Command `Hello chat :)` with the trigger `/hello`. Now typing `/hello` in ch
 
 - `{element.copytext}` can be used to insert the copytext of the right-clicked element (e.g. Emote/Link). Only works when executing a command through the right-click menu. [^1]
 
-- Placeholders can have an alt-text which will be displayed if the placeholder is not available (e.g. `{msg.text}` is not available when executing the command through the split input).
-  The syntax for this is: `{<placeholder>;<alt-text>}`.
+- Placeholders can have an alt-text which will be displayed if the placeholder is not available (e.g. `{msg.text}` is not available when executing the command through the split input).  
+  The syntax for this is: `{<placeholder>;<alt-text>}`.  
   Example: Add Command `Have a {1+;good} day!` with trigger `/day`. Now typing `/day super nice` will send `Have a super nice day!` but typing `/day` will send `Have a good day!`.
 
 [nightly]: ../Help/#what-is-nightly-and-how-to-use-install-it
