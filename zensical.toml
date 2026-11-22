@@ -347,6 +347,12 @@ name = "Donate"
 [project.plugins.search]
 enabled = true
 
+[project.plugins.git-revision-date-localized]
+enabled = true
+type = "datetime"
+fallback_to_build_date = true
+enable_parallel_processing = false
+
 # ----------------------------------------------------------------------------
 # In this section you can configure the Markdown extensions that are used when
 # rendering your documentation. We enable the most useful extensions by default,
