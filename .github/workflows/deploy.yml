@@ -16,6 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
+          fetch-depth: 0 # checkout complete git history and not just the latest commit
           persist-credentials: false
 
       - uses: actions/setup-python@v7
